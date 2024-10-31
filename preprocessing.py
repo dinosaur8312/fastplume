@@ -1,3 +1,13 @@
+import sys
+import os
+
+# Add the 'build' directory to sys.path
+build_dir = os.path.join(os.path.dirname(__file__), 'build')
+sys.path.append(build_dir)
+
+# Now import the cpp_engine module from the build directory
+import fp_cpp_engine  # This will be the name of the pybind11 module
+
 import pandas as pd
 import numpy as np
 from scipy import stats
@@ -83,6 +93,35 @@ def preprocess_data(file_path):
 
     return processed_df, ln_x_fit_params
 
+def send_data_to_cpp(processed_df, ln_x_fit_params):
+    # Create an instance of the C++ DispersionData class using float precision
+    dispersion_data = cpp_engine.DispersionData()
+
+    # Loop over the DataFrame rows and add data to the C++ class
+    for _, row in processed_df.iterrows():
+        istab = int(row['istab'])
+        wind = float(row['wind'])
+
+        # Create an instance of IstabWindData using float precision
+        wind_data = cpp_engine.IstabWindData(wind)
+
+        # Add the coefficients
+        wind_data.slope_sig_x = float(row['slope_sig_x'])
+        wind_data.intercept_sig_x = float(row['intercept_sig_x'])
+        wind_data.slope_sig_y = float(row['slope_sig_y'])
+        wind_data.intercept_sig_y = float(row['intercept_sig_y'])
+        wind_data.slope_sig_z = float(row['slope_sig_z'])
+        wind_data.intercept_sig_z = float(row['intercept_sig_z'])
+
+        # Add the wind data to the C++ DispersionData class
+        dispersion_data.add_istab_wind_data(istab, wind_data)
+
+    # Add global ln_x coefficients to the C++ class
+    dispersion_data.set_ln_x_fit_params(float(ln_x_fit_params[0]), float(ln_x_fit_params[1]))
+
+    # Optionally print the data from C++ for verification
+    dispersion_data.print_data()
+
 # Main function to run the code
 def main():
     # Specify the path to your CSV file
@@ -91,17 +130,8 @@ def main():
     # Run the preprocessing function
     processed_df, ln_x_fit_params = preprocess_data(file_path)
 
-    # Output the processed data (display or save)
-    print("Processed Data for ln_sig_x, ln_sig_y, ln_sig_z (per istab, wind):")
-    print(processed_df)
-
-    print("\nLeast Squares Parameters for ln_x (global across all istab, wind):")
-    print(f"Slope: {ln_x_fit_params[0]}, Intercept: {ln_x_fit_params[1]}")
-
-    # Optionally, save the preprocessed data to a new CSV file
-    output_file = 'processed_coefficients.csv'
-    processed_df.to_csv(output_file, index=False)
-    print(f"\nProcessed data saved to {output_file}")
+    # Send the preprocessed data to C++
+    send_data_to_cpp(processed_df, ln_x_fit_params)
 
 if __name__ == '__main__':
     main()

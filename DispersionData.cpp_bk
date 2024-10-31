@@ -1,0 +1,109 @@
+#include <vector>
+#include <string>
+#include <iostream>
+#include <pybind11/pybind11.h>
+#include <pybind11/stl.h>
+
+namespace py = pybind11;
+
+// Define a struct to store least square parameters for each (istab, wind) group
+struct IstabWindData {
+    float wind;  // Wind value for this istab
+    std::vector<float> x_values;
+    std::vector<float> sig_x_values;
+    std::vector<float> sig_y_values;
+    std::vector<float> sig_z_values;
+
+    // Coefficients for least square fitting
+    float slope_sig_x, intercept_sig_x;
+    float slope_sig_y, intercept_sig_y;
+    float slope_sig_z, intercept_sig_z;
+
+    IstabWindData(float wind_value) : wind(wind_value) {}
+
+    void print_data() const {
+        std::cout << "Wind: " << wind << "\n";
+        std::cout << "slope_sig_x: " << slope_sig_x << ", intercept_sig_x: " << intercept_sig_x << "\n";
+        std::cout << "slope_sig_y: " << slope_sig_y << ", intercept_sig_y: " << intercept_sig_y << "\n";
+        std::cout << "slope_sig_z: " << slope_sig_z << ", intercept_sig_z: " << intercept_sig_z << "\n\n";
+    }
+};
+
+// Template struct for IstabData
+struct IstabData {
+    int istab;  // istab value (0-6)
+    std::vector<IstabWindData> istab_wind_data;
+
+    IstabData(int istab_value) : istab(istab_value) {}
+
+    void add_wind_data(const IstabWindData& wind_data) {
+        istab_wind_data.push_back(wind_data);
+    }
+
+    void print_data() const {
+        std::cout << "Istab: " << istab << "\n";
+        for (const auto& wind_data : istab_wind_data) {
+            wind_data.print_data();
+        }
+    }
+};
+
+// Class for DispersionData using single-precision float
+class DispersionData {
+private:
+    std::vector<IstabData> istab_data;
+    float slope_ln_x, intercept_ln_x;  // Global ln_x coefficients
+
+public:
+    DispersionData() {
+        for (int i = 0; i < 7; ++i) {
+            istab_data.emplace_back(i);  // Create IstabData objects for istab 0-6
+        }
+    }
+
+    // Function to add wind data to a specific istab
+    void add_istab_wind_data(int istab, const IstabWindData& wind_data) {
+        if (istab >= 0 && istab < istab_data.size()) {
+            istab_data[istab].add_wind_data(wind_data);
+        }
+    }
+
+    // Set the global ln_x slope and intercept
+    void set_ln_x_fit_params(float slope_ln_x_value, float intercept_ln_x_value) {
+        slope_ln_x = slope_ln_x_value;
+        intercept_ln_x = intercept_ln_x_value;
+    }
+
+    // Function to print the global ln_x coefficients
+    void print_ln_x_fit_params() const {
+        std::cout << "Global ln_x Slope: " << slope_ln_x << ", Intercept: " << intercept_ln_x << "\n";
+    }
+
+    // Function to print all stored data (for debugging)
+    void print_data() const {
+        print_ln_x_fit_params();
+        for (const auto& data : istab_data) {
+            data.print_data();
+        }
+    }
+};
+
+// Bindings using pybind11
+PYBIND11_MODULE(fp_cpp_engine, m) {
+    py::class_<IstabWindData>(m, "IstabWindData")
+        .def(py::init<float>())
+        .def_readwrite("wind", &IstabWindData::wind)
+        .def_readwrite("slope_sig_x", &IstabWindData::slope_sig_x)
+        .def_readwrite("intercept_sig_x", &IstabWindData::intercept_sig_x)
+        .def_readwrite("slope_sig_y", &IstabWindData::slope_sig_y)
+        .def_readwrite("intercept_sig_y", &IstabWindData::intercept_sig_y)
+        .def_readwrite("slope_sig_z", &IstabWindData::slope_sig_z)
+        .def_readwrite("intercept_sig_z", &IstabWindData::intercept_sig_z)
+        .def("print_data", &IstabWindData::print_data);
+
+    py::class_<DispersionData>(m, "DispersionData")
+        .def(py::init<>())
+        .def("add_istab_wind_data", &DispersionData::add_istab_wind_data)
+        .def("set_ln_x_fit_params", &DispersionData::set_ln_x_fit_params)
+        .def("print_data", &DispersionData::print_data);
+}

@@ -1,0 +1,38 @@
+# Ignore build directories
+build/
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
+
+# Python temporary files if running scripts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

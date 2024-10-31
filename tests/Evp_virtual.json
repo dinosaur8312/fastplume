@@ -1,0 +1,5 @@
+{
+    "coefs_CSV": "../tests/hpac_dispersion_coefs.csv",
+    "reference_CSV": "../tests/Evp_virtual_Definitions_2024-08-05.csv",
+    "outputCSV": "output_Evp.csv"
+}
