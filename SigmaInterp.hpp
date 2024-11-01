@@ -125,6 +125,9 @@ public:
 
         auto data = CSVParser::parseRefCSV(config);
         auto coefs = CSVParser::parseCoefCSV(config.coefCSVPath);
+
+        auto coefData = CSVParser::parseCoefCSV_new(config.coefCSVPath);
+
         if(computeMode == 12)
         {
             generateCompleteBatch(data, coefs);

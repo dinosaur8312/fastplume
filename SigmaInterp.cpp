@@ -124,9 +124,9 @@ void findFourCoefs_sig(std::vector<CSVDataRow> coefs, const int istab, const flo
     std::vector<std::vector<double>> windgap_min(2, std::vector<double>(2, 9999999.f));
     std::vector<std::vector<double>> xgap_min(2, std::vector<double>(2, 9999999.f));
 
-    printf("in findFourCoefs_sig\n");
-    printf("istab=%d\n", istab);
-    printf("wind=%f\n", wind);
+    //printf("in findFourCoefs_sig\n");
+    //printf("istab=%d\n", istab);
+    //printf("wind=%f\n", wind);
     int jminwind = -1;
     int jmaxwind = -1;
     for (int j = 0; j < coefs.size(); j++)
@@ -194,8 +194,8 @@ void findFourCoefs_sig(std::vector<CSVDataRow> coefs, const int istab, const flo
             }
         }
     }
-    printf("jminwind=%d\n", jminwind);
-    printf("jmaxwind=%d\n", jmaxwind);
+    //printf("jminwind=%d\n", jminwind);
+    //printf("jmaxwind=%d\n", jmaxwind);
 
     for (int j = jminwind; j < jmaxwind; j++)
     {
@@ -229,7 +229,7 @@ void findFourCoefs_sig(std::vector<CSVDataRow> coefs, const int istab, const flo
                 printf("siggap=%f\n", xgap);
             }
     */
-        printf("j=%d, x_coef=%f, x=%f, xgap=%f\n", j, x_coef, x, xgap);
+        //printf("j=%d, x_coef=%f, x=%f, xgap=%f\n", j, x_coef, x, xgap);
         if (wind_coef <= wind)
         {
             //          if ((sigid == 0) && (j > 180) && (j < 185))
@@ -253,7 +253,7 @@ void findFourCoefs_sig(std::vector<CSVDataRow> coefs, const int istab, const flo
                         xgap_min[0][0] = xgap;
                         windgap_min[0][0] = windgap;
                         id0 = j;
-                        printf("xgap_min00=%f,windgap_min00=%f,id0=%d\n", xgap, windgap, j);
+                     //   printf("xgap_min00=%f,windgap_min00=%f,id0=%d\n", xgap, windgap, j);
                         // if ((sigid == 0) && (j > 180) && (j < 185))
                         //   printf("XXXXXXXXX FOUND id0\n");
                     }
@@ -275,7 +275,7 @@ void findFourCoefs_sig(std::vector<CSVDataRow> coefs, const int istab, const flo
                         id1 = j;
 
                         // printf("XXXXXXXXX FOUND id1\n");
-                         printf("xgap_min01=%f,windgap_min01=%f,id1=%d\n",xgap,windgap,j);
+                         //printf("xgap_min01=%f,windgap_min01=%f,id1=%d\n",xgap,windgap,j);
                     }
                 }
             }
@@ -319,7 +319,7 @@ void findFourCoefs_sig(std::vector<CSVDataRow> coefs, const int istab, const flo
 
     } // end of loop over all rows in coefs to find id0, id1, id2, id3
 
-    printf("raw:id0=%d,id1=%d,id2=%d,id3=%d\n", id0, id1, id2, id3);
+    //printf("raw:id0=%d,id1=%d,id2=%d,id3=%d\n", id0, id1, id2, id3);
 
     if ((id0 >= 0) && (id1 == -1))
         id1 = id0;
@@ -346,7 +346,7 @@ void findFourCoefs_sig(std::vector<CSVDataRow> coefs, const int istab, const flo
         id1 = id0 + 1;
     if (id3 < id2)
         id3 = id2 + 1;
-    printf("final:id0=%d,id1=%d,id2=%d,id3=%d\n", id0, id1, id2, id3);
+    //printf("final:id0=%d,id1=%d,id2=%d,id3=%d\n", id0, id1, id2, id3);
 }
 
 void compareSigmaData(std::vector<CSVDataRow> coefs, const int id0, const int id1, const int id2, const int id3,
@@ -469,7 +469,7 @@ void compareZfunction(std::vector<CSVDataRow> data, std::ofstream &outputFile)
     double pass_rate = (double)pass_count / (double)data.size() * 100;
     // print total number of test cases
     std::cout << "Total number of test cases = " << data.size() << "\n";
-    std::cout << "Pass rate = " << pass_rate << "%\n";
+ //   std::cout << "Pass rate = " << pass_rate << "%\n";
 }
 void compareXData(std::vector<CSVDataRow> coefs, const int id0, const int id1, const int id2, const int id3,
                   const float sig_x, CSVDataRow row,
@@ -865,40 +865,40 @@ void calcData_virtual_new(std::vector<CSVDataRow> coefs, const int id0, const in
         sig_x2 = row2.sig_z;
         sig_x3 = row3.sig_z;
     }
-    printf("x0=%f,x1=%f,x2=%f,x3=%f\n", x0, x1, x2, x3);
-    printf("sx0=%f,sx1=%f,sx2=%f,sx3=%f\n", sig_x0, sig_x1, sig_x2, sig_x3);
+    //printf("x0=%f,x1=%f,x2=%f,x3=%f\n", x0, x1, x2, x3);
+   // printf("sx0=%f,sx1=%f,sx2=%f,sx3=%f\n", sig_x0, sig_x1, sig_x2, sig_x3);
     double log_sig_x0, log_sig_x1, log_sig_x2, log_sig_x3;
     log_sig_x0 = log(sig_x0);
     log_sig_x1 = log(sig_x1);
     log_sig_x2 = log(sig_x2);
     log_sig_x3 = log(sig_x3);
     double w_wind = id0 == id2 ? 0.f : (row.wind - row0.wind) / (row2.wind - row0.wind);
-    printf("log_sig_x0=%f, log_sig_x1=%f,log_sig_x2=%f,log_sig_x3=%f\n", log_sig_x0, log_sig_x1, log_sig_x2, log_sig_x3);
-    printf("w_wind=%f\n", w_wind);
+    //printf("log_sig_x0=%f, log_sig_x1=%f,log_sig_x2=%f,log_sig_x3=%f\n", log_sig_x0, log_sig_x1, log_sig_x2, log_sig_x3);
+   // printf("w_wind=%f\n", w_wind);
 
     double log_sig_x02, log_sig_x13;
     log_sig_x02 = (1.f - w_wind) * log_sig_x0 + w_wind * log_sig_x2;
     log_sig_x13 = (1.f - w_wind) * log_sig_x1 + w_wind * log_sig_x3;
-    printf("log_sig_x02=%f, log_sig_x13=%f\n", log_sig_x02, log_sig_x13);
+    //printf("log_sig_x02=%f, log_sig_x13=%f\n", log_sig_x02, log_sig_x13);
 
     double logx0 = log(x0);
     double logx1 = log(x1);
     double logx2 = log(x2);
     double logx3 = log(x3);
 
-    printf("logx0=%f, logx1=%f,logx2=%f,logx3=%f\n", logx0, logx1, logx2, logx3);
+    //printf("logx0=%f, logx1=%f,logx2=%f,logx3=%f\n", logx0, logx1, logx2, logx3);
 
     double log_sig = log(sig);
-    printf("log_sig=%f\n", log_sig);
+  //  printf("log_sig=%f\n", log_sig);
 
     // double wx01 = id0 == id1 ? 0.f : (logx - logx0) / (logx1 - logx0);
     // double wx23 = id2 == id3 ? 0.f : (logx - logx2) / (logx3 - logx2);
 
     double w_sig = id0 == id1 ? 0.f : (log_sig - log_sig_x02) / (log_sig_x13 - log_sig_x02);
-    printf("w_sig=%f\n", w_sig);
+   // printf("w_sig=%f\n", w_sig);
 
     double log_x_coef = (1. - w_sig) * logx0 + w_sig * logx1;
-    printf("log_x_coef=%f\n", log_x_coef);
+   // printf("log_x_coef=%f\n", log_x_coef);
 
     if (xid == 0)
         row.xv = exp(log_x_coef);
@@ -1114,7 +1114,7 @@ void generateSample(std::vector<CSVDataRow> data, std::vector<CSVDataRow> coefs,
     double pass_rate = (double)pass_count / (double)data.size() * 100;
     // print total number of test cases
     std::cout << "Total number of test cases = " << data.size() << "\n";
-    std::cout << "Pass rate = " << pass_rate << "%\n";
+   // std::cout << "Pass rate = " << pass_rate << "%\n";
 }
 void generateSourceSigma(std::vector<CSVDataRow> data, std::vector<CSVDataRow> coefs, std::ofstream &outputFile)
 {
@@ -1260,7 +1260,7 @@ void generateSourceSigma(std::vector<CSVDataRow> data, std::vector<CSVDataRow> c
     double pass_rate = (double)pass_count / (double)data.size() * 100;
     // print total number of test cases
     std::cout << "Total number of test cases = " << data.size() << "\n";
-    std::cout << "Pass rate = " << pass_rate << "%\n";
+//    std::cout << "Pass rate = " << pass_rate << "%\n";
 }
 
 double calcDepletion(const CSVDataRow &row, const std::vector<CSVDataRow> &coefs)
@@ -1496,7 +1496,7 @@ void generateDose(std::vector<CSVDataRow> data, std::vector<CSVDataRow> coefs, s
     double pass_rate = (double)pass_count / (double)data.size() * 100;
     // print total number of test cases
     std::cout << "Total number of test cases = " << data.size() << "\n";
-    std::cout << "Pass rate = " << pass_rate << "%\n";
+    //std::cout << "Pass rate = " << pass_rate << "%\n";
 }
 
 void generateDoseBatch(std::vector<CSVDataRow> data, std::vector<CSVDataRow> coefs)
@@ -1674,7 +1674,7 @@ void generateDoseBatch(std::vector<CSVDataRow> data, std::vector<CSVDataRow> coe
     double pass_rate = (double)pass_count / (double)data.size() * 100;
     // print total number of test cases
     std::cout << "Total number of test cases = " << data.size() << "\n";
-    std::cout << "Pass rate = " << pass_rate << "%\n";
+   // std::cout << "Pass rate = " << pass_rate << "%\n";
 }
 
 void generateComplete(std::vector<CSVDataRow> data, std::vector<CSVDataRow> coefs, std::ofstream &outputFile)
@@ -1835,7 +1835,7 @@ void generateComplete(std::vector<CSVDataRow> data, std::vector<CSVDataRow> coef
     double pass_rate = (double)pass_count / (double)data.size() * 100;
     // print total number of test cases
     std::cout << "Total number of test cases = " << data.size() << "\n";
-    std::cout << "Pass rate = " << pass_rate << "%\n";
+   // std::cout << "Pass rate = " << pass_rate << "%\n";
 }
 
 void generateCompleteBatch(std::vector<CSVDataRow> data, std::vector<CSVDataRow> coefs)
@@ -1891,7 +1891,7 @@ void generateCompleteBatch(std::vector<CSVDataRow> data, std::vector<CSVDataRow>
             outputFile << "c_surf,c_surf_inf, C_dep, D_dep, delta_dep";
         outputFile << "\n";
         std::cout << "Writing to " << row.output_file << "\n";
-        std::cout << "row.dur = " << row.dur << "\n";
+       // std::cout << "row.dur = " << row.dur << "\n";
         std::cout << "Reading from " << row.xyzt_file << "\n";
         double sig_x0 = row.sig_x0;
         double sig_y0 = row.sig_y0;
@@ -1904,7 +1904,7 @@ void generateCompleteBatch(std::vector<CSVDataRow> data, std::vector<CSVDataRow>
         int id0, id1, id2, id3;
         bool flag = false;
 
-        printf("generateCompleteBatch, row %d sig_x0 = %f\n", i, sig_x0);
+        //printf("generateCompleteBatch, row %d sig_x0 = %f\n", i, sig_x0);
 
         if (sig_x0 > EPSILON)
         {
@@ -1913,8 +1913,8 @@ void generateCompleteBatch(std::vector<CSVDataRow> data, std::vector<CSVDataRow>
         }
         else
             row.xv = 0;
-        printf("generateCompleteBatch, row %d xv = %f\n", i, row.xv);
-        printf("generateCompleteBatch, row %d sig_y0 = %f\n", i, sig_y0);
+      //  printf("generateCompleteBatch, row %d xv = %f\n", i, row.xv);
+     //   printf("generateCompleteBatch, row %d sig_y0 = %f\n", i, sig_y0);
 
         if (sig_y0 > EPSILON)
         {
@@ -2066,10 +2066,10 @@ void generateCompleteBatch(std::vector<CSVDataRow> data, std::vector<CSVDataRow>
 
 
     //outputFile.close();
-    std::cout << "12 CSV file has been written successfully.\n";
+    std::cout << "CSV files have been written successfully.\n";
 
     double pass_rate = (double)pass_count / (double)data.size() * 100;
     // print total number of test cases
     std::cout << "Total number of test cases = " << data.size() << "\n";
-    std::cout << "Pass rate = " << pass_rate << "%\n";
+   // std::cout << "Pass rate = " << pass_rate << "%\n";
 }
