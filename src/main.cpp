@@ -6,6 +6,7 @@
 #include "SigmaInterp.hpp"
 #include "CSVParser.hpp"
 #include "JsonInputHandler.hpp"
+#include "FastPlume.h"
 
 // main function
 int main(int argc, char *argv[])
@@ -20,6 +21,10 @@ int main(int argc, char *argv[])
 
     try
     {
+
+        FastPlume::FastPlume plumeJob(configFilePath);
+        plumeJob.run();
+
         // Process the JSON file to get the configuration
         SimConfig config = JsonInputHandler::processJsonFile(configFilePath);
 

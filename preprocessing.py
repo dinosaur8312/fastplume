@@ -94,8 +94,8 @@ def preprocess_data(file_path):
     return processed_df, ln_x_fit_params
 
 def send_data_to_cpp(processed_df, ln_x_fit_params):
-    # Create an instance of the C++ DispersionData class using float precision
-    dispersion_data = cpp_engine.DispersionData()
+    # Create an instance of the C++ taskData class using float precision
+    dispersion_data = cpp_engine.taskData()
 
     # Loop over the DataFrame rows and add data to the C++ class
     for _, row in processed_df.iterrows():
@@ -113,7 +113,7 @@ def send_data_to_cpp(processed_df, ln_x_fit_params):
         wind_data.slope_sig_z = float(row['slope_sig_z'])
         wind_data.intercept_sig_z = float(row['intercept_sig_z'])
 
-        # Add the wind data to the C++ DispersionData class
+        # Add the wind data to the C++ taskData class
         dispersion_data.add_istab_wind_data(istab, wind_data)
 
     # Add global ln_x coefficients to the C++ class

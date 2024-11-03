@@ -48,14 +48,14 @@ struct IstabData {
     }
 };
 
-// Class for DispersionData using single-precision float
-class DispersionData {
+// Class for taskData using single-precision float
+class taskData {
 private:
     std::vector<IstabData> istab_data;
     float slope_ln_x, intercept_ln_x;  // Global ln_x coefficients
 
 public:
-    DispersionData() {
+    taskData() {
         for (int i = 0; i < 7; ++i) {
             istab_data.emplace_back(i);  // Create IstabData objects for istab 0-6
         }
@@ -101,9 +101,9 @@ PYBIND11_MODULE(fp_cpp_engine, m) {
         .def_readwrite("intercept_sig_z", &IstabWindData::intercept_sig_z)
         .def("print_data", &IstabWindData::print_data);
 
-    py::class_<DispersionData>(m, "DispersionData")
+    py::class_<taskData>(m, "taskData")
         .def(py::init<>())
-        .def("add_istab_wind_data", &DispersionData::add_istab_wind_data)
-        .def("set_ln_x_fit_params", &DispersionData::set_ln_x_fit_params)
-        .def("print_data", &DispersionData::print_data);
+        .def("add_istab_wind_data", &taskData::add_istab_wind_data)
+        .def("set_ln_x_fit_params", &taskData::set_ln_x_fit_params)
+        .def("print_data", &taskData::print_data);
 }
