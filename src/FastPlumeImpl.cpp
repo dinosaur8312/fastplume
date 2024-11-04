@@ -5,6 +5,8 @@
 
 namespace FastPlume
 {
+    FastPlumeImpl::FastPlumeImpl() {}
+
     FastPlumeImpl::FastPlumeImpl(const std::string &JsonInputFileName)
     {
         // print message
@@ -13,9 +15,155 @@ namespace FastPlume
 
         // Process the CSV files to get the data
         m_coefData = dispersionCoef(config.coefCSVPath);
-        m_taskData = taskData(config.taskCSVPath);
+        m_taskData = taskData(config.taskCSVPath, "./");
     }
 
+    FastPlumeImpl &FastPlumeImpl::setAttr(const std::string &attrName, const std::vector<double> &values)
+    {
+        m_taskData.setAttr(attrName, values);
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setAttr(const std::string &attrName, const std::vector<int> &values)
+    {
+        m_taskData.setAttr(attrName, values);
+        return *this;
+    }
+    FastPlumeImpl &FastPlumeImpl::setAttr(const std::string &attrName, const std::vector<std::vector<double>> &values)
+    {
+        if(m_taskData.getTaskNum()<=0)
+        {
+            throw std::invalid_argument("Task data not initialized. Please set task data before setting locData.");
+        }
+        // All tasks share the same locData
+        if (values.size() < 2 || values.size() > 4)
+        {
+            throw std::invalid_argument("Invalid vector size for locdata_single. Expected 2, 3, or 4 vectors.");
+        }
+
+        locData loc;
+        if (values.size() == 4)
+        {
+            loc.x = values[0];
+            loc.y = values[1];
+            loc.z = values[2];
+            loc.t = values[3];
+        }
+        else if (values.size() == 3)
+        {
+            loc.x = values[0];
+            loc.z = values[1];
+            loc.y.assign(values[0].size(), 0.0); // Initialize y as zero
+            loc.t = values[2];
+        }
+        else if (values.size() == 2)
+        {
+            loc.x = values[0];
+            loc.y.assign(values[0].size(), 0.0); // Initialize y as zero
+            loc.z.assign(values[0].size(), 0.0); // Initialize z as zero
+            loc.t = values[1];
+        }
+
+        std::vector<locData> locDataAllTasks(m_taskData.getTaskNum(), loc);
+        m_taskData.setAttr("v_locData", locDataAllTasks);
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setAttr(const std::string &attrName, const std::vector<std::vector<std::vector<double>>> &values)
+    {
+        if(m_taskData.getTaskNum()<=0)
+        {
+            throw std::invalid_argument("Task data not initialized. Please set task data before setting locData.");
+        }
+        // All tasks have their own locData
+        if (values.size() != m_taskData.getTaskNum())
+        {
+            throw std::invalid_argument("Invalid vector size for locdata_multiple. Expected size equal to number of tasks.");
+        }
+
+        std::vector<locData> locDataAllTasks;
+        for (const auto &taskLocData : values)
+        {
+            if (taskLocData.size() < 2 || taskLocData.size() > 4)
+            {
+                throw std::invalid_argument("Invalid vector size for locdata_single. Expected 2, 3, or 4 vectors.");
+            }
+
+            locData loc;
+            if (taskLocData.size() == 4)
+            {
+                loc.x = taskLocData[0];
+                loc.y = taskLocData[1];
+                loc.z = taskLocData[2];
+                loc.t = taskLocData[3];
+            }
+            else if (taskLocData.size() == 3)
+            {
+                loc.x = taskLocData[0];
+                loc.z = taskLocData[1];
+                loc.y.assign(taskLocData[0].size(), 0.0); // Initialize y as zero
+                loc.t = taskLocData[2];
+            }
+            else if (taskLocData.size() == 2)
+            {
+                loc.x = taskLocData[0];
+                loc.y.assign(taskLocData[0].size(), 0.0); // Initialize y as zero
+                loc.z.assign(taskLocData[0].size(), 0.0); // Initialize z as zero
+                loc.t = taskLocData[1];
+            }
+
+            locDataAllTasks.push_back(loc);
+        }
+
+        m_taskData.setAttr("v_locData", locDataAllTasks);
+        return *this;
+    }
+
+    // Helper setAttr for locData directly, hidden from user
+    FastPlumeImpl &FastPlumeImpl::setAttr(const std::string &attrName, const std::vector<locData> &values)
+    {
+        m_taskData.setAttr(attrName, values);
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setDispersionCoefCSV(const std::string &filePath)
+    {
+        // m_coefData.parseCSV(filePath);
+        DispersionCoefCSVPath = filePath;
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setTaskDataCSV(const std::string &filePath)
+    {
+        // m_taskData.parseCSV(filePath);
+        TaskDataCSVPath = filePath;
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setOutputFilePath(const std::string &filePath)
+    {
+        outputFilePath = filePath;
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setOutputMethod(const std::string &method)
+    {
+        outputMethod = method;
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setLocDataCSVImportDirectory(const std::string &directory)
+    {
+        // locDataDirectory = directory;
+        LocDataCSVImportDirectory = directory;
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setOutputDirectory(const std::string &directory)
+    {
+        outputDirectory = directory;
+        return *this;
+    }
 
     float FastPlumeImpl::interpolate_x_from_sig_component(int istab, float wind, float sig_value, const std::string &flag)
     {
@@ -62,9 +210,25 @@ namespace FastPlume
 
     void FastPlumeImpl::run()
     {
+        if (!DispersionCoefCSVPath.empty())
+        {
+            m_coefData = dispersionCoef(DispersionCoefCSVPath);
+        }
+        if (!TaskDataCSVPath.empty())
+        {
 
-        //print message
-        std::cout << "Running FastPlumeImpl with " << this->getTaskNum() << " tasks\n"; 
+            m_taskData = taskData(TaskDataCSVPath, LocDataCSVImportDirectory);
+        }
+
+        // print message
+        std::cout << "Running FastPlumeImpl with " << this->getTaskNum() << " tasks\n";
+
+        // print m_taskData
+        // m_taskData.printData();
+        // sort m_coefData
+        // m_coefData.sortData();
+        // print m_coefData
+        // m_coefData.printData();
 
         // Implementation of the core functionality
         // e.g., process `coefData` and `refData`
@@ -75,7 +239,7 @@ namespace FastPlume
         {
             auto row = m_taskData.getRow(i);
             // Add output file prefix to ../tests directory
-            std::string output_file = "../tests/" + row.output_file;
+            std::string output_file = outputDirectory + row.output_file;
             std::ofstream outputFile(output_file);
             outputFile << "case,istab,wind,x,y,z,t,dur,";
             outputFile << "sig_x,sig_y,sig_z,zfunc,yfunc,xfunc,qyz,cpeak,concentration,dinf,dose,";
@@ -87,7 +251,7 @@ namespace FastPlume
             double sig_x0 = row.sig_x0;
             double sig_y0 = row.sig_y0;
             double sig_z0 = row.sig_z0;
-           // printf("sig_x0 = %f, sig_y0 = %f, sig_z0 = %f\n", sig_x0, sig_y0, sig_z0);
+            // printf("sig_x0 = %f, sig_y0 = %f, sig_z0 = %f\n", sig_x0, sig_y0, sig_z0);
             auto locdata = row.m_locData;
 
             int istab = row.istab;
@@ -101,9 +265,9 @@ namespace FastPlume
 
             row.zv = sig_z0 > EPSILON ? this->interpolate_x_from_sig_component(istab, wind, sig_z0, "z") : 0;
 
-          //  printf("i = %d, row.xv = %f, row.yv = %f, row.zv = %f\n", i, row.xv, row.yv, row.zv);
+            //  printf("i = %d, row.xv = %f, row.yv = %f, row.zv = %f\n", i, row.xv, row.yv, row.zv);
 
-         //   printf("locdata.getLocNum() = %d\n", locdata.getLocNum()); 
+            //   printf("locdata.getLocNum() = %d\n", locdata.getLocNum());
 
             for (int j = 0; j < locdata.getLocNum(); j++)
             {
@@ -111,24 +275,24 @@ namespace FastPlume
                 double y = locdata.y[j];
                 double zrcp = locdata.z[j];
                 double t = locdata.t[j];
-               // printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f\n", i, j, x, y, zrcp, t);
+                // printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f\n", i, j, x, y, zrcp, t);
 
                 double x_merge = std::max(0., x) + row.xv;
                 double y_merge = std::max(0., x) + row.yv;
                 double z_merge = std::max(0., x) + row.zv;
 
-                //printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f, row.dur = %f, x_merge = %f, y_merge = %f, z_merge = %f\n", i, j, x, y, zrcp, t, row.dur, x_merge, y_merge, z_merge);
+                // printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f, row.dur = %f, x_merge = %f, y_merge = %f, z_merge = %f\n", i, j, x, y, zrcp, t, row.dur, x_merge, y_merge, z_merge);
 
                 double sig_x = this->interpolate_sig_component(istab, wind, x_merge, "x")[0];
                 double sig_y = this->interpolate_sig_component(istab, wind, y_merge, "y")[0];
                 double sig_z = this->interpolate_sig_component(istab, wind, z_merge, "z")[0];
 
-                //printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f, row.dur = %f, sig_x = %f, sig_y = %f, sig_z = %f\n", i, j, x, y, zrcp, t, row.dur, sig_x, sig_y, sig_z);    
+                // printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f, row.dur = %f, sig_x = %f, sig_y = %f, sig_z = %f\n", i, j, x, y, zrcp, t, row.dur, sig_x, sig_y, sig_z);
 
                 double zfunc = zFunction(zrcp, row.zplume, row.hml, sig_z);
                 double yfunc = pdfFunction(y, sig_y);
 
-                //printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f, row.dur = %f, sig_x = %f, sig_y = %f, sig_z = %f, zfunc = %f, yfunc = %f\n", i, j, x, y, zrcp, t, row.dur, sig_x, sig_y, sig_z, zfunc, yfunc);
+                // printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f, row.dur = %f, sig_x = %f, sig_y = %f, sig_z = %f, zfunc = %f, yfunc = %f\n", i, j, x, y, zrcp, t, row.dur, sig_x, sig_y, sig_z, zfunc, yfunc);
 
                 double qyz = row.mass * yfunc * zfunc;
                 double xfunc, concentration, cpeak, xfuncp;
@@ -207,7 +371,7 @@ namespace FastPlume
                     }
                 } // if (t >= 0)
 
-               // printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f, row.dur = %f, sig_x = %f, sig_y = %f, sig_z = %f, zfunc = %f, yfunc = %f, xfunc = %f, qyz = %f, cpeak = %f, concentration = %f, dinf = %f, dosage = %f\n", i, j, x, y, zrcp, t, row.dur, sig_x, sig_y, sig_z, zfunc, yfunc, xfunc, qyz, cpeak, concentration, dinf, dosage);
+                // printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f, row.dur = %f, sig_x = %f, sig_y = %f, sig_z = %f, zfunc = %f, yfunc = %f, xfunc = %f, qyz = %f, cpeak = %f, concentration = %f, dinf = %f, dosage = %f\n", i, j, x, y, zrcp, t, row.dur, sig_x, sig_y, sig_z, zfunc, yfunc, xfunc, qyz, cpeak, concentration, dinf, dosage);
 
                 outputFile << i << "," << istab << "," << wind << ",";
                 outputFile << x << "," << y << "," << zrcp << ",";
@@ -225,12 +389,12 @@ namespace FastPlume
             } // for (int j = 0; j < xyzt_rows.size(); j++)
 
             outputFile.close();
-            //exit(0);
+            // exit(0);
         } // end of loop over all rows in data
 
         // outputFile.close();
         std::cout << "New CSV files have been written successfully.\n";
 
-    }// end of run
+    } // end of run
 
 } // namespace FastPlume

@@ -170,6 +170,7 @@ namespace FastPlume
             }
             this->istabData.push_back(istabData);
         }
+
     }
 
     int dispersionCoef::find_nearest_wind_index(const std::vector<float> &wind_values, float wind) const
