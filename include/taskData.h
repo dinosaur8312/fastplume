@@ -4,15 +4,20 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "taskDataRow.h"
 
 namespace FastPlume
 {
+
+
+    
 
     class locData
     {
     public:
         // Constructor to initialize from a CSV file path
         void parseCSV(const std::string &filePath, const std::string &directory);
+        void printData() const;
         int getLocNum() const
         {
             return x.size();
@@ -38,30 +43,12 @@ namespace FastPlume
         std::vector<double> ctail;
 
         // Granting taskData full access to private members
+
+         // Function to convert to locDataRow format for easy retrieval
+        std::vector<locDataRow> toLocDataRows() const;
     };
 
-    class taskDataRow
-    {
-    public:
-        int id;
-        double sig_x0;
-        double sig_y0;
-        double sig_z0;
-        int istab;
-        double wind;
-        double mass;
-        double decay;
-        double vd;
-        double hml;
-        double zplume;
-        double xv;
-        double yv;
-        double zv;
-        double dur;
-        std::string xyzt_file;
-        std::string output_file;
-        locData m_locData;
-    };
+    
 
     class taskData
     {
@@ -89,15 +76,19 @@ namespace FastPlume
         // Method to print all data
         void printData() const;
 
+        void matchData();
+
         taskDataRow getRow(int index) const;
         void setRow(int index, const taskDataRow &row);
+
+        std::vector<taskDataRow> getAllTaskRows() const;
 
         int getTaskNum() const;
 
         void parseCSV(const std::string &csvFilePath, const std::string &locDataDirectory);
 
     private:
-        int taskNum;
+        //int taskNum;
 
         std::vector<int> id;
         std::vector<double> sig_x0;

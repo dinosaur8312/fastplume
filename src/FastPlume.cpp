@@ -64,4 +64,12 @@ void FastPlume::run() {
     pImpl->run();
 }
 
+std::vector<taskDataRow> FastPlume::getResults() const {
+    return pImpl->getResults();
+}
+
+void FastPlume::printResult() const {
+    pImpl->printResult();
+}
+
 } // namespace FastPlume

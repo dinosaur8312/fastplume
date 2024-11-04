@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include "taskDataRow.h"
 
 namespace FastPlume {
 
@@ -16,6 +17,7 @@ public:
     ~FastPlume();
 
     // Chaining methods to set attributes and configurations
+
     FastPlume& setAttr(const std::string& attrName, const std::vector<double>& values);
     FastPlume& setAttr(const std::string& attrName, const std::vector<int>& values);
     FastPlume& setAttr(const std::string& attrName, const std::vector<std::vector<double>>& values);
@@ -29,6 +31,10 @@ public:
 
     // Run simulation
     void run();
+
+    std::vector<taskDataRow> getResults() const;
+
+    void printResult() const;
 
 private:
     std::unique_ptr<FastPlumeImpl> pImpl;  // Pointer to the implementation

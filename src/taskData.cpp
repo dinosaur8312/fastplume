@@ -8,7 +8,101 @@
 namespace FastPlume
 {
 
-    void locData::parseCSV(const std::string &filePath, const std::string& directory)
+    std::vector<locDataRow> locData::toLocDataRows() const
+    {
+        std::vector<locDataRow> locDataRows;
+        for (size_t i = 0; i < x.size(); ++i)
+        {
+            locDataRow row;
+            row.iloc = iloc[i];
+            row.x = x[i];
+            row.y = y[i];
+            row.z = z[i];
+            row.t = t[i];
+            row.sig_x = sig_x[i];
+            row.sig_y = sig_y[i];
+            row.sig_z = sig_z[i];
+            row.concentration = concentration[i];
+            row.dosage = dosage[i];
+            row.cpeak = cpeak[i];
+            row.dinf = dinf[i];
+            row.xfunc = xfunc[i];
+            row.xfuncp = xfuncp[i];
+            row.yfunc = yfunc[i];
+            row.zfunc = zfunc[i];
+            row.qyz = qyz[i];
+            row.ctip = ctip[i];
+            row.ctail = ctail[i];
+
+            locDataRows.push_back(row);
+        }
+        return locDataRows;
+    }
+
+    void locData::printData() const
+    {
+        std::cout << "LocData:" << std::endl;
+        std::cout << "iloc: ";
+        for (const auto &val : iloc)
+            std::cout << val << " ";
+        std::cout << "\nx: ";
+        for (const auto &val : x)
+            std::cout << val << " ";
+        std::cout << "\ny: ";
+        for (const auto &val : y)
+            std::cout << val << " ";
+        std::cout << "\nz: ";
+        for (const auto &val : z)
+            std::cout << val << " ";
+        std::cout << "\nsig_x: ";
+        for (const auto &val : sig_x)
+            std::cout << val << " ";
+        std::cout << "\nsig_y: ";
+        for (const auto &val : sig_y)
+            std::cout << val << " ";
+        std::cout << "\nsig_z: ";
+        for (const auto &val : sig_z)
+            std::cout << val << " ";
+        std::cout << "\nt: ";
+        for (const auto &val : t)
+            std::cout << val << " ";
+        std::cout << "\nconcentration: ";
+        for (const auto &val : concentration)
+            std::cout << val << " ";
+        std::cout << "\ndosage: ";
+        for (const auto &val : dosage)
+            std::cout << val << " ";
+        std::cout << "\ncpeak: ";
+        for (const auto &val : cpeak)
+            std::cout << val << " ";
+        std::cout << "\ndinf: ";
+        for (const auto &val : dinf)
+            std::cout << val << " ";
+        std::cout << "\nxfunc: ";
+        for (const auto &val : xfunc)
+            std::cout << val << " ";
+        std::cout << "\nxfuncp: ";
+        for (const auto &val : xfuncp)
+            std::cout << val << " ";
+        std::cout << "\nyfunc: ";
+        for (const auto &val : yfunc)
+            std::cout << val << " ";
+        std::cout << "\nzfunc: ";
+        for (const auto &val : zfunc)
+            std::cout << val << " ";
+        std::cout << "\nqyz: ";
+        for (const auto &val : qyz)
+            std::cout << val << " ";
+        std::cout << "\nctip: ";
+        for (const auto &val : ctip)
+            std::cout << val << " ";
+        std::cout << "\nctail: ";
+        for (const auto &val : ctail)
+            std::cout << val << " ";
+        std::cout << std::endl;
+        std::cout << "\n----------------\n";
+    }
+    void locData::parseCSV(const std::string &filePath, const std::string &directory)
     {
         // Define the full file path
         std::string fullFilePath = directory + filePath;
@@ -109,14 +203,13 @@ namespace FastPlume
         ctip.resize(dataSize);
         ctail.resize(dataSize);
 
-
         file.close();
     }
 
     taskData::taskData(const std::string &csvFilePath, const std::string &locDataDirectory)
     {
         parseCSV(csvFilePath, locDataDirectory);
-        printData();
+        //printData();
     }
 
     void taskData::parseCSV(const std::string &csvFilePath, const std::string &locDataDirectory)
@@ -277,12 +370,89 @@ namespace FastPlume
         id.resize(istab.size()); // Resize id vector to the size of istab
         std::iota(id.begin(), id.end(), 0);
 
-        taskNum = id.size();
+        // taskNum = id.size();
     }
 
     taskData::~taskData()
     {
         // Destructor logic if any
+    }
+
+    std::vector<taskDataRow> taskData::getAllTaskRows() const
+    {
+        std::vector<taskDataRow> taskRows;
+
+        for (int i = 0; i < getTaskNum(); ++i)
+        {
+            taskDataRow row = getRow(i);                  // Get task data row
+            row.locations = v_locData[i].toLocDataRows(); // Populate location data rows
+            taskRows.push_back(row);
+        }
+
+        return taskRows;
+    }
+
+    // Match data sizes across vectors
+    void taskData::matchData()
+    {
+        // Get the target size based on `istab`
+        size_t targetSize = istab.size();
+
+        // Lambda to resize vectors in `taskData` to match `istab` size
+        auto resizeToTarget = [targetSize](auto &vec)
+        {
+            if (vec.size() < targetSize)
+                vec.resize(targetSize, typename std::decay_t<decltype(vec)>::value_type{});
+        };
+
+        // Apply resizing to all taskData vectors
+        resizeToTarget(id);
+        resizeToTarget(sig_x0);
+        resizeToTarget(sig_y0);
+        resizeToTarget(sig_z0);
+        resizeToTarget(wind);
+        resizeToTarget(mass);
+        resizeToTarget(decay);
+        resizeToTarget(vd);
+        resizeToTarget(hml);
+        resizeToTarget(zplume);
+        resizeToTarget(xv);
+        resizeToTarget(yv);
+        resizeToTarget(zv);
+        resizeToTarget(dur);
+        resizeToTarget(xyzt_file);
+        resizeToTarget(output_file);
+
+        // Ensure `v_locData` vectors match `x` size in each locData instance
+        for (auto &loc : v_locData)
+        {
+            size_t locTargetSize = loc.x.size();
+            auto resizeLocToTarget = [locTargetSize](auto &locVec)
+            {
+                if (locVec.size() < locTargetSize)
+                    locVec.resize(locTargetSize, typename std::decay_t<decltype(locVec)>::value_type{});
+            };
+
+            // Apply resizing to all locData vectors
+            resizeLocToTarget(loc.iloc);
+            resizeLocToTarget(loc.y);
+            resizeLocToTarget(loc.z);
+            resizeLocToTarget(loc.sig_x);
+            resizeLocToTarget(loc.sig_y);
+            resizeLocToTarget(loc.sig_z);
+            resizeLocToTarget(loc.t);
+            resizeLocToTarget(loc.concentration);
+            resizeLocToTarget(loc.dosage);
+            resizeLocToTarget(loc.cpeak);
+            resizeLocToTarget(loc.dinf);
+            resizeLocToTarget(loc.xfunc);
+            resizeLocToTarget(loc.xfuncp);
+            resizeLocToTarget(loc.yfunc);
+            resizeLocToTarget(loc.zfunc);
+            resizeLocToTarget(loc.qyz);
+            resizeLocToTarget(loc.ctip);
+            resizeLocToTarget(loc.ctail);
+        }
     }
 
     // Template method to set attributes
@@ -340,10 +510,10 @@ namespace FastPlume
         }
         else if constexpr (std::is_same<T, locData>::value)
         {
-            if (attrName == "v_locData")
+            if (attrName == "locData")
                 v_locData = values;
             else
-                throw std::invalid_argument("Invalid attribute name for locData vector");
+                throw std::invalid_argument("Invalid attribute name for locData vector: " + attrName);
         }
         else
         {
@@ -361,7 +531,7 @@ namespace FastPlume
         }
         else
         {
-            throw std::invalid_argument("Invalid attribute name for locData vector");
+            throw std::invalid_argument(" locData vector");
         }
     }
 
@@ -441,6 +611,15 @@ namespace FastPlume
         for (const auto &file : output_file)
             std::cout << file << " ";
         std::cout << std::endl;
+
+        // Print each locData instance in v_locData
+        std::cout << "\nLocData for each task:" << std::endl;
+        for (size_t i = 0; i < v_locData.size(); ++i)
+        {
+            std::cout << "Task " << i << " LocData:" << std::endl;
+            v_locData[i].printData();
+        }
+        std::cout << std::endl;
     }
 
     taskDataRow taskData::getRow(int index) const
@@ -468,7 +647,11 @@ namespace FastPlume
         row.dur = dur[index];
         row.xyzt_file = xyzt_file[index];
         row.output_file = output_file[index];
-        row.m_locData = v_locData[index];
+
+        // Populate m_locData by converting each element in v_locData[index] to locDataRow
+        const locData &loc_data = v_locData[index];
+        row.locations = loc_data.toLocDataRows(); // Convert locData to vector of locDataRow
+
         return row;
     }
 
@@ -496,19 +679,44 @@ namespace FastPlume
         dur[index] = row.dur;
         xyzt_file[index] = row.xyzt_file;
         output_file[index] = row.output_file;
-        v_locData[index] = row.m_locData;
+
+        // Convert the vector of locDataRow in taskDataRow back to locData
+        locData loc_data;
+        for (const auto &loc_row : row.locations)
+        {
+            loc_data.iloc.push_back(loc_row.iloc);
+            loc_data.x.push_back(loc_row.x);
+            loc_data.y.push_back(loc_row.y);
+            loc_data.z.push_back(loc_row.z);
+            loc_data.t.push_back(loc_row.t);
+            loc_data.sig_x.push_back(loc_row.sig_x);
+            loc_data.sig_y.push_back(loc_row.sig_y);
+            loc_data.sig_z.push_back(loc_row.sig_z);
+            loc_data.concentration.push_back(loc_row.concentration);
+            loc_data.dosage.push_back(loc_row.dosage);
+            loc_data.cpeak.push_back(loc_row.cpeak);
+            loc_data.dinf.push_back(loc_row.dinf);
+            loc_data.xfunc.push_back(loc_row.xfunc);
+            loc_data.xfuncp.push_back(loc_row.xfuncp);
+            loc_data.yfunc.push_back(loc_row.yfunc);
+            loc_data.zfunc.push_back(loc_row.zfunc);
+            loc_data.qyz.push_back(loc_row.qyz);
+            loc_data.ctip.push_back(loc_row.ctip);
+            loc_data.ctail.push_back(loc_row.ctail);
+        }
+
+        v_locData[index] = loc_data; // Set the locData in the main data vector
     }
 
     int taskData::getTaskNum() const
     {
-        return taskNum;
+        return istab.size();
     }
 
 } // namespace FastPlume
 
 // Explicit template instantiations
-template void FastPlume::taskData::setAttr<double>(const std::string&, const std::vector<double>&);
-template void FastPlume::taskData::setAttr<int>(const std::string&, const std::vector<int>&);
-template void FastPlume::taskData::setAttr<std::string>(const std::string&, const std::vector<std::string>&);
+template void FastPlume::taskData::setAttr<double>(const std::string &, const std::vector<double> &);
+template void FastPlume::taskData::setAttr<int>(const std::string &, const std::vector<int> &);
+template void FastPlume::taskData::setAttr<std::string>(const std::string &, const std::vector<std::string> &);
 template void FastPlume::taskData::setAttr<FastPlume::locData>(const std::string &attrName, const std::vector<FastPlume::locData> &values);
-

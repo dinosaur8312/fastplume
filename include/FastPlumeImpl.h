@@ -21,6 +21,7 @@ namespace FastPlume
         FastPlumeImpl &setAttr(const std::string &attrName, const std::vector<std::vector<double>> &values);
         FastPlumeImpl &setAttr(const std::string &attrName, const std::vector<std::vector<std::vector<double>>> &values);
         FastPlumeImpl &setAttr(const std::string &attrName, const std::vector<locData> &values);
+
         FastPlumeImpl &setDispersionCoefCSV(const std::string &filePath);
         FastPlumeImpl &setTaskDataCSV(const std::string &filePath);
         FastPlumeImpl &setOutputMethod(const std::string &method);
@@ -29,6 +30,9 @@ namespace FastPlume
         FastPlumeImpl &setOutputDirectory(const std::string &directory);
         // Accessor for task count
         int getTaskNum() const { return m_taskData.getTaskNum(); }
+
+        std::vector<taskDataRow> getResults() const;
+        void printResult() const;
 
     private:
         dispersionCoef m_coefData;
@@ -39,6 +43,8 @@ namespace FastPlume
         std::string outputFilePath;
         std::string outputMethod;
         std::string outputDirectory;
+
+        void validateConfiguration() const;
 
         // Internal methods for interpolation and calculation
         float interpolate_x_from_sig_component(int istab, float wind, float sig_value, const std::string &flag);

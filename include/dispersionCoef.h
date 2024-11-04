@@ -109,7 +109,7 @@ public:
     dispersionCoef(const std::string &filePath) {
         parseCSV(filePath);
         sortData();
-        printData();
+        //printData();
     }
 
     void parseCSV(const std::string &filePath);
