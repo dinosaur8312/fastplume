@@ -58,10 +58,10 @@ int main() {
 
             FastPlume::FastPlume plume;
 
-            plume.setTaskDataCSV("../examples/data/taskData.csv")
+            plume.setTaskDataCSV("../example/data/taskData.csv")
                  .setDispersionCoefCSV("../fixture/hpac_dispersion_coefs.csv")
-                 .setLocDataCSVImportDirectory("../examples/data/locs/")
-                 .setOutputDirectory("../examples/")
+                 .setLocDataCSVImportDirectory("../example/data/locs/")
+                 .setOutputDirectory("../example/")
                  .setOutputMethod("CSV");
 
             plume.run();

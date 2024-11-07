@@ -60,10 +60,10 @@ install(TARGETS FastPlume_Test
 )
 
 # Install all files in the data directory under examples
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/example/data/ DESTINATION examples/data)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/example/data/ DESTINATION example/data)
 
 # Install the example code file and Makefile under examples
 install(FILES ${PROJECT_SOURCE_DIR}/example/example.cpp
               ${PROJECT_SOURCE_DIR}/example/Makefile
-    DESTINATION examples
+    DESTINATION example
 )
