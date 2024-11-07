@@ -37,7 +37,11 @@ install(TARGETS FastPlumeShared FastPlumeStatic
 )
 
 # Install headers directly under include
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/ DESTINATION include)
+# Install only the required headers
+install(FILES ${PROJECT_SOURCE_DIR}/include/FastPlume.h
+              ${PROJECT_SOURCE_DIR}/include/taskDataRow.h
+    DESTINATION include
+)
 
 # Install the hpac_dispersion_coefs.csv to the fixture directory in the install path
 install(FILES ${PROJECT_SOURCE_DIR}/fixture/hpac_dispersion_coefs.csv
@@ -58,5 +62,8 @@ install(TARGETS FastPlume_Test
 # Install all files in the data directory under examples
 install(DIRECTORY ${PROJECT_SOURCE_DIR}/example/data/ DESTINATION examples/data)
 
-# Install the example code file under examples
-install(FILES ${PROJECT_SOURCE_DIR}/example/example.cpp DESTINATION examples)
+# Install the example code file and Makefile under examples
+install(FILES ${PROJECT_SOURCE_DIR}/example/example.cpp
+              ${PROJECT_SOURCE_DIR}/example/Makefile
+    DESTINATION examples
+)

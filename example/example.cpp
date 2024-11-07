@@ -32,6 +32,20 @@ int main() {
 
             plume.run();
 
+            auto results = plume.getResults();
+            for(const auto &row : results)
+            {
+                std::cout << "Task " << row.id << " results:" << std::endl;
+                for(const auto &loc : row.locations)
+                {
+                    std::cout << "Location: x=" << loc.x << ", y=" << loc.y << ", z=" << loc.z << ", t=" << loc.t << std::endl;
+                    std::cout << "  sig_x=" << loc.sig_x << ", sig_y=" << loc.sig_y << ", sig_z=" << loc.sig_z << std::endl;
+                    std::cout << "  zfunc=" << loc.zfunc << ", yfunc=" << loc.yfunc << ", xfunc=" << loc.xfunc << std::endl;
+                    std::cout << "  qyz=" << loc.qyz << ", cpeak=" << loc.cpeak << ", concentration=" << loc.concentration << std::endl;
+                    std::cout << "  dinf=" << loc.dinf << ", dosage=" << loc.dosage << std::endl;
+                }
+            }
+
             plume.printResult();
 
             std::cout << "Test 1 completed: Task data constructed using setAttr, results output to vector." << std::endl;

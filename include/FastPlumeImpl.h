@@ -22,6 +22,10 @@ namespace FastPlume
         FastPlumeImpl &setAttr(const std::string &attrName, const std::vector<std::vector<std::vector<double>>> &values);
         FastPlumeImpl &setAttr(const std::string &attrName, const std::vector<locData> &values);
 
+        // Templated getAttr method to retrieve an attribute by name
+        template <typename T>
+        std::vector<T> getAttr(const std::string &attrName) const;
+
         FastPlumeImpl &setDispersionCoefCSV(const std::string &filePath);
         FastPlumeImpl &setTaskDataCSV(const std::string &filePath);
         FastPlumeImpl &setOutputMethod(const std::string &method);

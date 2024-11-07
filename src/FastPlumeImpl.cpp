@@ -142,6 +142,12 @@ namespace FastPlume
         return *this;
     }
 
+    template <typename T>
+    std::vector<T> FastPlumeImpl::getAttr(const std::string &attrName) const {
+        return m_taskData.getAttr<T>(attrName);
+    }
+
+
     FastPlumeImpl &FastPlumeImpl::setDispersionCoefCSV(const std::string &filePath)
     {
         // m_coefData.parseCSV(filePath);

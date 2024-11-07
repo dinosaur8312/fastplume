@@ -32,6 +32,11 @@ public:
     // Run simulation
     void run();
 
+
+    // Retrieve attribute data
+    template <typename T>
+    std::vector<T> getAttr(const std::string& attrName) const;
+
     std::vector<taskDataRow> getResults() const;
 
     void printResult() const;

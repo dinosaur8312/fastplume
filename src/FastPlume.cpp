@@ -72,4 +72,10 @@ void FastPlume::printResult() const {
     pImpl->printResult();
 }
 
+template <typename T>
+std::vector<T> FastPlume::getAttr(const std::string& attrName) const {
+    return pImpl->getAttr<T>(attrName);
+}
+
+
 } // namespace FastPlume
