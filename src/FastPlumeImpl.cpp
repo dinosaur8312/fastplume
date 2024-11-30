@@ -39,12 +39,24 @@ namespace FastPlume
         m_taskData.setAttr(attrName, values);
         return *this;
     }
+    FastPlumeImpl &FastPlumeImpl::setEvapAttr(const std::string &attrName, const std::vector<double> &values)
+    {
+        m_taskEvapData.setAttr(attrName, values);
+        return *this;
+    }
 
     FastPlumeImpl &FastPlumeImpl::setAttr(const std::string &attrName, const std::vector<int> &values)
     {
         m_taskData.setAttr(attrName, values);
         return *this;
     }
+    FastPlumeImpl &FastPlumeImpl::setEvapAttr(const std::string &attrName, const std::vector<int> &values)
+    {
+        m_taskEvapData.setAttr(attrName, values);
+        return *this;
+    }
+
+
     FastPlumeImpl &FastPlumeImpl::setAttr(const std::string &attrName, const std::vector<std::vector<double>> &values)
     {
         if (m_taskData.getTaskNum() <= 0)
@@ -147,11 +159,23 @@ namespace FastPlume
         return m_taskData.getAttr<T>(attrName);
     }
 
+    template <typename T>
+    std::vector<T> FastPlumeImpl::getEvapAttr(const std::string &attrName) const {
+        return m_taskEvapData.getAttr<T>(attrName);
+    }
+
 
     FastPlumeImpl &FastPlumeImpl::setDispersionCoefCSV(const std::string &filePath)
     {
         // m_coefData.parseCSV(filePath);
         DispersionCoefCSVPath = filePath;
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setAgentPropertiesCSV(const std::string &filePath)
+    {
+        // m_agentData.parseCSV(filePath);
+        AgentPropertiesCSVPath = filePath;
         return *this;
     }
 
@@ -161,6 +185,12 @@ namespace FastPlume
         TaskDataCSVPath = filePath;
         return *this;
     }
+    FastPlumeImpl &FastPlumeImpl::setEvapTaskDataCSV(const std::string &filePath)
+    {
+        // m_taskData.parseCSV(filePath);
+        EvapTaskDataCSVPath = filePath;
+        return *this;
+    }
 
     FastPlumeImpl &FastPlumeImpl::setOutputFilePath(const std::string &filePath)
     {
@@ -168,9 +198,21 @@ namespace FastPlume
         return *this;
     }
 
+    FastPlumeImpl &FastPlumeImpl::setEvapOutputFilePath(const std::string &filePath)
+    {
+        outputEvapFilePath = filePath;
+        return *this;
+    }
+
     FastPlumeImpl &FastPlumeImpl::setOutputMethod(const std::string &method)
     {
         outputMethod = method;
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setEvapOutputMethod(const std::string &method)
+    {
+        outputEvapMethod = method;
         return *this;
     }
 
@@ -184,6 +226,12 @@ namespace FastPlume
     FastPlumeImpl &FastPlumeImpl::setOutputDirectory(const std::string &directory)
     {
         outputDirectory = directory;
+        return *this;
+    }
+
+    FastPlumeImpl &FastPlumeImpl::setEvapOutputDirectory(const std::string &directory)
+    {
+        outputEvapDirectory = directory;
         return *this;
     }
 
@@ -235,6 +283,11 @@ namespace FastPlume
         return m_taskData.getAllTaskRows();
     }
 
+    std::vector<taskEvapDataRow> FastPlumeImpl::getEvapResults() const
+    {
+        return m_taskEvapData.getAllTaskRows();
+    }
+
     void FastPlumeImpl::printResult() const
     {
         std::vector<taskDataRow> results = m_taskData.getAllTaskRows();
@@ -273,6 +326,31 @@ namespace FastPlume
                             << ", dosage: " << loc.dosage
                             << "\n\n";
             }
+            std::cout << "--------------------------------\n";
+        }
+    }
+
+    void FastPlumeImpl::printEvapResult() const
+    {
+        std::vector<taskEvapDataRow> results = m_taskEvapData.getAllTaskRows();
+
+        std::cout << "FastPlume Evaporation Simulation Results:" << std::endl;
+        for (size_t i = 0; i < results.size(); ++i)
+        {
+            const taskEvapDataRow &row = results[i];
+            std::cout << "Task " << i + 1 << ":\n";
+            std::cout << "  id: " << row.id << "\n"
+                      << "  surfaceTemperature: " << row.surfaceTemperature << ", AtmPressure: " << row.AtmPressure
+                      << ", windSpeed: " << row.windSpeed << "\n"
+                      << "  surfaceType: " << row.surfaceType << ", agentName: " << row.agentName
+                      << ", puddleLength: " << row.puddleLength << ", puddleWidth: " << row.puddleWidth
+                      << ", puddle_area: " << row.puddle_area << "\n"
+                      << "  windDirection: " << row.windDirection << ", lengthAlongWind: " << row.lengthAlongWind
+                      << ", quantityRemaining: " << row.quantityRemaining << "\n"
+                      << "  vaporPressure: " << row.vaporPressure << ", puddleLengthAlongWind: " << row.puddleLengthAlongWind
+                      << ", airDensity: " << row.airDensity << ", airViscosity: " << row.airViscosity
+                      << ", schmidtNumberD: " << row.schmidtNumberD << ", airDiffusivity: " << row.airDiffusivity
+                      << "\n";
             std::cout << "--------------------------------\n";
         }
     }
@@ -507,5 +585,10 @@ namespace FastPlume
         std::cout << "Run completed successfully.\n";
 
     } // end of run
+
+    void FastPlumeImpl::run_evap()
+    {
+        return;
+    }
 
 } // namespace FastPlume

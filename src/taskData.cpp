@@ -209,8 +209,10 @@ namespace FastPlume
     taskData::taskData(const std::string &csvFilePath, const std::string &locDataDirectory)
     {
         parseCSV(csvFilePath, locDataDirectory);
-        //printData();
+        // printData();
     }
+
+    
 
     void taskData::parseCSV(const std::string &csvFilePath, const std::string &locDataDirectory)
     {
@@ -373,6 +375,8 @@ namespace FastPlume
         // taskNum = id.size();
     }
 
+   
+
     taskData::~taskData()
     {
         // Destructor logic if any
@@ -521,6 +525,7 @@ namespace FastPlume
         }
     }
 
+    
     // Explicit specialization for locData
     template <>
     void taskData::setAttr<locData>(const std::string &attrName, const std::vector<locData> &values)
@@ -572,6 +577,7 @@ namespace FastPlume
         throw std::invalid_argument("Attribute name not recognized for retrieval");
     }
 
+   
     // Print a specific attribute by name
     template <typename T>
     void taskData::printAttr(const std::string &attrName) const
@@ -585,6 +591,7 @@ namespace FastPlume
         std::cout << std::endl;
     }
 
+    
     // Print all data in the class
     void taskData::printData() const
     {
@@ -622,6 +629,8 @@ namespace FastPlume
         std::cout << std::endl;
     }
 
+    
+
     taskDataRow taskData::getRow(int index) const
     {
         if (index < 0 || index >= id.size())
@@ -655,6 +664,7 @@ namespace FastPlume
         return row;
     }
 
+    
     void taskData::setRow(int index, const taskDataRow &row)
     {
         if (index < 0 || index >= id.size())
@@ -713,6 +723,7 @@ namespace FastPlume
         return istab.size();
     }
 
+   
 } // namespace FastPlume
 
 // Explicit template instantiations
@@ -720,3 +731,4 @@ template void FastPlume::taskData::setAttr<double>(const std::string &, const st
 template void FastPlume::taskData::setAttr<int>(const std::string &, const std::vector<int> &);
 template void FastPlume::taskData::setAttr<std::string>(const std::string &, const std::vector<std::string> &);
 template void FastPlume::taskData::setAttr<FastPlume::locData>(const std::string &attrName, const std::vector<FastPlume::locData> &values);
+

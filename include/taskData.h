@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include "taskDataRow.h"
+#include "agentProperties.h"
 
 namespace FastPlume
 {
@@ -111,6 +112,7 @@ namespace FastPlume
 
         std::vector<locData> v_locData;
     };
+    
 
 } // namespace FastPlume
 

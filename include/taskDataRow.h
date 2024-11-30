@@ -35,9 +35,9 @@ namespace FastPlume
         double dur;
         std::string xyzt_file;
         std::string output_file;
-       // locData m_locData;
-       std::vector<locDataRow> locations; // Store location data rows
+        // locData m_locData;
+        std::vector<locDataRow> locations; // Store location data rows
     };
 
-}
+} // namespace FastPlume
 #endif // TASKDATAROW_H
