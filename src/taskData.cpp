@@ -278,7 +278,9 @@ namespace FastPlume
         // Read data lines
         while (std::getline(file, line))
         {
+            line = trim(line);
             std::istringstream lineStream(line);
+            
             std::string cell;
             int colIdx = 0;
 
@@ -639,7 +641,7 @@ namespace FastPlume
         std::cout << "\nLocData for each task:" << std::endl;
         for (size_t i = 0; i < v_locData.size(); ++i)
         {
-        //   std::cout << "Task " << i << " LocData:" << std::endl;
+           std::cout << "Task " << i << " LocData:" << std::endl;
             v_locData[i].printData();
         }
         std::cout << std::endl;
