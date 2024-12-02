@@ -1,0 +1,8 @@
+
+=== Using setTaskDataCSV and setDispersionCoefCSV for setup, output to CSV ===
+Agent Properties are loaded
+Parsed 21 rows from ./taskFile/Evp_Runs_2024-07-11.csv
+EvapTaskData is loaded
+Running FastPlumeImpl with 21 tasks
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/Evp_Runs_2024-07-11_out.csv
+Test completed: Task data and coefficients set using CSV files, results output to CSV file.

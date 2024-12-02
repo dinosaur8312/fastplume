@@ -1,0 +1,66 @@
+# Build directories
+build/
+Build/
+cmake-build-debug/
+cmake-build-release/
+cmake-build-relwithdebinfo/
+cmake-build-minsizerel/
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Binary files
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.dSYM/
+*.pdb
+*.exp
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.user
+*.ncb
+*.sln
+*.vcxproj*
+*.xcodeproj
+*.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.~*
+
+# Coverage
+*.gcno
+*.gcda
+*.gcov
+coverage/
+
+# Debugging files
+*.stackdump
+*.core
+
+# Generated Documentation
+docs/html/
+docs/latex/
+
+# Package Management
+*.egg-info/
+dist/
+*.pyc
+__pycache__/

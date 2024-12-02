@@ -1,0 +1,5 @@
+{
+    "coefs_CSV": "../tests/unit_tests/hpac_dispersion_coefs.csv",
+    "reference_CSV": "../tests/unit_tests/Dust_Case_Definitions_2024-08-16.csv",
+    "outputCSV": "output_Dust_0816.csv"
+}

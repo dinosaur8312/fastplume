@@ -46,7 +46,7 @@ namespace FastPlume
         FastPlumeImpl &setEvapOutputDirectory(const std::string &directory);
         // Accessor for task count
         int getTaskNum() const { return m_taskData.getTaskNum(); }
-        int getEvapTaskNum() const { return m_taskData.getTaskNum(); }
+        int getEvapTaskNum() const { return m_taskEvapData.getTaskNum(); }
 
         std::vector<taskDataRow> getResults() const;
         std::vector<taskEvapDataRow> getEvapResults() const;

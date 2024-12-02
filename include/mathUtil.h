@@ -4,6 +4,12 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <unordered_map>
+#include <stdexcept>
+#include <string>
 
 namespace FastPlume
 {
@@ -90,31 +96,18 @@ namespace FastPlume
         return xs * cdfFunction(x, scale) + pdfFunction(x / scale);
     }
 
-    // Helper function to perform linear regression
-    static void computeLinearRegression(const std::vector<float> &values, float &slope, float &intercept)
+    void computeLinearRegression(const std::vector<float> &values, float &slope, float &intercept);
+   
+
+    float getSpeedFactor(int istab);
+
+    inline double AntoineToVaporPressure(double a, double b, double c, double temperature)
     {
-        size_t n = values.size();
-        if (n < 2)
-            return;
-
-        float sum_x = 0, sum_y = 0, sum_xy = 0, sum_x2 = 0;
-        for (size_t i = 0; i < n; ++i)
-        {
-            float x = static_cast<float>(i); // Use index as x value
-            float y = values[i];
-            sum_x += x;
-            sum_y += y;
-            sum_xy += x * y;
-            sum_x2 += x * x;
-        }
-
-        float denominator = n * sum_x2 - sum_x * sum_x;
-        if (denominator == 0)
-            return; // Prevent division by zero
-
-        slope = (n * sum_xy - sum_x * sum_y) / denominator;
-        intercept = (sum_y - slope * sum_x) / n;
+        return pow(10.0, a - fabs(b) / (temperature + c));
     }
+
+    void CalcPuddleDimensions(double quantity, const std::string surface_type,
+                              double &m_dPuddleArea, double &m_dPuddleLength, double &m_dPuddleWidth);
 
 } // namespace FastPlume
 

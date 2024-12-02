@@ -1,4 +1,5 @@
 #include "taskData.h"
+#include "stringUtil.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -122,8 +123,12 @@ namespace FastPlume
 
         // Map column names to indices for easy lookup
         bool hasX = false, hasY = false, hasZ = false, hasT = false;
+
+
         while (std::getline(headerStream, columnName, ','))
         {
+            columnName = trim(columnName);
+            //std::cout << "columnName: " << columnName << std::endl;
             columnIndices[columnName] = index++;
             if (columnName == "x")
                 hasX = true;
@@ -233,7 +238,9 @@ namespace FastPlume
         // Map column names to indices for easy lookup
         while (std::getline(headerStream, columnName, ','))
         {
+            columnName = trim(columnName);
             columnIndices[columnName] = index++;
+
             if (columnName == "x")
                 hasX = true;
             else if (columnName == "y")
@@ -244,7 +251,9 @@ namespace FastPlume
                 hasT = true;
             else if (columnName == "fn_fp_xyzt")
                 hasFnFpXyzt = true;
+
         }
+
 
         // Check required columns
         const std::vector<std::string> requiredColumns = {"istab"};
@@ -273,6 +282,8 @@ namespace FastPlume
             std::string cell;
             int colIdx = 0;
 
+            //std::cout << "line: " << line << std::endl;
+
             // Temporary variables to store values
             int istabVal = 0;
             double windVal = 0.0, hmlVal = 0.0, qMgVal = 0.0, durVal = 0.0, vDepVal = 0.0;
@@ -287,9 +298,17 @@ namespace FastPlume
             // Parse each cell and assign to the corresponding attribute based on column index
             while (std::getline(lineStream, cell, ','))
             {
+                //print cell
+                //std::cout << cell << std::endl;
+                //std::cout << "colIdx: " << colIdx << " cell: " << cell << std::endl;
+
                 if (colIdx == columnIndices["istab"])
+                {
                     istabVal = std::stoi(cell);
+
+                }
                 else if (colIdx == columnIndices["wind"] || colIdx == columnIndices["U"])
+
                     windVal = std::stod(cell);
                 else if (colIdx == columnIndices["hml"] || colIdx == columnIndices["zi"])
                     hmlVal = std::stod(cell);
@@ -301,15 +320,12 @@ namespace FastPlume
                     durVal = std::stod(cell);
                 else if (colIdx == columnIndices["v_dep"] || colIdx == columnIndices["vd"])
                     vDepVal = std::stod(cell);
-                // Optional columns
                 else if (columnIndices.find("sig_x0") != columnIndices.end() && colIdx == columnIndices["sig_x0"])
                     sigX0Val = std::stod(cell);
                 else if (columnIndices.find("sig_y0") != columnIndices.end() && colIdx == columnIndices["sig_y0"])
                     sigY0Val = std::stod(cell);
                 else if (columnIndices.find("sig_z0") != columnIndices.end() && colIdx == columnIndices["sig_z0"])
                     sigZ0Val = std::stod(cell);
-
-                // Populate locData with x, y, z, t if available
                 else if (columnIndices.find("x") != columnIndices.end() && colIdx == columnIndices["x"])
                 {
                     xVal = std::stod(cell);
@@ -623,7 +639,7 @@ namespace FastPlume
         std::cout << "\nLocData for each task:" << std::endl;
         for (size_t i = 0; i < v_locData.size(); ++i)
         {
-            std::cout << "Task " << i << " LocData:" << std::endl;
+        //   std::cout << "Task " << i << " LocData:" << std::endl;
             v_locData[i].printData();
         }
         std::cout << std::endl;

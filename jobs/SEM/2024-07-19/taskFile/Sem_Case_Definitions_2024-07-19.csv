@@ -1,0 +1,13 @@
+id,case,type,hp_done,fp_done,flag,agent_hp,agent_fp,Q_kg,dur,dur_min,rel_rate_kg/s,time,U,stability,iwind,istab,zi,fn_hpac_conc,fn_hpac_dose,fn_fp_xyzt,fn_fp_output
+0,0,sem,,,1,geng,geng,10,60,1.0,0.16666666666666666,hhmm,2.3,A,2,0,5500,sem_hpac_conc_000_hhmm.tab,sem_hpac_dose_000_hhmm.tab,xyzt_hires_20.csv,sem_fp_out_000.csv
+1,1,sem,,,1,geng,geng,10,60,1.0,0.16666666666666666,hhmm,2.3,D,2,3,5500,sem_hpac_conc_001_hhmm.tab,sem_hpac_dose_001_hhmm.tab,xyzt_hires_23.csv,sem_fp_out_001.csv
+2,2,sem,,,1,geng,geng,10,60,1.0,0.16666666666666666,hhmm,2.3,F,2,5,5500,sem_hpac_conc_002_hhmm.tab,sem_hpac_dose_002_hhmm.tab,xyzt_hires_25.csv,sem_fp_out_002.csv
+3,3,sem,,,1,geng,geng,10,60,1.0,0.16666666666666666,hhmm,9.6,D,5,3,5500,sem_hpac_conc_003_hhmm.tab,sem_hpac_dose_003_hhmm.tab,xyzt_hires_53.csv,sem_fp_out_003.csv
+4,4,sem,,,1,geng,geng,10,300,5.0,0.03333333333333333,hhmm,2.3,A,2,0,5500,sem_hpac_conc_004_hhmm.tab,sem_hpac_dose_004_hhmm.tab,xyzt_hires_20.csv,sem_fp_out_004.csv
+5,5,sem,,,1,geng,geng,10,300,5.0,0.03333333333333333,hhmm,2.3,D,2,3,5500,sem_hpac_conc_005_hhmm.tab,sem_hpac_dose_005_hhmm.tab,xyzt_hires_23.csv,sem_fp_out_005.csv
+6,6,sem,,,1,geng,geng,10,300,5.0,0.03333333333333333,hhmm,2.3,F,2,5,5500,sem_hpac_conc_006_hhmm.tab,sem_hpac_dose_006_hhmm.tab,xyzt_hires_25.csv,sem_fp_out_006.csv
+7,7,sem,,,1,geng,geng,10,300,5.0,0.03333333333333333,hhmm,9.6,D,5,3,5500,sem_hpac_conc_007_hhmm.tab,sem_hpac_dose_007_hhmm.tab,xyzt_hires_53.csv,sem_fp_out_007.csv
+8,8,sem,,,1,geng,geng,10,3600,60.0,0.002777777777777778,hhmm,2.3,A,2,0,5500,sem_hpac_conc_008_hhmm.tab,sem_hpac_dose_008_hhmm.tab,xyzt_hires_20.csv,sem_fp_out_008.csv
+9,9,sem,,,1,geng,geng,10,3600,60.0,0.002777777777777778,hhmm,2.3,D,2,3,5500,sem_hpac_conc_009_hhmm.tab,sem_hpac_dose_009_hhmm.tab,xyzt_hires_23.csv,sem_fp_out_009.csv
+10,10,sem,,,1,geng,geng,10,3600,60.0,0.002777777777777778,hhmm,2.3,F,2,5,5500,sem_hpac_conc_010_hhmm.tab,sem_hpac_dose_010_hhmm.tab,xyzt_hires_25.csv,sem_fp_out_010.csv
+11,11,sem,,,1,geng,geng,10,3600,60.0,0.002777777777777778,hhmm,9.6,D,5,3,5500,sem_hpac_conc_011_hhmm.tab,sem_hpac_dose_011_hhmm.tab,xyzt_hires_53.csv,sem_fp_out_011.csv
