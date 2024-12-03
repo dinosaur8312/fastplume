@@ -76,6 +76,7 @@ namespace FastPlume
         float interpolate_x_from_sig_component(int istab, float wind, float sig_value, const std::string &flag);
         std::vector<float> interpolate_sig_component(int istab, float wind, float x, const std::string &flag);
         double calcDepletion(const taskDataRow &row, double x, double z);
+        double run_evap_row(taskEvapDataRow &row);
     };
 } // namespace FastPlume
 

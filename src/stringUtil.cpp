@@ -3,6 +3,21 @@
 
 namespace FastPlume
 {
+
+    std::string removeSpecialCharacters(const std::string &line)
+    {
+        std::string result;
+        for (char ch : line)
+        {
+            if (ch != ',' && ch != '"' && ch != '(' && ch != ')')
+            {
+                // Keep all characters except comma, double quote, and brackets
+                result += ch;
+            }
+        }
+        return result;
+    }
+
     std::string removeCommasInsideQuotes(const std::string &line)
     {
         std::string result;

@@ -275,7 +275,7 @@ namespace FastPlume
        // printf("agentName = %s\n", row.agentName.c_str());
         row.time = time[index];
        // printf("time = %f\n", row.time);
-        row.stabilityClass = stabilityClass[index];
+        //row.stabilityClass = stabilityClass[index];
       //  printf("stabilityClass = %d\n", row.stabilityClass);
         row.quantityRemaining = quantityRemaining[index];
         //printf("quantityRemaining = %f\n", row.quantityRemaining);

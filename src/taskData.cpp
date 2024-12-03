@@ -279,12 +279,13 @@ namespace FastPlume
         while (std::getline(file, line))
         {
             line = trim(line);
+            line = removeCommasInsideQuotes(line);
             std::istringstream lineStream(line);
             
             std::string cell;
             int colIdx = 0;
 
-            //std::cout << "line: " << line << std::endl;
+           // std::cout << "line: " << line << std::endl;
 
             // Temporary variables to store values
             int istabVal = 0;
@@ -303,6 +304,7 @@ namespace FastPlume
                 //print cell
                 //std::cout << cell << std::endl;
                 //std::cout << "colIdx: " << colIdx << " cell: " << cell << std::endl;
+                cell = removeSpecialCharacters(cell);
 
                 if (colIdx == columnIndices["istab"])
                 {

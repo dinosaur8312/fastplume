@@ -13,6 +13,7 @@ namespace FastPlume
         size_t last = str.find_last_not_of(" \t\r\n");
         return (first == std::string::npos || last == std::string::npos) ? "" : str.substr(first, last - first + 1);
     }
+    std::string removeSpecialCharacters(const std::string &line);
 
     std::string removeCommasInsideQuotes(const std::string &line);
      double safeConvertToDouble(const std::string &str);

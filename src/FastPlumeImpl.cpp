@@ -343,13 +343,7 @@ namespace FastPlume
                       << "  surfaceTemperature: " << row.surfaceTemperature << ", AtmPressure: " << row.AtmPressure
                       << ", windSpeed: " << row.windSpeed << "\n"
                       << "  surfaceType: " << row.surfaceType << ", agentName: " << row.agentName
-                      << ", puddleLength: " << row.puddleLength << ", puddleWidth: " << row.puddleWidth
-                      << ", puddle_area: " << row.puddle_area << "\n"
-                      << "  windDirection: " << row.windDirection << ", lengthAlongWind: " << row.lengthAlongWind
-                      << ", quantityRemaining: " << row.quantityRemaining << "\n"
-                      << "  vaporPressure: " << row.vaporPressure << ", puddleLengthAlongWind: " << row.puddleLengthAlongWind
-                      << ", airDensity: " << row.airDensity << ", airViscosity: " << row.airViscosity
-                      << ", schmidtNumberD: " << row.schmidtNumberD << ", airDiffusivity: " << row.airDiffusivity
+                      << ", quantityRemaining: " << row.quantityRemaining 
                       << "\n";
             std::cout << "--------------------------------\n";
         }
@@ -357,6 +351,7 @@ namespace FastPlume
 
     void FastPlumeImpl::run()
     {
+        bool if_evp = false;
         // Validate the configuration
         validateConfiguration();
         if (!DispersionCoefCSVPath.empty())
@@ -370,6 +365,20 @@ namespace FastPlume
         }
 
         m_taskData.matchData();
+
+        if (!AgentPropertiesCSVPath.empty())
+        {
+            m_agentData = agentProperties(AgentPropertiesCSVPath);
+            if_evp = true;
+            printf("Agent Properties are loaded\n");
+        }
+        if (!EvapTaskDataCSVPath.empty())
+        {
+            m_taskEvapData = taskEvapData(EvapTaskDataCSVPath);
+        }
+
+        m_taskEvapData.matchData();
+
         // m_taskData.printData();
         //  print message
         std::cout << "Running FastPlumeImpl with " << this->getTaskNum() << " tasks\n";
@@ -389,6 +398,11 @@ namespace FastPlume
         for (int i = 0; i < this->getTaskNum(); i++)
         {
             auto row = m_taskData.getRow(i);
+            if(if_evp)
+            {
+                auto row_evap = m_taskEvapData.getRow(i);
+                row.dur = run_evap_row(row_evap);
+            }
             // Add output file prefix to ../tests directory
 
             std::ofstream outputFile;
@@ -596,7 +610,7 @@ namespace FastPlume
     void FastPlumeImpl::run_evap()
     {
         // Validate the configuration
-        validateConfiguration();
+       // validateConfiguration();
         if (!AgentPropertiesCSVPath.empty())
         {
             m_agentData = agentProperties(AgentPropertiesCSVPath);
@@ -612,6 +626,7 @@ namespace FastPlume
 
         std::cout << "Running FastPlumeImpl with " << this->getEvapTaskNum() << " tasks\n";
 
+        /*
         std::ofstream outputFile;
         if (outputEvapMethod == "CSV")
         {
@@ -624,172 +639,20 @@ namespace FastPlume
             outputFile << "windDirection,lengthAlongWind,quantityRemaining,vaporPressure,puddleLengthAlongWind,airDensity,airViscosity,schmidtNumberD,airDiffusivity\n";
         }
 
+        */
         for (int i = 0; i < this->getEvapTaskNum(); i++)
         {
-            //printf("i = %d\n", i);  
+            // printf("i = %d\n", i);
             auto row = m_taskEvapData.getRow(i);
 
-            agentProperty agent = m_agentData.getAgentProperty(row.agentName);
+            double depletion_time = run_evap_row(row);
 
-            double windSpeed = row.windSpeed;
+            // std::cout << "\tDepletion time: " << depletion_time << " s\n";
 
-            double temperature = row.surfaceTemperature;
-            double atmPressure = row.AtmPressure;
-            double agentMolecularWeight = agent.m_MolecularWeight;
-            double agentMolecularVolume = agent.m_MolecularVolume;
-            double agentBoilingPoint = agent.m_BoilingPoint;
-            double agentFreezingPoint = agent.m_FreezingPoint;
-            double time = row.time;
-
-            double agentVaporPressure = AntoineToVaporPressure(
-                agent.m_AntoineA,
-                agent.m_AntoineB,
-                agent.m_AntoineC,
-                temperature);
-
-            double puddleArea;
-            double puddleLength;
-            double puddleWidth;
-
-            //print all above values
-            //printf("i = %d, windSpeed = %f, temperature = %f, atmPressure = %f, agentMolecularWeight = %f, agentMolecularVolume = %f, agentBoilingPoint = %f, agentFreezingPoint = %f, time = %f, agentVaporPressure = %f\n", i, windSpeed, temperature, atmPressure, agentMolecularWeight, agentMolecularVolume, agentBoilingPoint, agentFreezingPoint, time, agentVaporPressure);
-
-            CalcPuddleDimensions(row.quantityRemaining, row.surfaceType, puddleArea, puddleLength, puddleWidth);
-
-            double sig_x0 = puddleLength / 3.0;
-            double sig_y0 = puddleWidth / 3.0;
-            double sig_z0 = 0.1;
-
-            // Convert temperature from Celsius to Kelvin
-            temperature += 273.15;
-            agentFreezingPoint += 273.15;
-            agentBoilingPoint += 273.15;
-
-            // Convert atmospheric pressure from mmHg to atm
-            atmPressure /= 760.0;
-            agentVaporPressure /= 760.0;
-
-            // Precondition: Ensure no boiling at the onset
-            if (atmPressure <= agentVaporPressure || temperature >= agentBoilingPoint)
-            {
-                std::cout << "\tAgent is boiling.\n";
-                // return m_environment.getQuantityRemaining() / 6.0; // Simplified boiling case
-            }
-
-            if (temperature > -1.0e-6 && temperature < 1.0e-6)
-            {
-                throw std::runtime_error("Temperature is zero");
-            }
-
-            // print all input values
-            /*
-            std::cout << "\tWind speed: " << windSpeed << " m/s\n";
-            std::cout << "\tTemperature: " << temperature << " K\n";
-            std::cout << "\tAtmospheric pressure: " << atmPressure << " atm\n";
-            std::cout << "\tPuddle area: " << puddleArea << " m^2\n";
-            std::cout << "\tPuddle length: " << puddleLength << " m\n";
-            std::cout << "\tAgent molecular weight: " << agentMolecularWeight << " gm/gm mole\n";
-            std::cout << "\tAgent molecular volume: " << agentMolecularVolume << " cm^3/gm mole\n";
-            std::cout << "\tAgent vapor pressure: " << agentVaporPressure << " atm\n";
-            std::cout << "\tAgent boiling point: " << agentBoilingPoint << " K\n";
-            std::cout << "\tAgent freezing point: " << agentFreezingPoint << " K\n";
-            */
-            // Calculate air density and viscosity
-            double airDensity = (0.3487 * atmPressure) / temperature;
-            double airViscosity = exp(4.36 + 0.002844 * temperature) * 1.0e-6;
-
-            if (airDensity > -1.0e-6 && airDensity < 1.0e-6)
-            {
-                throw std::runtime_error("Air density is zero");
-            }
-
-            //std::cout << "\tAir density: " << airDensity << " gm/cm^3\n";
-            //std::cout << "\tAir viscosity: " << airViscosity << " poise(gm/cm * sec)\n";
-
-            // Calculate Schmidt and Reynolds numbers
-            double schmidtNumberD = airViscosity / airDensity;
-
-            if (schmidtNumberD > -1.0e-6 && schmidtNumberD < 1.0e-6)
-            {
-                throw std::runtime_error("Schmidt number is zero");
-            }
-
-            if (agentMolecularWeight > -1.0e-6 && agentMolecularWeight < 1.0e-6)
-            {
-                throw std::runtime_error("Agent molecular weight is zero");
-            }
-
-            if (atmPressure > -1.0e-6 && atmPressure < 1.0e-6)
-            {
-                throw std::runtime_error("Atmospheric pressure is zero");
-            }
-
-            double airDiffusivity = pow(temperature, 1.5) * pow(0.03448 + 1.0 / agentMolecularWeight, 0.5) / atmPressure;
-            airDiffusivity *= 0.0043 / pow(3.1034 + pow(agentMolecularVolume, 1.0 / 3.0), 2.0);
-
-         //   std::cout << "\tSchmidt number: " << schmidtNumberD << " dimensionless\n";
-          //  std::cout << "\tAir diffusivity: " << airDiffusivity << " cm^2/s\n";
-
-            if (windSpeed < 0.03)
-            {
-                windSpeed = 0.03;
-            }
-
-            double reynoldsNumber = 1.0e4 * puddleLength * windSpeed / schmidtNumberD;
-
-            if (reynoldsNumber > -1.0e-6 && reynoldsNumber < 1.0e-6)
-            {
-                throw std::runtime_error("Reynolds number is zero");
-            }
-
-            double massTransferFactor = (reynoldsNumber <= 20000.0) ? 0.664 / sqrt(reynoldsNumber) : 0.036 / pow(reynoldsNumber, 0.2);
-
-           // std::cout << "\tReynolds number: " << reynoldsNumber << " dimensionless\n";
-           // std::cout << "\tMass transfer factor: " << massTransferFactor << " dimensionless\n";
-
-            // Calculate mass transfer coefficient and evaporation rate
-            double molarMassVelocity = 3.448 * windSpeed * airDensity;
-            double massTransferCoefficient = molarMassVelocity * massTransferFactor / pow(schmidtNumberD / airDiffusivity, 0.667);
-            double evaporationRate = 6.0e8 * massTransferCoefficient * agentMolecularWeight * agentVaporPressure / atmPressure;
-
-           // std::cout << "\tMolar mass velocity: " << molarMassVelocity << " gm/cm^2s\n";
-           // std::cout << "\tMass transfer coefficient: " << massTransferCoefficient << " cm/s\n";
-           // std::cout << "\tEvaporation rate: " << evaporationRate << " mg/s\n";
-
-            // Consider still air calculations
-            double tkOverE = 0.1025 * temperature / sqrt(agentBoilingPoint);
-            double collisionIntForDiffusion = 1.075 * pow(tkOverE, -0.1615) + 2.0 * pow(10.0 * tkOverE, -0.74 * log10(10 * tkOverE));
-            // collisionDiameter = 1.18 * math.pow(agentMolecularVolume, 0.3333)
-            double collisionDiameter = 1.18 * pow(agentMolecularVolume, 0.3333);
-            // agentDiffusivity = pow(temperature, 1.5) * math.pow(0.03448 + 1.0/agentMolecularWeight, 0.5)/atmPressure
-            // agentDiffusivity *= 0.00205/(collisionIntForDiffusion * math.pow((3.711 + collisionDiameter)/2.0 ,2.0))
-            double agentDiffusivity = pow(temperature, 1.5) * pow(0.03448 + 1.0 / agentMolecularWeight, 0.5) / atmPressure;
-            agentDiffusivity *= 0.00205 / (collisionIntForDiffusion * pow((3.711 + collisionDiameter) / 2.0, 2.0));
-
-            double diameterOfSpill = sqrt(4.0 * puddleArea / M_PI);
-            double reynoldsNumberStill = 300.0 * diameterOfSpill / schmidtNumberD;
-
-            //std::cout << "\tDiameter of spill: " << diameterOfSpill << " m\n";
-            //std::cout << "\tReynolds number (still air): " << reynoldsNumberStill << " dimensionless\n";
-
-            double evaporationRateStill = 292000.0 * (1.0 + 0.51 * sqrt(reynoldsNumberStill) * pow(schmidtNumberD / agentDiffusivity, 0.3333)) * log(1.0 / (1.0 - agentVaporPressure / atmPressure)) *
-                                          (agentMolecularWeight / temperature) * (agentDiffusivity / diameterOfSpill) * (2.0 / M_PI);
-
-            //std::cout << "\tEvaporation rate (still air): " << evaporationRateStill << " mg/s\n";
-
-            // Compare and return the appropriate evaporation rate
-            double finalRate = std::max(evaporationRate, evaporationRateStill) * puddleArea / 60.0; // Convert to mg/s
-            // print
-           // std::cout << "\tEvaporation rate: " << finalRate << " mg/s\n";
-            // return finalRate;
-
-            double depletion_time = row.quantityRemaining / finalRate;
-
-            //std::cout << "\tDepletion time: " << depletion_time << " s\n";
-
-            //std::cout << "\n";
+            // std::cout << "\n";
 
             // Output the calculated evaporation rate
+            /*
             outputFile << agentVaporPressure << "," << puddleArea << "," << puddleLength << ","
                        << puddleWidth << "," << sig_x0 << "," << sig_y0 << "," << sig_z0 << ","
                        << airDensity << "," << airViscosity << "," << schmidtNumberD << ","
@@ -798,11 +661,173 @@ namespace FastPlume
                        << tkOverE << "," << collisionIntForDiffusion << "," << collisionDiameter << ","
                        << agentDiffusivity << "," << diameterOfSpill << "," << reynoldsNumberStill << ","
                        << evaporationRateStill << "," << finalRate << "," << depletion_time << "\n";
+            */
         }
 
-        outputFile.close();
-        std::cout << "CSV file written to " << outputFilePath << "\n";
+        //outputFile.close();
+        //std::cout << "CSV file written to " << outputFilePath << "\n";
         return;
+    }
+
+    double FastPlumeImpl::run_evap_row(taskEvapDataRow &row)
+    {
+        agentProperty agent = m_agentData.getAgentProperty(row.agentName);
+
+        double windSpeed = row.windSpeed;
+
+        double temperature = row.surfaceTemperature;
+        double atmPressure = row.AtmPressure;
+        double agentMolecularWeight = agent.m_MolecularWeight;
+        double agentMolecularVolume = agent.m_MolecularVolume;
+        double agentBoilingPoint = agent.m_BoilingPoint;
+        double agentFreezingPoint = agent.m_FreezingPoint;
+        double time = row.time;
+
+        double agentVaporPressure = AntoineToVaporPressure(
+            agent.m_AntoineA,
+            agent.m_AntoineB,
+            agent.m_AntoineC,
+            temperature);
+
+        double puddleArea;
+        double puddleLength;
+        double puddleWidth;
+
+        // print all above values
+        // printf("i = %d, windSpeed = %f, temperature = %f, atmPressure = %f, agentMolecularWeight = %f, agentMolecularVolume = %f, agentBoilingPoint = %f, agentFreezingPoint = %f, time = %f, agentVaporPressure = %f\n", i, windSpeed, temperature, atmPressure, agentMolecularWeight, agentMolecularVolume, agentBoilingPoint, agentFreezingPoint, time, agentVaporPressure);
+
+        CalcPuddleDimensions(row.quantityRemaining, row.surfaceType, puddleArea, puddleLength, puddleWidth);
+
+        double sig_x0 = puddleLength / 3.0;
+        double sig_y0 = puddleWidth / 3.0;
+        double sig_z0 = 0.1;
+
+        // Convert temperature from Celsius to Kelvin
+        temperature += 273.15;
+        agentFreezingPoint += 273.15;
+        agentBoilingPoint += 273.15;
+
+        // Convert atmospheric pressure from mmHg to atm
+        atmPressure /= 760.0;
+        agentVaporPressure /= 760.0;
+
+        // Precondition: Ensure no boiling at the onset
+        if (atmPressure <= agentVaporPressure || temperature >= agentBoilingPoint)
+        {
+            std::cout << "\tAgent is boiling.\n";
+            // return m_environment.getQuantityRemaining() / 6.0; // Simplified boiling case
+        }
+
+        if (temperature > -1.0e-6 && temperature < 1.0e-6)
+        {
+            throw std::runtime_error("Temperature is zero");
+        }
+
+        // print all input values
+        /*
+        std::cout << "\tWind speed: " << windSpeed << " m/s\n";
+        std::cout << "\tTemperature: " << temperature << " K\n";
+        std::cout << "\tAtmospheric pressure: " << atmPressure << " atm\n";
+        std::cout << "\tPuddle area: " << puddleArea << " m^2\n";
+        std::cout << "\tPuddle length: " << puddleLength << " m\n";
+        std::cout << "\tAgent molecular weight: " << agentMolecularWeight << " gm/gm mole\n";
+        std::cout << "\tAgent molecular volume: " << agentMolecularVolume << " cm^3/gm mole\n";
+        std::cout << "\tAgent vapor pressure: " << agentVaporPressure << " atm\n";
+        std::cout << "\tAgent boiling point: " << agentBoilingPoint << " K\n";
+        std::cout << "\tAgent freezing point: " << agentFreezingPoint << " K\n";
+        */
+        // Calculate air density and viscosity
+        double airDensity = (0.3487 * atmPressure) / temperature;
+        double airViscosity = exp(4.36 + 0.002844 * temperature) * 1.0e-6;
+
+        if (airDensity > -1.0e-6 && airDensity < 1.0e-6)
+        {
+            throw std::runtime_error("Air density is zero");
+        }
+
+        // std::cout << "\tAir density: " << airDensity << " gm/cm^3\n";
+        // std::cout << "\tAir viscosity: " << airViscosity << " poise(gm/cm * sec)\n";
+
+        // Calculate Schmidt and Reynolds numbers
+        double schmidtNumberD = airViscosity / airDensity;
+
+        if (schmidtNumberD > -1.0e-6 && schmidtNumberD < 1.0e-6)
+        {
+            throw std::runtime_error("Schmidt number is zero");
+        }
+
+        if (agentMolecularWeight > -1.0e-6 && agentMolecularWeight < 1.0e-6)
+        {
+            throw std::runtime_error("Agent molecular weight is zero");
+        }
+
+        if (atmPressure > -1.0e-6 && atmPressure < 1.0e-6)
+        {
+            throw std::runtime_error("Atmospheric pressure is zero");
+        }
+
+        double airDiffusivity = pow(temperature, 1.5) * pow(0.03448 + 1.0 / agentMolecularWeight, 0.5) / atmPressure;
+        airDiffusivity *= 0.0043 / pow(3.1034 + pow(agentMolecularVolume, 1.0 / 3.0), 2.0);
+
+        //   std::cout << "\tSchmidt number: " << schmidtNumberD << " dimensionless\n";
+        //  std::cout << "\tAir diffusivity: " << airDiffusivity << " cm^2/s\n";
+
+        if (windSpeed < 0.03)
+        {
+            windSpeed = 0.03;
+        }
+
+        double reynoldsNumber = 1.0e4 * puddleLength * windSpeed / schmidtNumberD;
+
+        if (reynoldsNumber > -1.0e-6 && reynoldsNumber < 1.0e-6)
+        {
+            throw std::runtime_error("Reynolds number is zero");
+        }
+
+        double massTransferFactor = (reynoldsNumber <= 20000.0) ? 0.664 / sqrt(reynoldsNumber) : 0.036 / pow(reynoldsNumber, 0.2);
+
+        // std::cout << "\tReynolds number: " << reynoldsNumber << " dimensionless\n";
+        // std::cout << "\tMass transfer factor: " << massTransferFactor << " dimensionless\n";
+
+        // Calculate mass transfer coefficient and evaporation rate
+        double molarMassVelocity = 3.448 * windSpeed * airDensity;
+        double massTransferCoefficient = molarMassVelocity * massTransferFactor / pow(schmidtNumberD / airDiffusivity, 0.667);
+        double evaporationRate = 6.0e8 * massTransferCoefficient * agentMolecularWeight * agentVaporPressure / atmPressure;
+
+        // std::cout << "\tMolar mass velocity: " << molarMassVelocity << " gm/cm^2s\n";
+        // std::cout << "\tMass transfer coefficient: " << massTransferCoefficient << " cm/s\n";
+        // std::cout << "\tEvaporation rate: " << evaporationRate << " mg/s\n";
+
+        // Consider still air calculations
+        double tkOverE = 0.1025 * temperature / sqrt(agentBoilingPoint);
+        double collisionIntForDiffusion = 1.075 * pow(tkOverE, -0.1615) + 2.0 * pow(10.0 * tkOverE, -0.74 * log10(10 * tkOverE));
+        // collisionDiameter = 1.18 * math.pow(agentMolecularVolume, 0.3333)
+        double collisionDiameter = 1.18 * pow(agentMolecularVolume, 0.3333);
+        // agentDiffusivity = pow(temperature, 1.5) * math.pow(0.03448 + 1.0/agentMolecularWeight, 0.5)/atmPressure
+        // agentDiffusivity *= 0.00205/(collisionIntForDiffusion * math.pow((3.711 + collisionDiameter)/2.0 ,2.0))
+        double agentDiffusivity = pow(temperature, 1.5) * pow(0.03448 + 1.0 / agentMolecularWeight, 0.5) / atmPressure;
+        agentDiffusivity *= 0.00205 / (collisionIntForDiffusion * pow((3.711 + collisionDiameter) / 2.0, 2.0));
+
+        double diameterOfSpill = sqrt(4.0 * puddleArea / M_PI);
+        double reynoldsNumberStill = 300.0 * diameterOfSpill / schmidtNumberD;
+
+        // std::cout << "\tDiameter of spill: " << diameterOfSpill << " m\n";
+        // std::cout << "\tReynolds number (still air): " << reynoldsNumberStill << " dimensionless\n";
+
+        double evaporationRateStill = 292000.0 * (1.0 + 0.51 * sqrt(reynoldsNumberStill) * pow(schmidtNumberD / agentDiffusivity, 0.3333)) * log(1.0 / (1.0 - agentVaporPressure / atmPressure)) *
+                                      (agentMolecularWeight / temperature) * (agentDiffusivity / diameterOfSpill) * (2.0 / M_PI);
+
+        // std::cout << "\tEvaporation rate (still air): " << evaporationRateStill << " mg/s\n";
+
+        // Compare and return the appropriate evaporation rate
+        double finalRate = std::max(evaporationRate, evaporationRateStill) * puddleArea / 60.0; // Convert to mg/s
+        // print
+        // std::cout << "\tEvaporation rate: " << finalRate << " mg/s\n";
+        // return finalRate;
+
+        double depletion_time = row.quantityRemaining / finalRate;
+
+        return depletion_time;
     }
 
 } // namespace FastPlume
