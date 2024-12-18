@@ -1,461 +1,513 @@
-﻿agent_key,version,agent_type,name,standard_code,description,molecular_weight,molecular_volume,boiling_point,freezing_point,antoine_a,antoine_b,antoine_c,inst_aerosol_present,skin_factor,liquid_density,placard_number
-1,1,CSEPP,GA,GA,Tabun,162.18,188,244.85,-50,8.305,-2820,273,FALSE,,1.07,
-2,1,CSEPP,GB,GB,Sarin,140.1,150.3,157.85,-56,8.5916,-2424.5,273,FALSE,,1.1,
-3,1,CSEPP,HD,HD,Distilled mustard,159.1,149.7,216.85,14.45,7.47009,-1935.47,204.2,FALSE,,1.27,
-4,1,CSEPP,HT,HT,60% mustard and 40% T,159.1,149.7,227.85,0,7.47009,-1935.47,204.2,FALSE,,1.26,
-5,1,CSEPP,L,L,Lewisite,207.35,130.1,189.85,-18,6.40361,-1237.04,155.2,FALSE,,1.88,
-7,1,CSEPP,VX,VX,EA 1701,267.4,342.2,297.85,-51,7.281,-2072.1,172.5,TRUE,0.022,1.01,
-8,1,CSEPP,UserDefined, ,DIPA,101,101,400,-15,7.5,-1290,273,FALSE,,1,
-9,1,CSEPP,UserDefined, ,Phosgene,98.92,72.2,7.6,-128,7.46,-1289.2,273,FALSE,,1.37,
-1000,0,TIC,Acetal,105-57-7,volatile liquid; hypnotic,118.17,143.1669494,103.5,-100,6.92032,1272.727,211.28,FALSE,,0.8254,1088
-1001,0,TIC,Acetaldehyde,75-07-7,flammable liquid; pungent odor,44.05,55.90101523,20.9,-123,8.0634,1637.083,295.467,FALSE,,0.788,1089
-1002,0,TIC,"Acetic acid, glacial",64-19-7,liquid; burns skin; pungent odor,60.05,57.48611909,117.9,16.7,7.55716,1642.54,233.386,FALSE,,1.0446,2789
-1003,0,TIC,Acetic anhydride,108-24-7,readily combustible liquid; fire hazard; strong acetic odor,102.09,94.35304991,139.6,-73,7.12165,1427.77,198.037,FALSE,,1.082,1715
-1004,0,TIC,Acetone,67-64-1,"volatile, highly flammable liquid; characteristic odor",58.08,73.52829472,56.3,-94.7,7.29958,1312.253,240.705,FALSE,,0.7899,1090
-1005,0,TIC,Acetonitrile,75-05-8,poisonous liquid with ether-like odor,41.05,52.13029399,81.6,-43.8,7.15383,1355.374,235.297,FALSE,,0.78745,1648
-1006,0,TIC,Acetyl bromide,506-96-7,fuming liquid; irritating to the eyes; violently decomposes in water or alcohol,122.95,80.88815789,76.1,-96.5,5.50958,670.92,170.91,FALSE,,1.52,1716
-1007,0,TIC,Acetyl chloride,75-36-5,flammable liquid; extremely irritating to the eyes; pungent odor,78.5,71.03429554,50.7,-112.8,6.84078,1062.86,217.619,FALSE,,1.1051,1717
-1008,0,TIC,Acetylene,74-86-2,gas; forms insoluble explosive compounds with copper and silver,26.04,41.94587629,-83.9,-80.8,0,0,0,FALSE,,0.6208,1001
-1009,0,TIC,Acetylene tetrabromide,79-27-6,"yellowish, heavy liquid",345.65,116.5531427,243.5,0,7.8252,2393.457,240.705,FALSE,,2.9656,2504
-1010,0,TIC,Acetyl iodide,507-02-8,fuming liquid with suffocating odor,169.95,82.20470156,108,-273.15,3.87669,285.338,95.618,FALSE,,2.0674,1898
-1011,0,TIC,Acrolein,107-02-8,flammable liquid with pungent odor,56.06,66.82560496,52.7,-87.7,6.99096,1167.888,231.59,FALSE,,0.8389,1092
-1012,0,TIC,Acrylic acid,79-10-7,corrosive liquid; acrid odor and fumes,72.06,68.55675007,141,13,5.57117,621.275,151.221,FALSE,,1.0511,2218
-1013,0,TIC,Acrylonitrile,107-13-1,"explosive, flammable, and toxic liquid",53.06,66.29185407,77.4,-83.5,6.94171,1255.939,231.297,FALSE,,0.8004,1093
-1014,0,TIC,Allyl alcohol,107-18-6,colorless liquid; mustard-like odor,58.08,68.00936768,97.1,-129,11.65762,4510.213,416.797,FALSE,,0.854,1098
-1015,0,TIC,Allyl chloride,107-05-1,"liquid; unpleasant, pungent odor",76.52,81.57782516,45.1,-134.5,5.11593,365.121,118.231,FALSE,,0.938,1100
-1016,0,TIC,Allyl isothiocyanate,57-06-7,colorless or pale yellow liquid,99.16,97.50245821,151.1,-80,2.74759,161.415,55.205,FALSE,,1.017,1545
-1017,0,TIC,Allyltrichlorosilane,107-37-9,'',175.5,146.1160603,116.1,35,6.6039,1116,183.15,FALSE,,1.2011,1724
-1018,0,TIC,Aluminum triethyl,97-93-8,'',114.17,137.2235577,194,-52.5,10.28904,3451.295,275.29,FALSE,,0.832,3051
-1019,0,TIC,Ammonia,7664-41-7,colorless gas,17.03,24.97799941,-33.4,-77.7,7.74396,1113.928,262.741,FALSE,,0.6818,1005
-1020,0,TIC,Sec-amyl alcohol,"584-02-1, 6032-29-7, 26635-63-2",'',88.15,,115.3,-69,7.29859,1291.212,173.133,FALSE,,,1987
-1021,0,TIC,Tert-amyl alcohol,75-85-4,'',88.15,108.8809289,102,-8.8,7.3418,1261.658,181.197,FALSE,,0.8096,1987
-1022,0,TIC,Amyl mercaptan,110-66-7,"liquid; penetrating, unpleasant odor",104.21,123.7501484,126.6,-75.7,6.93311,1369.479,211.314,FALSE,,0.8421,1111
-1023,0,TIC,Amyl methyl ketone,110-43-0,'',114.18,139.294864,151,-35,10.12304,3331.738,309.832,FALSE,,0.8197,1110
-1024,0,TIC,Aniline,62-53-3,oily liquid; darkens on exposure to air and light,93.13,91.15200157,184,-6,7.22051,1661.858,199.102,FALSE,,1.0217,1547
-1025,0,TIC,Anisole,100-66-3,liquid; agreeable odor,108.14,108.6179188,153.6,-37.5,7.05236,1489.756,203.543,FALSE,,0.9956,2222
-1026,0,TIC,Antimony pentachloride,7647-18-9,"colorless to yellow, oily liquid",299.05,126.8235793,175,2.8,7.76624,2046.733,240.858,FALSE,,2.358,1730
-1027,0,TIC,Argon,7440-37-1,"colorless, odorless gas",39.95,,-185.9,-189.4,0,0,0,FALSE,,,1006
-1028,0,TIC,Arsenic trichloride,7784-34-1,oily liquid; fumes in air; intensely poisonous,181.28,84.51282051,130.2,-16,7.35057,1620.019,231.788,FALSE,,2.145,1560
-1029,0,TIC,Arsine,7784-42-1,"colorless, neutral gas; garlic odor",77.95,,-62.5,-116.9,6.30893,606.597,238.844,FALSE,,,2188
-1030,0,TIC,Benzaldehyde,100-52-7,liquid; oxidizes in air; volatile with steam,106.12,101.0666667,178.7,-57.1,8.09006,2337.539,268.047,FALSE,,1.05,1990
-1031,0,TIC,Benzene,71-43-2,"colorless, volatile, highly flammable liquid",78.11,88.89268237,80.1,5.5,6.89324,1203.835,219.924,FALSE,,0.8787,1114
-1032,0,TIC,Benzonitrile,100-47-0,liquid,103.12,102.0990099,191,-12.8,7.72911,2110.572,244.819,FALSE,,1.01,2224
-1033,0,TIC,Benzotrifluoride,98-08-8,liquid; soluble in many organic solvents,146.11,122.9261316,102.1,-29,6.96928,1305.612,217.292,FALSE,,1.1886,2338
-1034,0,TIC,Benzyl bromide,100-39-0,lacrimatory liquid,171.05,98.41772152,198.5,-3.9,7.54852,2043.135,238.58,FALSE,,1.738,1737
-1035,0,TIC,Benzyl chloride,100-44-7,liquid; unpleasant odor,126.58,115.0727273,179.4,-39,7.55773,1932.142,233.754,FALSE,,1.1,1738
-1036,0,TIC,Boron tribromide,10294-33-4,"colorless, fuming liquid",250.5,92.846553,91.1,-46.1,6.89162,1262.484,224.832,FALSE,,2.698,2692
-1037,0,TIC,Boron trichloride,10294-34-5,"colorless, fuming liquid",117.17,86.79259259,12.5,-107,6.82655,973.995,234.156,FALSE,,1.35,1741
-1038,0,TIC,Boron trifluoride,7/2/7637,colorless gas; suffocating odor; forms dense white fumes in moist air,67.81,43.1910828,-99.8,-127.1,7.55725,663.463,242.355,FALSE,,1.57,1008
-1039,0,TIC,Bromine,7726-95-6,"dark reddish-brown, volatile liquid; vaporizes rapidly; suffocating odor",159.81,51.38585209,58.7,-7.3,5.82039,638.258,158.006,FALSE,,3.11,1744
-1040,0,TIC,Bromine pentafluoride,7789-30-2,liquid; fumes in air,174.9,71.08600228,41.1,-60,7.67287,1411.692,253.387,FALSE,,2.4604,1745
-1041,0,TIC,Bromobenzene,108-86-1,mobile liquid; aromatic odor,157.01,105.0093633,156.1,-30.7,6.94712,1495.044,211.642,FALSE,,1.4952,2514
-1042,0,TIC,1-Bromobutane,109-65-9,'',137.02,108.0088286,101.6,-112.4,6.67517,1084.887,207.906,FALSE,,1.2686,1126
-1043,0,TIC,Bromochlorodifluoromethane,353-59-3,'',165.37,89.38918919,-4,-159.5,6.839097065,936.27,240.491,FALSE,,1.85,1974
-1044,0,TIC,Bromochloromethane,74-97-5,'',129.38,66.88378825,68.1,-88,6.39587,895.556,186.703,FALSE,,1.9344,1887
-1045,0,TIC,Bromoform,75-25-2,heavy liquid; chloroform odor,252.73,87.45285304,149.2,8.1,6.79051,1363.237,200.002,FALSE,,2.8899,2515
-1046,0,TIC,1-Bromo-3-methylbutane,107-82-4,'',151.07,124.8512397,120.5755948,-273.15,7.12591,1480.387,228.152,FALSE,,1.21,2341
-1047,0,TIC,1-Bromopropane,106-94-5,'',122.99,,71,-110,7.03766,1259.836,232.042,FALSE,,,2344
-1048,0,TIC,M-bromotoluene,591-17-3,liquid,171.05,121.320661,183.7,-40,9.38887,3506.406,355.894,FALSE,,1.4099,1993
-1049,0,TIC,Bromotrifluoromethane,75-63-8,'',148.91,94.24683544,-57.9,-168,0,0,0,FALSE,,1.58,1009
-1050,0,TIC,"1,3-Butadiene",106-99-0,"colorless, flammable gas; mild aromatic odor",54.09,87.96552285,-4.4,-108.9,6.87308,941.662,240.397,FALSE,,0.6149,1993
-1051,0,TIC,Butane,106-97-8,flammable gas,58.12,100.414651,-0.5,-138.3,6.72512,909.65,237.004,FALSE,,0.5788,1011
-1052,0,TIC,Butyl acetate,123-86-4,liquid,116.16,131.6111489,126.1,-73.5,7.14313,1440.231,211.788,FALSE,,0.8826,1123
-1053,0,TIC,Butyl acrylate,141-32-2,"elastic, tacky substance",128.17,144.0436053,147.4,-64.6,7.30193,1658.03,227.589,FALSE,,0.8898,2348
-1054,0,TIC,N-butyl alcohol,71-36-3,liquid; burns with a strongly luminous flame,74.12,91.52877254,117.7,-89.3,7.42117,1351.555,179.81,FALSE,,0.8098,
-1055,0,TIC,Sec-butyl alcohol,78-92-2,liquid,74.12,91.9260821,99.6,-114.7,7.20453,1158.672,168.467,FALSE,,0.8063,1990
-1056,0,TIC,Tert-butyl alcohol,75-65-0,crystals; camphor-like odor,74.12,94.32305519,82.4,25.8,7.37284,1174.869,179.23,FALSE,,0.78581,1120
-1057,0,TIC,Tert-butylamine,75-64-9,liquid,73.14,105.1164128,44.4,-67,6.78204,992.719,210.423,FALSE,,0.6958,1992
-1058,0,TIC,Butylbenzene,104-51-8,liquid,134.22,156.0516219,183.3,-87.8,6.98318,1577.965,201.378,FALSE,,0.8601,2709
-1059,0,TIC,Butyl chloride,109-69-3,highly flammable liquid,92.57,105.0761652,78.4,-123.1,6.87098,1182.903,218.265,FALSE,,0.88098,1127
-1060,0,TIC,N-butyl ether,142-96-1,liquid,130.23,169.4820406,141,-97.8,6.80528,1302.768,191.669,FALSE,,0.7684,
-1061,0,TIC,N-butyl formate,592-84-7,'',102.13,,106.1,-91.9,7.10282,1347.33,213.194,FALSE,,,
-1062,0,TIC,Butyl mercaptan,109-79-5,flammable liquid; heavy skunk odor,90.19,107.7809247,98.5,-115.7,6.92754,1281.018,218.15,FALSE,,0.83679,2347
-1063,0,TIC,Butyl methyl ether,628-28-4,'',88.15,,70.2,-115.7,6.88388,1160.272,219.706,FALSE,,,2350
-1064,0,TIC,Butyraldehyde,123-72-8,flammable liquid,72.11,89.95758483,74.8,-96.4,6.46622,952.851,190.581,FALSE,,0.8016,1129
-1065,0,TIC,Butyric acid,107-92-6,oily liquid; rancid odor,88.11,92.00167067,163.3,-5.2,8.98464,2634.471,269.679,FALSE,,0.9577,2820
-1066,0,TIC,Butyronitrile,109-74-0,liquid,69.11,85.4158942,117.6,-111.9,6.12907,1452.08,224.186,FALSE,,0.8091,2411
-1067,0,TIC,Camphene,79-92-5,cubic crystals from alcohol,136.23,162.3718713,160.5,47,7.61376,1893.487,239.295,FALSE,,0.839,1325
-1068,0,TIC,Carbon bisulfide,75-15-0,"mobile, poisonous, very flammable liquid",76.14,60.27549082,46.2,-111.6,6.94193,1168.62,241.534,FALSE,,1.2632,1131
-1069,0,TIC,Carbon dioxide,124-38-9,"colorless, odorless, noncombustible gas",44.01,,-78.48,-56.6,0,0,0,FALSE,,,1013
-1070,0,TIC,Carbon tetrabromide,558-13-4,'',331.7,112.0305323,190,90,6.2754,1152.616,150.143,FALSE,,2.9608,2516
-1071,0,TIC,Carbon tetrachloride,56-23-5,"colorless, clear, nonflammable, heavy liquid",153.82,96.49937265,76.6,-22.8,6.89801,1221.781,227.411,FALSE,,1.594,1846
-1072,0,TIC,Carbon tetrafluoride,75-73-0,"colorless, odorless gas",88,29.00461437,-128.1,-183.6,0,0,0,FALSE,,3.034,1982
-1073,0,TIC,Carbonyl fluoride,353-50-4,pungent gas; instantly hydrolyzed by water,66.01,,-84.1,-111.3,0,0,0,FALSE,,,2417
-1074,0,TIC,Carbonyl sulfide,463-58-1,'',60.08,58.44357977,-50.1,-138.8,0,0,0,FALSE,,1.028,2204
-1075,0,TIC,Chlorine,7782-50-5,greenish-yellow gas; suffocating odor,70.91,45.31279954,-34,-101,7.16324,969.992,260.359,FALSE,,1.5649,1017
-1076,0,TIC,Chlorine dioxide,"10049-04-4, 70377-94-5",yellow to reddish-yellow gas; reacts violently with organic chemicals,67.45,41.07795371,10.9,-59.6,6.20803,644.581,182.69,FALSE,,1.642,9191
-1077,0,TIC,Chlorine pentafluoride,13637-63-3,'',130.44,,-13.81243272,-273.15,6.63613,798.006,226.312,FALSE,,,2548
-1078,0,TIC,Chlorine trifluoride,7790-91-2,"corrosive, colorless gas; sweet, suffocating odor; extremely reactive",92.5,50.68493151,11.7,-76.1,7.18792,1182.409,262.815,FALSE,,1.825,1749
-1079,0,TIC,Chloroacetone,78-95-5,liquid lacrimator; pungent odor,92.53,82.39536955,119.7,-44.5,7.9599,1902.738,255.948,FALSE,,1.123,1695
-1080,0,TIC,Chloroacetyl chloride,79-04-9,'',112.94,79.5240107,106,-22,7.13411,1331.94,207.176,FALSE,,1.4202,1752
-1081,0,TIC,Chloroaniline,27134-26-5,liquid; practically insoluble in water,127.57,105.3079082,208.84,-1.94,7.03286,1646.915,187.891,FALSE,,1.2114,2018
-1082,0,TIC,Chlorobenzene,108-90-7,colorless liquid; faint odor,112.56,101.7905589,131.7,-45.2,6.98593,1435.675,218.026,FALSE,,1.1058,1134
-1083,0,TIC,1-Chloro-2-bromoethane,107-04-0,'',143.42,82.46320147,107.2,-16.6,7.2705,1500.797,235.27,FALSE,,1.7392,2996
-1084,0,TIC,Chlorodifluoromethane,75-45-6,'',86.47,72.42043551,-40.8,-157.4,7.240767065,947.577,258.186,FALSE,,1.194,1018
-1085,0,TIC,Chloroform,67-66-3,"nonflammable, heavy, very volatile, sweet-tasting liquid",119.38,80.47185709,61.2,-63.5,7.08282,1233.129,232.197,FALSE,,1.4835,1888
-1086,0,TIC,1-Chloroheptane,629-06-1,'',134.5,,160.6717091,-273.15,6.8382,1410.064,195.639,FALSE,,,
-1087,0,TIC,1-Chlorohexane,544-10-5,mobile liquid,120.5,137.2437358,134,-273.15,6.76886,1304.968,200.058,FALSE,,0.878,
-1088,0,TIC,Chloropicrin,76-06-2,slightly oily liquid; intense odor,164.37,99.26923541,112.2,-69.2,7.23399,1506.333,233.781,FALSE,,1.6558,1580
-1089,0,TIC,Chloroprene,126-99-8,'',88.54,92.61506276,59.4,-130,6.29051,841.921,187.786,FALSE,,0.956,1991
-1090,0,TIC,1-Chloropropane,540-54-5,'',78.54,88.25710754,46.5,-122.8,7.00764,1155.007,233.159,FALSE,,0.8899,1278
-1091,0,TIC,2-Chloropropane,75-29-6,'',78.54,91.14541024,35.7,-117.2,7.8513,1631.7,292.986,FALSE,,0.8617,2356
-1092,0,TIC,O-chloropyridine,109-09-1,'',113.55,,170,-273.15,7.4338,1851.07,235.867,FALSE,,,2822
-1093,0,TIC,M-chlorotoluene,108-41-8,liquid,126.58,117.6394052,162.2,-47.8,7.35658,1807.576,241.045,FALSE,,1.076,2238
-1094,0,TIC,O-chlorotoluene,95-49-8,liquid; vapor harmful,126.58,116.9222243,159.1,-36.5,7.36251,1768.105,234.761,FALSE,,1.0826,2230
-1095,0,TIC,Chlorotrifluoromethane,75-72-9,'',104.46,,-81.4,-181,0,0,0,FALSE,,,1022
-1096,0,TIC,Chromium oxychloride,14977-61-8,'',154.9,81.09947644,116.1,-96.5,6.82264,1256.761,202.288,FALSE,,1.91,1758
-1097,0,TIC,Cresol,1319-77-3,poisonous liquid; may have color,108.14,104.5841393,202.1301559,-273.15,7.47667,1833.137,196.736,FALSE,,1.034,2076
-1098,0,TIC,M-cresol,108-39-4,poisonous liquid; may have color,108.14,104.5841393,202.3,12.2,7.47667,1833.137,196.736,FALSE,,1.034,2076
-1099,0,TIC,O-cresol,95-48-7,poisonous liquid; may have color,108.14,103.2855778,191,31,6.84285,1391.332,160.176,FALSE,,1.047,1598
-1100,0,TIC,P-cresol,106-44-5,poisonous liquid; may have color,108.14,106.1757486,202,34.8,7.01603,1498.579,160.55,FALSE,,1.0185,2076
-1101,0,TIC,Crotonic acid,3724-65-0,monoclinic needles; prisms from water or ligroin,86.1,84.57760314,185,15,8.60269,2430.085,239.624,FALSE,,1.018,2823
-1102,0,TIC,Cumene,98-82-8,colorless liquid,120.19,139.4315545,152.4,-96,6.92929,1455.811,207.202,FALSE,,0.862,1918
-1103,0,TIC,Cyanogen,460-19-5,highly poisonous gas; almond-like odor,52.03,54.55594002,-21.1,-27.9,7.391707065,1041.518,251.862,FALSE,,0.9537,1026
-1104,0,TIC,Cyanogen bromide,506-68-3,"needles, cubes; vapors are very poisonous",105.93,52.5707196,61.1,52.2,6.41177,727.385,143.098,FALSE,,2.015,1889
-1105,0,TIC,Cyanogen chloride,506-77-4,liquid; vapors are very poisonous,61.47,51.8296796,12.9,-6.5,7.53687,1074.1,218.692,FALSE,,1.186,1589
-1106,0,TIC,Cyanogen iodide,506-78-5,white needles; very pungent odor; very poisonous,152.92,53.84507042,141.0921731,146.5,10.65945,3335.292,287.683,FALSE,,2.84,
-1107,0,TIC,Cyclobutane,287-23-0,gas; burns with a luminous flame,56.11,78.75087719,12.5,-90.7,6.94653,1038.009,242.816,FALSE,,0.7125,2601
-1108,0,TIC,Cycloheptane,291-64-5,'',98.19,121.252161,118.8,-8,6.8522,1330.402,216.204,FALSE,,0.8098,2241
-1109,0,TIC,Cycloheptatriene,544-25-2,'',92.15,,115.2652957,-273.15,7.06021,1422.104,224.999,FALSE,,,2603
-1110,0,TIC,Cyclohexane,110-82-7,flammable liquid; pungent when impure,84.16,108.1609048,80.7,6.5,6.84498,1203.526,222.863,FALSE,,0.7781,1145
-1111,0,TIC,Cyclohexanethiol,1569-69-3,'',116.22,118.8100593,158.8,-83.5,6.88709,1476.958,209.857,FALSE,,0.9782,3054
-1112,0,TIC,Cyclohexanol,108-93-0,hygroscopic crystals,100.16,104.0731505,160.9,23.5,5.95587,777.363,91.113,FALSE,,0.9624,2617
-1113,0,TIC,Cyclohexanone,108-94-1,oily liquid,98.14,104.1715317,155.4,-31.1,5.9784,1495.51,209.552,FALSE,,0.9421,1915
-1114,0,TIC,Cyclohexene,110-83-8,liquid,82.14,101.4324525,83,-103.5,5.8724,1221.9,223.17,FALSE,,0.8098,2256
-1115,0,TIC,Cyclohexyl acetate,622-45-7,'',142.2,146.9008264,174,-83.1,7.7575,1959.7,233.55,FALSE,,0.968,2243
-1116,0,TIC,Cyclohexylamine,108-91-8,"liquid; strong, fishy, amine odor",99.17,3.9668,134.5,-17.7,6.94395,1380.225,205.865,FALSE,,25,2357
-1117,0,TIC,Cyclooctatetraene,629-20-9,'',104.16,,141.806553,-273.15,6.8709,1402.263,209.629,FALSE,,,2358
-1118,0,TIC,Cyclopentane,287-92-3,"mobile, flammable liquid",70.13,94.04586295,49.2,-93.8,6.8779,1119.208,230.738,FALSE,,0.7457,1146
-1119,0,TIC,Cyclopentanone,120-92-3,liquid; peppermint odor,84.12,88.66963919,130.6,-51.3,3.95815,376.418,104.651,FALSE,,0.94869,2245
-1120,0,TIC,Cyclopropane,75-19-4,flammable gas,42.08,22.3948909,-32.8,-127.6,6.925247065,870.393,248.087,FALSE,,1.879,1027
-1121,0,TIC,P-cymene,99-87-6,liquid,134.22,155.8885017,177.1,-67.9,7.03724,1599.29,207.659,FALSE,,0.861,2046
-1122,0,TIC,Decahydronaphthalene,91-17-8,'',138.2,154.1550474,195,-42.4,6.87557,1594.687,203.419,FALSE,,0.8965,1147
-1123,0,TIC,N-decane,124-18-5,'',142.28,194.9041096,174.2,-29.6,3.08531,440.616,116.254,FALSE,,0.73,
-1124,0,TIC,1-Decene,872-05-9,'',140.27,189.3493521,170.6,-66.3,6.96036,1501.872,197.578,FALSE,,0.7408,
-1125,0,TIC,Diacetone alcohol,123-42-2,"flammable liquid; faint, pleasant odor",116.16,124.822695,167.9,-44,7.8745,1996.859,231.624,FALSE,,0.9306,1148
-1126,0,TIC,Diacetyl,431-03-8,yellowish-green liquid,86.09,86.95959596,87.8,-2.4,6.41428,927.108,174.201,FALSE,,0.99,2346
-1127,0,TIC,Diborane,19287-45-7,"colorless, flammable gas; repulsive, sickly-sweet odor",27.67,131.7619048,-92.5,-165.5,6.65666,598.39,250.975,FALSE,,0.21,1911
-1128,0,TIC,Dibromobenzene,26249-12-7,crystals; insoluble in water,235.92,244.7049061,220.4,87.31,5.36353,757.96,81.92,FALSE,,0.9641,2711
-1129,0,TIC,Dibromomethane,74-95-3,'',173.84,69.62233169,97,-52.5,7.39244,1546.096,244.173,FALSE,,2.4969,2664
-1130,0,TIC,"1,2-Dibromopropane",78-75-1,'',201.9,104.4814738,141.1797133,-55.2,7.31383,1666.951,234.85,FALSE,,1.9324,2872
-1131,0,TIC,"1,3-Dichloroacetone",534-07-6,"plates, needles on distillation",126.97,91.83422537,173,45,7.77519,1937.489,224.058,FALSE,,1.3826,2649
-1132,0,TIC,M-dichlorobenzene,541-73-1,liquid,147,114.0950016,173.1,-24.8,7.07264,1629.812,215.822,FALSE,,1.2884,
-1133,0,TIC,O-dichlorobenzene,95-50-1,liquid,147,112.5660464,180.4,-17,7.07028,1649.55,213.314,FALSE,,1.3059,1591
-1134,0,TIC,"2,2'-Dichlorodiethyl ether",111-44-4,'',143.01,117.2213115,178.5,-47,7.69239,1990.755,235.347,FALSE,,1.22,1916
-1135,0,TIC,Dichlorodifluoroethylene,27156-03-2,'',132.92,,20.66577926,-273.15,6.94811,1023.135,230.885,FALSE,,,
-1136,0,TIC,Dichlorodifluoromethane,75-71-8,"colorless, odorless, nonflammable gas",120.91,81.36608345,-29.8,-158,6.686187065,782.072,235.377,FALSE,,1.486,1028
-1137,0,TIC,"1,1-Dichloroethane",75-34-3,'',98.96,84.7260274,57.3,-97,7.06941,1215.342,232.89,FALSE,,1.168,2362
-1138,0,TIC,Dichlorofluoromethane,75-43-4,'',102.92,73.25266904,8.9,-135,7.17231,1105.42,248.671,FALSE,,1.405,1029
-1139,0,TIC,Dichloromethane,75-09-2,'',84.93,64.07393436,39.7,-95.1,6.84833,1016.865,216.527,FALSE,,1.3255,1593
-1140,0,TIC,"1,2-Dichloropropane",78-87-5,'',112.99,97.48921484,96.4,-100.4,6.9618,1296.996,221.591,FALSE,,1.159,1279
-1141,0,TIC,"1,2-Dichloro-1,1,2,2-tetrafluoroethane",76-14-2,'',170.92,117.4707904,3.8,-92.5,7.02672,1031.026,245.239,FALSE,,1.455,1958
-1142,0,TIC,Diethoxymethane,462-95-3,'',104.15,,87.5,-66.5,6.98573,1270.167,221.259,FALSE,,,2373
-1143,0,TIC,Diethyl aluminum chloride,96-10-6,'',120.57,,207.2895087,-273.15,8.67105,2812.31,278.408,FALSE,,,
-1144,0,TIC,Diethylamine,109-89-7,hygroscopic crystals,73.14,103.3927057,55.5,-49.8,5.73703,559.071,140.176,FALSE,,0.7074,1154
-1145,0,TIC,"N,n-diethylaniline",91-66-7,colorless to yellow liquid,149.23,160.3416783,216.3,-38,8.25784,2652.751,277.322,FALSE,,0.9307,
-1146,0,TIC,Diethylbenzene,25340-17-4,'',134.21,,180,-273.15,7.00601,1576.261,201.004,FALSE,,,2049
-1147,0,TIC,Diethyl carbonate,105-58-8,'',118.13,121.1341263,126.8,-43,7.65126,1721.904,235.191,FALSE,,0.9752,2366
-1148,0,TIC,Diethylene glycol dimethyl ether,111-96-6,'',134.17,141.9638134,162.5,-64,7.74733,1922.137,235.087,FALSE,,0.9451,
-1149,0,TIC,Diethyl ether,60-29-7,'',74.12,103.8968321,34.4,-116.3,6.8971,1062.64,228.22,FALSE,,0.7134,1155
-1150,0,TIC,Diethyl ketone,96-22-0,'',86.13,105.5514706,102,-39,5.74052,716.17,147.172,FALSE,,0.816,1156
-1151,0,TIC,Diethyl sulfide,352-93-2,'',90.19,107.7538829,92.1,-104,7.54093,1560.523,246.593,FALSE,,0.837,2375
-1152,0,TIC,Diethylzinc,557-20-0,mobile liquid,123.5,102.3622047,123.9,-27.8,7.28955,1571.638,238.172,FALSE,,1.2065,1366
-1153,0,TIC,"1,1-Difluoroethane",75-37-6,'',66.05,72.58241758,-24,-117,7.109157065,896.171,238.436,FALSE,,0.91,1030
-1154,0,TIC,Difluoromethane,75-10-5,'',52.02,,-51.6,-136.1,0,0,0,FALSE,,,3252
-1155,0,TIC,Diisobutylamine,110-96-3,'',129.24,173.4765101,139.1,-70,7.51216,1747.385,237.793,FALSE,,0.745,2361
-1156,0,TIC,Diisopropyl ether,108-20-3,liquid; readily forms peroxides,102.18,140.7825847,68.3,-85.5,6.84159,1135.034,218.23,FALSE,,0.7258,1159
-1157,0,TIC,"1,1-Dimethoxyethane",534-15-6,'',90.12,106.0048227,64.3,-113.2,6.79398,1087.364,213.443,FALSE,,0.85015,2377
-1158,0,TIC,"1,2-Dimethoxyethane",110-71-4,liquid; sharp ethereal odor,90.12,104.4445732,84.6,-58,6.71285,1260.52,235.828,FALSE,,0.86285,2252
-1159,0,TIC,Dimethylacetamide,127-19-5,liquid,87.12,93.0172966,166.1,-20,8.96961,2725.96,301.359,FALSE,,0.9366,1993
-1160,0,TIC,Dimethylamine,124-40-3,gas at ordinary temperature; very soluble in water,45.08,66.25514403,6.9,-92.2,7.16881,995.445,225.281,FALSE,,0.6804,1160
-1161,0,TIC,"N,n-dimethylaniline",121-69-7,oily liquid; poisonous,121.18,126.7573222,193.5,2.5,7.70513,2117.236,245.544,FALSE,,0.956,
-1162,0,TIC,"2,3-Dimethylbutane",79-29-8,'',86.18,130.2599758,58,-128,6.80983,1127.187,228.95,FALSE,,0.6616,2457
-1163,0,TIC,Dimethylcyclohexane,589-90-2,'',112.24,,129.7263021,-273.15,6.84164,1369.525,216.04,FALSE,,,2263
-1164,0,TIC,Dimethyldichlorosilane,75-78-5,'',129.06,120.6168224,70.2,-76.1,7.14354,1328,241.15,FALSE,,1.07,1162
-1165,0,TIC,Dimethyldiethoxysilane,78-62-6,'',148.28,,113.2511054,-273.15,7.31607,1490.127,222.721,FALSE,,,2380
-1166,0,TIC,Dimethyl disulfide,624-92-0,'',94.2,88.65882353,109.7,-84.7,7.07103,1397.604,223.987,FALSE,,1.0625,2381
-1167,0,TIC,Dimethyl ether,115-10-6,'',46.07,24.01292643,-24.8,-141.5,6.989847065,894.669,242.546,FALSE,,1.91855,1033
-1168,0,TIC,"N,n-dimethylformamide",68-12-2,colorless to very slightly yellow liquid; faint amine odor,73.09,77.38485971,152,-60.4,6.80578,1337.716,190.502,FALSE,,0.9445,
-1169,0,TIC,"1,1-Dimethylhydrazine",57-14-7,"flammable, hygroscopic liquid; fumes in air and gradually turns yellow; ammonia-like fishy odor",60.1,76.85421995,63.9,-57.8,7.58826,1388.51,232.537,FALSE,,0.782,1163
-1170,0,TIC,"1,2-Dimethylhydrazine",540-73-8,"flammable, hygroscopic liquid corrosive to skin; fumes in air and gradually turns yellow; ammoniacal odor",60.1,72.6371767,81,-273.15,5.83914,707.722,152.171,FALSE,,0.8274,2382
-1171,0,TIC,Dimethylnaphthalene,28804-88-8,'',156.23,155.7627119,259.9146034,-273.15,7.42429,2136.17,210.246,FALSE,,1.003,
-1172,0,TIC,Dimethyl sulfide,75-18-3,'',62.13,73.24059884,37.3,-98.3,7.16223,1201.134,243.244,FALSE,,0.8483,1164
-1173,0,TIC,"N,n-dimethyl-p-toluidine",99-97-8,'',135.23,,210.5096388,-273.15,6.59181,1364.255,157.114,FALSE,,,
-1174,0,TIC,Dioxane,123-91-1,flammable liquid; vapor harmful; faint pleasant odor,88.11,85.30351438,101.3,11.8,7.45645,1570.093,241.853,FALSE,,1.0329,1165
-1175,0,TIC,Dioxolane,646-06-0,'',74.09,69.89622642,76.43841451,-273.15,6.99369,1237.377,224.415,FALSE,,1.06,1166
-1176,0,TIC,Diphenyldichlorosilane,80-10-4,'',253.2,210.2990033,304.1,-22,6.9548,1884,158.15,FALSE,,1.204,1769
-1177,0,TIC,Di-n-propyl ether,114-43-3,'',102.18,136.860434,90.1,-123.2,6.94461,1254.781,218.82,FALSE,,0.7466,
-1178,0,TIC,Dipropyl ketone,123-19-3,colorless liquid; penetrating odor,114.18,139.0742996,144,-32.5,8.82487,2199.856,226.271,FALSE,,0.821,2710
-1179,0,TIC,Divinyl benzene,1321-74-0,'',130.19,,199.5,-66.9,7.50222,2011.921,235.585,FALSE,,,1993
-1180,0,TIC,Ethane,74-84-0,"colorless, odorless gas; flammable asphyxiant",30.07,67.42152466,-88.6,-182.8,0,0,0,FALSE,,0.446,1035
-1181,0,TIC,Ethanol,64-17-5,"clear, colorless, flammable liquid",46.07,58.39036755,78.3,-114.1,8.24739,1670.409,232.959,FALSE,,0.789,1170
-1182,0,TIC,Ethyl acetate,141-78-6,"clear, volatile, flammable liquid; fruity odor",88.11,97.68292683,77.1,-83.5,7.10319,1245.702,217.961,FALSE,,0.902,1173
-1183,0,TIC,Ethyl acetoacetate,141-97-9,liquid; agreeable odor,130.14,126.5707061,180.8,-39,8.03837,2189.547,243.966,FALSE,,1.0282,1917
-1184,0,TIC,Ethyl acetylene,107-00-6,'',54.09,,8.1,-125.7,7.1153,1046.879,239.199,FALSE,,,2452
-1185,0,TIC,Ethyl acrylate,140-88-5,"liquid; lacrimator; acrid, penetrating odor;",100.12,5.006,99.5,-71.2,7.14963,1366.06,220.472,FALSE,,20,1917
-1186,0,TIC,Ethylamine,75-04-7,flammable liquid; ammonia odor,45.08,65.42815675,16.6,-81,7.40523,1203.822,249.434,FALSE,,0.689,1036
-1187,0,TIC,N-ethylaniline,103-69-5,liquid; rapidly becomes brown on exposure to light and air,121.18,125.9012987,203,-63.5,8.51785,2809.017,294.006,FALSE,,0.9625,
-1188,0,TIC,Ethylbenzene,100-41-4,colorless liquid; flammable,106.17,122.4567474,136.2,-95,6.94998,1419.315,212.611,FALSE,,0.867,1175
-1189,0,TIC,Ethyl bromide,74-96-4,flammable volatile liquid; vapor harmful,108.96,74.56884752,38.4,-118.6,6.98751,1121.371,234.672,FALSE,,1.4612,1891
-1190,0,TIC,Ethyl butyl ether,628-81-9,'',102.18,,92.2,-103,6.93767,1252.485,216.465,FALSE,,,1179
-1191,0,TIC,Ethyl butyrate,105-54-4,colorless liquid; pineapple odor,116.16,132.1501706,121.5,-98,7.20697,1509.443,227.866,FALSE,,0.879,1180
-1192,0,TIC,Ethyl chloride,75-00-3,flammable gas or very volatile liquid,64.51,70.01302366,12.3,-136.4,7.03691,1052.821,241.072,FALSE,,0.9214,1037
-1193,0,TIC,Ethyl chloroacetate,105-39-5,liquid; pungent odor; vapors irritate the eyes,122.55,106.5837537,144.2,-26,7.55391,1725.872,225.84,FALSE,,1.1498,1181
-1194,0,TIC,Ethyldichlorosilane,1789-58-8,'',129.1,118.6580882,73.9,-273.15,7.61426,1664,276.15,FALSE,,1.088,1183
-1195,0,TIC,Ethylene,74-85-1,"colorless, flammable gas; faint sweet odor",28.05,0.554700818,-103.7,-169.1,0,0,0,FALSE,,50.5678,1962
-1196,0,TIC,Ethylene chlorohydrin,107-07-3,colorless liquid; poisonous,80.51,67.25981621,128.6,-67.5,8.31676,2082.063,254.306,FALSE,,1.197,1135
-1197,0,TIC,Ethylenediamine,107-15-3,"colorless, clear, thick liquid; ammonia odor",60.1,66.92650334,117.3,11.1,7.09878,1302.256,191.362,FALSE,,0.898,1604
-1198,0,TIC,Ethylene dibromide,106-93-4,heavy liquid; chloroform odor,187.86,86.49171271,131.4,9.8,10.24424,4101.146,426.184,FALSE,,2.172,1605
-1199,0,TIC,Ethylene dichloride,107-06-2,heavy liquid; pleasant odor; burns with smoky flame,98.96,80.12306696,83.4,-35.7,7.46028,1521.789,248.48,FALSE,,1.2351,1184
-1200,0,TIC,Ethylene glycol diethyl ether,629-14-1,'',118.17,139.2857143,121.4,-74,6.54681,1270.934,227.564,FALSE,,0.8484,1153
-1201,0,TIC,Ethylene glycol isopropyl ether,109-59-1,'',104.15,115.337763,141,-273.15,7.58054,1692.265,218.454,FALSE,,0.903,
-1202,0,TIC,Ethylene glycol monomethyl ether,109-86-4,poisonous liquid,76.09,78.87426143,124.4,-85.1,7.93896,1853.556,242.312,FALSE,,0.9647,1188
-1203,0,TIC,Ethylene glycol monomethyl ether acetate,110-49-6,"colorless liquid; dissolves gums, resins",118.13,117.2622593,145,-65,7.28129,1545.712,206.474,FALSE,,1.0074,1189
-1204,0,TIC,Ethylene oxide,75-21-8,flammable gas or liquid; explosive,44.05,49.94331066,10.5,-112.5,8.72206,2022.83,335.806,FALSE,,0.882,1040
-1205,0,TIC,Ethyl fluoride,353-36-6,'',48.06,,-37.7,-143.2,7.216687065,950.397,256.658,FALSE,,,2453
-1206,0,TIC,Ethyl isobutyrate,97-62-1,"liquid; aromatic, fruity odor",116.16,133.5172414,109.9,-88.1,7.35712,1536.985,233.246,FALSE,,0.87,2385
-1207,0,TIC,Ethyl mercaptan,75-08-1,"liquid; penetrating, leek-like odor",62.13,74.72038485,35,-147.9,6.95206,1084.531,231.385,FALSE,,0.8315,2363
-1208,0,TIC,Ethyl methyl ether,540-67-0,liquid,60.1,82.88511929,7.4,-113.1,6.33009,600.134,164.616,FALSE,,0.7251,1039
-1209,0,TIC,Ethyl methyl ketone,78-93-3,flammable liquid; acetone-like odor,72.11,89.57763975,79.6,-86.7,6.8645,1150.207,209.246,FALSE,,0.805,1193
-1210,0,TIC,Ethyl nitrate,625-58-1,'',91.08,82.1725009,87.64566357,-273.15,7.16033,1337.035,224.78,FALSE,,1.1084,1194
-1211,0,TIC,Ethyl orthoformate,122-51-0,liquid; odor resembling pine needles,148.23,166.38231,146.1232086,-18,7.71662,1821.195,230.482,FALSE,,0.8909,2524
-1212,0,TIC,Ethyl propionate,105-37-3,colorless liquid; fruity odor,102.13,114.5340361,99.1,-73.9,7.02036,1274.735,208.932,FALSE,,0.8917,1195
-1213,0,TIC,Ethyl propyl ether,628-32-0,'',88.15,,63.9,-127.5,6.99648,1194.642,227.135,FALSE,,,2615
-1214,0,TIC,Ethyl silicate,78-10-4,"colorless, flammable liquid",208.3,223.2583065,168.9,-85.5,7.04822,1561.277,205.578,FALSE,,0.933,1292
-1215,0,TIC,Ethyl toluene,"611-14-3, 25550-14-5",'',120.19,,165.2,-80.8,7.01582,1529.184,208.509,FALSE,,,1993
-1216,0,TIC,Ethyltrichlorosilane,115-21-9,'',163.51,132.0652613,97.9,-105.6,6.58174,1102,199.15,FALSE,,1.2381,1196
-1217,0,TIC,Fluorine,7782-41-4,'',38,25.1206452,-188.2,-219.6,6.89865,322.067,268.402,FALSE,,1.5127,1045
-1218,0,TIC,Fluorobenzene,462-06-6,liquid; benzene odor,96.1,93.84765625,84.7,-42.2,7.23735,1409.848,238.358,FALSE,,1.024,2387
-1219,0,TIC,Fluorotoluene,25496-08-6,colorless liquid; insoluble in water,110.13,109.6912351,114,-62,7.13671,1457.699,228.522,FALSE,,1.004,2388
-1220,0,TIC,2-Fluorotoluene,95-52-3,colorless liquid; insoluble in water,110.13,109.6912351,114,-62,7.13671,1457.699,228.522,FALSE,,1.004,
-1221,0,TIC,3-Fluorotoluene,352-70-5,colorless liquid; insoluble in water,110.13,110.4613842,116,-87.7,7.20581,1501.055,230.821,FALSE,,0.997,
-1222,0,TIC,4-Fluorotoluene,352-32-9,colorless liquid; odor of oil of bitter almonds,110.13,110.01998,116.6,-56.8,6.99407,1373.934,217.384,FALSE,,1.001,
-1223,0,TIC,Formamide,75-12-7,"slightly viscous, colorless liquid",45.04,39.73883889,219.9,2.6,10.4603,3881.305,300.805,FALSE,,1.1334,2265
-1224,0,TIC,Formic acid,64-18-6,colorless liquid; pungent odor,46.03,37.7295082,100.6,8.4,4.87631,515,133.742,FALSE,,1.22,1779
-1225,0,TIC,Furan,110-00-9,liquid; anesthetic vapors,68.07,72.63899264,31.4,-85.6,6.97513,1060.801,227.734,FALSE,,0.9371,2389
-1226,0,TIC,Furfural,98-01-1,colorless oily liquid; peculiar odor,96.08,83.09262302,161.7,-36.5,6.96865,1430.133,188.701,FALSE,,1.1563,1199
-1227,0,TIC,Germane,7782-65-2,colorless gas,76.67,50.34143139,-88.1,-165.9,0,0,0,FALSE,,1.523,2192
-1228,0,TIC,Halothane,151-67-7,"non-flammable, highly volatile liquid; sweetish odor",197.38,105.494388,50.2,-115.8,6.70035,1016.075,215.569,FALSE,,1.871,
-1229,0,TIC,N-heptaldehyde,111-71-7,liquid; penetrating fruity odor,114.18,138.9693532,152.8,-43.3,5.47587,686.453,111.817,FALSE,,0.82162,
-1230,0,TIC,N-heptane,142-82-5,"volatile, flammable liquid",100.2,146.5555068,98.4,-90.6,6.90342,1268.636,216.951,FALSE,,0.6837,
-1231,0,TIC,N-heptene,25339-56-4,'',98.18,140.8608321,93.6,-118.9,7.09321,1400.674,238.957,FALSE,,0.697,
-1232,0,TIC,Hexadiene,42296-74-2,'',82.16,,59.60034684,-273.15,6.56332,1008.139,214.163,FALSE,,,2458
-1233,0,TIC,Hexafluoroacetone,684-16-2,'',166.02,124.8270677,-27.3,-125.5,7.23614,978.564,252.197,FALSE,,1.33,2420
-1234,0,TIC,Hexafluoroethane,76-16-4,'',138.01,,-78.2,-100,0,0,0,FALSE,,,2193
-1235,0,TIC,Hexafluoropropylene,116-15-4,'',150.02,94.76942514,-29.6,-156.5,7.387977065,1028.267,258.456,FALSE,,1.583,1858
-1236,0,TIC,N-hexane,110-54-3,"colorless, very volatile liquid; faint odor",86.18,131.6127062,68.7,-95.3,6.87776,1171.53,224.366,FALSE,,0.6548,
-1237,0,TIC,N-hexanethiol,111-31-9,'',118.24,,152.7,-80.5,6.94664,1454.004,204.954,FALSE,,,
-1238,0,TIC,N-hexanol,"111-27-3, 25917-35-5",liquid,102.18,125.3281001,157.4,-44.6,7.28781,1422.031,165.444,FALSE,,0.8153,
-1239,0,TIC,1-Hexene,592-41-6,'',84.16,125.0334274,63.5,-139.8,6.86573,1152.971,225.849,FALSE,,0.6731,2370
-1240,0,TIC,Hydrazine,7803-57-8,"colorless, oily liquid; fuming in air; explodes during distillation in air is present",32.05,31.93503388,113.5,1.5,7.88615,1724.782,231.317,FALSE,,1.0036,2029
-1241,0,TIC,Hydrogen,1333-74-0,flammable gas,2.02,26.47444299,-252.8,-259.2,0,0,0,FALSE,,0.0763,1049
-1242,0,TIC,Hydrogen bromide,10035-10-6,"colorless, corrosive, nonflammable gas; acrid odor; fumes in moist air",80.91,,-66.7,-86.8,7.03095,754.969,248.064,FALSE,,,1048
-1243,0,TIC,Hydrogen chloride,7647-01-0,"colorless, corrosive, nonflammable gas; pungent odor",36.46,,-85,-114.2,7.44899,868.358,274.904,FALSE,,,1050
-1244,0,TIC,Hydrogen cyanide,74-90-8,'',27.03,39.34497817,25.7,-13.2,7.54927,1340.791,261.558,FALSE,,0.687,1051
-1245,0,TIC,Hydrogen fluoride,7664-39-3,colorless gas or liquid; intensely poisonous,20.01,20.19172553,19.5,-83.4,7.7899,1556.559,297.349,FALSE,,0.991,1052
-1246,0,TIC,Hydrogen iodide,10034-85-2,"colorless, acrid, non-flammable gas; decomposed by light; fumes in air",127.91,,-35.6,-50.8,7.14364,939.994,255.138,FALSE,,,2197
-1247,0,TIC,Hydrogen selenide,7/5/7783,highly toxic and reactive gas; disagreeable odor,80.98,38.19811321,-42,-65.7,6.49175,596.484,206.797,FALSE,,2.12,2202
-1248,0,TIC,Hydrogen sulfide,6/4/7783,"flammable, poisonous gas; odor of rotten eggs",34.08,,-60.3,-85.5,7.40397,958.587,272.611,FALSE,,,1053
-1249,0,TIC,Iodine,7553-56-2,bluish-black scales; readily sublimes at room temperature,253.81,64.09343434,184.4,113.6,6.23939,1039.159,126.561,FALSE,,3.96,1792
-1250,0,TIC,Iodomethylpropane,513-38-2,liquid; becomes brown on exposure,184.03,114.6604361,120,-93,7.59833,1711.247,242.23,FALSE,,1.605,2391
-1251,0,TIC,Iodopropane,26914-02-3,colorless or slightly yellow liquid,170,97.30967373,102.5,-98,7.22121,1507.41,244.701,FALSE,,1.747,2392
-1252,0,TIC,Iso-amyl acetate,123-92-2,"colorless, neutral liquid; pear-like odor",130.18,148.6073059,142,-78.5,7.95557,1932.043,244.452,FALSE,,0.876,1993
-1253,0,TIC,Isoamyl nitrate,'',colorless liquid,117.15,117.6204819,147.5,-273.15,7.62123,1785.807,229.175,FALSE,,0.996,1993
-1254,0,TIC,Isobutane,75-28-5,'',58.12,105.4962608,-11.7,-159.6,7.203197065,1132.108,274.068,FALSE,,0.55092,1075
-1255,0,TIC,Isobutanol,78-83-1,"colorless, flammable liquid",74.12,92.44200549,107.7,-108,7.30636,1236.991,171.622,FALSE,,0.8018,1212
-1256,0,TIC,Isobutyl acetate,110-19-0,colorless liquid,116.16,133.3333333,116.16,-98.8,7.41186,1625.875,240.656,FALSE,,0.8712,1213
-1257,0,TIC,Isobutyl aldehyde,78-84-2,flammable liquid; pungent odor,72.11,90.84152179,64.1,-65,6.74905,1060.141,209.954,FALSE,,0.7938,2045
-1258,0,TIC,Isobutylamine,78-81-9,liquid; blisters skin,73.14,101.0220994,67.7,-84.6,7.28814,1317.873,230.729,FALSE,,0.724,1214
-1259,0,TIC,Isobutylene,115-11-7,gas,56.11,95.26315789,-6.9,-140.3,6.522187065,799.055,226.535,FALSE,,0.589,1055
-1260,0,TIC,Isobutyl formate,542-55-2,liquid,102.13,115.4011299,98.1,-95.8,7.38476,1514.427,237.855,FALSE,,0.885,2393
-1261,0,TIC,Isobutyl isobutyrate,97-85-8,liquid,144.21,164.8114286,147.5,-80.7,7.63543,1806.356,232.452,FALSE,,0.875,2528
-1262,0,TIC,Isobutyl nitrate,'',liquid,103.12,101.5960591,67.2,-273.15,8.20041,2045.425,264.154,FALSE,,1.015,1992
-1263,0,TIC,Isobutyl propionate,540-42-1,liquid; agreeable odor,130.21,155.7535885,137,-71,7.65794,1767.952,233.197,FALSE,,0.836,2394
-1264,0,TIC,Isobutyric acid,79-31-2,liquid; pungent odor,88.11,92.74736842,154.5,-46,5.11418,459.215,52.772,FALSE,,0.95,2529
-1265,0,TIC,Isohexane,107-83-5,'',86.18,131.9350888,60.3,-153.6,6.8391,1135.41,226.572,FALSE,,0.6532,2288
-1266,0,TIC,Isooctane,540-84-1,"highly flammable, mobile liquid",114.23,165.0865682,99.2,-107.4,6.81189,1257.84,220.735,FALSE,,0.69194,1262
-1267,0,TIC,Isopentane,78-78-4,'',72.15,116.3522013,27.8,-159.9,6.78967,1020.012,233.097,FALSE,,0.6201,1265
-1268,0,TIC,Isoprene,78-79-5,"colorless, volatile liquid",68.12,100.0293686,34.1,-145.9,6.09096,706.92,186.104,FALSE,,0.681,1218
-1269,0,TIC,Isopropanol,67-63-0,flammable liquid,60.1,76.5556334,82.3,-87.9,7.7361,1357.427,197.336,FALSE,,0.78505,1219
-1270,0,TIC,Isopropenylbenzene,98-83-9,'',118.18,129.7825609,165.5,-23.2,8.09477,2326.867,280.38,FALSE,,0.9106,2303
-1271,0,TIC,Isopropyl acetate,108-21-4,colorless liquid,102.13,117.1484285,88.5,-73.4,7.42682,1490.877,239.052,FALSE,,0.8718,1220
-1272,0,TIC,Isopropylamine,75-31-0,"colorless, flammable liquid; ammonia odor; strong base",59.11,85.17291066,31.8,-95.2,6.89017,985.65,214.071,FALSE,,0.694,1221
-1273,0,TIC,Isopropyl chloroacetate,105-48-6,'',136.59,,93.3,-273.15,8.29163,2263.166,269.739,FALSE,,,2947
-1274,0,TIC,Isopropyl cyclohexane,696-29-7,'',126.24,,154.8,-89.4,6.87257,1452.816,209.391,FALSE,,,
-1275,0,TIC,Isopropyl isobutyrate,617-50-5,'',130.21,,137.8,-273.15,7.22096,1488.585,222.419,FALSE,,,2406
-1276,0,TIC,Isopropyl mercaptan,75-33-2,'',76.16,93.52818372,52.6,-130.5,6.87734,1113.895,226.157,FALSE,,0.8143,2402
-1277,0,TIC,Isopropyl nitrate,1712-64-7,'',105.11,,104.2632332,-273.15,6.42006,1018.568,183.528,FALSE,,,1222
-1278,0,TIC,Ketene,463-51-4,gas; penetrating odor,42.04,,-49.8,-151.1,6.85232,766.685,242.541,FALSE,,,2521
-1279,0,TIC,Krypton,7439-90-9,"colorless, odorless, inert gas",83.8,,-153.3,-157.4,0,0,0,FALSE,,,1056
-1280,0,TIC,Mesityl oxide,141-79-7,"colorless, oily liquid; honey-like odor",98.14,114.2225326,129.8,-53,7.06863,1434.631,213.062,FALSE,,0.8592,1229
-1281,0,TIC,Methacrylic acid,79-41-4,long prisms or a corrosive liquid,86.09,84.79267212,161,15,8.24835,2094.201,228.636,FALSE,,1.0153,2531
-1282,0,TIC,Methacrylonitrile,126-98-7,liquid,67.09,83.8520185,90.3,-35.8,6.99865,1353.573,238.029,FALSE,,0.8001,3079
-1283,0,TIC,Methane,74-82-8,"colorless, odorless, flammable gas",16.04,,-161.5,-182.5,0,0,0,FALSE,,,1971
-1284,0,TIC,Methanol,67-56-1,"flammable, poisonous, mobile liquid",32.04,40.73226545,64.7,-97.7,8.07919,1581.341,239.65,FALSE,,0.7866,1230
-1285,0,TIC,Methyl acetate,79-20-9,colorless liquid; pleasant odor,74.08,79.2977949,56.9,-98,7.07874,1164.426,220.46,FALSE,,0.9342,1231
-1286,0,TIC,Methyl acetylene,74-99-7,'',40.06,56.7261399,-23.2,-102.7,6.905787065,818.384,226.693,FALSE,,0.7062,1060
-1287,0,TIC,Methyl acrylate,96-33-3,liquid lacrimator; acrid odor,86.09,90.28841112,80.2,-76.8,7.19837,1338.663,229.634,FALSE,,0.9535,1919
-1288,0,TIC,Methylal,109-87-5,"colorless, clear, volatile, flammable liquid; chloroform odor",76.09,88.54881881,41.9,-104.8,6.91185,1068.35,222.741,FALSE,,0.8593,1234
-1289,0,TIC,Methylamine,74-89-5,flammable gas,31.06,46.89009662,-6.3,-93.5,7.395,1034.977,235.576,FALSE,,0.6624,1061
-1290,0,TIC,N-methylaniline,"100-61-8, 26915-12-8",colorless or slightly yellow liquid,107.15,108.3417594,195.9,-57,7.86919,2226.576,250.694,FALSE,,0.989,
-1291,0,TIC,Methyl bromide,74-83-9,"colorless, poisonous gas",94.94,54.87861272,3.6,-93.6,7.14384,1069.708,247.379,FALSE,,1.73,1062
-1292,0,TIC,3-Methylbutan-2-one,563-80-4,"colorless, flammable liquid; acetone-like odor",86.13,106.3333333,94.4,-93,8.50069,1806.925,232.532,FALSE,,0.81,2397
-1293,0,TIC,2-Methyl-2-butene,"513-35-9, 26760-64-5",highly flammable liquid; disagreeable odor,70.13,106.2575758,38.6,-133.8,6.92237,1098.619,233.261,FALSE,,0.66,2460
-1294,0,TIC,3-Methyl-1-butene,563-45-1,'',70.13,112.8762273,20.1,-168.5,6.82636,1013.575,236.83,FALSE,,0.6213,2561
-1295,0,TIC,Methyl butyl ketone,591-78-6,colorless liquid,100.16,123.4561814,127.6,-55.8,8.54225,2011.668,227.786,FALSE,,0.8113,1224
-1296,0,TIC,Methyl butyrate,623-42-7,colorless liquid,102.13,113.6798753,102.7,-85.8,7.46009,1528.058,231.544,FALSE,,0.8984,1237
-1297,0,TIC,Methyl chloride,74-87-3,"colorless, poisonous gas of mild odor",50.49,55.42261251,-24.2,-97.7,7.10017,951.561,249.682,FALSE,,0.911,1063
-1298,0,TIC,Methyl chloroacetate,96-34-4,colorless liquid,108.52,87.65751212,129.8,-32.1,7.15628,1390.083,195.64,FALSE,,1.238,2295
-1299,0,TIC,Methylcyclopentane,96-37-7,'',84.16,112.42319,71.8,-142.4,6.86283,1186.059,226.042,FALSE,,0.7486,2298
-1300,0,TIC,Methyl dichloroacetate,116-54-1,'',142.97,,142.8,-52.2,7.73068,1820.46,232.293,FALSE,,,2299
-1301,0,TIC,2-Methyl-5-ethylpyridine,104-90-5,liquid; aromatic odor,121.18,131.9468641,177.8,-70.3,5.62874,805.918,113.17,FALSE,,0.9184,2300
-1302,0,TIC,Methyl fluoride,593-53-3,gas; agreeable ether-like odor,34.03,38.34798287,-78.3,-141.8,0,0,0,FALSE,,0.8874,2454
-1303,0,TIC,Methyl formate,107-31-3,colorless flammable liquid; agreeable odor,60.05,60.84093212,31.7,-99,3.12607,6.524,-5.39,FALSE,,0.987,1243
-1304,0,TIC,2-Methylfuran,534-22-5,'',82.1,,65.24291961,-88.7,7.69038,1643.082,276.384,FALSE,,,2301
-1305,0,TIC,Methylhydrazine,60-34-4,clear liquid; strong reducing agent,46.07,52.71167048,87.8,-52.4,6.84297,1115.19,191.648,FALSE,,0.874,1244
-1306,0,TIC,2-Methyl-2-hydroxy-3-butyne,115-19-5,'',84.12,,104.4446749,2.6,6.74439,1016.517,158.657,FALSE,,,
-1307,0,TIC,Methyl iodide,74-88-4,"colorless, poisonous liquid; turns brown when exposed to light",141.94,62.25438596,42.4,-66.5,8.01791,1755.986,299.261,FALSE,,2.28,2644
-1308,0,TIC,Methyl isobutyl carbinol,108-11-2,'',102.18,126.5386997,131.7,-273.15,10.44853,3831.194,374.829,FALSE,,0.8075,2053
-1309,0,TIC,Methyl isobutyl ketone,108-10-1,'',100.16,124.5461328,116,-84,6.82808,1254.095,201.613,FALSE,,0.8042,1245
-1310,0,TIC,Methyl isothiocyanate,556-61-6,crystals; highly irritating pesticide,73.12,68.39397624,118.9,-273.15,3.03266,129.47,55.603,FALSE,,1.0691,2477
-1311,0,TIC,Methyl isovalerate,556-24-1,liquid; valerian odor,116.18,131.8728717,116.5,-273.15,7.40329,1582.466,233.027,FALSE,,0.881,2400
-1312,0,TIC,Methyl mercaptan,74-93-1,flammable gas; odor of rotten cabbage,48.11,50.11458333,6,-123,7.22891,1122.494,251.402,FALSE,,0.96,1064
-1313,0,TIC,Methyl methacrylate monomer,80-62-6,'',100.12,106.059322,100.3,-48.2,8.25295,1945.56,265.581,FALSE,,0.944,1247
-1314,0,TIC,Methyl pentane,43133-95-5,'',86.18,131.9350888,60.27083657,-273.15,6.8391,1135.41,226.572,FALSE,,0.6532,
-1315,0,TIC,Methylphenyldichlorosilane,149-74-6,'',191.13,161.0736558,204.2,-43.5,7.3947,1965.971,230.12,FALSE,,1.1866,2437
-1316,0,TIC,Methyl propionate,554-12-1,colorless liquid,88.11,96.29508197,79.5,-87.5,6.91496,1155.987,207.171,FALSE,,0.915,1248
-1317,0,TIC,Methyl propyl ether,557-17-5,"mobile, flammable liquid",74.12,100.7612833,39.1,-139.2,6.5626,903.588,206.459,FALSE,,0.7356,2612
-1318,0,TIC,Methyl propyl ketone,107-87-9,colorless liquid,86.13,106.4647713,102.3,-76.9,7.01753,1311.145,214.693,FALSE,,0.809,1249
-1319,0,TIC,2-Methylpyridine,109-06-8,colorless liquid; strong unpleasant odor,93.13,98.62331886,129.4,-66.7,7.01123,1401.681,209.988,FALSE,,0.9443,2313
-1320,0,TIC,4-Methyl pyridine,108-89-4,"flammable liquid; obnoxious, sweetish odor",93.13,97.53875157,145.4,3.6,7.0449,1482.84,210.743,FALSE,,0.9548,2313
-1321,0,TIC,6-Methylquinoline,91-62-3,'',143.19,132.2649178,258.6,-22.2,7.00274,1802.833,172.447,FALSE,,1.0826,
-1322,0,TIC,8-Methylquinoline,611-32-5,'',143.19,,247.8930201,-80,7.26087,1921.712,190.847,FALSE,,,
-1323,0,TIC,P-methylstyrene,622-97-9,'',118.18,128.8346234,172.8,-34.1,7.04842,1594.812,209.895,FALSE,,0.9173,1993
-1324,0,TIC,Methyl thiocyanate,556-64-9,colorless liquid; onion odor,73.12,68.46441948,131.5,-51.1,7.16502,1566.033,232.507,FALSE,,1.068,
-1325,0,TIC,Methyltrichlorosilane,75-79-6,'',149.48,117.7007874,66.4,-77.8,6.87213,1167,226.15,FALSE,,1.27,1250
-1326,0,TIC,Monopropylamine,107-10-8,"colorless, alkaline liquid; strong ammonia odor",59.11,82.21140473,47.9,-83,6.92646,1044.028,210.836,FALSE,,0.719,1277
-1327,0,TIC,Naphthalene,91-20-3,"white scales, powder, balls, or cakes; odor of mothballs; sublimes at room temperature",128.17,110.3012048,218,80.3,7.14627,1831.571,211.821,FALSE,,1.162,1334
-1328,0,TIC,Neohexane,75-83-2,'',86.18,132.8912876,49.7,-98.9,6.75483,1081.176,229.343,FALSE,,0.6485,1208
-1329,0,TIC,Neon,1/9/7440,"colorless, odorless, inert gas",20.18,,-246.1,-248.6,0,0,0,FALSE,,,1065
-1330,0,TIC,Nickel carbonyl,13463-39-3,"poisonous, volatile liquid; oxidizes in air, exploding at 60 degrees Celsius",170.75,129.552352,42.8,-19,7.51245,1409.037,261.513,FALSE,,1.318,1259
-1331,0,TIC,Nitrobenzene,98-95-3,colorless to pale yellow liquid; poisonous; almond odor,123.11,102.2763147,210.8,5.8,7.09063,1727.592,199.712,FALSE,,1.2037,1662
-1332,0,TIC,Nitroethane,79-24-3,oily liquid; pleasant odor,75.07,71.85107198,114.1,-89.5,7.58777,1671.266,241.187,FALSE,,1.0448,2842
-1333,0,TIC,Nitrogen,7727-37-9,odorless gas; condenses to a liquid,28.01,34.83830846,-195.8,-210,0,0,0,FALSE,,0.804,1066
-1334,0,TIC,Nitrogen dioxide,10102-44-0,reddish-brown gas or liquid; deadly poison; irritating odor,46.01,31.77486188,21,-11.3,6.22758,540.635,141.22,FALSE,,1.448,1067
-1335,0,TIC,Nitromethane,75-52-5,oily liquid; somewhat disagreeable odor,61.04,53.68041509,101.2,-28.5,7.28052,1446.196,227.517,FALSE,,1.1371,1261
-1336,0,TIC,1-Nitropropane,25322-01-4,liquid,89.09,89.43881136,132.2,-107.8,7.11284,1466.368,215.121,FALSE,,0.9961,2608
-1337,0,TIC,2-Nitropropane,79-46-9,liquid,89.09,90.7137766,120.2,-91.3,7.48654,1664.036,240.995,FALSE,,0.9821,3241
-1338,0,TIC,Nitrosyl chloride,2696-92-6,"very corrosive, reddish-yellow gas",65.46,46.19618913,-5.4,-59.6,7.505777065,1151.544,255.287,FALSE,,1.417,1069
-1339,0,TIC,Nitrotoluene,1321-12-6,yellowish liquid,137.1,117.9659267,220,-273.15,6.16817,1130.679,121.626,FALSE,,1.1622,1664
-1340,0,TIC,O-nitrotoluene,88-72-2,yellowish liquid,137.14,118.0003442,222.5,-3.2,6.16817,1130.679,121.626,FALSE,,1.1622,1664
-1341,0,TIC,P-nitrotoluene,99-99-0,yellowish crystals,137.14,124.2435224,238.5,51.6,6.9675,1699.858,182.682,FALSE,,1.1038,1664
-1342,0,TIC,Nitrous oxide,10024-97-2,laughing gas; colorless asphyxiant,44.01,22.37417387,-88.5,-90.8,0,0,0,FALSE,,1.967,1070
-1343,0,TIC,N-nonane,111-84-2,'',128.26,178.7346711,150.8,-53.5,6.69999,1492.928,217.255,FALSE,,0.7176,
-1344,0,TIC,1-Nonene,124-11-8,'',126.24,169.8372124,146.9,-81.2,6.95389,1435.359,205.535,FALSE,,0.7433,1993
-1345,0,TIC,Octafluorocyclobutane,115-25-3,'',200.03,,-6,-40.2,7.128997065,1007.399,242.945,FALSE,,,1976
-1346,0,TIC,Octafluoropropane,76-19-7,'',188.02,,-36.7,-147.7,6.963657065,842.613,243.127,FALSE,,,2424
-1347,0,TIC,N-octane,111-65-9,flammable liquid,114.23,163.5080587,125.7,-56.8,8.0763,1936.281,253.007,FALSE,,0.69862,
-1348,0,TIC,1-Octene,111-66-0,'',112.21,156.9590152,121.3,-101.7,6.93262,1353.486,212.764,FALSE,,0.7149,1993
-1349,0,TIC,Oxygen,7782-44-7,"colorless, odorless gas; supports combustion",32,28.07017544,-183,-218.8,0,0,0,FALSE,,1.14,1072
-1350,0,TIC,Oxygen difluoride,7783-41-7,'',54,28.42105263,-145.6,-233.9,0,0,0,FALSE,,1.9,2190
-1351,0,TIC,Ozone,10028-15-6,"bluish, explosive gas or blue liquid; pleasant odor",48,29.73977695,-111.3,-193,0,0,0,FALSE,,1.614,1995
-1352,0,TIC,Pentachloroethane,76-01-7,liquid; chloroform-like odor,202.29,120.4393903,159.9,-29,6.64274,1342.271,196.506,FALSE,,1.6796,1669
-1353,0,TIC,"1,3-Pentadiene",504-60-9,'',68.12,100.7692308,42.8,-141.1,6.94776,1119.249,232.952,FALSE,,0.676,1993
-1354,0,TIC,"1,4-Pentadiene",591-93-5,'',68.12,,26,-148.3,7.03467,1108.225,241.046,FALSE,,,
-1355,0,TIC,N-pentane,109-66-0,flammable liquid,72.15,115.18567,36.1,-129.7,6.8643,1070.617,232.696,FALSE,,0.62638,
-1356,0,TIC,N-pentanol,71-41-0,liquid; mild characteristic odor; irritating to eyes,88.15,108.2126197,137.8,-77.6,7.55787,1492.549,181.529,FALSE,,0.8146,
-1357,0,TIC,1-Pentene,109-67-1,liquid,70.13,109.0838389,30,-165.1,6.78568,1014.294,229.783,FALSE,,0.6429,1108
-1358,0,TIC,Perchloroethylene,127-18-4,"colorless, nonflammable liquid",165.83,102.1938744,121.2,-22.3,7.05566,1440.819,223.979,FALSE,,1.6227,1897
-1359,0,TIC,Phenol,108-95-2,"colorless, needle crystals or white, crystalline mass; poisonous and caustic",94.11,87.87114846,181.8,40.9,7.12198,1509.677,174.201,FALSE,,1.071,1671
-1360,0,TIC,Phenylacetyl chloride,103-80-0,'',154.6,,209.713736,-273.15,7.89846,2224.227,233.566,FALSE,,,2577
-1361,0,TIC,Phenylhydrazine,100-63-0,prisms or oil; turns yellow to dark red on exposure to light and air,108.14,98.50610312,243.5,19.2,8.06061,2480.263,235.654,FALSE,,1.0978,2572
-1362,0,TIC,Phenyl isocyanate,103-71-9,liquid with acrid odor; irritating to eyes,119.12,108.7258123,166.3,-30,7.39799,1800.757,232.847,FALSE,,1.0956,2487
-1363,0,TIC,Phenyl mercaptan,108-98-5,"liquid; repulsive, garlic-like odor; oxidizes in air",110.18,102.7032066,169.1,-14.9,6.99019,1529.454,203.048,FALSE,,1.0728,2337
-1364,0,TIC,Phenyltrichlorosilane,98-13-5,'',211.55,160.1438304,201.8,-40,6.9834,1641,199.15,FALSE,,1.321,1804
-1365,0,TIC,Phosgene,75-44-5,"colorless, highly toxic gas; suffocating odor",98.92,72.10438079,7.6,-127.8,7.14615,1072.71,243.295,FALSE,,1.3719,1076
-1366,0,TIC,Phosphine,7803-51-2,poisonous gas; odor of decaying fish; spontaneously flammable in air,34,,-87.7,-133.8,6.90101,702.651,262.085,FALSE,,,2199
-1367,0,TIC,Phosphorus oxychloride,10025-87-3,"colorless, strongly fuming liquid; pugnent odor",153.33,93.20972644,105.5,1.2,7.15676,1445.959,233.031,FALSE,,1.645,1810
-1368,0,TIC,Phosphorus tribromide,7789-60-8,"colorless, fuming liquid; very penetrating odor; corrosive",270.73,94.99298246,172.8,-41.6,7.02639,1694.636,233.409,FALSE,,2.85,1808
-1369,0,TIC,Phosphorus trichloride,12/2/7719,"colorless, clear, fuming liquid",137.33,87.24904701,76.1,-92,7.07015,1304.47,236.185,FALSE,,1.574,1809
-1370,0,TIC,Beta-picoline,108-99-6,colorless liquid; sweetish odor,93.13,97.35521639,144.1,-18.1,7.05389,1484.307,211.544,FALSE,,0.9566,2313
-1371,0,TIC,Piperidine,110-89-4,liquid; soapy feel; characteristic odor,85.15,98.75898863,106.4,-10.5,6.85699,1239.577,205.528,FALSE,,0.8622,2401
-1372,0,TIC,Propadiene,463-49-0,'',40.06,22.41745943,-34.5,-136.3,6.673187065,755.286,233.991,FALSE,,1.787,2200
-1373,0,TIC,Propane,74-98-6,"odorless gas; burns with luminous, smoky flame",44.1,75.34597642,-42,-187.7,7.41188,1149.36,298.056,FALSE,,0.5853,1075
-1374,0,TIC,Propanethiol,79869-58-2,'',76.16,90.34400949,67.71819859,-273.15,6.92863,1183.392,224.634,FALSE,,0.843,2402
-1375,0,TIC,N-propanol,71-23-8,liquid; alcoholic and slightly stupefying odor,60.1,74.63057246,97.2,-126.2,8.18894,1690.864,221.346,FALSE,,0.8053,
-1376,0,TIC,Propionic acid,79-09-4,oily liquid; rancid odor,74.08,74.60221551,141.2,-20.7,7.62068,1679.869,213.318,FALSE,,0.993,1848
-1377,0,TIC,Propionic anhydride,123-62-6,liquid; pungent odor,130.14,129.2941666,167,-45,6.10586,949.198,127.252,FALSE,,1.00654193,2496
-1378,0,TIC,Propionitrile,107-12-0,liquid; sweetish odor; poisonous when decomposing,55.08,70.45280123,97.4,-92.9,6.49242,1036.424,189.39,FALSE,,0.7818,2404
-1379,0,TIC,N-propyl acetate,109-60-4,liquid; odor of pears,102.13,122.1650718,101.5,-95,7.01896,1283.861,208.772,FALSE,,0.836,
-1380,0,TIC,N-propyl benzene,103-65-1,liquid,120.19,139.4315545,159.2,-99.6,6.95094,1490.963,207.15,FALSE,,0.862,
-1381,0,TIC,Propylene,115-07-1,flammable gas; burns with yellow sooty flame,42.08,81.88363495,-47.7,-185.3,0,0,0,FALSE,,0.5139,1075
-1382,0,TIC,Propylene oxide,75-56-9,"colorless, extremely flammable liquid",58.08,69.94219653,34.5,-111.9,6.42556,802.487,191.802,FALSE,,0.8304,1280
-1383,0,TIC,N-propyl formate,110-74-7,colorless liquid; pleasant odor,88.11,97.79134295,80.8,-92.9,6.90905,1159.609,207.335,FALSE,,0.901,
-1384,0,TIC,Propyl mercaptan,107-03-9,'',76.16,90.34400949,67.7,-113.2,6.92863,1183.392,224.634,FALSE,,0.843,2402
-1385,0,TIC,N-propyl nitrate,627-13-4,pale yellow liquid; heating may cause explosion,105.1,99.73429493,110.6,-273.15,7.73719,1721.723,245.49,FALSE,,1.0538,
-1386,0,TIC,Pyridine,110-86-1,"flammable, colorless liquid; disagreeable odor",79.1,80.49088245,115.3,-41.6,7.03782,1371.358,214.654,FALSE,,0.98272,1282
-1387,0,TIC,"Pyridine, 2-methyl-5-vinyl-",140-76-1,'',119.18,,181.1,-14.3,6.35364,1135.712,143.982,FALSE,,,
-1388,0,TIC,Pyrrolidine,123-75-1,almost colorless liquid; ammonia-like odor; fumes in air,71.12,83.4741784,86.6,-57.8,6.92463,1180.043,205.255,FALSE,,0.852,1922
-1389,0,TIC,Resorcinol,108-46-3,"white, needle-like crystals; becomes pink on exposure to light and air",110.11,86.58488637,276.5,108.9,8.39758,2687.152,210.986,FALSE,,1.2717,2876
-1390,0,TIC,Selenium hexafluoride,7783-79-1,gas,193,,-34.4,-50.6,9.408207065,1556.66,284.052,FALSE,,,2194
-1391,0,TIC,Selenium oxychloride,7791-23-3,"nearly colorless or yellowish, corrosive liquid; fumes in air",165.87,67.9795082,180,8.5,10.25402,3515.404,308.095,FALSE,,2.44,2879
-1392,0,TIC,Silane,7803-62-5,gas; repulsive odor,32.12,47.23529412,-112.1,-184.7,7.09738,703.987,278.502,FALSE,,0.68,2203
-1393,0,TIC,Silicon tetrachloride,10026-04-7,"colorless, clear, fuming liquid",169.9,111.7763158,56.9,-68.8,7.70402,1616.546,278.455,FALSE,,1.52,1818
-1394,0,TIC,Silicon tetrafluoride,7783-61-1,colorless gas; very pungent odor; forms heavy clouds with moist air,104.08,65.13141427,-95.16028603,-86.8,0,0,0,FALSE,,1.598,1859
-1395,0,TIC,Styrene monomer,100-42-5,"colorless to yellowish, oily liquid; penetrating odor",104.15,114.9558499,145.2,-30.6,6.9344,1459.909,213.599,FALSE,,0.906,2055
-1396,0,TIC,Sulfur dioxide,9/5/7446,"colorless, nonflammable gas; strong suffocating odor",64.06,42.70666667,-10,-73.1,7.25308,966.575,231.079,FALSE,,1.5,1079
-1397,0,TIC,Sulfur monochloride,"12771-08-3, 10025-67-9","non-flammable, light amber to yellowish red, fuming, oily liquid",135.03,79.97038792,137.8,-80,6.9399,1417.43,211.465,FALSE,,1.6885,1828
-1398,0,TIC,Sulfur trioxide,11/9/7446,ice-like mass,80.06,41.64585934,44.7,16.8,7.08025,892.175,169.586,FALSE,,1.9224,1829
-1399,0,TIC,T-butyl bromide,507-19-7,colorless liquid,137.04,113.0226804,73.3,-16.3,7.43955,1539.717,264.955,FALSE,,1.2125,
-1400,0,TIC,Tellurium hexafluoride,7783-80-4,colorless gas; repulsive odor,241.61,96.68267307,-35.5,-37.6,8.230527065,1122.339,247.713,FALSE,,2.499,2195
-1401,0,TIC,"1,1,2,2-Tetrachloro-1,2-difluoroethane",76-12-0,'',203.83,123.9314161,92.9,24.8,10.02097,3501.665,398.81,FALSE,,1.6447,1078
-1402,0,TIC,"1,1,2,2-Tetrachloroethane",79-34-5,"nonflammable, heavy, mobile liquid",167.85,105.21532,145.1,-43.8,6.09073,959.602,149.778,FALSE,,1.5953,1702
-1403,0,TIC,Tetrafluoroethylene,116-14-3,'',100.01,65.83936801,-75.6,-131.1,0,0,0,FALSE,,1.519,1081
-1404,0,TIC,Tetrahydrofuran,109-99-9,hygroscopic liquid; faint odor,72.11,81.09536662,66,-108.5,6.99628,1202.942,226.332,FALSE,,0.8892,2056
-1405,0,TIC,Tetrahydrothiophene,110-01-0,colorless liquid; natural gas odorant,88.17,88.2847702,121.1,-96.2,7.88371,1979.981,275.496,FALSE,,0.9987,2412
-1406,0,TIC,Tetramethyllead,75-74-1,'',267.33,134,109.7715084,-27.5,7.01769,1376.726,223.021,FALSE,,1.995,1649
-1407,0,TIC,Tetramethylsilane,75-76-3,'',88.22,,26.6,-99.1,6.85213,1047.272,237.093,FALSE,,,2749
-1408,0,TIC,Tetranitromethane,509-14-8,pale yellow liquid,196.03,120.7899439,125.7,13.9,4.63198,498.772,114.612,FALSE,,1.6229,1510
-1409,0,TIC,Thiazole,288-47-1,colorless or pale yellow liquid,85.13,70.94166667,116.8,-273.15,7.14057,1424.453,216.157,FALSE,,1.2,
-1410,0,TIC,Thionyl chloride,9/7/7719,"colorless to pale yellow or reddish, fuming liquid; suffocating odor",118.97,72.63125763,75.6,-104.5,7.21904,1399.91,246.948,FALSE,,1.638,1836
-1411,0,TIC,Thiophene,110-02-1,liquid; slight aromatic odor,84.14,79.00914606,84.2,-38.2,6.94868,1239.578,220.565,FALSE,,1.06494,2414
-1412,0,TIC,Thiophosphoryl chloride,3982-91-0,fuming liquid; strong irritant,169.4,103.6085627,125,-36.2,7.23188,1553.827,233.178,FALSE,,1.635,1837
-1413,0,TIC,Titanium tetrachloride,7550-45-0,colorless liquid; penetrating acid odor,189.68,109.8957126,135.9,-24.1,7.72479,1990.235,275.15,FALSE,,1.726,1838
-1414,0,TIC,Toluene,108-88-3,flammable liquid; benzene-like odor,92.14,106.6929134,110.6,-95,7.01667,1377.578,222.643,FALSE,,0.8636,1294
-1415,0,TIC,"Toluene-2,4-diisocyanate",584-84-9,"liquid; sharp, pungent odor",174.16,142.2410977,251,13.9,7.47157,2064.243,197.974,FALSE,,1.2244,2078
-1416,0,TIC,Toluidine,'',light yellow liquid; becomes reddish brown on exposure to light and air,107.15,106.2996032,200.3,-16.4,7.06678,1617.232,186.024,FALSE,,1.008,1708
-1417,0,TIC,P-toluidine,106-49-0,lustrous plates or leaflets,107.15,102.4378585,200.4,43.7,7.59394,1961.716,216.15,FALSE,,1.046,1993
-1418,0,TIC,Trichloroacetaldehyde,75-87-6,"oily liquid; pungent, irritating odor",147.39,97.47371206,97.7,-57.1,7.20366,1466.442,241.385,FALSE,,1.5121,2075
-1419,0,TIC,Trichloroacetyl chloride,76-02-8,'',181.83,112.2268856,118,-57,6.98442,1386.68,219.703,FALSE,,1.6202,2442
-1420,0,TIC,Trichlorobenzene,12002-48-1,liquid; volatile with steam,181.44,124.6153846,213,17,7.51512,2110.983,242.429,FALSE,,1.456,2321
-1421,0,TIC,"1,1,1-Trichloroethane",71-55-6,nonflammable liquid,133.4,99.73086124,74.1,-30,8.76117,2210.179,308.052,FALSE,,1.3376,2831
-1422,0,TIC,"1,1,2-Trichloroethane",79-00-5,nonflammable liquid; pleasant odor,133.4,92.53607103,113.9,-36.6,6.94484,1310.297,208.74,FALSE,,1.4416,
-1423,0,TIC,Trichloroethylene,79-01-6,"nonflammable, mobile liquid; chloroform odor",131.39,89.73500888,87,-84.8,6.42856,974.538,187.339,FALSE,,1.4642,1710
-1424,0,TIC,Trichlorofluoromethane,75-69-4,nonflammable liquid below 23.7 degrees Celsius,137.37,91.94779116,23.8,-111.1,6.88957,1043.303,236.548,FALSE,,1.494,2810
-1425,0,TIC,"1,2,3-Trichloropropane",96-18-4,'',147.43,106.1487508,156.9,-14.7,7.5318,1818.875,232.519,FALSE,,1.3889,2810
-1426,0,TIC,Trichlorosilane,10025-78-2,volatile liquid; fumes in air,135.45,100.9540136,31.9,-128.2,7.09119,1170,246.15,FALSE,,1.3417,1295
-1427,0,TIC,"1,1,2-Trichloro-1,2,2-trifluoroethane",76-13-1,'',187.38,119.8464982,47.6,-36.2,6.90446,1112.856,229.031,FALSE,,1.5635,1708
-1428,0,TIC,Triethylamine,121-44-8,liquid; strong ammoniacal odor,101.19,139.4762233,88.8,-114.7,5.85878,695.814,144.879,FALSE,,0.7255,1296
-1429,0,TIC,Trifluoroacetic acid,76-05-1,"liquid; sharp, biting odor",114.02,74.27529151,71.8,-15.3,6.22044,1267.252,220.192,FALSE,,1.5351,2699
-1430,0,TIC,Trifluorochloroethylene,79-38-9,'',116.47,89.24904215,-28.3,-158.1,6.901457065,850.498,239.904,FALSE,,1.305,1082
-1431,0,TIC,"1,1,1-Trifluoroethane",420-46-2,'',84.04,,-47.3,-111.3,0,0,0,FALSE,,,2035
-1432,0,TIC,Trifluoromethane,75-46-7,"colorless, odorless gas",70.01,46.05921053,-82.1,-155.2,0,0,0,FALSE,,1.52,1984
-1433,0,TIC,Triisobutylene,7756-94-7,gas; simple asphyxiant,168.32,285.7724958,177,-76,6.97343,1595.479,210.85,FALSE,,0.589,2324
-1434,0,TIC,Trimethylamine,75-50-3,"gas; pungent, fishy, ammoniacal odor",59.11,94.27432217,2.9,-117.1,6.89123,970.297,239.09,FALSE,,0.627,1083
-1435,0,TIC,"1,2,4-Trimethylbenzene",95-63-6,liquid,120.19,137.1875357,169.4,-43.8,7.04383,1573.267,208.564,FALSE,,0.8761,1993
-1436,0,TIC,"1,3,5-Trimethylbenzene",108-67-8,liquid; peculiar odor,120.19,139.1571147,164.7,-44.7,7.07437,1569.622,209.578,FALSE,,0.8637,2325
-1437,0,TIC,Trimethylchlorosilane,75-77-4,'',108.64,127.2131148,57.6,-57.7,6.8407,1123.68,225.979,FALSE,,0.854,1298
-1438,0,TIC,Tungsten hexafluoride,7783-82-6,colorless gas or pale yellow liquid,297.9,86.57367044,19.4,2.8,7.43079,1021.208,208.45,FALSE,,3.441,2196
-1439,0,TIC,Vinyl acetate,108-05-4,liquid; polymerizes in light,86.09,92.37124464,72.5,-92.8,7.21542,1299.069,226.967,FALSE,,0.932,1301
-1440,0,TIC,Vinyl bromide,593-60-2,'',106.95,71.61990223,15.8,-137.8,7.24379,1219.308,264.021,FALSE,,1.4933,1085
-1441,0,TIC,Vinyl chloride,75-01-4,colorless gas; polymerizes in light,62.5,68.63606413,-13.9,-153.8,6.86108,892.757,238.099,FALSE,,0.9106,1086
-1442,0,TIC,Vinyl fluoride,75-02-5,'',46.04,72.38993711,-72.2,-160.5,0,0,0,FALSE,,0.636,1860
-1443,0,TIC,Vinylidene chloride,75-35-4,"liquid; mild, sweet odor",96.94,79.92414873,31.6,-122.6,6.9829,1104.726,237.747,FALSE,,1.2129,1303
-1444,0,TIC,Vinyltrichlorosilane,75-94-5,'',161.49,129.9613713,90.7,-94.8,7.32284,1513,250.15,FALSE,,1.2426,1305
-1445,0,TIC,Xenon,7440-63-3,"colorless, odorless, inert gas",131.29,,-108.1,-111.8,0,0,0,FALSE,,,2036
-1446,0,TIC,Xylene,1330-20-7,"mobile, flammable liquid",106.17,122.8819444,138.5,-273.15,7.96709,1996.545,258.378,FALSE,,0.864,1307
-1447,0,TIC,M-xylene,108-38-3,colorless liquid,106.17,122.2593275,139.1,-47.8,7.96709,1996.545,258.378,FALSE,,0.8684,2956
-1448,0,TIC,O-xylene,95-47-6,colorless liquid,106.17,120.6340189,144.4,-25.2,7.81265,1901.373,246.882,FALSE,,0.8801,
-1449,0,TIC,P-xylene,106-42-3,colorless plates or prisms,106.17,123.3043761,138.4,13.3,7.32399,1644.214,232.921,FALSE,,0.86104,1307
-1450,0,TIC,"2,6-Xylidine",87-62-7,'',121.2,123.1457021,218.605542,8.4,7.57561,2157.756,240.999,FALSE,,0.9842,1711
-1451,0,TIC,Sodium Hydroxide (solid),1310-73-2,whitish solid sodium hydroxide; becomes colourless and odorless after dissolution in water,39.9971,0.476190476,1388,318,-5.12494,0,273.15,FALSE,,2.1,1823
+,Unnamed: 0.1,Unnamed: 0,name_hp,longName,CASNumber,agentType,materialType,units,gasDepVelocity,gasDepVelocity_units,antoine_a_hp,antoine_a_units,antoine_b_hp,antoine_b_units,antoine_c_hp,antoine_c_units,liquidDensity_a,liquidDensity_a_units,liquidDensity_b,liquidDensity_b_units,molecularWeight,molecularWeight_units,agent_key,version,agent_type,name_fp,standard_code,description,molecular_weight,molecular_volume,boiling_point,freezing_point,antoine_a_fp,antoine_b_fp,antoine_c_fp,inst_aerosol_present,skin_factor,liquid_density,placard_number,from,name,antoine_a,antoine_b,antoine_c
+0,0,1.0,acetocya,Acetone Cyanohydrin,75-86-5,IND,Liquid,kg,0.003,m/s,11.774,log(Torr),2623.415,C-log(Torr),200.0,C,927.0,kg/m^3,0.0,/K,85.105,amu,,,,,,,,,,,,,,,,,,hp,acetocya,11.774,2623.415,200.0
+1,1,2.0,ACETONE,Acetone,67-64-1,IND,Liquid,kg,0.003,m/s,7.729577,log(Torr),1312.253,C-log(Torr),240.705,C,786.581,kg/m^3,1.2913,/K,58.08,amu,1004.0,0.0,TIC,Acetone,67-64-1,"volatile, highly flammable liquid; characteristic odor",58.08,73.52829472,56.3,-94.7,7.29958,1312.253,240.705,False,,0.7899,1090.0,hp,Acetone,7.729577,1312.253,240.705
+2,2,3.0,acrolein,Acrolein,107-02-8,IND,Liquid,kg,0.003,m/s,7.001,log(Torr),1187.1,C-log(Torr),234.4,C,1953.0,kg/m^3,1.02064,/K,56.063,amu,1011.0,0.0,TIC,Acrolein,107-02-8,flammable liquid with pungent odor,56.06,66.82560496,52.7,-87.7,6.99096,1167.888,231.59,False,,0.8389,1092.0,hp,Acrolein,7.001,1187.1,234.4
+3,3,4.0,acrylacid,Acrylic Acid,79-10-7,IND,Liquid,kg,0.003,m/s,5.5712,log(Torr),621.28,C-log(Torr),151.23,C,1051.1,kg/m^3,0.0,/K,72.0,amu,1012.0,0.0,TIC,Acrylic acid,79-10-7,corrosive liquid; acrid odor and fumes,72.06,68.55675007,141.0,13.0,5.57117,621.275,151.221,False,,1.0511,2218.0,hp,Acrylic acid,5.5712,621.28,151.23
+4,4,5.0,acryloni,Acrylonitrile,107-13-1,IND,Liquid,kg,0.003,m/s,6.656,log(Torr),1046.86,C-log(Torr),200.0,C,802.26,kg/m^3,0.0,/K,53.063,amu,1013.0,0.0,TIC,Acrylonitrile,107-13-1,"explosive, flammable, and toxic liquid",53.06,66.29185407,77.4,-83.5,6.94171,1255.939,231.297,False,,0.8004,1093.0,hp,Acrylonitrile,6.656,1046.86,200.0
+5,5,8.0,allylalc,Allyl Alcohol,107-18-6,IND,Liquid,kg,0.003,m/s,11.6576,log(Torr),4510.213,C-log(Torr),416.797,C,845.39,kg/m^3,1.1823,/K,58.08,amu,1014.0,0.0,TIC,Allyl alcohol,107-18-6,colorless liquid; mustard-like odor,58.08,68.00936768,97.1,-129.0,11.65762,4510.213,416.797,False,,0.854,1098.0,hp,Allyl alcohol,11.6576,4510.213,416.797
+6,6,9.0,allylam,Allyl Amne,107-11-9,IND,Liquid,kg,0.003,m/s,20.56,log(Torr),4545.0,C-log(Torr),200.0,C,758.39,kg/m^3,0.0,/K,57.095,amu,,,,,,,,,,,,,,,,,,hp,allylam,20.56,4545.0,200.0
+7,7,10.0,allylch,Allyl Chloroformate,2937-50-0,IND,Liquid,kg,0.003,m/s,3.785,log(Torr),282.889,C-log(Torr),200.0,C,1000.0,kg/m^3,0.0,/K,120.54,amu,,,,,,,,,,,,,,,,,,hp,allylch,3.785,282.889,200.0
+8,8,12.0,ammonia_liq,Liquid Ammonia,7664-41-7,IND,Liquid,kg,0.0,m/s,7.6041,log(Torr),1026.3,C-log(Torr),250.38,C,638.0,kg/m^3,1.2596,/K,17.031,amu,1019.0,0.0,TIC,Ammonia,7664-41-7,colorless gas,17.03,24.97799941,-33.4,-77.7,7.74396,1113.928,262.741,False,,0.6818,1005.0,hp,Ammonia,7.6041,1026.3,250.38
+9,9,13.0,aniline,Aniline,62-53-3,IND,Liquid,kg,0.0,m/s,7.221,log(Torr),1662.0,C-log(Torr),199.1,C,1017.0,kg/m^3,0.819,/K,93.13,amu,1024.0,0.0,TIC,Aniline,62-53-3,oily liquid; darkens on exposure to air and light,93.13,91.15200157,184.0,-6.0,7.22051,1661.858,199.102,False,,1.0217,1547.0,hp,Aniline,7.221,1662.0,199.1
+10,10,17.0,arsine_liq,Liquid Arsine,7784-42-1,C&I,Liquid,kg,0.0,m/s,6.31,log(Torr),607.0,C-log(Torr),238.8,C,1184.0,kg/m^3,4.56,/K,77.946,amu,1029.0,0.0,TIC,Arsine,7784-42-1,"colorless, neutral gas; garlic odor",77.95,,-62.5,-116.9,6.30893,606.597,238.844,False,,,2188.0,hp,Arsine,6.31,607.0,238.8
+11,11,18.0,benz,Benzene,71-43-2,IND,Liquid,kg,0.0,m/s,6.906,log(Torr),1211.0,C-log(Torr),220.8,C,872.9,kg/m^3,0.0,/K,78.11,amu,1031.0,0.0,TIC,Benzene,71-43-2,"colorless, volatile, highly flammable liquid",78.11,88.89268237,80.1,5.5,6.89324,1203.835,219.924,False,,0.8787,1114.0,hp,Benzene,6.906,1211.0,220.8
+12,12,22.0,bortribr,Boron Tribromide,10294-34-4,IND,Liquid,kg,0.003,m/s,6.477,log(Torr),1042.771,C-log(Torr),200.0,C,1000.0,kg/m^3,0.0,/K,250.523,amu,,,,,,,,,,,,,,,,,,hp,bortribr,6.477,1042.771,200.0
+13,13,39.0,butdne,Butadiene,106-99-0,IND,Liquid,kg,0.0,m/s,6.873,log(Torr),941.7,C-log(Torr),240.4,C,650.0,kg/m^3,1.117,/K,54.1,amu,1050.0,0.0,TIC,"1,3-Butadiene",106-99-0,"colorless, flammable gas; mild aromatic odor",54.09,87.96552285,-4.4,-108.9,6.87308,941.662,240.397,False,,0.6149,1993.0,hp,"1,3-Butadiene",6.873,941.7,240.4
+14,14,41.0,CARBONTET,Carbon Tetrachloride,56-23-5,IND,Liquid,kg,0.003,m/s,6.8983,log(Torr),122.781,C-log(Torr),227.41,C,1583.52,kg/m^3,2.0167,/K,153.82,amu,1071.0,0.0,TIC,Carbon tetrachloride,56-23-5,"colorless, clear, nonflammable, heavy liquid",153.82,96.49937265,76.6,-22.8,6.89801,1221.781,227.411,False,,1.594,1846.0,hp,Carbon tetrachloride,6.8983,122.781,227.41
+15,15,43.0,cg,Carbonyl Chloride,75-44-5,C&I,Liquid,kg,0.0,m/s,7.2949,log(Torr),1183.3,C-log(Torr),260.0,C,1373.0,kg/m^3,0.0,/K,98.92,amu,1365.0,0.0,TIC,Phosgene,75-44-5,"colorless, highly toxic gas; suffocating odor",98.92,72.10438079,7.6,-127.8,7.14615,1072.71,243.295,False,,1.3719,1076.0,hp,Phosgene,7.2949,1183.3,260.0
+16,16,147.0,phosgene_liq,Liquid Phosgene,75-44-5,C&I,Liquid,kg,0.0,m/s,6.83,log(Torr),945.57,C-log(Torr),231.44,C,1132.7,kg/m^3,3.71,/K,98.915,amu,1365.0,0.0,TIC,Phosgene,75-44-5,"colorless, highly toxic gas; suffocating odor",98.92,72.10438079,7.6,-127.8,7.14615,1072.71,243.295,False,,1.3719,1076.0,hp,Phosgene,6.83,945.57,231.44
+17,17,44.0,chloral,Chloral,75-87-6,IND,Liquid,kg,0.003,m/s,7.2037,log(Torr),1466.44,C-log(Torr),241.395,C,1546.0,kg/m^3,1.66,/K,147.39,amu,1418.0,0.0,TIC,Trichloroacetaldehyde,75-87-6,"oily liquid; pungent, irritating odor",147.39,97.47371206,97.7,-57.1,7.20366,1466.442,241.385,False,,1.5121,2075.0,hp,Trichloroacetaldehyde,7.2037,1466.44,241.395
+18,18,45.0,chlorfrm,Chloroform,67-66-3,IND,Liquid,kg,0.003,m/s,6.7696,log(Torr),1072.37,C-log(Torr),214.69,C,1498.0,kg/m^3,0.0,/K,119.37,amu,1085.0,0.0,TIC,Chloroform,67-66-3,"nonflammable, heavy, very volatile, sweet-tasting liquid",119.38,80.47185709,61.2,-63.5,7.08282,1233.129,232.197,False,,1.4835,1888.0,hp,Chloroform,6.7696,1072.37,214.69
+19,19,46.0,chloroac,Chloroacetone,78-95-5,IND,Liquid,kg,0.003,m/s,6.385,log(Torr),1120.18,C-log(Torr),200.0,C,1150.0,kg/m^3,0.0,/K,92.524,amu,1079.0,0.0,TIC,Chloroacetone,78-95-5,liquid lacrimator; pungent odor,92.53,82.39536955,119.7,-44.5,7.9599,1902.738,255.948,False,,1.123,1695.0,hp,Chloroacetone,6.385,1120.18,200.0
+20,20,47.0,CHLOROBENZ,Chlorobenzene,108-90-7,IND,Liquid,kg,0.0,m/s,6.986,log(Torr),1436.0,C-log(Torr),218.0,C,1106.0,kg/m^3,0.0,/K,112.56,amu,1082.0,0.0,TIC,Chlorobenzene,108-90-7,colorless liquid; faint odor,112.56,101.7905589,131.7,-45.2,6.98593,1435.675,218.026,False,,1.1058,1134.0,hp,Chlorobenzene,6.986,1436.0,218.0
+21,21,48.0,chloroeth,Chloroethanol,107-07-3,IND,Liquid,kg,0.0,m/s,8.317,log(Torr),2082.0,C-log(Torr),254.3,C,1196.142,kg/m^3,0.00089,/K,80.51,amu,1196.0,0.0,TIC,Ethylene chlorohydrin,107-07-3,colorless liquid; poisonous,80.51,67.25981621,128.6,-67.5,8.31676,2082.063,254.306,False,,1.197,1135.0,hp,Ethylene chlorohydrin,8.317,2082.0,254.3
+22,22,49.0,chloroni,chloroacetonitrile,107-14-2,IND,Liquid,kg,0.003,m/s,6.382,log(Torr),1138.0,C-log(Torr),200.0,C,1000.0,kg/m^3,0.0,/K,75.497,amu,,,,,,,,,,,,,,,,,,hp,chloroni,6.382,1138.0,200.0
+23,23,50.0,chloroprene,Chloroprene,126-99-8,IND,Liquid,kg,0.0,m/s,6.29,log(Torr),841.9,C-log(Torr),214.8,C,958.0,kg/m^3,0.0,/K,88.54,amu,1089.0,0.0,TIC,Chloroprene,126-99-8,'',88.54,92.61506276,59.4,-130.0,6.29051,841.921,187.786,False,,0.956,1991.0,hp,Chloroprene,6.29,841.9,214.8
+24,24,51.0,chlorsul,Chlorosulfonic Acid,7790-94-5,IND,Liquid,kg,0.003,m/s,8.599,log(Torr),2012.765,C-log(Torr),200.0,C,849.5,kg/m^3,0.0,/K,116.525,amu,,,,,,,,,,,,,,,,,,hp,chlorsul,8.599,2012.765,200.0
+25,25,52.0,chlortrifl,Chlorine Trifluoride,7790-91-2,IND,Liquid,kg,0.0,m/s,13.3542,log(Torr),4662.34,C-log(Torr),273.16,C,1746.0,kg/m^3,0.0,/K,92.45,amu,1078.0,0.0,TIC,Chlorine trifluoride,7790-91-2,"corrosive, colorless gas; sweet, suffocating odor; extremely reactive",92.5,50.68493151,11.7,-76.1,7.18792,1182.409,262.815,False,,1.825,1749.0,hp,Chlorine trifluoride,13.3542,4662.34,273.16
+26,26,55.0,cl2_liq,Liquid Chlorine,7782-50-5,C&I,Liquid,kg,0.0,m/s,7.0147,log(Torr),892.52,C-log(Torr),249.69,C,1471.3,kg/m^3,0.4179,/K,70.906,amu,1075.0,0.0,TIC,Chlorine,7782-50-5,greenish-yellow gas; suffocating odor,70.91,45.31279954,-34.0,-101.0,7.16324,969.992,260.359,False,,1.5649,1017.0,hp,Chlorine,7.0147,892.52,249.69
+27,27,59.0,crotonhy,Crotonaldehyde,4170-30-3,IND,Liquid,kg,0.003,m/s,7.147,log(Torr),1296.781,C-log(Torr),200.0,C,1000.0,kg/m^3,0.0,/K,70.09,amu,,,,,,,,,,,,,,,,,,hp,crotonhy,7.147,1296.781,200.0
+28,28,61.0,css,Carbon Disulfide,75-15-0,IND,Liquid,kg,0.003,m/s,6.417,log(Torr),871.746,C-log(Torr),200.0,C,1260.0,kg/m^3,0.0,/K,76.143,amu,1068.0,0.0,TIC,Carbon bisulfide,75-15-0,"mobile, poisonous, very flammable liquid",76.14,60.27549082,46.2,-111.6,6.94193,1168.62,241.534,False,,1.2632,1131.0,hp,Carbon bisulfide,6.417,871.746,200.0
+29,29,62.0,cyaneth,Cyanoethane,107-12-0,IND,Liquid,kg,0.003,m/s,6.49813,log(Torr),1036.424,C-log(Torr),189.4,C,777.337,kg/m^3,1.0513,/K,55.08,amu,1378.0,0.0,TIC,Propionitrile,107-12-0,liquid; sweetish odor; poisonous when decomposing,55.08,70.45280123,97.4,-92.9,6.49242,1036.424,189.39,False,,0.7818,2404.0,hp,Propionitrile,6.49813,1036.424,189.4
+30,30,65.0,diborane_liq,Liquid Diborane,19287-45-7,IND,Liquid,kg,0.0,m/s,6.66,log(Torr),599.0,C-log(Torr),251.0,C,163.0,kg/m^3,1.88,/K,27.67,amu,1127.0,0.0,TIC,Diborane,19287-45-7,"colorless, flammable gas; repulsive, sickly-sweet odor",27.67,131.7619048,-92.5,-165.5,6.65666,598.39,250.975,False,,0.21,1911.0,hp,Diborane,6.66,599.0,251.0
+31,31,66.0,DIISOPROP,Diisopropylaminoethanol,96-80-0,IND,Liquid,kg,0.003,m/s,9.1981,log(Torr),2926.1804,C-log(Torr),273.15,C,1025.01,kg/m^3,1.1726,/K,145.24,amu,,,,,,,,,,,,,,,,,,hp,DIISOPROP,9.1981,2926.1804,273.15
+32,32,67.0,diisprplmn,Diisopropylamine,108-18-9,IND,Liquid,kg,0.003,m/s,7.633,log(Torr),1697.0,C-log(Torr),273.1,C,713.0,kg/m^3,0.0,/K,101.19,amu,,,,,,,,,,,,,,,,,,hp,diisprplmn,7.633,1697.0,273.1
+33,33,68.0,diketene,Diketene,674-82-8,IND,Liquid,kg,0.003,m/s,3.25,log(Torr),53.86,C-log(Torr),200.0,C,1050.7,kg/m^3,0.0,/K,84.074,amu,,,,,,,,,,,,,,,,,,hp,diketene,3.25,53.86,200.0
+34,34,69.0,dimethhz,"1,2-Dimethyl hydrazine",57-14-7,IND,Liquid,kg,0.003,m/s,6.406,log(Torr),990.56,C-log(Torr),200.0,C,1000.0,kg/m^3,0.0,/K,60.098,amu,1169.0,0.0,TIC,"1,1-Dimethylhydrazine",57-14-7,"flammable, hygroscopic liquid; fumes in air and gradually turns yellow; ammonia-like fishy odor",60.1,76.85421995,63.9,-57.8,7.58826,1388.51,232.537,False,,0.782,1163.0,hp,"1,1-Dimethylhydrazine",6.406,990.56,200.0
+35,35,70.0,dimethsu,Dimethyl Sulfate,77-78-1,IND,Liquid,kg,0.003,m/s,8.017,log(Torr),1922.647,C-log(Torr),200.0,C,1322.5,kg/m^3,0.0,/K,126.133,amu,,,,,,,,,,,,,,,,,,hp,dimethsu,8.017,1922.647,200.0
+36,36,71.0,DIMTHYLAM,Dimethylamine,124-40-3,IND,Liquid,kg,0.003,m/s,7.1688,log(Torr),995.445,C-log(Torr),225.281,C,650.17,kg/m^3,1.51,/K,45.08,amu,1160.0,0.0,TIC,Dimethylamine,124-40-3,gas at ordinary temperature; very soluble in water,45.08,66.25514403,6.9,-92.2,7.16881,995.445,225.281,False,,0.6804,1160.0,hp,Dimethylamine,7.1688,995.445,225.281
+37,37,73.0,edc,"1,2 Dichloroethane",107-06-2,IND,Liquid,kg,0.0,m/s,7.46,log(Torr),1522.0,C-log(Torr),248.4,C,1246.0,kg/m^3,0.0,/K,98.96,amu,1199.0,0.0,TIC,Ethylene dichloride,107-06-2,heavy liquid; pleasant odor; burns with smoky flame,98.96,80.12306696,83.4,-35.7,7.46028,1521.789,248.48,False,,1.2351,1184.0,hp,Ethylene dichloride,7.46,1522.0,248.4
+38,38,74.0,ethdibr,Ethylene Dibromide,106-93-4,IND,Liquid,kg,0.003,m/s,6.5,log(Torr),1198.102,C-log(Torr),200.0,C,1967.97,kg/m^3,1.989,/K,187.861,amu,1198.0,0.0,TIC,Ethylene dibromide,106-93-4,heavy liquid; chloroform odor,187.86,86.49171271,131.4,9.8,10.24424,4101.146,426.184,False,,2.172,1605.0,hp,Ethylene dibromide,6.5,1198.102,200.0
+39,39,76.0,ethyloxi_liq,Liquid Ethylene Oxide,75-21-8,IND,Liquid,kg,0.0,m/s,7.26,log(Torr),1115.38,C-log(Torr),244.14,C,869.0,kg/m^3,0.0,/K,44.052,amu,1204.0,0.0,TIC,Ethylene oxide,75-21-8,flammable gas or liquid; explosive,44.05,49.94331066,10.5,-112.5,8.72206,2022.83,335.806,False,,0.882,1040.0,hp,Ethylene oxide,7.26,1115.38,244.14
+40,40,80.0,formalde_liq,Liquid Formaldehyde,50-00-0,IND,Liquid,kg,0.0,m/s,7.16,log(Torr),959.67,C-log(Torr),243.39,C,763.1,kg/m^3,1.6,/K,30.026,amu,,,,,,,,,,,,,,,,,,hp,formalde_liq,7.16,959.67,243.39
+41,41,81.0,ga,Tabun,77-81-6,CHM,Liquid,kg,0.003,m/s,6.80011,log(Torr),1700.59,C-log(Torr),186.4,C,1099.9,kg/m^3,0.99,/K,162.1,amu,1.0,1.0,CSEPP,GA,77-81-6,Tabun,162.18,188.0,244.85,-50.0,8.305,-2820.0,273.0,False,,1.07,,hp,GA,6.80011,1700.59,186.4
+42,42,201.0,tga,thickened tabun,77-81-6,CHM,Liquid,kg,0.01,m/s,6.80011,log(Torr),1700.59,C-log(Torr),186.4,C,1099.9,kg/m^3,0.99,/K,162.1,amu,1.0,1.0,CSEPP,GA,77-81-6,Tabun,162.18,188.0,244.85,-50.0,8.305,-2820.0,273.0,False,,1.07,,hp,GA,6.80011,1700.59,186.4
+43,43,82.0,gb,Sarin,107-44-8,CHM,Liquid,kg,0.003,m/s,7.4816,log(Torr),1773.82,C-log(Torr),227.9,C,1118.2,kg/m^3,1.18,/K,140.1,amu,2.0,1.0,CSEPP,GB,107-44-8,Sarin,140.1,150.3,157.85,-56.0,8.5916,-2424.5,273.0,False,,1.1,,hp,GB,7.4816,1773.82,227.9
+44,44,83.0,gd,Soman,96-64-0,CHM,Liquid,kg,0.005,m/s,7.4706,log(Torr),1903.1,C-log(Torr),216.9,C,1045.6,kg/m^3,0.93,/K,182.2,amu,,,,,,,,,,,,,,,,,,hp,gd,7.4706,1903.1,216.9
+45,45,202.0,tgd,Thickened Soman,96-64-0,CHM,Liquid,kg,0.01,m/s,7.4706,log(Torr),1903.1,C-log(Torr),216.9,C,1045.6,kg/m^3,0.93,/K,182.2,amu,,,,,,,,,,,,,,,,,,hp,tgd,7.4706,1903.1,216.9
+46,46,84.0,gf,Cyclohexyl Methylphosphonofluoridate,329-99-7,CHM,Liquid,kg,0.01,m/s,6.5624,log(Torr),1507.3,C-log(Torr),170.4,C,1152.4,kg/m^3,1.0,/K,180.2,amu,,,,,,,,,,,,,,,,,,hp,gf,6.5624,1507.3,170.4
+47,47,203.0,tgf,thickened cyclohexyl methylphosphonofluoridate,329-99-7,CHM,Liquid,kg,0.01,m/s,6.5624,log(Torr),1507.3,C-log(Torr),170.4,C,1152.4,kg/m^3,1.0,/K,180.2,amu,,,,,,,,,,,,,,,,,,hp,tgf,6.5624,1507.3,170.4
+48,48,85.0,glycine,Glycine,56-40-6,IND,Liquid,kg,0.003,m/s,18.712,log(Torr),7155.9,C-log(Torr),273.16,C,1161.0,kg/m^3,0.0,/K,75.07,amu,,,,,,,,,,,,,,,,,,hp,glycine,18.712,7155.9,273.16
+49,49,88.0,hbr_liq,Liquid Hydrogen Bromide,10035-10-6,IND,Liquid,kg,0.0,m/s,7.03,log(Torr),755.16,C-log(Torr),248.06,C,4093.0,kg/m^3,0.76,/K,80.912,amu,1242.0,0.0,TIC,Hydrogen bromide,10035-10-6,"colorless, corrosive, nonflammable gas; acrid odor; fumes in moist air",80.91,,-66.7,-86.8,7.03095,754.969,248.064,False,,,1048.0,hp,Hydrogen bromide,7.03,755.16,248.06
+50,50,90.0,hcfuel,Hydrocarbon Fuel,112-40-3,IND,Liquid,kg,0.0,m/s,7.109,log(Torr),2061.173,C-log(Torr),270.112,C,820.0,kg/m^3,1.1195,/K,170.33,amu,,,,,,,,,,,,,,,,,,hp,hcfuel,7.109,2061.173,270.112
+51,51,92.0,hcl_liq,Liquid Hydrogen Chloride,7647-01-0,C&I,Liquid,kg,0.0,m/s,7.45,log(Torr),868.58,C-log(Torr),271.4,C,769.6,kg/m^3,4.64,/K,36.461,amu,1243.0,0.0,TIC,Hydrogen chloride,7647-01-0,"colorless, corrosive, nonflammable gas; pungent odor",36.46,,-85.0,-114.2,7.44899,868.358,274.904,False,,,1050.0,hp,Hydrogen chloride,7.45,868.58,271.4
+52,52,93.0,hcn,"Hydrogen Cyanide (AC, HCN)",74-90-8,C&I,Liquid,kg,0.003,m/s,7.7446,log(Torr),1453.1,C-log(Torr),273.0,C,681.07,kg/m^3,0.0,/K,27.026,amu,1244.0,0.0,TIC,Hydrogen cyanide,74-90-8,'',27.03,39.34497817,25.7,-13.2,7.54927,1340.791,261.558,False,,0.687,1051.0,hp,Hydrogen cyanide,7.7446,1453.1,273.0
+53,53,94.0,hd,Mustard,505-60-2,CHM,Liquid,kg,0.01,m/s,7.475,log(Torr),1935.47,C-log(Torr),204.2,C,1295.4,kg/m^3,1.07,/K,159.1,amu,3.0,1.0,CSEPP,HD,505-60-2,Distilled mustard,159.1,149.7,216.85,14.45,7.47009,-1935.47,204.2,False,,1.27,,hp,HD,7.475,1935.47,204.2
+54,54,204.0,thd,Thickened Sulfur Mustard,505-60-2,CHM,Liquid,kg,0.01,m/s,7.475,log(Torr),1935.47,C-log(Torr),204.2,C,1295.4,kg/m^3,1.07,/K,159.1,amu,3.0,1.0,CSEPP,HD,505-60-2,Distilled mustard,159.1,149.7,216.85,14.45,7.47009,-1935.47,204.2,False,,1.27,,hp,HD,7.475,1935.47,204.2
+55,55,96.0,hf_liq,Liquid Hydrogen Fluoride,7664-39-3,IND,Liquid,kg,0.0,m/s,7.43,log(Torr),1332.1,C-log(Torr),273.15,C,965.5,kg/m^3,2.67,/K,20.006,amu,1245.0,0.0,TIC,Hydrogen fluoride,7664-39-3,colorless gas or liquid; intensely poisonous,20.01,20.19172553,19.5,-83.4,7.7899,1556.559,297.349,False,,0.991,1052.0,hp,Hydrogen fluoride,7.43,1332.1,273.15
+56,56,97.0,hn1,HN1 Nitrogen Mustard,538-07-8,CHM,Liquid,kg,0.01,m/s,9.0566,log(Torr),2885.01,C-log(Torr),273.15,C,1090.0,kg/m^3,0.0,/K,170.08,amu,,,,,,,,,,,,,,,,,,hp,hn1,9.0566,2885.01,273.15
+57,57,98.0,hn2,HN2 Nitrogen Mustard,51-75-2,CHM,Liquid,kg,0.01,m/s,55.8468,log(Torr),98925.55,C-log(Torr),1734.47,C,1150.0,kg/m^3,0.0,/K,156.07,amu,,,,,,,,,,,,,,,,,,hp,hn2,55.8468,98925.55,1734.47
+58,58,99.0,hn3,HN3 Nitrogen Mustard,555-77-1,CHM,Liquid,kg,0.01,m/s,8.55297,log(Torr),2856.46,C-log(Torr),246.4,C,1240.0,kg/m^3,0.0,/K,204.56,amu,,,,,,,,,,,,,,,,,,hp,hn3,8.55297,2856.46,246.4
+59,59,102.0,hse_liq,Liquid Hydrogen Selenide,7783-07-5,IND,Liquid,kg,0.0,m/s,6.49,log(Torr),596.64,C-log(Torr),206.8,C,1503.9,kg/m^3,6.73,/K,80.98,amu,,,,,,,,,,,,,,,,,,hp,hse_liq,6.49,596.64,206.8
+60,60,103.0,hs_liq,Liquid Hydrogen Sulfide,7783-06-4,IND,Liquid,kg,0.0,m/s,7.31,log(Torr),829.65,C-log(Torr),247.74,C,642.8,kg/m^3,3.49,/K,34.082,amu,,,,,,,,,,,,,,,,,,hp,hs_liq,7.31,829.65,247.74
+61,61,104.0,hydrazine,Hydrazine,302-01-2,IND,Liquid,kg,0.0,m/s,8.85,log(Torr),2328.54,C-log(Torr),273.15,C,994.6,kg/m^3,2.17,/K,34.082,amu,,,,,,,,,,,,,,,,,,hp,hydrazine,8.85,2328.54,273.15
+62,62,105.0,hydroxnit,Hydroxylamine Nitrate,13465-08-2,IND,Liquid,kg,0.003,m/s,9.8099,log(Torr),2472.17,C-log(Torr),273.16,C,1180.0,kg/m^3,0.0,/K,31.58,amu,,,,,,,,,,,,,,,,,,hp,hydroxnit,9.8099,2472.17,273.16
+63,63,108.0,ironpetl,Iron Pentacarbonyl,13463-40-6,IND,Liquid,kg,0.003,m/s,6.327,log(Torr),1044.258,C-log(Torr),200.0,C,1000.0,kg/m^3,0.0,/K,195.896,amu,,,,,,,,,,,,,,,,,,hp,ironpetl,6.327,1044.258,200.0
+64,64,109.0,isoprop,Isopropylamine,75-31-0,IND,Liquid,kg,0.003,m/s,6.89,log(Torr),985.65,C-log(Torr),214.081,C,687.9,kg/m^3,0.0,/K,59.11,amu,1272.0,0.0,TIC,Isopropylamine,75-31-0,"colorless, flammable liquid; ammonia odor; strong base",59.11,85.17291066,31.8,-95.2,6.89017,985.65,214.071,False,,0.694,1221.0,hp,Isopropylamine,6.89,985.65,214.081
+65,65,110.0,ISOPROPANOL,Isopropanol,67-63-0,IND,Liquid,kg,0.003,m/s,7.7413,log(Torr),1360.13,C-log(Torr),197.592,C,781.49,kg/m^3,0.9871,/K,60.1,amu,1269.0,0.0,TIC,Isopropanol,67-63-0,flammable liquid,60.1,76.5556334,82.3,-87.9,7.7361,1357.427,197.336,False,,0.78505,1219.0,hp,Isopropanol,7.7413,1360.13,197.592
+66,66,111.0,lewisite,Lewisite,541-25-3,CHM,Liquid,kg,0.01,m/s,6.404,log(Torr),1237.03,C-log(Torr),155.2,C,1921.0,kg/m^3,1.67,/K,207.32,amu,5.0,1.0,CSEPP,L,541-25-3,Lewisite,207.35,130.1,189.85,-18.0,6.40361,-1237.04,155.2,False,,1.88,,hp,L,6.404,1237.03,155.2
+67,67,113.0,malathion,Malathion,121-75-5,IND,Liquid,kg,0.003,m/s,10.0536,log(Torr),4381.0,C-log(Torr),273.0,C,1230.0,kg/m^3,0.0,/K,330.4,amu,,,,,,,,,,,,,,,,,,hp,malathion,10.0536,4381.0,273.0
+68,68,114.0,methane,LNG (Methane),74-82-8,C&I,Liquid,kg,0.3,m/s,6.745,log(Torr),410.92,C-log(Torr),267.45,C,422.4,kg/m^3,0.0,/K,16.04,amu,1283.0,0.0,TIC,Methane,74-82-8,"colorless, odorless, flammable gas",16.04,,-161.5,-182.5,0.0,0.0,0.0,False,,,1971.0,hp,Methane,6.745,410.92,267.45
+69,69,115.0,methanol,Methyl Alcohol,67-56-1,IND,Liquid,kg,0.0,m/s,8.07294,log(Torr),1581.341,C-log(Torr),239.66,C,791.4,kg/m^3,0.9259,/K,32.04,amu,1284.0,0.0,TIC,Methanol,67-56-1,"flammable, poisonous, mobile liquid",32.04,40.73226545,64.7,-97.7,8.07919,1581.341,239.65,False,,0.7866,1230.0,hp,Methanol,8.07294,1581.341,239.66
+70,70,116.0,methclfo,Methyl Chloroformate,79-22-1,IND,Liquid,kg,0.003,m/s,3.576,log(Torr),188.486,C-log(Torr),200.0,C,1215.0,kg/m^3,0.0,/K,94.497,amu,,,,,,,,,,,,,,,,,,hp,methclfo,3.576,188.486,200.0
+71,71,117.0,mibk,Methyl Isobutyl Ketone,108-10-1,IND,Liquid,kg,0.0,m/s,6.828,log(Torr),1254.0,C-log(Torr),201.6,C,796.0,kg/m^3,0.0,/K,100.16,amu,1309.0,0.0,TIC,Methyl isobutyl ketone,108-10-1,'',100.16,124.5461328,116.0,-84.0,6.82808,1254.095,201.613,False,,0.8042,1245.0,hp,Methyl isobutyl ketone,6.828,1254.0,201.6
+72,72,118.0,mthisocn,Methyl Isocyanate,624-83-9,IND,Liquid,kg,0.003,m/s,7.069,log(Torr),1000.588,C-log(Torr),200.0,C,927.25,kg/m^3,0.0,/K,57.051,amu,,,,,,,,,,,,,,,,,,hp,mthisocn,7.069,1000.588,200.0
+73,73,119.0,mthsulcl,Methanesulfonyl Chloride,124-63-0,IND,Liquid,kg,0.003,m/s,6.988,log(Torr),1482.82,C-log(Torr),200.0,C,1480.0,kg/m^3,0.0,/K,114.552,amu,,,,,,,,,,,,,,,,,,hp,mthsulcl,6.988,1482.82,200.0
+74,74,122.0,MTHYLAM,Monomethylamine,74-89-5,IND,Liquid,kg,0.003,m/s,7.99045,log(Torr),1363.5579,C-log(Torr),273.15,C,662.8,kg/m^3,1.1677,/K,31.06,amu,1289.0,0.0,TIC,Methylamine,74-89-5,flammable gas,31.06,46.89009662,-6.3,-93.5,7.395,1034.977,235.576,False,,0.6624,1061.0,hp,Methylamine,7.99045,1363.5579,273.15
+75,75,123.0,MTHYLDC,Methyl Phosphonic Dichloride,676-97-1,IND,Liquid,kg,0.003,m/s,7.2442,log(Torr),1669.7,C-log(Torr),216.1,C,1455.9,kg/m^3,1.38,/K,132.91,amu,,,,,,,,,,,,,,,,,,hp,MTHYLDC,7.2442,1669.7,216.1
+76,76,125.0,mthylmcp_liq,Liquid Methyl Mercaptan,74-93-1,IND,Liquid,kg,0.0,m/s,7.23,log(Torr),1122.78,C-log(Torr),251.4,C,739.7,kg/m^3,2.16,/K,48.109,amu,1312.0,0.0,TIC,Methyl mercaptan,74-93-1,flammable gas; odor of rotten cabbage,48.11,50.11458333,6.0,-123.0,7.22891,1122.494,251.402,False,,0.96,1064.0,hp,Methyl mercaptan,7.23,1122.78,251.4
+77,77,126.0,mthylsal,Methyl Salicylate,119-36-8,IND,Liquid,kg,0.003,m/s,6.9,log(Torr),1585.87,C-log(Torr),173.99,C,1178.0,kg/m^3,0.0,/K,152.15,amu,,,,,,,,,,,,,,,,,,hp,mthylsal,6.9,1585.87,173.99
+78,78,127.0,mtylhzne,Methyl Hydrazine,60-34-4,IND,Liquid,kg,0.003,m/s,7.185,log(Torr),1238.779,C-log(Torr),200.0,C,866.0,kg/m^3,0.0,/K,46.072,amu,1305.0,0.0,TIC,Methylhydrazine,60-34-4,clear liquid; strong reducing agent,46.07,52.71167048,87.8,-52.4,6.84297,1115.19,191.648,False,,0.874,1244.0,hp,Methylhydrazine,7.185,1238.779,200.0
+79,79,129.0,nbutiso,n-Butyl Isocyanate,111-36-4,IND,Liquid,kg,0.003,m/s,6.384,log(Torr),1103.38,C-log(Torr),200.0,C,878.89,kg/m^3,0.0,/K,99.13,amu,,,,,,,,,,,,,,,,,,hp,nbutiso,6.384,1103.38,200.0
+80,80,133.0,nitrdiox,Nitrogen Dioxide,10102-44-0,IND,Liquid,kg,0.003,m/s,8.91712,log(Torr),1798.54,C-log(Torr),276.8,C,2340.0,kg/m^3,0.07,/K,46.006,amu,1334.0,0.0,TIC,Nitrogen dioxide,10102-44-0,reddish-brown gas or liquid; deadly poison; irritating odor,46.01,31.77486188,21.0,-11.3,6.22758,540.635,141.22,False,,1.448,1067.0,hp,Nitrogen dioxide,8.91712,1798.54,276.8
+81,81,134.0,nitricac,Nitric Acid,7697-37-2,IND,Liquid,kg,0.003,m/s,7.3461,log(Torr),1326.7,C-log(Torr),214.03,C,1474.1,kg/m^3,1.668,/K,63.013,amu,,,,,,,,,,,,,,,,,,hp,nitricac,7.3461,1326.7,214.03
+82,82,141.0,paraformaldehyde,Paraformaldehyde,110-88-3,IND,Liquid,kg,0.003,m/s,2.09008,log(Torr),633.20853,C-log(Torr),273.16,C,1170.0,kg/m^3,0.0,/K,90.08,amu,,,,,,,,,,,,,,,,,,hp,paraformaldehyde,2.09008,633.20853,273.16
+83,83,142.0,parathion,Parathion,56-38-2,IND,Liquid,kg,0.003,m/s,8.915,log(Torr),3911.0,C-log(Torr),273.15,C,1260.0,kg/m^3,0.0,/K,219.27,amu,,,,,,,,,,,,,,,,,,hp,parathion,8.915,3911.0,273.15
+84,84,143.0,perchlor,Tetrachloroethylene,127-18-4,IND,Liquid,kg,0.0,m/s,7.056,log(Torr),1441.0,C-log(Torr),224.0,C,1613.0,kg/m^3,0.0,/K,165.83,amu,1358.0,0.0,TIC,Perchloroethylene,127-18-4,"colorless, nonflammable liquid",165.83,102.1938744,121.2,-22.3,7.05566,1440.819,223.979,False,,1.6227,1897.0,hp,Perchloroethylene,7.056,1441.0,224.0
+85,85,148.0,phosgene_ox,Phosgene Oxime,1794-86-1,IND,Liquid,kg,0.003,m/s,8.5856,log(Torr),2288.47,C-log(Torr),273.16,C,1580.0,kg/m^3,2.06,/K,113.93,amu,,,,,,,,,,,,,,,,,,hp,phosgene_ox,8.5856,2288.47,273.16
+86,86,149.0,phospent,Phosphorus Pentasulfide,1314-80-3,IND,Liquid,kg,0.003,m/s,10.575,log(Torr),6049.0,C-log(Torr),273.16,C,2090.0,kg/m^3,0.0,/K,222.28,amu,,,,,,,,,,,,,,,,,,hp,phospent,10.575,6049.0,273.16
+87,87,151.0,phosphin_liq,Liquid Phosphine,7803-51-2,IND,Liquid,kg,0.0,m/s,6.9,log(Torr),702.83,C-log(Torr),262.09,C,404.3,kg/m^3,2.81,/K,33.998,amu,1366.0,0.0,TIC,Phosphine,7803-51-2,poisonous gas; odor of decaying fish; spontaneously flammable in air,34.0,,-87.7,-133.8,6.90101,702.651,262.085,False,,,2199.0,hp,Phosphine,6.9,702.83,262.09
+88,88,152.0,phostricl,Phosphorous Trichloride,7719-12-2,IND,Liquid,kg,0.003,m/s,6.273,log(Torr),937.715,C-log(Torr),198.475,C,1568.1,kg/m^3,0.0,/K,137.332,amu,,,,,,,,,,,,,,,,,,hp,phostricl,6.273,937.715,198.475
+89,89,153.0,phsoxycl,Phosphorous Oxychloride,10025-87-3,IND,Liquid,kg,0.003,m/s,6.213,log(Torr),1019.109,C-log(Torr),200.0,C,1668.3,kg/m^3,0.0,/K,153.331,amu,1367.0,0.0,TIC,Phosphorus oxychloride,10025-87-3,"colorless, strongly fuming liquid; pugnent odor",153.33,93.20972644,105.5,1.2,7.15676,1445.959,233.031,False,,1.645,1810.0,hp,Phosphorus oxychloride,6.213,1019.109,200.0
+90,90,154.0,PINACOLONE,Pinacolone,75-97-8,IND,Liquid,kg,0.003,m/s,8.1694,log(Torr),2004.92,C-log(Torr),273.15,C,801.2,kg/m^3,0.98,/K,100.16,amu,,,,,,,,,,,,,,,,,,hp,PINACOLONE,8.1694,2004.92,273.15
+91,91,155.0,PINACOLYL,Pinacolyl Alcohol,464-07-3,IND,Liquid,kg,0.003,m/s,9.269746139,log(Torr),2511.808831,C-log(Torr),273.15,C,812.2,kg/m^3,1.092,/K,102.17,amu,,,,,,,,,,,,,,,,,,hp,PINACOLYL,9.269746139,2511.808831,273.15
+92,92,160.0,pyrid,Pyridine,110-86-1,IND,Liquid,kg,0.0,m/s,7.038,log(Torr),1371.0,C-log(Torr),214.7,C,978.56,kg/m^3,0.0,/K,79.1,amu,1386.0,0.0,TIC,Pyridine,110-86-1,"flammable, colorless liquid; disagreeable odor",79.1,80.49088245,115.3,-41.6,7.03782,1371.358,214.654,False,,0.98272,1282.0,hp,Pyridine,7.038,1371.0,214.7
+93,93,191.0,styrene,Styrene,100-42-5,IND,Liquid,kg,0.003,m/s,6.9071,log(Torr),1418.79,C-log(Torr),206.66,C,907.4,kg/m^3,0.0,/K,104.16,amu,1395.0,0.0,TIC,Styrene monomer,100-42-5,"colorless to yellowish, oily liquid; penetrating odor",104.15,114.9558499,145.2,-30.6,6.9344,1459.909,213.599,False,,0.906,2055.0,hp,Styrene monomer,6.9071,1418.79,206.66
+94,94,192.0,sulfacid,Sulfuric Acid,7664-93-9,IND,Liquid,kg,0.003,m/s,6.5735,log(Torr),1881.8,C-log(Torr),156.66,C,1831.0,kg/m^3,1.1195,/K,98.079,amu,,,,,,,,,,,,,,,,,,hp,sulfacid,6.5735,1881.8,156.66
+95,95,193.0,sulfcl,Sulfuryl Chloride,7791-25-5,IND,Liquid,kg,0.003,m/s,6.649,log(Torr),1013.996,C-log(Torr),200.0,C,1659.9,kg/m^3,0.0,/K,134.97,amu,,,,,,,,,,,,,,,,,,hp,sulfcl,6.649,1013.996,200.0
+96,96,195.0,sulfdxde_liq,Liquid Sulfur Dioxide,7446-09-5,IND,Liquid,kg,0.0,m/s,6.36,log(Torr),668.39,C-log(Torr),200.9,C,1194.8,kg/m^3,4.71,/K,64.065,amu,,,,,,,,,,,,,,,,,,hp,sulfdxde_liq,6.36,668.39,200.9
+97,97,196.0,tbp,Tributyl Phosphate,126-73-8,C&I,Liquid,kg,0.0,m/s,11.45,log(Torr),4816.0,C-log(Torr),273.1,C,980.0,kg/m^3,0.0,/K,266.32,amu,,,,,,,,,,,,,,,,,,hp,tbp,11.45,4816.0,273.1
+98,98,197.0,tcea,"1,1,1-Trichloroethane",71-55-6,IND,Liquid,kg,0.0,m/s,8.761,log(Torr),2210.0,C-log(Torr),308.1,C,1330.0,kg/m^3,0.0,/K,133.42,amu,1421.0,0.0,TIC,"1,1,1-Trichloroethane",71-55-6,nonflammable liquid,133.4,99.73086124,74.1,-30.0,8.76117,2210.179,308.052,False,,1.3376,2831.0,hp,"1,1,1-Trichloroethane",8.761,2210.0,308.1
+99,99,200.0,tep,Triethylphosphate,78-40-0,C&I,Liquid,kg,0.005,m/s,7.0,log(Torr),1800.0,C-log(Torr),218.0,C,1094.3,kg/m^3,1.2,/K,182.158,amu,,,,,,,,,,,,,,,,,,hp,tep,7.0,1800.0,218.0
+100,100,205.0,thiochl,Thionyl Chloride,7719-09-7,IND,Liquid,kg,0.0,m/s,7.219,log(Torr),1400.0,C-log(Torr),246.9,C,1640.0,kg/m^3,0.0,/K,118.98,amu,,,,,,,,,,,,,,,,,,hp,thiochl,7.219,1400.0,246.9
+101,101,207.0,titnchrd,Titanium Tetrachloride,7550-45-0,IND,Liquid,kg,0.003,m/s,7.117,log(Torr),1210.595,C-log(Torr),229.664,C,1718.2,kg/m^3,0.0,/K,189.678,amu,1413.0,0.0,TIC,Titanium tetrachloride,7550-45-0,colorless liquid; penetrating acid odor,189.68,109.8957126,135.9,-24.1,7.72479,1990.235,275.15,False,,1.726,1838.0,hp,Titanium tetrachloride,7.117,1210.595,229.664
+102,102,208.0,toldiiso,"2,4-Toluene Diisocyanate",584-84-9,IND,Liquid,kg,0.003,m/s,1.596,log(Torr),716.8,C-log(Torr),197.97,C,1224.0,kg/m^3,0.0,/K,174.16,amu,1415.0,0.0,TIC,"Toluene-2,4-diisocyanate",584-84-9,"liquid; sharp, pungent odor",174.16,142.2410977,251.0,13.9,7.47157,2064.243,197.974,False,,1.2244,2078.0,hp,"Toluene-2,4-diisocyanate",1.596,716.8,197.97
+103,103,209.0,toluene,Toluene,108-88-3,IND,Liquid,kg,0.003,m/s,6.957,log(Torr),1342.0,C-log(Torr),218.9,C,866.0,kg/m^3,0.0,/K,92.15,amu,1414.0,0.0,TIC,Toluene,108-88-3,flammable liquid; benzene-like odor,92.14,106.6929134,110.6,-95.0,7.01667,1377.578,222.643,False,,0.8636,1294.0,hp,Toluene,6.957,1342.0,218.9
+104,104,213.0,trctylcd,Trichloroacetyl Chloride,76-2-8,IND,Liquid,kg,0.003,m/s,6.358,log(Torr),1104.93,C-log(Torr),200.0,C,1615.0,kg/m^3,0.0,/K,181.83,amu,,,,,,,,,,,,,,,,,,hp,trctylcd,6.358,1104.93,200.0
+105,105,218.0,tvx,Thickened VX,50782-69-9,CHM,Liquid,kg,0.01,m/s,7.281,log(Torr),2072.1,C-log(Torr),172.5,C,1029.0,kg/m^3,0.83,/K,267.4,amu,7.0,1.0,CSEPP,VX,50782-69-9,EA 1701,267.4,342.2,297.85,-51.0,7.281,-2072.1,172.5,True,0.022,1.01,,hp,VX,7.281,2072.1,172.5
+106,106,225.0,vx,Persistent Nerve (VX),50782-69-9,CHM,Liquid,kg,0.003,m/s,7.281,log(Torr),2072.1,C-log(Torr),172.5,C,1029.0,kg/m^3,0.83,/K,211.2,amu,7.0,1.0,CSEPP,VX,50782-69-9,EA 1701,267.4,342.2,297.85,-51.0,7.281,-2072.1,172.5,True,0.022,1.01,,hp,VX,7.281,2072.1,172.5
+107,107,,,,HT,,,,,,,,,,,,,,,,,,4.0,1.0,CSEPP,HT,HT,60% mustard and 40% T,159.1,149.7,227.85,0.0,7.47009,-1935.47,204.2,False,,1.26,,fp,HT,7.47009,-1935.47,204.2
+108,108,,,, ,,,,,,,,,,,,,,,,,,8.0,1.0,CSEPP,UserDefined, ,DIPA,101.0,101.0,400.0,-15.0,7.5,-1290.0,273.0,False,,1.0,,fp,UserDefined,7.5,-1290.0,273.0
+109,109,,,, ,,,,,,,,,,,,,,,,,,9.0,1.0,CSEPP,UserDefined, ,Phosgene,98.92,72.2,7.6,-128.0,7.46,-1289.2,273.0,False,,1.37,,fp,UserDefined,7.46,-1289.2,273.0
+110,110,,,,105-57-7,,,,,,,,,,,,,,,,,,1000.0,0.0,TIC,Acetal,105-57-7,volatile liquid; hypnotic,118.17,143.1669494,103.5,-100.0,6.92032,1272.727,211.28,False,,0.8254,1088.0,fp,Acetal,6.92032,1272.727,211.28
+111,111,,,,75-07-7,,,,,,,,,,,,,,,,,,1001.0,0.0,TIC,Acetaldehyde,75-07-7,flammable liquid; pungent odor,44.05,55.90101523,20.9,-123.0,8.0634,1637.083,295.467,False,,0.788,1089.0,fp,Acetaldehyde,8.0634,1637.083,295.467
+112,112,,,,64-19-7,,,,,,,,,,,,,,,,,,1002.0,0.0,TIC,"Acetic acid, glacial",64-19-7,liquid; burns skin; pungent odor,60.05,57.48611909,117.9,16.7,7.55716,1642.54,233.386,False,,1.0446,2789.0,fp,"Acetic acid, glacial",7.55716,1642.54,233.386
+113,113,,,,108-24-7,,,,,,,,,,,,,,,,,,1003.0,0.0,TIC,Acetic anhydride,108-24-7,readily combustible liquid; fire hazard; strong acetic odor,102.09,94.35304991,139.6,-73.0,7.12165,1427.77,198.037,False,,1.082,1715.0,fp,Acetic anhydride,7.12165,1427.77,198.037
+114,114,,,,75-05-8,,,,,,,,,,,,,,,,,,1005.0,0.0,TIC,Acetonitrile,75-05-8,poisonous liquid with ether-like odor,41.05,52.13029399,81.6,-43.8,7.15383,1355.374,235.297,False,,0.78745,1648.0,fp,Acetonitrile,7.15383,1355.374,235.297
+115,115,,,,506-96-7,,,,,,,,,,,,,,,,,,1006.0,0.0,TIC,Acetyl bromide,506-96-7,fuming liquid; irritating to the eyes; violently decomposes in water or alcohol,122.95,80.88815789,76.1,-96.5,5.50958,670.92,170.91,False,,1.52,1716.0,fp,Acetyl bromide,5.50958,670.92,170.91
+116,116,,,,75-36-5,,,,,,,,,,,,,,,,,,1007.0,0.0,TIC,Acetyl chloride,75-36-5,flammable liquid; extremely irritating to the eyes; pungent odor,78.5,71.03429554,50.7,-112.8,6.84078,1062.86,217.619,False,,1.1051,1717.0,fp,Acetyl chloride,6.84078,1062.86,217.619
+117,117,,,,74-86-2,,,,,,,,,,,,,,,,,,1008.0,0.0,TIC,Acetylene,74-86-2,gas; forms insoluble explosive compounds with copper and silver,26.04,41.94587629,-83.9,-80.8,0.0,0.0,0.0,False,,0.6208,1001.0,fp,Acetylene,0.0,0.0,0.0
+118,118,,,,79-27-6,,,,,,,,,,,,,,,,,,1009.0,0.0,TIC,Acetylene tetrabromide,79-27-6,"yellowish, heavy liquid",345.65,116.5531427,243.5,0.0,7.8252,2393.457,240.705,False,,2.9656,2504.0,fp,Acetylene tetrabromide,7.8252,2393.457,240.705
+119,119,,,,507-02-8,,,,,,,,,,,,,,,,,,1010.0,0.0,TIC,Acetyl iodide,507-02-8,fuming liquid with suffocating odor,169.95,82.20470156,108.0,-273.15,3.87669,285.338,95.618,False,,2.0674,1898.0,fp,Acetyl iodide,3.87669,285.338,95.618
+120,120,,,,107-05-1,,,,,,,,,,,,,,,,,,1015.0,0.0,TIC,Allyl chloride,107-05-1,"liquid; unpleasant, pungent odor",76.52,81.57782516,45.1,-134.5,5.11593,365.121,118.231,False,,0.938,1100.0,fp,Allyl chloride,5.11593,365.121,118.231
+121,121,,,,57-06-7,,,,,,,,,,,,,,,,,,1016.0,0.0,TIC,Allyl isothiocyanate,57-06-7,colorless or pale yellow liquid,99.16,97.50245821,151.1,-80.0,2.74759,161.415,55.205,False,,1.017,1545.0,fp,Allyl isothiocyanate,2.74759,161.415,55.205
+122,122,,,,107-37-9,,,,,,,,,,,,,,,,,,1017.0,0.0,TIC,Allyltrichlorosilane,107-37-9,'',175.5,146.1160603,116.1,35.0,6.6039,1116.0,183.15,False,,1.2011,1724.0,fp,Allyltrichlorosilane,6.6039,1116.0,183.15
+123,123,,,,97-93-8,,,,,,,,,,,,,,,,,,1018.0,0.0,TIC,Aluminum triethyl,97-93-8,'',114.17,137.2235577,194.0,-52.5,10.28904,3451.295,275.29,False,,0.832,3051.0,fp,Aluminum triethyl,10.28904,3451.295,275.29
+124,124,,,,"584-02-1, 6032-29-7, 26635-63-2",,,,,,,,,,,,,,,,,,1020.0,0.0,TIC,Sec-amyl alcohol,"584-02-1, 6032-29-7, 26635-63-2",'',88.15,,115.3,-69.0,7.29859,1291.212,173.133,False,,,1987.0,fp,Sec-amyl alcohol,7.29859,1291.212,173.133
+125,125,,,,75-85-4,,,,,,,,,,,,,,,,,,1021.0,0.0,TIC,Tert-amyl alcohol,75-85-4,'',88.15,108.8809289,102.0,-8.8,7.3418,1261.658,181.197,False,,0.8096,1987.0,fp,Tert-amyl alcohol,7.3418,1261.658,181.197
+126,126,,,,110-66-7,,,,,,,,,,,,,,,,,,1022.0,0.0,TIC,Amyl mercaptan,110-66-7,"liquid; penetrating, unpleasant odor",104.21,123.7501484,126.6,-75.7,6.93311,1369.479,211.314,False,,0.8421,1111.0,fp,Amyl mercaptan,6.93311,1369.479,211.314
+127,127,,,,110-43-0,,,,,,,,,,,,,,,,,,1023.0,0.0,TIC,Amyl methyl ketone,110-43-0,'',114.18,139.294864,151.0,-35.0,10.12304,3331.738,309.832,False,,0.8197,1110.0,fp,Amyl methyl ketone,10.12304,3331.738,309.832
+128,128,,,,100-66-3,,,,,,,,,,,,,,,,,,1025.0,0.0,TIC,Anisole,100-66-3,liquid; agreeable odor,108.14,108.6179188,153.6,-37.5,7.05236,1489.756,203.543,False,,0.9956,2222.0,fp,Anisole,7.05236,1489.756,203.543
+129,129,,,,7647-18-9,,,,,,,,,,,,,,,,,,1026.0,0.0,TIC,Antimony pentachloride,7647-18-9,"colorless to yellow, oily liquid",299.05,126.8235793,175.0,2.8,7.76624,2046.733,240.858,False,,2.358,1730.0,fp,Antimony pentachloride,7.76624,2046.733,240.858
+130,130,,,,7440-37-1,,,,,,,,,,,,,,,,,,1027.0,0.0,TIC,Argon,7440-37-1,"colorless, odorless gas",39.95,,-185.9,-189.4,0.0,0.0,0.0,False,,,1006.0,fp,Argon,0.0,0.0,0.0
+131,131,,,,7784-34-1,,,,,,,,,,,,,,,,,,1028.0,0.0,TIC,Arsenic trichloride,7784-34-1,oily liquid; fumes in air; intensely poisonous,181.28,84.51282051,130.2,-16.0,7.35057,1620.019,231.788,False,,2.145,1560.0,fp,Arsenic trichloride,7.35057,1620.019,231.788
+132,132,,,,100-52-7,,,,,,,,,,,,,,,,,,1030.0,0.0,TIC,Benzaldehyde,100-52-7,liquid; oxidizes in air; volatile with steam,106.12,101.0666667,178.7,-57.1,8.09006,2337.539,268.047,False,,1.05,1990.0,fp,Benzaldehyde,8.09006,2337.539,268.047
+133,133,,,,100-47-0,,,,,,,,,,,,,,,,,,1032.0,0.0,TIC,Benzonitrile,100-47-0,liquid,103.12,102.0990099,191.0,-12.8,7.72911,2110.572,244.819,False,,1.01,2224.0,fp,Benzonitrile,7.72911,2110.572,244.819
+134,134,,,,98-08-8,,,,,,,,,,,,,,,,,,1033.0,0.0,TIC,Benzotrifluoride,98-08-8,liquid; soluble in many organic solvents,146.11,122.9261316,102.1,-29.0,6.96928,1305.612,217.292,False,,1.1886,2338.0,fp,Benzotrifluoride,6.96928,1305.612,217.292
+135,135,,,,100-39-0,,,,,,,,,,,,,,,,,,1034.0,0.0,TIC,Benzyl bromide,100-39-0,lacrimatory liquid,171.05,98.41772152,198.5,-3.9,7.54852,2043.135,238.58,False,,1.738,1737.0,fp,Benzyl bromide,7.54852,2043.135,238.58
+136,136,,,,100-44-7,,,,,,,,,,,,,,,,,,1035.0,0.0,TIC,Benzyl chloride,100-44-7,liquid; unpleasant odor,126.58,115.0727273,179.4,-39.0,7.55773,1932.142,233.754,False,,1.1,1738.0,fp,Benzyl chloride,7.55773,1932.142,233.754
+137,137,,,,10294-33-4,,,,,,,,,,,,,,,,,,1036.0,0.0,TIC,Boron tribromide,10294-33-4,"colorless, fuming liquid",250.5,92.846553,91.1,-46.1,6.89162,1262.484,224.832,False,,2.698,2692.0,fp,Boron tribromide,6.89162,1262.484,224.832
+138,138,,,,10294-34-5,,,,,,,,,,,,,,,,,,1037.0,0.0,TIC,Boron trichloride,10294-34-5,"colorless, fuming liquid",117.17,86.79259259,12.5,-107.0,6.82655,973.995,234.156,False,,1.35,1741.0,fp,Boron trichloride,6.82655,973.995,234.156
+139,139,,,,7/2/7637,,,,,,,,,,,,,,,,,,1038.0,0.0,TIC,Boron trifluoride,7/2/7637,colorless gas; suffocating odor; forms dense white fumes in moist air,67.81,43.1910828,-99.8,-127.1,7.55725,663.463,242.355,False,,1.57,1008.0,fp,Boron trifluoride,7.55725,663.463,242.355
+140,140,,,,7726-95-6,,,,,,,,,,,,,,,,,,1039.0,0.0,TIC,Bromine,7726-95-6,"dark reddish-brown, volatile liquid; vaporizes rapidly; suffocating odor",159.81,51.38585209,58.7,-7.3,5.82039,638.258,158.006,False,,3.11,1744.0,fp,Bromine,5.82039,638.258,158.006
+141,141,,,,7789-30-2,,,,,,,,,,,,,,,,,,1040.0,0.0,TIC,Bromine pentafluoride,7789-30-2,liquid; fumes in air,174.9,71.08600228,41.1,-60.0,7.67287,1411.692,253.387,False,,2.4604,1745.0,fp,Bromine pentafluoride,7.67287,1411.692,253.387
+142,142,,,,108-86-1,,,,,,,,,,,,,,,,,,1041.0,0.0,TIC,Bromobenzene,108-86-1,mobile liquid; aromatic odor,157.01,105.0093633,156.1,-30.7,6.94712,1495.044,211.642,False,,1.4952,2514.0,fp,Bromobenzene,6.94712,1495.044,211.642
+143,143,,,,109-65-9,,,,,,,,,,,,,,,,,,1042.0,0.0,TIC,1-Bromobutane,109-65-9,'',137.02,108.0088286,101.6,-112.4,6.67517,1084.887,207.906,False,,1.2686,1126.0,fp,1-Bromobutane,6.67517,1084.887,207.906
+144,144,,,,353-59-3,,,,,,,,,,,,,,,,,,1043.0,0.0,TIC,Bromochlorodifluoromethane,353-59-3,'',165.37,89.38918919,-4.0,-159.5,6.839097065,936.27,240.491,False,,1.85,1974.0,fp,Bromochlorodifluoromethane,6.839097065,936.27,240.491
+145,145,,,,74-97-5,,,,,,,,,,,,,,,,,,1044.0,0.0,TIC,Bromochloromethane,74-97-5,'',129.38,66.88378825,68.1,-88.0,6.39587,895.556,186.703,False,,1.9344,1887.0,fp,Bromochloromethane,6.39587,895.556,186.703
+146,146,,,,75-25-2,,,,,,,,,,,,,,,,,,1045.0,0.0,TIC,Bromoform,75-25-2,heavy liquid; chloroform odor,252.73,87.45285304,149.2,8.1,6.79051,1363.237,200.002,False,,2.8899,2515.0,fp,Bromoform,6.79051,1363.237,200.002
+147,147,,,,107-82-4,,,,,,,,,,,,,,,,,,1046.0,0.0,TIC,1-Bromo-3-methylbutane,107-82-4,'',151.07,124.8512397,120.5755948,-273.15,7.12591,1480.387,228.152,False,,1.21,2341.0,fp,1-Bromo-3-methylbutane,7.12591,1480.387,228.152
+148,148,,,,106-94-5,,,,,,,,,,,,,,,,,,1047.0,0.0,TIC,1-Bromopropane,106-94-5,'',122.99,,71.0,-110.0,7.03766,1259.836,232.042,False,,,2344.0,fp,1-Bromopropane,7.03766,1259.836,232.042
+149,149,,,,591-17-3,,,,,,,,,,,,,,,,,,1048.0,0.0,TIC,M-bromotoluene,591-17-3,liquid,171.05,121.320661,183.7,-40.0,9.38887,3506.406,355.894,False,,1.4099,1993.0,fp,M-bromotoluene,9.38887,3506.406,355.894
+150,150,,,,75-63-8,,,,,,,,,,,,,,,,,,1049.0,0.0,TIC,Bromotrifluoromethane,75-63-8,'',148.91,94.24683544,-57.9,-168.0,0.0,0.0,0.0,False,,1.58,1009.0,fp,Bromotrifluoromethane,0.0,0.0,0.0
+151,151,,,,106-97-8,,,,,,,,,,,,,,,,,,1051.0,0.0,TIC,Butane,106-97-8,flammable gas,58.12,100.414651,-0.5,-138.3,6.72512,909.65,237.004,False,,0.5788,1011.0,fp,Butane,6.72512,909.65,237.004
+152,152,,,,123-86-4,,,,,,,,,,,,,,,,,,1052.0,0.0,TIC,Butyl acetate,123-86-4,liquid,116.16,131.6111489,126.1,-73.5,7.14313,1440.231,211.788,False,,0.8826,1123.0,fp,Butyl acetate,7.14313,1440.231,211.788
+153,153,,,,141-32-2,,,,,,,,,,,,,,,,,,1053.0,0.0,TIC,Butyl acrylate,141-32-2,"elastic, tacky substance",128.17,144.0436053,147.4,-64.6,7.30193,1658.03,227.589,False,,0.8898,2348.0,fp,Butyl acrylate,7.30193,1658.03,227.589
+154,154,,,,71-36-3,,,,,,,,,,,,,,,,,,1054.0,0.0,TIC,N-butyl alcohol,71-36-3,liquid; burns with a strongly luminous flame,74.12,91.52877254,117.7,-89.3,7.42117,1351.555,179.81,False,,0.8098,,fp,N-butyl alcohol,7.42117,1351.555,179.81
+155,155,,,,78-92-2,,,,,,,,,,,,,,,,,,1055.0,0.0,TIC,Sec-butyl alcohol,78-92-2,liquid,74.12,91.9260821,99.6,-114.7,7.20453,1158.672,168.467,False,,0.8063,1990.0,fp,Sec-butyl alcohol,7.20453,1158.672,168.467
+156,156,,,,75-65-0,,,,,,,,,,,,,,,,,,1056.0,0.0,TIC,Tert-butyl alcohol,75-65-0,crystals; camphor-like odor,74.12,94.32305519,82.4,25.8,7.37284,1174.869,179.23,False,,0.78581,1120.0,fp,Tert-butyl alcohol,7.37284,1174.869,179.23
+157,157,,,,75-64-9,,,,,,,,,,,,,,,,,,1057.0,0.0,TIC,Tert-butylamine,75-64-9,liquid,73.14,105.1164128,44.4,-67.0,6.78204,992.719,210.423,False,,0.6958,1992.0,fp,Tert-butylamine,6.78204,992.719,210.423
+158,158,,,,104-51-8,,,,,,,,,,,,,,,,,,1058.0,0.0,TIC,Butylbenzene,104-51-8,liquid,134.22,156.0516219,183.3,-87.8,6.98318,1577.965,201.378,False,,0.8601,2709.0,fp,Butylbenzene,6.98318,1577.965,201.378
+159,159,,,,109-69-3,,,,,,,,,,,,,,,,,,1059.0,0.0,TIC,Butyl chloride,109-69-3,highly flammable liquid,92.57,105.0761652,78.4,-123.1,6.87098,1182.903,218.265,False,,0.88098,1127.0,fp,Butyl chloride,6.87098,1182.903,218.265
+160,160,,,,142-96-1,,,,,,,,,,,,,,,,,,1060.0,0.0,TIC,N-butyl ether,142-96-1,liquid,130.23,169.4820406,141.0,-97.8,6.80528,1302.768,191.669,False,,0.7684,,fp,N-butyl ether,6.80528,1302.768,191.669
+161,161,,,,592-84-7,,,,,,,,,,,,,,,,,,1061.0,0.0,TIC,N-butyl formate,592-84-7,'',102.13,,106.1,-91.9,7.10282,1347.33,213.194,False,,,,fp,N-butyl formate,7.10282,1347.33,213.194
+162,162,,,,109-79-5,,,,,,,,,,,,,,,,,,1062.0,0.0,TIC,Butyl mercaptan,109-79-5,flammable liquid; heavy skunk odor,90.19,107.7809247,98.5,-115.7,6.92754,1281.018,218.15,False,,0.83679,2347.0,fp,Butyl mercaptan,6.92754,1281.018,218.15
+163,163,,,,628-28-4,,,,,,,,,,,,,,,,,,1063.0,0.0,TIC,Butyl methyl ether,628-28-4,'',88.15,,70.2,-115.7,6.88388,1160.272,219.706,False,,,2350.0,fp,Butyl methyl ether,6.88388,1160.272,219.706
+164,164,,,,123-72-8,,,,,,,,,,,,,,,,,,1064.0,0.0,TIC,Butyraldehyde,123-72-8,flammable liquid,72.11,89.95758483,74.8,-96.4,6.46622,952.851,190.581,False,,0.8016,1129.0,fp,Butyraldehyde,6.46622,952.851,190.581
+165,165,,,,107-92-6,,,,,,,,,,,,,,,,,,1065.0,0.0,TIC,Butyric acid,107-92-6,oily liquid; rancid odor,88.11,92.00167067,163.3,-5.2,8.98464,2634.471,269.679,False,,0.9577,2820.0,fp,Butyric acid,8.98464,2634.471,269.679
+166,166,,,,109-74-0,,,,,,,,,,,,,,,,,,1066.0,0.0,TIC,Butyronitrile,109-74-0,liquid,69.11,85.4158942,117.6,-111.9,6.12907,1452.08,224.186,False,,0.8091,2411.0,fp,Butyronitrile,6.12907,1452.08,224.186
+167,167,,,,79-92-5,,,,,,,,,,,,,,,,,,1067.0,0.0,TIC,Camphene,79-92-5,cubic crystals from alcohol,136.23,162.3718713,160.5,47.0,7.61376,1893.487,239.295,False,,0.839,1325.0,fp,Camphene,7.61376,1893.487,239.295
+168,168,,,,124-38-9,,,,,,,,,,,,,,,,,,1069.0,0.0,TIC,Carbon dioxide,124-38-9,"colorless, odorless, noncombustible gas",44.01,,-78.48,-56.6,0.0,0.0,0.0,False,,,1013.0,fp,Carbon dioxide,0.0,0.0,0.0
+169,169,,,,558-13-4,,,,,,,,,,,,,,,,,,1070.0,0.0,TIC,Carbon tetrabromide,558-13-4,'',331.7,112.0305323,190.0,90.0,6.2754,1152.616,150.143,False,,2.9608,2516.0,fp,Carbon tetrabromide,6.2754,1152.616,150.143
+170,170,,,,75-73-0,,,,,,,,,,,,,,,,,,1072.0,0.0,TIC,Carbon tetrafluoride,75-73-0,"colorless, odorless gas",88.0,29.00461437,-128.1,-183.6,0.0,0.0,0.0,False,,3.034,1982.0,fp,Carbon tetrafluoride,0.0,0.0,0.0
+171,171,,,,353-50-4,,,,,,,,,,,,,,,,,,1073.0,0.0,TIC,Carbonyl fluoride,353-50-4,pungent gas; instantly hydrolyzed by water,66.01,,-84.1,-111.3,0.0,0.0,0.0,False,,,2417.0,fp,Carbonyl fluoride,0.0,0.0,0.0
+172,172,,,,463-58-1,,,,,,,,,,,,,,,,,,1074.0,0.0,TIC,Carbonyl sulfide,463-58-1,'',60.08,58.44357977,-50.1,-138.8,0.0,0.0,0.0,False,,1.028,2204.0,fp,Carbonyl sulfide,0.0,0.0,0.0
+173,173,,,,"10049-04-4, 70377-94-5",,,,,,,,,,,,,,,,,,1076.0,0.0,TIC,Chlorine dioxide,"10049-04-4, 70377-94-5",yellow to reddish-yellow gas; reacts violently with organic chemicals,67.45,41.07795371,10.9,-59.6,6.20803,644.581,182.69,False,,1.642,9191.0,fp,Chlorine dioxide,6.20803,644.581,182.69
+174,174,,,,13637-63-3,,,,,,,,,,,,,,,,,,1077.0,0.0,TIC,Chlorine pentafluoride,13637-63-3,'',130.44,,-13.81243272,-273.15,6.63613,798.006,226.312,False,,,2548.0,fp,Chlorine pentafluoride,6.63613,798.006,226.312
+175,175,,,,79-04-9,,,,,,,,,,,,,,,,,,1080.0,0.0,TIC,Chloroacetyl chloride,79-04-9,'',112.94,79.5240107,106.0,-22.0,7.13411,1331.94,207.176,False,,1.4202,1752.0,fp,Chloroacetyl chloride,7.13411,1331.94,207.176
+176,176,,,,27134-26-5,,,,,,,,,,,,,,,,,,1081.0,0.0,TIC,Chloroaniline,27134-26-5,liquid; practically insoluble in water,127.57,105.3079082,208.84,-1.94,7.03286,1646.915,187.891,False,,1.2114,2018.0,fp,Chloroaniline,7.03286,1646.915,187.891
+177,177,,,,107-04-0,,,,,,,,,,,,,,,,,,1083.0,0.0,TIC,1-Chloro-2-bromoethane,107-04-0,'',143.42,82.46320147,107.2,-16.6,7.2705,1500.797,235.27,False,,1.7392,2996.0,fp,1-Chloro-2-bromoethane,7.2705,1500.797,235.27
+178,178,,,,75-45-6,,,,,,,,,,,,,,,,,,1084.0,0.0,TIC,Chlorodifluoromethane,75-45-6,'',86.47,72.42043551,-40.8,-157.4,7.240767065,947.577,258.186,False,,1.194,1018.0,fp,Chlorodifluoromethane,7.240767065,947.577,258.186
+179,179,,,,629-06-1,,,,,,,,,,,,,,,,,,1086.0,0.0,TIC,1-Chloroheptane,629-06-1,'',134.5,,160.6717091,-273.15,6.8382,1410.064,195.639,False,,,,fp,1-Chloroheptane,6.8382,1410.064,195.639
+180,180,,,,544-10-5,,,,,,,,,,,,,,,,,,1087.0,0.0,TIC,1-Chlorohexane,544-10-5,mobile liquid,120.5,137.2437358,134.0,-273.15,6.76886,1304.968,200.058,False,,0.878,,fp,1-Chlorohexane,6.76886,1304.968,200.058
+181,181,,,,76-06-2,,,,,,,,,,,,,,,,,,1088.0,0.0,TIC,Chloropicrin,76-06-2,slightly oily liquid; intense odor,164.37,99.26923541,112.2,-69.2,7.23399,1506.333,233.781,False,,1.6558,1580.0,fp,Chloropicrin,7.23399,1506.333,233.781
+182,182,,,,540-54-5,,,,,,,,,,,,,,,,,,1090.0,0.0,TIC,1-Chloropropane,540-54-5,'',78.54,88.25710754,46.5,-122.8,7.00764,1155.007,233.159,False,,0.8899,1278.0,fp,1-Chloropropane,7.00764,1155.007,233.159
+183,183,,,,75-29-6,,,,,,,,,,,,,,,,,,1091.0,0.0,TIC,2-Chloropropane,75-29-6,'',78.54,91.14541024,35.7,-117.2,7.8513,1631.7,292.986,False,,0.8617,2356.0,fp,2-Chloropropane,7.8513,1631.7,292.986
+184,184,,,,109-09-1,,,,,,,,,,,,,,,,,,1092.0,0.0,TIC,O-chloropyridine,109-09-1,'',113.55,,170.0,-273.15,7.4338,1851.07,235.867,False,,,2822.0,fp,O-chloropyridine,7.4338,1851.07,235.867
+185,185,,,,108-41-8,,,,,,,,,,,,,,,,,,1093.0,0.0,TIC,M-chlorotoluene,108-41-8,liquid,126.58,117.6394052,162.2,-47.8,7.35658,1807.576,241.045,False,,1.076,2238.0,fp,M-chlorotoluene,7.35658,1807.576,241.045
+186,186,,,,95-49-8,,,,,,,,,,,,,,,,,,1094.0,0.0,TIC,O-chlorotoluene,95-49-8,liquid; vapor harmful,126.58,116.9222243,159.1,-36.5,7.36251,1768.105,234.761,False,,1.0826,2230.0,fp,O-chlorotoluene,7.36251,1768.105,234.761
+187,187,,,,75-72-9,,,,,,,,,,,,,,,,,,1095.0,0.0,TIC,Chlorotrifluoromethane,75-72-9,'',104.46,,-81.4,-181.0,0.0,0.0,0.0,False,,,1022.0,fp,Chlorotrifluoromethane,0.0,0.0,0.0
+188,188,,,,14977-61-8,,,,,,,,,,,,,,,,,,1096.0,0.0,TIC,Chromium oxychloride,14977-61-8,'',154.9,81.09947644,116.1,-96.5,6.82264,1256.761,202.288,False,,1.91,1758.0,fp,Chromium oxychloride,6.82264,1256.761,202.288
+189,189,,,,1319-77-3,,,,,,,,,,,,,,,,,,1097.0,0.0,TIC,Cresol,1319-77-3,poisonous liquid; may have color,108.14,104.5841393,202.1301559,-273.15,7.47667,1833.137,196.736,False,,1.034,2076.0,fp,Cresol,7.47667,1833.137,196.736
+190,190,,,,108-39-4,,,,,,,,,,,,,,,,,,1098.0,0.0,TIC,M-cresol,108-39-4,poisonous liquid; may have color,108.14,104.5841393,202.3,12.2,7.47667,1833.137,196.736,False,,1.034,2076.0,fp,M-cresol,7.47667,1833.137,196.736
+191,191,,,,95-48-7,,,,,,,,,,,,,,,,,,1099.0,0.0,TIC,O-cresol,95-48-7,poisonous liquid; may have color,108.14,103.2855778,191.0,31.0,6.84285,1391.332,160.176,False,,1.047,1598.0,fp,O-cresol,6.84285,1391.332,160.176
+192,192,,,,106-44-5,,,,,,,,,,,,,,,,,,1100.0,0.0,TIC,P-cresol,106-44-5,poisonous liquid; may have color,108.14,106.1757486,202.0,34.8,7.01603,1498.579,160.55,False,,1.0185,2076.0,fp,P-cresol,7.01603,1498.579,160.55
+193,193,,,,3724-65-0,,,,,,,,,,,,,,,,,,1101.0,0.0,TIC,Crotonic acid,3724-65-0,monoclinic needles; prisms from water or ligroin,86.1,84.57760314,185.0,15.0,8.60269,2430.085,239.624,False,,1.018,2823.0,fp,Crotonic acid,8.60269,2430.085,239.624
+194,194,,,,98-82-8,,,,,,,,,,,,,,,,,,1102.0,0.0,TIC,Cumene,98-82-8,colorless liquid,120.19,139.4315545,152.4,-96.0,6.92929,1455.811,207.202,False,,0.862,1918.0,fp,Cumene,6.92929,1455.811,207.202
+195,195,,,,460-19-5,,,,,,,,,,,,,,,,,,1103.0,0.0,TIC,Cyanogen,460-19-5,highly poisonous gas; almond-like odor,52.03,54.55594002,-21.1,-27.9,7.391707065,1041.518,251.862,False,,0.9537,1026.0,fp,Cyanogen,7.391707065,1041.518,251.862
+196,196,,,,506-68-3,,,,,,,,,,,,,,,,,,1104.0,0.0,TIC,Cyanogen bromide,506-68-3,"needles, cubes; vapors are very poisonous",105.93,52.5707196,61.1,52.2,6.41177,727.385,143.098,False,,2.015,1889.0,fp,Cyanogen bromide,6.41177,727.385,143.098
+197,197,,,,506-77-4,,,,,,,,,,,,,,,,,,1105.0,0.0,TIC,Cyanogen chloride,506-77-4,liquid; vapors are very poisonous,61.47,51.8296796,12.9,-6.5,7.53687,1074.1,218.692,False,,1.186,1589.0,fp,Cyanogen chloride,7.53687,1074.1,218.692
+198,198,,,,506-78-5,,,,,,,,,,,,,,,,,,1106.0,0.0,TIC,Cyanogen iodide,506-78-5,white needles; very pungent odor; very poisonous,152.92,53.84507042,141.0921731,146.5,10.65945,3335.292,287.683,False,,2.84,,fp,Cyanogen iodide,10.65945,3335.292,287.683
+199,199,,,,287-23-0,,,,,,,,,,,,,,,,,,1107.0,0.0,TIC,Cyclobutane,287-23-0,gas; burns with a luminous flame,56.11,78.75087719,12.5,-90.7,6.94653,1038.009,242.816,False,,0.7125,2601.0,fp,Cyclobutane,6.94653,1038.009,242.816
+200,200,,,,291-64-5,,,,,,,,,,,,,,,,,,1108.0,0.0,TIC,Cycloheptane,291-64-5,'',98.19,121.252161,118.8,-8.0,6.8522,1330.402,216.204,False,,0.8098,2241.0,fp,Cycloheptane,6.8522,1330.402,216.204
+201,201,,,,544-25-2,,,,,,,,,,,,,,,,,,1109.0,0.0,TIC,Cycloheptatriene,544-25-2,'',92.15,,115.2652957,-273.15,7.06021,1422.104,224.999,False,,,2603.0,fp,Cycloheptatriene,7.06021,1422.104,224.999
+202,202,,,,110-82-7,,,,,,,,,,,,,,,,,,1110.0,0.0,TIC,Cyclohexane,110-82-7,flammable liquid; pungent when impure,84.16,108.1609048,80.7,6.5,6.84498,1203.526,222.863,False,,0.7781,1145.0,fp,Cyclohexane,6.84498,1203.526,222.863
+203,203,,,,1569-69-3,,,,,,,,,,,,,,,,,,1111.0,0.0,TIC,Cyclohexanethiol,1569-69-3,'',116.22,118.8100593,158.8,-83.5,6.88709,1476.958,209.857,False,,0.9782,3054.0,fp,Cyclohexanethiol,6.88709,1476.958,209.857
+204,204,,,,108-93-0,,,,,,,,,,,,,,,,,,1112.0,0.0,TIC,Cyclohexanol,108-93-0,hygroscopic crystals,100.16,104.0731505,160.9,23.5,5.95587,777.363,91.113,False,,0.9624,2617.0,fp,Cyclohexanol,5.95587,777.363,91.113
+205,205,,,,108-94-1,,,,,,,,,,,,,,,,,,1113.0,0.0,TIC,Cyclohexanone,108-94-1,oily liquid,98.14,104.1715317,155.4,-31.1,5.9784,1495.51,209.552,False,,0.9421,1915.0,fp,Cyclohexanone,5.9784,1495.51,209.552
+206,206,,,,110-83-8,,,,,,,,,,,,,,,,,,1114.0,0.0,TIC,Cyclohexene,110-83-8,liquid,82.14,101.4324525,83.0,-103.5,5.8724,1221.9,223.17,False,,0.8098,2256.0,fp,Cyclohexene,5.8724,1221.9,223.17
+207,207,,,,622-45-7,,,,,,,,,,,,,,,,,,1115.0,0.0,TIC,Cyclohexyl acetate,622-45-7,'',142.2,146.9008264,174.0,-83.1,7.7575,1959.7,233.55,False,,0.968,2243.0,fp,Cyclohexyl acetate,7.7575,1959.7,233.55
+208,208,,,,108-91-8,,,,,,,,,,,,,,,,,,1116.0,0.0,TIC,Cyclohexylamine,108-91-8,"liquid; strong, fishy, amine odor",99.17,3.9668,134.5,-17.7,6.94395,1380.225,205.865,False,,25.0,2357.0,fp,Cyclohexylamine,6.94395,1380.225,205.865
+209,209,,,,629-20-9,,,,,,,,,,,,,,,,,,1117.0,0.0,TIC,Cyclooctatetraene,629-20-9,'',104.16,,141.806553,-273.15,6.8709,1402.263,209.629,False,,,2358.0,fp,Cyclooctatetraene,6.8709,1402.263,209.629
+210,210,,,,287-92-3,,,,,,,,,,,,,,,,,,1118.0,0.0,TIC,Cyclopentane,287-92-3,"mobile, flammable liquid",70.13,94.04586295,49.2,-93.8,6.8779,1119.208,230.738,False,,0.7457,1146.0,fp,Cyclopentane,6.8779,1119.208,230.738
+211,211,,,,120-92-3,,,,,,,,,,,,,,,,,,1119.0,0.0,TIC,Cyclopentanone,120-92-3,liquid; peppermint odor,84.12,88.66963919,130.6,-51.3,3.95815,376.418,104.651,False,,0.94869,2245.0,fp,Cyclopentanone,3.95815,376.418,104.651
+212,212,,,,75-19-4,,,,,,,,,,,,,,,,,,1120.0,0.0,TIC,Cyclopropane,75-19-4,flammable gas,42.08,22.3948909,-32.8,-127.6,6.925247065,870.393,248.087,False,,1.879,1027.0,fp,Cyclopropane,6.925247065,870.393,248.087
+213,213,,,,99-87-6,,,,,,,,,,,,,,,,,,1121.0,0.0,TIC,P-cymene,99-87-6,liquid,134.22,155.8885017,177.1,-67.9,7.03724,1599.29,207.659,False,,0.861,2046.0,fp,P-cymene,7.03724,1599.29,207.659
+214,214,,,,91-17-8,,,,,,,,,,,,,,,,,,1122.0,0.0,TIC,Decahydronaphthalene,91-17-8,'',138.2,154.1550474,195.0,-42.4,6.87557,1594.687,203.419,False,,0.8965,1147.0,fp,Decahydronaphthalene,6.87557,1594.687,203.419
+215,215,,,,124-18-5,,,,,,,,,,,,,,,,,,1123.0,0.0,TIC,N-decane,124-18-5,'',142.28,194.9041096,174.2,-29.6,3.08531,440.616,116.254,False,,0.73,,fp,N-decane,3.08531,440.616,116.254
+216,216,,,,872-05-9,,,,,,,,,,,,,,,,,,1124.0,0.0,TIC,1-Decene,872-05-9,'',140.27,189.3493521,170.6,-66.3,6.96036,1501.872,197.578,False,,0.7408,,fp,1-Decene,6.96036,1501.872,197.578
+217,217,,,,123-42-2,,,,,,,,,,,,,,,,,,1125.0,0.0,TIC,Diacetone alcohol,123-42-2,"flammable liquid; faint, pleasant odor",116.16,124.822695,167.9,-44.0,7.8745,1996.859,231.624,False,,0.9306,1148.0,fp,Diacetone alcohol,7.8745,1996.859,231.624
+218,218,,,,431-03-8,,,,,,,,,,,,,,,,,,1126.0,0.0,TIC,Diacetyl,431-03-8,yellowish-green liquid,86.09,86.95959596,87.8,-2.4,6.41428,927.108,174.201,False,,0.99,2346.0,fp,Diacetyl,6.41428,927.108,174.201
+219,219,,,,26249-12-7,,,,,,,,,,,,,,,,,,1128.0,0.0,TIC,Dibromobenzene,26249-12-7,crystals; insoluble in water,235.92,244.7049061,220.4,87.31,5.36353,757.96,81.92,False,,0.9641,2711.0,fp,Dibromobenzene,5.36353,757.96,81.92
+220,220,,,,74-95-3,,,,,,,,,,,,,,,,,,1129.0,0.0,TIC,Dibromomethane,74-95-3,'',173.84,69.62233169,97.0,-52.5,7.39244,1546.096,244.173,False,,2.4969,2664.0,fp,Dibromomethane,7.39244,1546.096,244.173
+221,221,,,,78-75-1,,,,,,,,,,,,,,,,,,1130.0,0.0,TIC,"1,2-Dibromopropane",78-75-1,'',201.9,104.4814738,141.1797133,-55.2,7.31383,1666.951,234.85,False,,1.9324,2872.0,fp,"1,2-Dibromopropane",7.31383,1666.951,234.85
+222,222,,,,534-07-6,,,,,,,,,,,,,,,,,,1131.0,0.0,TIC,"1,3-Dichloroacetone",534-07-6,"plates, needles on distillation",126.97,91.83422537,173.0,45.0,7.77519,1937.489,224.058,False,,1.3826,2649.0,fp,"1,3-Dichloroacetone",7.77519,1937.489,224.058
+223,223,,,,541-73-1,,,,,,,,,,,,,,,,,,1132.0,0.0,TIC,M-dichlorobenzene,541-73-1,liquid,147.0,114.0950016,173.1,-24.8,7.07264,1629.812,215.822,False,,1.2884,,fp,M-dichlorobenzene,7.07264,1629.812,215.822
+224,224,,,,95-50-1,,,,,,,,,,,,,,,,,,1133.0,0.0,TIC,O-dichlorobenzene,95-50-1,liquid,147.0,112.5660464,180.4,-17.0,7.07028,1649.55,213.314,False,,1.3059,1591.0,fp,O-dichlorobenzene,7.07028,1649.55,213.314
+225,225,,,,111-44-4,,,,,,,,,,,,,,,,,,1134.0,0.0,TIC,"2,2'-Dichlorodiethyl ether",111-44-4,'',143.01,117.2213115,178.5,-47.0,7.69239,1990.755,235.347,False,,1.22,1916.0,fp,"2,2'-Dichlorodiethyl ether",7.69239,1990.755,235.347
+226,226,,,,27156-03-2,,,,,,,,,,,,,,,,,,1135.0,0.0,TIC,Dichlorodifluoroethylene,27156-03-2,'',132.92,,20.66577926,-273.15,6.94811,1023.135,230.885,False,,,,fp,Dichlorodifluoroethylene,6.94811,1023.135,230.885
+227,227,,,,75-71-8,,,,,,,,,,,,,,,,,,1136.0,0.0,TIC,Dichlorodifluoromethane,75-71-8,"colorless, odorless, nonflammable gas",120.91,81.36608345,-29.8,-158.0,6.686187065,782.072,235.377,False,,1.486,1028.0,fp,Dichlorodifluoromethane,6.686187065,782.072,235.377
+228,228,,,,75-34-3,,,,,,,,,,,,,,,,,,1137.0,0.0,TIC,"1,1-Dichloroethane",75-34-3,'',98.96,84.7260274,57.3,-97.0,7.06941,1215.342,232.89,False,,1.168,2362.0,fp,"1,1-Dichloroethane",7.06941,1215.342,232.89
+229,229,,,,75-43-4,,,,,,,,,,,,,,,,,,1138.0,0.0,TIC,Dichlorofluoromethane,75-43-4,'',102.92,73.25266904,8.9,-135.0,7.17231,1105.42,248.671,False,,1.405,1029.0,fp,Dichlorofluoromethane,7.17231,1105.42,248.671
+230,230,,,,75-09-2,,,,,,,,,,,,,,,,,,1139.0,0.0,TIC,Dichloromethane,75-09-2,'',84.93,64.07393436,39.7,-95.1,6.84833,1016.865,216.527,False,,1.3255,1593.0,fp,Dichloromethane,6.84833,1016.865,216.527
+231,231,,,,78-87-5,,,,,,,,,,,,,,,,,,1140.0,0.0,TIC,"1,2-Dichloropropane",78-87-5,'',112.99,97.48921484,96.4,-100.4,6.9618,1296.996,221.591,False,,1.159,1279.0,fp,"1,2-Dichloropropane",6.9618,1296.996,221.591
+232,232,,,,76-14-2,,,,,,,,,,,,,,,,,,1141.0,0.0,TIC,"1,2-Dichloro-1,1,2,2-tetrafluoroethane",76-14-2,'',170.92,117.4707904,3.8,-92.5,7.02672,1031.026,245.239,False,,1.455,1958.0,fp,"1,2-Dichloro-1,1,2,2-tetrafluoroethane",7.02672,1031.026,245.239
+233,233,,,,462-95-3,,,,,,,,,,,,,,,,,,1142.0,0.0,TIC,Diethoxymethane,462-95-3,'',104.15,,87.5,-66.5,6.98573,1270.167,221.259,False,,,2373.0,fp,Diethoxymethane,6.98573,1270.167,221.259
+234,234,,,,96-10-6,,,,,,,,,,,,,,,,,,1143.0,0.0,TIC,Diethyl aluminum chloride,96-10-6,'',120.57,,207.2895087,-273.15,8.67105,2812.31,278.408,False,,,,fp,Diethyl aluminum chloride,8.67105,2812.31,278.408
+235,235,,,,109-89-7,,,,,,,,,,,,,,,,,,1144.0,0.0,TIC,Diethylamine,109-89-7,hygroscopic crystals,73.14,103.3927057,55.5,-49.8,5.73703,559.071,140.176,False,,0.7074,1154.0,fp,Diethylamine,5.73703,559.071,140.176
+236,236,,,,91-66-7,,,,,,,,,,,,,,,,,,1145.0,0.0,TIC,"N,n-diethylaniline",91-66-7,colorless to yellow liquid,149.23,160.3416783,216.3,-38.0,8.25784,2652.751,277.322,False,,0.9307,,fp,"N,n-diethylaniline",8.25784,2652.751,277.322
+237,237,,,,25340-17-4,,,,,,,,,,,,,,,,,,1146.0,0.0,TIC,Diethylbenzene,25340-17-4,'',134.21,,180.0,-273.15,7.00601,1576.261,201.004,False,,,2049.0,fp,Diethylbenzene,7.00601,1576.261,201.004
+238,238,,,,105-58-8,,,,,,,,,,,,,,,,,,1147.0,0.0,TIC,Diethyl carbonate,105-58-8,'',118.13,121.1341263,126.8,-43.0,7.65126,1721.904,235.191,False,,0.9752,2366.0,fp,Diethyl carbonate,7.65126,1721.904,235.191
+239,239,,,,111-96-6,,,,,,,,,,,,,,,,,,1148.0,0.0,TIC,Diethylene glycol dimethyl ether,111-96-6,'',134.17,141.9638134,162.5,-64.0,7.74733,1922.137,235.087,False,,0.9451,,fp,Diethylene glycol dimethyl ether,7.74733,1922.137,235.087
+240,240,,,,60-29-7,,,,,,,,,,,,,,,,,,1149.0,0.0,TIC,Diethyl ether,60-29-7,'',74.12,103.8968321,34.4,-116.3,6.8971,1062.64,228.22,False,,0.7134,1155.0,fp,Diethyl ether,6.8971,1062.64,228.22
+241,241,,,,96-22-0,,,,,,,,,,,,,,,,,,1150.0,0.0,TIC,Diethyl ketone,96-22-0,'',86.13,105.5514706,102.0,-39.0,5.74052,716.17,147.172,False,,0.816,1156.0,fp,Diethyl ketone,5.74052,716.17,147.172
+242,242,,,,352-93-2,,,,,,,,,,,,,,,,,,1151.0,0.0,TIC,Diethyl sulfide,352-93-2,'',90.19,107.7538829,92.1,-104.0,7.54093,1560.523,246.593,False,,0.837,2375.0,fp,Diethyl sulfide,7.54093,1560.523,246.593
+243,243,,,,557-20-0,,,,,,,,,,,,,,,,,,1152.0,0.0,TIC,Diethylzinc,557-20-0,mobile liquid,123.5,102.3622047,123.9,-27.8,7.28955,1571.638,238.172,False,,1.2065,1366.0,fp,Diethylzinc,7.28955,1571.638,238.172
+244,244,,,,75-37-6,,,,,,,,,,,,,,,,,,1153.0,0.0,TIC,"1,1-Difluoroethane",75-37-6,'',66.05,72.58241758,-24.0,-117.0,7.109157065,896.171,238.436,False,,0.91,1030.0,fp,"1,1-Difluoroethane",7.109157065,896.171,238.436
+245,245,,,,75-10-5,,,,,,,,,,,,,,,,,,1154.0,0.0,TIC,Difluoromethane,75-10-5,'',52.02,,-51.6,-136.1,0.0,0.0,0.0,False,,,3252.0,fp,Difluoromethane,0.0,0.0,0.0
+246,246,,,,110-96-3,,,,,,,,,,,,,,,,,,1155.0,0.0,TIC,Diisobutylamine,110-96-3,'',129.24,173.4765101,139.1,-70.0,7.51216,1747.385,237.793,False,,0.745,2361.0,fp,Diisobutylamine,7.51216,1747.385,237.793
+247,247,,,,108-20-3,,,,,,,,,,,,,,,,,,1156.0,0.0,TIC,Diisopropyl ether,108-20-3,liquid; readily forms peroxides,102.18,140.7825847,68.3,-85.5,6.84159,1135.034,218.23,False,,0.7258,1159.0,fp,Diisopropyl ether,6.84159,1135.034,218.23
+248,248,,,,534-15-6,,,,,,,,,,,,,,,,,,1157.0,0.0,TIC,"1,1-Dimethoxyethane",534-15-6,'',90.12,106.0048227,64.3,-113.2,6.79398,1087.364,213.443,False,,0.85015,2377.0,fp,"1,1-Dimethoxyethane",6.79398,1087.364,213.443
+249,249,,,,110-71-4,,,,,,,,,,,,,,,,,,1158.0,0.0,TIC,"1,2-Dimethoxyethane",110-71-4,liquid; sharp ethereal odor,90.12,104.4445732,84.6,-58.0,6.71285,1260.52,235.828,False,,0.86285,2252.0,fp,"1,2-Dimethoxyethane",6.71285,1260.52,235.828
+250,250,,,,127-19-5,,,,,,,,,,,,,,,,,,1159.0,0.0,TIC,Dimethylacetamide,127-19-5,liquid,87.12,93.0172966,166.1,-20.0,8.96961,2725.96,301.359,False,,0.9366,1993.0,fp,Dimethylacetamide,8.96961,2725.96,301.359
+251,251,,,,121-69-7,,,,,,,,,,,,,,,,,,1161.0,0.0,TIC,"N,n-dimethylaniline",121-69-7,oily liquid; poisonous,121.18,126.7573222,193.5,2.5,7.70513,2117.236,245.544,False,,0.956,,fp,"N,n-dimethylaniline",7.70513,2117.236,245.544
+252,252,,,,79-29-8,,,,,,,,,,,,,,,,,,1162.0,0.0,TIC,"2,3-Dimethylbutane",79-29-8,'',86.18,130.2599758,58.0,-128.0,6.80983,1127.187,228.95,False,,0.6616,2457.0,fp,"2,3-Dimethylbutane",6.80983,1127.187,228.95
+253,253,,,,589-90-2,,,,,,,,,,,,,,,,,,1163.0,0.0,TIC,Dimethylcyclohexane,589-90-2,'',112.24,,129.7263021,-273.15,6.84164,1369.525,216.04,False,,,2263.0,fp,Dimethylcyclohexane,6.84164,1369.525,216.04
+254,254,,,,75-78-5,,,,,,,,,,,,,,,,,,1164.0,0.0,TIC,Dimethyldichlorosilane,75-78-5,'',129.06,120.6168224,70.2,-76.1,7.14354,1328.0,241.15,False,,1.07,1162.0,fp,Dimethyldichlorosilane,7.14354,1328.0,241.15
+255,255,,,,78-62-6,,,,,,,,,,,,,,,,,,1165.0,0.0,TIC,Dimethyldiethoxysilane,78-62-6,'',148.28,,113.2511054,-273.15,7.31607,1490.127,222.721,False,,,2380.0,fp,Dimethyldiethoxysilane,7.31607,1490.127,222.721
+256,256,,,,624-92-0,,,,,,,,,,,,,,,,,,1166.0,0.0,TIC,Dimethyl disulfide,624-92-0,'',94.2,88.65882353,109.7,-84.7,7.07103,1397.604,223.987,False,,1.0625,2381.0,fp,Dimethyl disulfide,7.07103,1397.604,223.987
+257,257,,,,115-10-6,,,,,,,,,,,,,,,,,,1167.0,0.0,TIC,Dimethyl ether,115-10-6,'',46.07,24.01292643,-24.8,-141.5,6.989847065,894.669,242.546,False,,1.91855,1033.0,fp,Dimethyl ether,6.989847065,894.669,242.546
+258,258,,,,68-12-2,,,,,,,,,,,,,,,,,,1168.0,0.0,TIC,"N,n-dimethylformamide",68-12-2,colorless to very slightly yellow liquid; faint amine odor,73.09,77.38485971,152.0,-60.4,6.80578,1337.716,190.502,False,,0.9445,,fp,"N,n-dimethylformamide",6.80578,1337.716,190.502
+259,259,,,,540-73-8,,,,,,,,,,,,,,,,,,1170.0,0.0,TIC,"1,2-Dimethylhydrazine",540-73-8,"flammable, hygroscopic liquid corrosive to skin; fumes in air and gradually turns yellow; ammoniacal odor",60.1,72.6371767,81.0,-273.15,5.83914,707.722,152.171,False,,0.8274,2382.0,fp,"1,2-Dimethylhydrazine",5.83914,707.722,152.171
+260,260,,,,28804-88-8,,,,,,,,,,,,,,,,,,1171.0,0.0,TIC,Dimethylnaphthalene,28804-88-8,'',156.23,155.7627119,259.9146034,-273.15,7.42429,2136.17,210.246,False,,1.003,,fp,Dimethylnaphthalene,7.42429,2136.17,210.246
+261,261,,,,75-18-3,,,,,,,,,,,,,,,,,,1172.0,0.0,TIC,Dimethyl sulfide,75-18-3,'',62.13,73.24059884,37.3,-98.3,7.16223,1201.134,243.244,False,,0.8483,1164.0,fp,Dimethyl sulfide,7.16223,1201.134,243.244
+262,262,,,,99-97-8,,,,,,,,,,,,,,,,,,1173.0,0.0,TIC,"N,n-dimethyl-p-toluidine",99-97-8,'',135.23,,210.5096388,-273.15,6.59181,1364.255,157.114,False,,,,fp,"N,n-dimethyl-p-toluidine",6.59181,1364.255,157.114
+263,263,,,,123-91-1,,,,,,,,,,,,,,,,,,1174.0,0.0,TIC,Dioxane,123-91-1,flammable liquid; vapor harmful; faint pleasant odor,88.11,85.30351438,101.3,11.8,7.45645,1570.093,241.853,False,,1.0329,1165.0,fp,Dioxane,7.45645,1570.093,241.853
+264,264,,,,646-06-0,,,,,,,,,,,,,,,,,,1175.0,0.0,TIC,Dioxolane,646-06-0,'',74.09,69.89622642,76.43841451,-273.15,6.99369,1237.377,224.415,False,,1.06,1166.0,fp,Dioxolane,6.99369,1237.377,224.415
+265,265,,,,80-10-4,,,,,,,,,,,,,,,,,,1176.0,0.0,TIC,Diphenyldichlorosilane,80-10-4,'',253.2,210.2990033,304.1,-22.0,6.9548,1884.0,158.15,False,,1.204,1769.0,fp,Diphenyldichlorosilane,6.9548,1884.0,158.15
+266,266,,,,114-43-3,,,,,,,,,,,,,,,,,,1177.0,0.0,TIC,Di-n-propyl ether,114-43-3,'',102.18,136.860434,90.1,-123.2,6.94461,1254.781,218.82,False,,0.7466,,fp,Di-n-propyl ether,6.94461,1254.781,218.82
+267,267,,,,123-19-3,,,,,,,,,,,,,,,,,,1178.0,0.0,TIC,Dipropyl ketone,123-19-3,colorless liquid; penetrating odor,114.18,139.0742996,144.0,-32.5,8.82487,2199.856,226.271,False,,0.821,2710.0,fp,Dipropyl ketone,8.82487,2199.856,226.271
+268,268,,,,1321-74-0,,,,,,,,,,,,,,,,,,1179.0,0.0,TIC,Divinyl benzene,1321-74-0,'',130.19,,199.5,-66.9,7.50222,2011.921,235.585,False,,,1993.0,fp,Divinyl benzene,7.50222,2011.921,235.585
+269,269,,,,74-84-0,,,,,,,,,,,,,,,,,,1180.0,0.0,TIC,Ethane,74-84-0,"colorless, odorless gas; flammable asphyxiant",30.07,67.42152466,-88.6,-182.8,0.0,0.0,0.0,False,,0.446,1035.0,fp,Ethane,0.0,0.0,0.0
+270,270,,,,64-17-5,,,,,,,,,,,,,,,,,,1181.0,0.0,TIC,Ethanol,64-17-5,"clear, colorless, flammable liquid",46.07,58.39036755,78.3,-114.1,8.24739,1670.409,232.959,False,,0.789,1170.0,fp,Ethanol,8.24739,1670.409,232.959
+271,271,,,,141-78-6,,,,,,,,,,,,,,,,,,1182.0,0.0,TIC,Ethyl acetate,141-78-6,"clear, volatile, flammable liquid; fruity odor",88.11,97.68292683,77.1,-83.5,7.10319,1245.702,217.961,False,,0.902,1173.0,fp,Ethyl acetate,7.10319,1245.702,217.961
+272,272,,,,141-97-9,,,,,,,,,,,,,,,,,,1183.0,0.0,TIC,Ethyl acetoacetate,141-97-9,liquid; agreeable odor,130.14,126.5707061,180.8,-39.0,8.03837,2189.547,243.966,False,,1.0282,1917.0,fp,Ethyl acetoacetate,8.03837,2189.547,243.966
+273,273,,,,107-00-6,,,,,,,,,,,,,,,,,,1184.0,0.0,TIC,Ethyl acetylene,107-00-6,'',54.09,,8.1,-125.7,7.1153,1046.879,239.199,False,,,2452.0,fp,Ethyl acetylene,7.1153,1046.879,239.199
+274,274,,,,140-88-5,,,,,,,,,,,,,,,,,,1185.0,0.0,TIC,Ethyl acrylate,140-88-5,"liquid; lacrimator; acrid, penetrating odor;",100.12,5.006,99.5,-71.2,7.14963,1366.06,220.472,False,,20.0,1917.0,fp,Ethyl acrylate,7.14963,1366.06,220.472
+275,275,,,,75-04-7,,,,,,,,,,,,,,,,,,1186.0,0.0,TIC,Ethylamine,75-04-7,flammable liquid; ammonia odor,45.08,65.42815675,16.6,-81.0,7.40523,1203.822,249.434,False,,0.689,1036.0,fp,Ethylamine,7.40523,1203.822,249.434
+276,276,,,,103-69-5,,,,,,,,,,,,,,,,,,1187.0,0.0,TIC,N-ethylaniline,103-69-5,liquid; rapidly becomes brown on exposure to light and air,121.18,125.9012987,203.0,-63.5,8.51785,2809.017,294.006,False,,0.9625,,fp,N-ethylaniline,8.51785,2809.017,294.006
+277,277,,,,100-41-4,,,,,,,,,,,,,,,,,,1188.0,0.0,TIC,Ethylbenzene,100-41-4,colorless liquid; flammable,106.17,122.4567474,136.2,-95.0,6.94998,1419.315,212.611,False,,0.867,1175.0,fp,Ethylbenzene,6.94998,1419.315,212.611
+278,278,,,,74-96-4,,,,,,,,,,,,,,,,,,1189.0,0.0,TIC,Ethyl bromide,74-96-4,flammable volatile liquid; vapor harmful,108.96,74.56884752,38.4,-118.6,6.98751,1121.371,234.672,False,,1.4612,1891.0,fp,Ethyl bromide,6.98751,1121.371,234.672
+279,279,,,,628-81-9,,,,,,,,,,,,,,,,,,1190.0,0.0,TIC,Ethyl butyl ether,628-81-9,'',102.18,,92.2,-103.0,6.93767,1252.485,216.465,False,,,1179.0,fp,Ethyl butyl ether,6.93767,1252.485,216.465
+280,280,,,,105-54-4,,,,,,,,,,,,,,,,,,1191.0,0.0,TIC,Ethyl butyrate,105-54-4,colorless liquid; pineapple odor,116.16,132.1501706,121.5,-98.0,7.20697,1509.443,227.866,False,,0.879,1180.0,fp,Ethyl butyrate,7.20697,1509.443,227.866
+281,281,,,,75-00-3,,,,,,,,,,,,,,,,,,1192.0,0.0,TIC,Ethyl chloride,75-00-3,flammable gas or very volatile liquid,64.51,70.01302366,12.3,-136.4,7.03691,1052.821,241.072,False,,0.9214,1037.0,fp,Ethyl chloride,7.03691,1052.821,241.072
+282,282,,,,105-39-5,,,,,,,,,,,,,,,,,,1193.0,0.0,TIC,Ethyl chloroacetate,105-39-5,liquid; pungent odor; vapors irritate the eyes,122.55,106.5837537,144.2,-26.0,7.55391,1725.872,225.84,False,,1.1498,1181.0,fp,Ethyl chloroacetate,7.55391,1725.872,225.84
+283,283,,,,1789-58-8,,,,,,,,,,,,,,,,,,1194.0,0.0,TIC,Ethyldichlorosilane,1789-58-8,'',129.1,118.6580882,73.9,-273.15,7.61426,1664.0,276.15,False,,1.088,1183.0,fp,Ethyldichlorosilane,7.61426,1664.0,276.15
+284,284,,,,74-85-1,,,,,,,,,,,,,,,,,,1195.0,0.0,TIC,Ethylene,74-85-1,"colorless, flammable gas; faint sweet odor",28.05,0.554700818,-103.7,-169.1,0.0,0.0,0.0,False,,50.5678,1962.0,fp,Ethylene,0.0,0.0,0.0
+285,285,,,,107-15-3,,,,,,,,,,,,,,,,,,1197.0,0.0,TIC,Ethylenediamine,107-15-3,"colorless, clear, thick liquid; ammonia odor",60.1,66.92650334,117.3,11.1,7.09878,1302.256,191.362,False,,0.898,1604.0,fp,Ethylenediamine,7.09878,1302.256,191.362
+286,286,,,,629-14-1,,,,,,,,,,,,,,,,,,1200.0,0.0,TIC,Ethylene glycol diethyl ether,629-14-1,'',118.17,139.2857143,121.4,-74.0,6.54681,1270.934,227.564,False,,0.8484,1153.0,fp,Ethylene glycol diethyl ether,6.54681,1270.934,227.564
+287,287,,,,109-59-1,,,,,,,,,,,,,,,,,,1201.0,0.0,TIC,Ethylene glycol isopropyl ether,109-59-1,'',104.15,115.337763,141.0,-273.15,7.58054,1692.265,218.454,False,,0.903,,fp,Ethylene glycol isopropyl ether,7.58054,1692.265,218.454
+288,288,,,,109-86-4,,,,,,,,,,,,,,,,,,1202.0,0.0,TIC,Ethylene glycol monomethyl ether,109-86-4,poisonous liquid,76.09,78.87426143,124.4,-85.1,7.93896,1853.556,242.312,False,,0.9647,1188.0,fp,Ethylene glycol monomethyl ether,7.93896,1853.556,242.312
+289,289,,,,110-49-6,,,,,,,,,,,,,,,,,,1203.0,0.0,TIC,Ethylene glycol monomethyl ether acetate,110-49-6,"colorless liquid; dissolves gums, resins",118.13,117.2622593,145.0,-65.0,7.28129,1545.712,206.474,False,,1.0074,1189.0,fp,Ethylene glycol monomethyl ether acetate,7.28129,1545.712,206.474
+290,290,,,,353-36-6,,,,,,,,,,,,,,,,,,1205.0,0.0,TIC,Ethyl fluoride,353-36-6,'',48.06,,-37.7,-143.2,7.216687065,950.397,256.658,False,,,2453.0,fp,Ethyl fluoride,7.216687065,950.397,256.658
+291,291,,,,97-62-1,,,,,,,,,,,,,,,,,,1206.0,0.0,TIC,Ethyl isobutyrate,97-62-1,"liquid; aromatic, fruity odor",116.16,133.5172414,109.9,-88.1,7.35712,1536.985,233.246,False,,0.87,2385.0,fp,Ethyl isobutyrate,7.35712,1536.985,233.246
+292,292,,,,75-08-1,,,,,,,,,,,,,,,,,,1207.0,0.0,TIC,Ethyl mercaptan,75-08-1,"liquid; penetrating, leek-like odor",62.13,74.72038485,35.0,-147.9,6.95206,1084.531,231.385,False,,0.8315,2363.0,fp,Ethyl mercaptan,6.95206,1084.531,231.385
+293,293,,,,540-67-0,,,,,,,,,,,,,,,,,,1208.0,0.0,TIC,Ethyl methyl ether,540-67-0,liquid,60.1,82.88511929,7.4,-113.1,6.33009,600.134,164.616,False,,0.7251,1039.0,fp,Ethyl methyl ether,6.33009,600.134,164.616
+294,294,,,,78-93-3,,,,,,,,,,,,,,,,,,1209.0,0.0,TIC,Ethyl methyl ketone,78-93-3,flammable liquid; acetone-like odor,72.11,89.57763975,79.6,-86.7,6.8645,1150.207,209.246,False,,0.805,1193.0,fp,Ethyl methyl ketone,6.8645,1150.207,209.246
+295,295,,,,625-58-1,,,,,,,,,,,,,,,,,,1210.0,0.0,TIC,Ethyl nitrate,625-58-1,'',91.08,82.1725009,87.64566357,-273.15,7.16033,1337.035,224.78,False,,1.1084,1194.0,fp,Ethyl nitrate,7.16033,1337.035,224.78
+296,296,,,,122-51-0,,,,,,,,,,,,,,,,,,1211.0,0.0,TIC,Ethyl orthoformate,122-51-0,liquid; odor resembling pine needles,148.23,166.38231,146.1232086,-18.0,7.71662,1821.195,230.482,False,,0.8909,2524.0,fp,Ethyl orthoformate,7.71662,1821.195,230.482
+297,297,,,,105-37-3,,,,,,,,,,,,,,,,,,1212.0,0.0,TIC,Ethyl propionate,105-37-3,colorless liquid; fruity odor,102.13,114.5340361,99.1,-73.9,7.02036,1274.735,208.932,False,,0.8917,1195.0,fp,Ethyl propionate,7.02036,1274.735,208.932
+298,298,,,,628-32-0,,,,,,,,,,,,,,,,,,1213.0,0.0,TIC,Ethyl propyl ether,628-32-0,'',88.15,,63.9,-127.5,6.99648,1194.642,227.135,False,,,2615.0,fp,Ethyl propyl ether,6.99648,1194.642,227.135
+299,299,,,,78-10-4,,,,,,,,,,,,,,,,,,1214.0,0.0,TIC,Ethyl silicate,78-10-4,"colorless, flammable liquid",208.3,223.2583065,168.9,-85.5,7.04822,1561.277,205.578,False,,0.933,1292.0,fp,Ethyl silicate,7.04822,1561.277,205.578
+300,300,,,,"611-14-3, 25550-14-5",,,,,,,,,,,,,,,,,,1215.0,0.0,TIC,Ethyl toluene,"611-14-3, 25550-14-5",'',120.19,,165.2,-80.8,7.01582,1529.184,208.509,False,,,1993.0,fp,Ethyl toluene,7.01582,1529.184,208.509
+301,301,,,,115-21-9,,,,,,,,,,,,,,,,,,1216.0,0.0,TIC,Ethyltrichlorosilane,115-21-9,'',163.51,132.0652613,97.9,-105.6,6.58174,1102.0,199.15,False,,1.2381,1196.0,fp,Ethyltrichlorosilane,6.58174,1102.0,199.15
+302,302,,,,7782-41-4,,,,,,,,,,,,,,,,,,1217.0,0.0,TIC,Fluorine,7782-41-4,'',38.0,25.1206452,-188.2,-219.6,6.89865,322.067,268.402,False,,1.5127,1045.0,fp,Fluorine,6.89865,322.067,268.402
+303,303,,,,462-06-6,,,,,,,,,,,,,,,,,,1218.0,0.0,TIC,Fluorobenzene,462-06-6,liquid; benzene odor,96.1,93.84765625,84.7,-42.2,7.23735,1409.848,238.358,False,,1.024,2387.0,fp,Fluorobenzene,7.23735,1409.848,238.358
+304,304,,,,25496-08-6,,,,,,,,,,,,,,,,,,1219.0,0.0,TIC,Fluorotoluene,25496-08-6,colorless liquid; insoluble in water,110.13,109.6912351,114.0,-62.0,7.13671,1457.699,228.522,False,,1.004,2388.0,fp,Fluorotoluene,7.13671,1457.699,228.522
+305,305,,,,95-52-3,,,,,,,,,,,,,,,,,,1220.0,0.0,TIC,2-Fluorotoluene,95-52-3,colorless liquid; insoluble in water,110.13,109.6912351,114.0,-62.0,7.13671,1457.699,228.522,False,,1.004,,fp,2-Fluorotoluene,7.13671,1457.699,228.522
+306,306,,,,352-70-5,,,,,,,,,,,,,,,,,,1221.0,0.0,TIC,3-Fluorotoluene,352-70-5,colorless liquid; insoluble in water,110.13,110.4613842,116.0,-87.7,7.20581,1501.055,230.821,False,,0.997,,fp,3-Fluorotoluene,7.20581,1501.055,230.821
+307,307,,,,352-32-9,,,,,,,,,,,,,,,,,,1222.0,0.0,TIC,4-Fluorotoluene,352-32-9,colorless liquid; odor of oil of bitter almonds,110.13,110.01998,116.6,-56.8,6.99407,1373.934,217.384,False,,1.001,,fp,4-Fluorotoluene,6.99407,1373.934,217.384
+308,308,,,,75-12-7,,,,,,,,,,,,,,,,,,1223.0,0.0,TIC,Formamide,75-12-7,"slightly viscous, colorless liquid",45.04,39.73883889,219.9,2.6,10.4603,3881.305,300.805,False,,1.1334,2265.0,fp,Formamide,10.4603,3881.305,300.805
+309,309,,,,64-18-6,,,,,,,,,,,,,,,,,,1224.0,0.0,TIC,Formic acid,64-18-6,colorless liquid; pungent odor,46.03,37.7295082,100.6,8.4,4.87631,515.0,133.742,False,,1.22,1779.0,fp,Formic acid,4.87631,515.0,133.742
+310,310,,,,110-00-9,,,,,,,,,,,,,,,,,,1225.0,0.0,TIC,Furan,110-00-9,liquid; anesthetic vapors,68.07,72.63899264,31.4,-85.6,6.97513,1060.801,227.734,False,,0.9371,2389.0,fp,Furan,6.97513,1060.801,227.734
+311,311,,,,98-01-1,,,,,,,,,,,,,,,,,,1226.0,0.0,TIC,Furfural,98-01-1,colorless oily liquid; peculiar odor,96.08,83.09262302,161.7,-36.5,6.96865,1430.133,188.701,False,,1.1563,1199.0,fp,Furfural,6.96865,1430.133,188.701
+312,312,,,,7782-65-2,,,,,,,,,,,,,,,,,,1227.0,0.0,TIC,Germane,7782-65-2,colorless gas,76.67,50.34143139,-88.1,-165.9,0.0,0.0,0.0,False,,1.523,2192.0,fp,Germane,0.0,0.0,0.0
+313,313,,,,151-67-7,,,,,,,,,,,,,,,,,,1228.0,0.0,TIC,Halothane,151-67-7,"non-flammable, highly volatile liquid; sweetish odor",197.38,105.494388,50.2,-115.8,6.70035,1016.075,215.569,False,,1.871,,fp,Halothane,6.70035,1016.075,215.569
+314,314,,,,111-71-7,,,,,,,,,,,,,,,,,,1229.0,0.0,TIC,N-heptaldehyde,111-71-7,liquid; penetrating fruity odor,114.18,138.9693532,152.8,-43.3,5.47587,686.453,111.817,False,,0.82162,,fp,N-heptaldehyde,5.47587,686.453,111.817
+315,315,,,,142-82-5,,,,,,,,,,,,,,,,,,1230.0,0.0,TIC,N-heptane,142-82-5,"volatile, flammable liquid",100.2,146.5555068,98.4,-90.6,6.90342,1268.636,216.951,False,,0.6837,,fp,N-heptane,6.90342,1268.636,216.951
+316,316,,,,25339-56-4,,,,,,,,,,,,,,,,,,1231.0,0.0,TIC,N-heptene,25339-56-4,'',98.18,140.8608321,93.6,-118.9,7.09321,1400.674,238.957,False,,0.697,,fp,N-heptene,7.09321,1400.674,238.957
+317,317,,,,42296-74-2,,,,,,,,,,,,,,,,,,1232.0,0.0,TIC,Hexadiene,42296-74-2,'',82.16,,59.60034684,-273.15,6.56332,1008.139,214.163,False,,,2458.0,fp,Hexadiene,6.56332,1008.139,214.163
+318,318,,,,684-16-2,,,,,,,,,,,,,,,,,,1233.0,0.0,TIC,Hexafluoroacetone,684-16-2,'',166.02,124.8270677,-27.3,-125.5,7.23614,978.564,252.197,False,,1.33,2420.0,fp,Hexafluoroacetone,7.23614,978.564,252.197
+319,319,,,,76-16-4,,,,,,,,,,,,,,,,,,1234.0,0.0,TIC,Hexafluoroethane,76-16-4,'',138.01,,-78.2,-100.0,0.0,0.0,0.0,False,,,2193.0,fp,Hexafluoroethane,0.0,0.0,0.0
+320,320,,,,116-15-4,,,,,,,,,,,,,,,,,,1235.0,0.0,TIC,Hexafluoropropylene,116-15-4,'',150.02,94.76942514,-29.6,-156.5,7.387977065,1028.267,258.456,False,,1.583,1858.0,fp,Hexafluoropropylene,7.387977065,1028.267,258.456
+321,321,,,,110-54-3,,,,,,,,,,,,,,,,,,1236.0,0.0,TIC,N-hexane,110-54-3,"colorless, very volatile liquid; faint odor",86.18,131.6127062,68.7,-95.3,6.87776,1171.53,224.366,False,,0.6548,,fp,N-hexane,6.87776,1171.53,224.366
+322,322,,,,111-31-9,,,,,,,,,,,,,,,,,,1237.0,0.0,TIC,N-hexanethiol,111-31-9,'',118.24,,152.7,-80.5,6.94664,1454.004,204.954,False,,,,fp,N-hexanethiol,6.94664,1454.004,204.954
+323,323,,,,"111-27-3, 25917-35-5",,,,,,,,,,,,,,,,,,1238.0,0.0,TIC,N-hexanol,"111-27-3, 25917-35-5",liquid,102.18,125.3281001,157.4,-44.6,7.28781,1422.031,165.444,False,,0.8153,,fp,N-hexanol,7.28781,1422.031,165.444
+324,324,,,,592-41-6,,,,,,,,,,,,,,,,,,1239.0,0.0,TIC,1-Hexene,592-41-6,'',84.16,125.0334274,63.5,-139.8,6.86573,1152.971,225.849,False,,0.6731,2370.0,fp,1-Hexene,6.86573,1152.971,225.849
+325,325,,,,7803-57-8,,,,,,,,,,,,,,,,,,1240.0,0.0,TIC,Hydrazine,7803-57-8,"colorless, oily liquid; fuming in air; explodes during distillation in air is present",32.05,31.93503388,113.5,1.5,7.88615,1724.782,231.317,False,,1.0036,2029.0,fp,Hydrazine,7.88615,1724.782,231.317
+326,326,,,,1333-74-0,,,,,,,,,,,,,,,,,,1241.0,0.0,TIC,Hydrogen,1333-74-0,flammable gas,2.02,26.47444299,-252.8,-259.2,0.0,0.0,0.0,False,,0.0763,1049.0,fp,Hydrogen,0.0,0.0,0.0
+327,327,,,,10034-85-2,,,,,,,,,,,,,,,,,,1246.0,0.0,TIC,Hydrogen iodide,10034-85-2,"colorless, acrid, non-flammable gas; decomposed by light; fumes in air",127.91,,-35.6,-50.8,7.14364,939.994,255.138,False,,,2197.0,fp,Hydrogen iodide,7.14364,939.994,255.138
+328,328,,,,7/5/7783,,,,,,,,,,,,,,,,,,1247.0,0.0,TIC,Hydrogen selenide,7/5/7783,highly toxic and reactive gas; disagreeable odor,80.98,38.19811321,-42.0,-65.7,6.49175,596.484,206.797,False,,2.12,2202.0,fp,Hydrogen selenide,6.49175,596.484,206.797
+329,329,,,,6/4/7783,,,,,,,,,,,,,,,,,,1248.0,0.0,TIC,Hydrogen sulfide,6/4/7783,"flammable, poisonous gas; odor of rotten eggs",34.08,,-60.3,-85.5,7.40397,958.587,272.611,False,,,1053.0,fp,Hydrogen sulfide,7.40397,958.587,272.611
+330,330,,,,7553-56-2,,,,,,,,,,,,,,,,,,1249.0,0.0,TIC,Iodine,7553-56-2,bluish-black scales; readily sublimes at room temperature,253.81,64.09343434,184.4,113.6,6.23939,1039.159,126.561,False,,3.96,1792.0,fp,Iodine,6.23939,1039.159,126.561
+331,331,,,,513-38-2,,,,,,,,,,,,,,,,,,1250.0,0.0,TIC,Iodomethylpropane,513-38-2,liquid; becomes brown on exposure,184.03,114.6604361,120.0,-93.0,7.59833,1711.247,242.23,False,,1.605,2391.0,fp,Iodomethylpropane,7.59833,1711.247,242.23
+332,332,,,,26914-02-3,,,,,,,,,,,,,,,,,,1251.0,0.0,TIC,Iodopropane,26914-02-3,colorless or slightly yellow liquid,170.0,97.30967373,102.5,-98.0,7.22121,1507.41,244.701,False,,1.747,2392.0,fp,Iodopropane,7.22121,1507.41,244.701
+333,333,,,,123-92-2,,,,,,,,,,,,,,,,,,1252.0,0.0,TIC,Iso-amyl acetate,123-92-2,"colorless, neutral liquid; pear-like odor",130.18,148.6073059,142.0,-78.5,7.95557,1932.043,244.452,False,,0.876,1993.0,fp,Iso-amyl acetate,7.95557,1932.043,244.452
+334,334,,,,'',,,,,,,,,,,,,,,,,,1253.0,0.0,TIC,Isoamyl nitrate,'',colorless liquid,117.15,117.6204819,147.5,-273.15,7.62123,1785.807,229.175,False,,0.996,1993.0,fp,Isoamyl nitrate,7.62123,1785.807,229.175
+335,335,,,,'',,,,,,,,,,,,,,,,,,1262.0,0.0,TIC,Isobutyl nitrate,'',liquid,103.12,101.5960591,67.2,-273.15,8.20041,2045.425,264.154,False,,1.015,1992.0,fp,Isobutyl nitrate,8.20041,2045.425,264.154
+336,336,,,,'',,,,,,,,,,,,,,,,,,1416.0,0.0,TIC,Toluidine,'',light yellow liquid; becomes reddish brown on exposure to light and air,107.15,106.2996032,200.3,-16.4,7.06678,1617.232,186.024,False,,1.008,1708.0,fp,Toluidine,7.06678,1617.232,186.024
+337,337,,,,75-28-5,,,,,,,,,,,,,,,,,,1254.0,0.0,TIC,Isobutane,75-28-5,'',58.12,105.4962608,-11.7,-159.6,7.203197065,1132.108,274.068,False,,0.55092,1075.0,fp,Isobutane,7.203197065,1132.108,274.068
+338,338,,,,78-83-1,,,,,,,,,,,,,,,,,,1255.0,0.0,TIC,Isobutanol,78-83-1,"colorless, flammable liquid",74.12,92.44200549,107.7,-108.0,7.30636,1236.991,171.622,False,,0.8018,1212.0,fp,Isobutanol,7.30636,1236.991,171.622
+339,339,,,,110-19-0,,,,,,,,,,,,,,,,,,1256.0,0.0,TIC,Isobutyl acetate,110-19-0,colorless liquid,116.16,133.3333333,116.16,-98.8,7.41186,1625.875,240.656,False,,0.8712,1213.0,fp,Isobutyl acetate,7.41186,1625.875,240.656
+340,340,,,,78-84-2,,,,,,,,,,,,,,,,,,1257.0,0.0,TIC,Isobutyl aldehyde,78-84-2,flammable liquid; pungent odor,72.11,90.84152179,64.1,-65.0,6.74905,1060.141,209.954,False,,0.7938,2045.0,fp,Isobutyl aldehyde,6.74905,1060.141,209.954
+341,341,,,,78-81-9,,,,,,,,,,,,,,,,,,1258.0,0.0,TIC,Isobutylamine,78-81-9,liquid; blisters skin,73.14,101.0220994,67.7,-84.6,7.28814,1317.873,230.729,False,,0.724,1214.0,fp,Isobutylamine,7.28814,1317.873,230.729
+342,342,,,,115-11-7,,,,,,,,,,,,,,,,,,1259.0,0.0,TIC,Isobutylene,115-11-7,gas,56.11,95.26315789,-6.9,-140.3,6.522187065,799.055,226.535,False,,0.589,1055.0,fp,Isobutylene,6.522187065,799.055,226.535
+343,343,,,,542-55-2,,,,,,,,,,,,,,,,,,1260.0,0.0,TIC,Isobutyl formate,542-55-2,liquid,102.13,115.4011299,98.1,-95.8,7.38476,1514.427,237.855,False,,0.885,2393.0,fp,Isobutyl formate,7.38476,1514.427,237.855
+344,344,,,,97-85-8,,,,,,,,,,,,,,,,,,1261.0,0.0,TIC,Isobutyl isobutyrate,97-85-8,liquid,144.21,164.8114286,147.5,-80.7,7.63543,1806.356,232.452,False,,0.875,2528.0,fp,Isobutyl isobutyrate,7.63543,1806.356,232.452
+345,345,,,,540-42-1,,,,,,,,,,,,,,,,,,1263.0,0.0,TIC,Isobutyl propionate,540-42-1,liquid; agreeable odor,130.21,155.7535885,137.0,-71.0,7.65794,1767.952,233.197,False,,0.836,2394.0,fp,Isobutyl propionate,7.65794,1767.952,233.197
+346,346,,,,79-31-2,,,,,,,,,,,,,,,,,,1264.0,0.0,TIC,Isobutyric acid,79-31-2,liquid; pungent odor,88.11,92.74736842,154.5,-46.0,5.11418,459.215,52.772,False,,0.95,2529.0,fp,Isobutyric acid,5.11418,459.215,52.772
+347,347,,,,107-83-5,,,,,,,,,,,,,,,,,,1265.0,0.0,TIC,Isohexane,107-83-5,'',86.18,131.9350888,60.3,-153.6,6.8391,1135.41,226.572,False,,0.6532,2288.0,fp,Isohexane,6.8391,1135.41,226.572
+348,348,,,,540-84-1,,,,,,,,,,,,,,,,,,1266.0,0.0,TIC,Isooctane,540-84-1,"highly flammable, mobile liquid",114.23,165.0865682,99.2,-107.4,6.81189,1257.84,220.735,False,,0.69194,1262.0,fp,Isooctane,6.81189,1257.84,220.735
+349,349,,,,78-78-4,,,,,,,,,,,,,,,,,,1267.0,0.0,TIC,Isopentane,78-78-4,'',72.15,116.3522013,27.8,-159.9,6.78967,1020.012,233.097,False,,0.6201,1265.0,fp,Isopentane,6.78967,1020.012,233.097
+350,350,,,,78-79-5,,,,,,,,,,,,,,,,,,1268.0,0.0,TIC,Isoprene,78-79-5,"colorless, volatile liquid",68.12,100.0293686,34.1,-145.9,6.09096,706.92,186.104,False,,0.681,1218.0,fp,Isoprene,6.09096,706.92,186.104
+351,351,,,,98-83-9,,,,,,,,,,,,,,,,,,1270.0,0.0,TIC,Isopropenylbenzene,98-83-9,'',118.18,129.7825609,165.5,-23.2,8.09477,2326.867,280.38,False,,0.9106,2303.0,fp,Isopropenylbenzene,8.09477,2326.867,280.38
+352,352,,,,108-21-4,,,,,,,,,,,,,,,,,,1271.0,0.0,TIC,Isopropyl acetate,108-21-4,colorless liquid,102.13,117.1484285,88.5,-73.4,7.42682,1490.877,239.052,False,,0.8718,1220.0,fp,Isopropyl acetate,7.42682,1490.877,239.052
+353,353,,,,105-48-6,,,,,,,,,,,,,,,,,,1273.0,0.0,TIC,Isopropyl chloroacetate,105-48-6,'',136.59,,93.3,-273.15,8.29163,2263.166,269.739,False,,,2947.0,fp,Isopropyl chloroacetate,8.29163,2263.166,269.739
+354,354,,,,696-29-7,,,,,,,,,,,,,,,,,,1274.0,0.0,TIC,Isopropyl cyclohexane,696-29-7,'',126.24,,154.8,-89.4,6.87257,1452.816,209.391,False,,,,fp,Isopropyl cyclohexane,6.87257,1452.816,209.391
+355,355,,,,617-50-5,,,,,,,,,,,,,,,,,,1275.0,0.0,TIC,Isopropyl isobutyrate,617-50-5,'',130.21,,137.8,-273.15,7.22096,1488.585,222.419,False,,,2406.0,fp,Isopropyl isobutyrate,7.22096,1488.585,222.419
+356,356,,,,75-33-2,,,,,,,,,,,,,,,,,,1276.0,0.0,TIC,Isopropyl mercaptan,75-33-2,'',76.16,93.52818372,52.6,-130.5,6.87734,1113.895,226.157,False,,0.8143,2402.0,fp,Isopropyl mercaptan,6.87734,1113.895,226.157
+357,357,,,,1712-64-7,,,,,,,,,,,,,,,,,,1277.0,0.0,TIC,Isopropyl nitrate,1712-64-7,'',105.11,,104.2632332,-273.15,6.42006,1018.568,183.528,False,,,1222.0,fp,Isopropyl nitrate,6.42006,1018.568,183.528
+358,358,,,,463-51-4,,,,,,,,,,,,,,,,,,1278.0,0.0,TIC,Ketene,463-51-4,gas; penetrating odor,42.04,,-49.8,-151.1,6.85232,766.685,242.541,False,,,2521.0,fp,Ketene,6.85232,766.685,242.541
+359,359,,,,7439-90-9,,,,,,,,,,,,,,,,,,1279.0,0.0,TIC,Krypton,7439-90-9,"colorless, odorless, inert gas",83.8,,-153.3,-157.4,0.0,0.0,0.0,False,,,1056.0,fp,Krypton,0.0,0.0,0.0
+360,360,,,,141-79-7,,,,,,,,,,,,,,,,,,1280.0,0.0,TIC,Mesityl oxide,141-79-7,"colorless, oily liquid; honey-like odor",98.14,114.2225326,129.8,-53.0,7.06863,1434.631,213.062,False,,0.8592,1229.0,fp,Mesityl oxide,7.06863,1434.631,213.062
+361,361,,,,79-41-4,,,,,,,,,,,,,,,,,,1281.0,0.0,TIC,Methacrylic acid,79-41-4,long prisms or a corrosive liquid,86.09,84.79267212,161.0,15.0,8.24835,2094.201,228.636,False,,1.0153,2531.0,fp,Methacrylic acid,8.24835,2094.201,228.636
+362,362,,,,126-98-7,,,,,,,,,,,,,,,,,,1282.0,0.0,TIC,Methacrylonitrile,126-98-7,liquid,67.09,83.8520185,90.3,-35.8,6.99865,1353.573,238.029,False,,0.8001,3079.0,fp,Methacrylonitrile,6.99865,1353.573,238.029
+363,363,,,,79-20-9,,,,,,,,,,,,,,,,,,1285.0,0.0,TIC,Methyl acetate,79-20-9,colorless liquid; pleasant odor,74.08,79.2977949,56.9,-98.0,7.07874,1164.426,220.46,False,,0.9342,1231.0,fp,Methyl acetate,7.07874,1164.426,220.46
+364,364,,,,74-99-7,,,,,,,,,,,,,,,,,,1286.0,0.0,TIC,Methyl acetylene,74-99-7,'',40.06,56.7261399,-23.2,-102.7,6.905787065,818.384,226.693,False,,0.7062,1060.0,fp,Methyl acetylene,6.905787065,818.384,226.693
+365,365,,,,96-33-3,,,,,,,,,,,,,,,,,,1287.0,0.0,TIC,Methyl acrylate,96-33-3,liquid lacrimator; acrid odor,86.09,90.28841112,80.2,-76.8,7.19837,1338.663,229.634,False,,0.9535,1919.0,fp,Methyl acrylate,7.19837,1338.663,229.634
+366,366,,,,109-87-5,,,,,,,,,,,,,,,,,,1288.0,0.0,TIC,Methylal,109-87-5,"colorless, clear, volatile, flammable liquid; chloroform odor",76.09,88.54881881,41.9,-104.8,6.91185,1068.35,222.741,False,,0.8593,1234.0,fp,Methylal,6.91185,1068.35,222.741
+367,367,,,,"100-61-8, 26915-12-8",,,,,,,,,,,,,,,,,,1290.0,0.0,TIC,N-methylaniline,"100-61-8, 26915-12-8",colorless or slightly yellow liquid,107.15,108.3417594,195.9,-57.0,7.86919,2226.576,250.694,False,,0.989,,fp,N-methylaniline,7.86919,2226.576,250.694
+368,368,,,,74-83-9,,,,,,,,,,,,,,,,,,1291.0,0.0,TIC,Methyl bromide,74-83-9,"colorless, poisonous gas",94.94,54.87861272,3.6,-93.6,7.14384,1069.708,247.379,False,,1.73,1062.0,fp,Methyl bromide,7.14384,1069.708,247.379
+369,369,,,,563-80-4,,,,,,,,,,,,,,,,,,1292.0,0.0,TIC,3-Methylbutan-2-one,563-80-4,"colorless, flammable liquid; acetone-like odor",86.13,106.3333333,94.4,-93.0,8.50069,1806.925,232.532,False,,0.81,2397.0,fp,3-Methylbutan-2-one,8.50069,1806.925,232.532
+370,370,,,,"513-35-9, 26760-64-5",,,,,,,,,,,,,,,,,,1293.0,0.0,TIC,2-Methyl-2-butene,"513-35-9, 26760-64-5",highly flammable liquid; disagreeable odor,70.13,106.2575758,38.6,-133.8,6.92237,1098.619,233.261,False,,0.66,2460.0,fp,2-Methyl-2-butene,6.92237,1098.619,233.261
+371,371,,,,563-45-1,,,,,,,,,,,,,,,,,,1294.0,0.0,TIC,3-Methyl-1-butene,563-45-1,'',70.13,112.8762273,20.1,-168.5,6.82636,1013.575,236.83,False,,0.6213,2561.0,fp,3-Methyl-1-butene,6.82636,1013.575,236.83
+372,372,,,,591-78-6,,,,,,,,,,,,,,,,,,1295.0,0.0,TIC,Methyl butyl ketone,591-78-6,colorless liquid,100.16,123.4561814,127.6,-55.8,8.54225,2011.668,227.786,False,,0.8113,1224.0,fp,Methyl butyl ketone,8.54225,2011.668,227.786
+373,373,,,,623-42-7,,,,,,,,,,,,,,,,,,1296.0,0.0,TIC,Methyl butyrate,623-42-7,colorless liquid,102.13,113.6798753,102.7,-85.8,7.46009,1528.058,231.544,False,,0.8984,1237.0,fp,Methyl butyrate,7.46009,1528.058,231.544
+374,374,,,,74-87-3,,,,,,,,,,,,,,,,,,1297.0,0.0,TIC,Methyl chloride,74-87-3,"colorless, poisonous gas of mild odor",50.49,55.42261251,-24.2,-97.7,7.10017,951.561,249.682,False,,0.911,1063.0,fp,Methyl chloride,7.10017,951.561,249.682
+375,375,,,,96-34-4,,,,,,,,,,,,,,,,,,1298.0,0.0,TIC,Methyl chloroacetate,96-34-4,colorless liquid,108.52,87.65751212,129.8,-32.1,7.15628,1390.083,195.64,False,,1.238,2295.0,fp,Methyl chloroacetate,7.15628,1390.083,195.64
+376,376,,,,96-37-7,,,,,,,,,,,,,,,,,,1299.0,0.0,TIC,Methylcyclopentane,96-37-7,'',84.16,112.42319,71.8,-142.4,6.86283,1186.059,226.042,False,,0.7486,2298.0,fp,Methylcyclopentane,6.86283,1186.059,226.042
+377,377,,,,116-54-1,,,,,,,,,,,,,,,,,,1300.0,0.0,TIC,Methyl dichloroacetate,116-54-1,'',142.97,,142.8,-52.2,7.73068,1820.46,232.293,False,,,2299.0,fp,Methyl dichloroacetate,7.73068,1820.46,232.293
+378,378,,,,104-90-5,,,,,,,,,,,,,,,,,,1301.0,0.0,TIC,2-Methyl-5-ethylpyridine,104-90-5,liquid; aromatic odor,121.18,131.9468641,177.8,-70.3,5.62874,805.918,113.17,False,,0.9184,2300.0,fp,2-Methyl-5-ethylpyridine,5.62874,805.918,113.17
+379,379,,,,593-53-3,,,,,,,,,,,,,,,,,,1302.0,0.0,TIC,Methyl fluoride,593-53-3,gas; agreeable ether-like odor,34.03,38.34798287,-78.3,-141.8,0.0,0.0,0.0,False,,0.8874,2454.0,fp,Methyl fluoride,0.0,0.0,0.0
+380,380,,,,107-31-3,,,,,,,,,,,,,,,,,,1303.0,0.0,TIC,Methyl formate,107-31-3,colorless flammable liquid; agreeable odor,60.05,60.84093212,31.7,-99.0,3.12607,6.524,-5.39,False,,0.987,1243.0,fp,Methyl formate,3.12607,6.524,-5.39
+381,381,,,,534-22-5,,,,,,,,,,,,,,,,,,1304.0,0.0,TIC,2-Methylfuran,534-22-5,'',82.1,,65.24291961,-88.7,7.69038,1643.082,276.384,False,,,2301.0,fp,2-Methylfuran,7.69038,1643.082,276.384
+382,382,,,,115-19-5,,,,,,,,,,,,,,,,,,1306.0,0.0,TIC,2-Methyl-2-hydroxy-3-butyne,115-19-5,'',84.12,,104.4446749,2.6,6.74439,1016.517,158.657,False,,,,fp,2-Methyl-2-hydroxy-3-butyne,6.74439,1016.517,158.657
+383,383,,,,74-88-4,,,,,,,,,,,,,,,,,,1307.0,0.0,TIC,Methyl iodide,74-88-4,"colorless, poisonous liquid; turns brown when exposed to light",141.94,62.25438596,42.4,-66.5,8.01791,1755.986,299.261,False,,2.28,2644.0,fp,Methyl iodide,8.01791,1755.986,299.261
+384,384,,,,108-11-2,,,,,,,,,,,,,,,,,,1308.0,0.0,TIC,Methyl isobutyl carbinol,108-11-2,'',102.18,126.5386997,131.7,-273.15,10.44853,3831.194,374.829,False,,0.8075,2053.0,fp,Methyl isobutyl carbinol,10.44853,3831.194,374.829
+385,385,,,,556-61-6,,,,,,,,,,,,,,,,,,1310.0,0.0,TIC,Methyl isothiocyanate,556-61-6,crystals; highly irritating pesticide,73.12,68.39397624,118.9,-273.15,3.03266,129.47,55.603,False,,1.0691,2477.0,fp,Methyl isothiocyanate,3.03266,129.47,55.603
+386,386,,,,556-24-1,,,,,,,,,,,,,,,,,,1311.0,0.0,TIC,Methyl isovalerate,556-24-1,liquid; valerian odor,116.18,131.8728717,116.5,-273.15,7.40329,1582.466,233.027,False,,0.881,2400.0,fp,Methyl isovalerate,7.40329,1582.466,233.027
+387,387,,,,80-62-6,,,,,,,,,,,,,,,,,,1313.0,0.0,TIC,Methyl methacrylate monomer,80-62-6,'',100.12,106.059322,100.3,-48.2,8.25295,1945.56,265.581,False,,0.944,1247.0,fp,Methyl methacrylate monomer,8.25295,1945.56,265.581
+388,388,,,,43133-95-5,,,,,,,,,,,,,,,,,,1314.0,0.0,TIC,Methyl pentane,43133-95-5,'',86.18,131.9350888,60.27083657,-273.15,6.8391,1135.41,226.572,False,,0.6532,,fp,Methyl pentane,6.8391,1135.41,226.572
+389,389,,,,149-74-6,,,,,,,,,,,,,,,,,,1315.0,0.0,TIC,Methylphenyldichlorosilane,149-74-6,'',191.13,161.0736558,204.2,-43.5,7.3947,1965.971,230.12,False,,1.1866,2437.0,fp,Methylphenyldichlorosilane,7.3947,1965.971,230.12
+390,390,,,,554-12-1,,,,,,,,,,,,,,,,,,1316.0,0.0,TIC,Methyl propionate,554-12-1,colorless liquid,88.11,96.29508197,79.5,-87.5,6.91496,1155.987,207.171,False,,0.915,1248.0,fp,Methyl propionate,6.91496,1155.987,207.171
+391,391,,,,557-17-5,,,,,,,,,,,,,,,,,,1317.0,0.0,TIC,Methyl propyl ether,557-17-5,"mobile, flammable liquid",74.12,100.7612833,39.1,-139.2,6.5626,903.588,206.459,False,,0.7356,2612.0,fp,Methyl propyl ether,6.5626,903.588,206.459
+392,392,,,,107-87-9,,,,,,,,,,,,,,,,,,1318.0,0.0,TIC,Methyl propyl ketone,107-87-9,colorless liquid,86.13,106.4647713,102.3,-76.9,7.01753,1311.145,214.693,False,,0.809,1249.0,fp,Methyl propyl ketone,7.01753,1311.145,214.693
+393,393,,,,109-06-8,,,,,,,,,,,,,,,,,,1319.0,0.0,TIC,2-Methylpyridine,109-06-8,colorless liquid; strong unpleasant odor,93.13,98.62331886,129.4,-66.7,7.01123,1401.681,209.988,False,,0.9443,2313.0,fp,2-Methylpyridine,7.01123,1401.681,209.988
+394,394,,,,108-89-4,,,,,,,,,,,,,,,,,,1320.0,0.0,TIC,4-Methyl pyridine,108-89-4,"flammable liquid; obnoxious, sweetish odor",93.13,97.53875157,145.4,3.6,7.0449,1482.84,210.743,False,,0.9548,2313.0,fp,4-Methyl pyridine,7.0449,1482.84,210.743
+395,395,,,,91-62-3,,,,,,,,,,,,,,,,,,1321.0,0.0,TIC,6-Methylquinoline,91-62-3,'',143.19,132.2649178,258.6,-22.2,7.00274,1802.833,172.447,False,,1.0826,,fp,6-Methylquinoline,7.00274,1802.833,172.447
+396,396,,,,611-32-5,,,,,,,,,,,,,,,,,,1322.0,0.0,TIC,8-Methylquinoline,611-32-5,'',143.19,,247.8930201,-80.0,7.26087,1921.712,190.847,False,,,,fp,8-Methylquinoline,7.26087,1921.712,190.847
+397,397,,,,622-97-9,,,,,,,,,,,,,,,,,,1323.0,0.0,TIC,P-methylstyrene,622-97-9,'',118.18,128.8346234,172.8,-34.1,7.04842,1594.812,209.895,False,,0.9173,1993.0,fp,P-methylstyrene,7.04842,1594.812,209.895
+398,398,,,,556-64-9,,,,,,,,,,,,,,,,,,1324.0,0.0,TIC,Methyl thiocyanate,556-64-9,colorless liquid; onion odor,73.12,68.46441948,131.5,-51.1,7.16502,1566.033,232.507,False,,1.068,,fp,Methyl thiocyanate,7.16502,1566.033,232.507
+399,399,,,,75-79-6,,,,,,,,,,,,,,,,,,1325.0,0.0,TIC,Methyltrichlorosilane,75-79-6,'',149.48,117.7007874,66.4,-77.8,6.87213,1167.0,226.15,False,,1.27,1250.0,fp,Methyltrichlorosilane,6.87213,1167.0,226.15
+400,400,,,,107-10-8,,,,,,,,,,,,,,,,,,1326.0,0.0,TIC,Monopropylamine,107-10-8,"colorless, alkaline liquid; strong ammonia odor",59.11,82.21140473,47.9,-83.0,6.92646,1044.028,210.836,False,,0.719,1277.0,fp,Monopropylamine,6.92646,1044.028,210.836
+401,401,,,,91-20-3,,,,,,,,,,,,,,,,,,1327.0,0.0,TIC,Naphthalene,91-20-3,"white scales, powder, balls, or cakes; odor of mothballs; sublimes at room temperature",128.17,110.3012048,218.0,80.3,7.14627,1831.571,211.821,False,,1.162,1334.0,fp,Naphthalene,7.14627,1831.571,211.821
+402,402,,,,75-83-2,,,,,,,,,,,,,,,,,,1328.0,0.0,TIC,Neohexane,75-83-2,'',86.18,132.8912876,49.7,-98.9,6.75483,1081.176,229.343,False,,0.6485,1208.0,fp,Neohexane,6.75483,1081.176,229.343
+403,403,,,,1/9/7440,,,,,,,,,,,,,,,,,,1329.0,0.0,TIC,Neon,1/9/7440,"colorless, odorless, inert gas",20.18,,-246.1,-248.6,0.0,0.0,0.0,False,,,1065.0,fp,Neon,0.0,0.0,0.0
+404,404,,,,13463-39-3,,,,,,,,,,,,,,,,,,1330.0,0.0,TIC,Nickel carbonyl,13463-39-3,"poisonous, volatile liquid; oxidizes in air, exploding at 60 degrees Celsius",170.75,129.552352,42.8,-19.0,7.51245,1409.037,261.513,False,,1.318,1259.0,fp,Nickel carbonyl,7.51245,1409.037,261.513
+405,405,,,,98-95-3,,,,,,,,,,,,,,,,,,1331.0,0.0,TIC,Nitrobenzene,98-95-3,colorless to pale yellow liquid; poisonous; almond odor,123.11,102.2763147,210.8,5.8,7.09063,1727.592,199.712,False,,1.2037,1662.0,fp,Nitrobenzene,7.09063,1727.592,199.712
+406,406,,,,79-24-3,,,,,,,,,,,,,,,,,,1332.0,0.0,TIC,Nitroethane,79-24-3,oily liquid; pleasant odor,75.07,71.85107198,114.1,-89.5,7.58777,1671.266,241.187,False,,1.0448,2842.0,fp,Nitroethane,7.58777,1671.266,241.187
+407,407,,,,7727-37-9,,,,,,,,,,,,,,,,,,1333.0,0.0,TIC,Nitrogen,7727-37-9,odorless gas; condenses to a liquid,28.01,34.83830846,-195.8,-210.0,0.0,0.0,0.0,False,,0.804,1066.0,fp,Nitrogen,0.0,0.0,0.0
+408,408,,,,75-52-5,,,,,,,,,,,,,,,,,,1335.0,0.0,TIC,Nitromethane,75-52-5,oily liquid; somewhat disagreeable odor,61.04,53.68041509,101.2,-28.5,7.28052,1446.196,227.517,False,,1.1371,1261.0,fp,Nitromethane,7.28052,1446.196,227.517
+409,409,,,,25322-01-4,,,,,,,,,,,,,,,,,,1336.0,0.0,TIC,1-Nitropropane,25322-01-4,liquid,89.09,89.43881136,132.2,-107.8,7.11284,1466.368,215.121,False,,0.9961,2608.0,fp,1-Nitropropane,7.11284,1466.368,215.121
+410,410,,,,79-46-9,,,,,,,,,,,,,,,,,,1337.0,0.0,TIC,2-Nitropropane,79-46-9,liquid,89.09,90.7137766,120.2,-91.3,7.48654,1664.036,240.995,False,,0.9821,3241.0,fp,2-Nitropropane,7.48654,1664.036,240.995
+411,411,,,,2696-92-6,,,,,,,,,,,,,,,,,,1338.0,0.0,TIC,Nitrosyl chloride,2696-92-6,"very corrosive, reddish-yellow gas",65.46,46.19618913,-5.4,-59.6,7.505777065,1151.544,255.287,False,,1.417,1069.0,fp,Nitrosyl chloride,7.505777065,1151.544,255.287
+412,412,,,,1321-12-6,,,,,,,,,,,,,,,,,,1339.0,0.0,TIC,Nitrotoluene,1321-12-6,yellowish liquid,137.1,117.9659267,220.0,-273.15,6.16817,1130.679,121.626,False,,1.1622,1664.0,fp,Nitrotoluene,6.16817,1130.679,121.626
+413,413,,,,88-72-2,,,,,,,,,,,,,,,,,,1340.0,0.0,TIC,O-nitrotoluene,88-72-2,yellowish liquid,137.14,118.0003442,222.5,-3.2,6.16817,1130.679,121.626,False,,1.1622,1664.0,fp,O-nitrotoluene,6.16817,1130.679,121.626
+414,414,,,,99-99-0,,,,,,,,,,,,,,,,,,1341.0,0.0,TIC,P-nitrotoluene,99-99-0,yellowish crystals,137.14,124.2435224,238.5,51.6,6.9675,1699.858,182.682,False,,1.1038,1664.0,fp,P-nitrotoluene,6.9675,1699.858,182.682
+415,415,,,,10024-97-2,,,,,,,,,,,,,,,,,,1342.0,0.0,TIC,Nitrous oxide,10024-97-2,laughing gas; colorless asphyxiant,44.01,22.37417387,-88.5,-90.8,0.0,0.0,0.0,False,,1.967,1070.0,fp,Nitrous oxide,0.0,0.0,0.0
+416,416,,,,111-84-2,,,,,,,,,,,,,,,,,,1343.0,0.0,TIC,N-nonane,111-84-2,'',128.26,178.7346711,150.8,-53.5,6.69999,1492.928,217.255,False,,0.7176,,fp,N-nonane,6.69999,1492.928,217.255
+417,417,,,,124-11-8,,,,,,,,,,,,,,,,,,1344.0,0.0,TIC,1-Nonene,124-11-8,'',126.24,169.8372124,146.9,-81.2,6.95389,1435.359,205.535,False,,0.7433,1993.0,fp,1-Nonene,6.95389,1435.359,205.535
+418,418,,,,115-25-3,,,,,,,,,,,,,,,,,,1345.0,0.0,TIC,Octafluorocyclobutane,115-25-3,'',200.03,,-6.0,-40.2,7.128997065,1007.399,242.945,False,,,1976.0,fp,Octafluorocyclobutane,7.128997065,1007.399,242.945
+419,419,,,,76-19-7,,,,,,,,,,,,,,,,,,1346.0,0.0,TIC,Octafluoropropane,76-19-7,'',188.02,,-36.7,-147.7,6.963657065,842.613,243.127,False,,,2424.0,fp,Octafluoropropane,6.963657065,842.613,243.127
+420,420,,,,111-65-9,,,,,,,,,,,,,,,,,,1347.0,0.0,TIC,N-octane,111-65-9,flammable liquid,114.23,163.5080587,125.7,-56.8,8.0763,1936.281,253.007,False,,0.69862,,fp,N-octane,8.0763,1936.281,253.007
+421,421,,,,111-66-0,,,,,,,,,,,,,,,,,,1348.0,0.0,TIC,1-Octene,111-66-0,'',112.21,156.9590152,121.3,-101.7,6.93262,1353.486,212.764,False,,0.7149,1993.0,fp,1-Octene,6.93262,1353.486,212.764
+422,422,,,,7782-44-7,,,,,,,,,,,,,,,,,,1349.0,0.0,TIC,Oxygen,7782-44-7,"colorless, odorless gas; supports combustion",32.0,28.07017544,-183.0,-218.8,0.0,0.0,0.0,False,,1.14,1072.0,fp,Oxygen,0.0,0.0,0.0
+423,423,,,,7783-41-7,,,,,,,,,,,,,,,,,,1350.0,0.0,TIC,Oxygen difluoride,7783-41-7,'',54.0,28.42105263,-145.6,-233.9,0.0,0.0,0.0,False,,1.9,2190.0,fp,Oxygen difluoride,0.0,0.0,0.0
+424,424,,,,10028-15-6,,,,,,,,,,,,,,,,,,1351.0,0.0,TIC,Ozone,10028-15-6,"bluish, explosive gas or blue liquid; pleasant odor",48.0,29.73977695,-111.3,-193.0,0.0,0.0,0.0,False,,1.614,1995.0,fp,Ozone,0.0,0.0,0.0
+425,425,,,,76-01-7,,,,,,,,,,,,,,,,,,1352.0,0.0,TIC,Pentachloroethane,76-01-7,liquid; chloroform-like odor,202.29,120.4393903,159.9,-29.0,6.64274,1342.271,196.506,False,,1.6796,1669.0,fp,Pentachloroethane,6.64274,1342.271,196.506
+426,426,,,,504-60-9,,,,,,,,,,,,,,,,,,1353.0,0.0,TIC,"1,3-Pentadiene",504-60-9,'',68.12,100.7692308,42.8,-141.1,6.94776,1119.249,232.952,False,,0.676,1993.0,fp,"1,3-Pentadiene",6.94776,1119.249,232.952
+427,427,,,,591-93-5,,,,,,,,,,,,,,,,,,1354.0,0.0,TIC,"1,4-Pentadiene",591-93-5,'',68.12,,26.0,-148.3,7.03467,1108.225,241.046,False,,,,fp,"1,4-Pentadiene",7.03467,1108.225,241.046
+428,428,,,,109-66-0,,,,,,,,,,,,,,,,,,1355.0,0.0,TIC,N-pentane,109-66-0,flammable liquid,72.15,115.18567,36.1,-129.7,6.8643,1070.617,232.696,False,,0.62638,,fp,N-pentane,6.8643,1070.617,232.696
+429,429,,,,71-41-0,,,,,,,,,,,,,,,,,,1356.0,0.0,TIC,N-pentanol,71-41-0,liquid; mild characteristic odor; irritating to eyes,88.15,108.2126197,137.8,-77.6,7.55787,1492.549,181.529,False,,0.8146,,fp,N-pentanol,7.55787,1492.549,181.529
+430,430,,,,109-67-1,,,,,,,,,,,,,,,,,,1357.0,0.0,TIC,1-Pentene,109-67-1,liquid,70.13,109.0838389,30.0,-165.1,6.78568,1014.294,229.783,False,,0.6429,1108.0,fp,1-Pentene,6.78568,1014.294,229.783
+431,431,,,,108-95-2,,,,,,,,,,,,,,,,,,1359.0,0.0,TIC,Phenol,108-95-2,"colorless, needle crystals or white, crystalline mass; poisonous and caustic",94.11,87.87114846,181.8,40.9,7.12198,1509.677,174.201,False,,1.071,1671.0,fp,Phenol,7.12198,1509.677,174.201
+432,432,,,,103-80-0,,,,,,,,,,,,,,,,,,1360.0,0.0,TIC,Phenylacetyl chloride,103-80-0,'',154.6,,209.713736,-273.15,7.89846,2224.227,233.566,False,,,2577.0,fp,Phenylacetyl chloride,7.89846,2224.227,233.566
+433,433,,,,100-63-0,,,,,,,,,,,,,,,,,,1361.0,0.0,TIC,Phenylhydrazine,100-63-0,prisms or oil; turns yellow to dark red on exposure to light and air,108.14,98.50610312,243.5,19.2,8.06061,2480.263,235.654,False,,1.0978,2572.0,fp,Phenylhydrazine,8.06061,2480.263,235.654
+434,434,,,,103-71-9,,,,,,,,,,,,,,,,,,1362.0,0.0,TIC,Phenyl isocyanate,103-71-9,liquid with acrid odor; irritating to eyes,119.12,108.7258123,166.3,-30.0,7.39799,1800.757,232.847,False,,1.0956,2487.0,fp,Phenyl isocyanate,7.39799,1800.757,232.847
+435,435,,,,108-98-5,,,,,,,,,,,,,,,,,,1363.0,0.0,TIC,Phenyl mercaptan,108-98-5,"liquid; repulsive, garlic-like odor; oxidizes in air",110.18,102.7032066,169.1,-14.9,6.99019,1529.454,203.048,False,,1.0728,2337.0,fp,Phenyl mercaptan,6.99019,1529.454,203.048
+436,436,,,,98-13-5,,,,,,,,,,,,,,,,,,1364.0,0.0,TIC,Phenyltrichlorosilane,98-13-5,'',211.55,160.1438304,201.8,-40.0,6.9834,1641.0,199.15,False,,1.321,1804.0,fp,Phenyltrichlorosilane,6.9834,1641.0,199.15
+437,437,,,,7789-60-8,,,,,,,,,,,,,,,,,,1368.0,0.0,TIC,Phosphorus tribromide,7789-60-8,"colorless, fuming liquid; very penetrating odor; corrosive",270.73,94.99298246,172.8,-41.6,7.02639,1694.636,233.409,False,,2.85,1808.0,fp,Phosphorus tribromide,7.02639,1694.636,233.409
+438,438,,,,12/2/7719,,,,,,,,,,,,,,,,,,1369.0,0.0,TIC,Phosphorus trichloride,12/2/7719,"colorless, clear, fuming liquid",137.33,87.24904701,76.1,-92.0,7.07015,1304.47,236.185,False,,1.574,1809.0,fp,Phosphorus trichloride,7.07015,1304.47,236.185
+439,439,,,,108-99-6,,,,,,,,,,,,,,,,,,1370.0,0.0,TIC,Beta-picoline,108-99-6,colorless liquid; sweetish odor,93.13,97.35521639,144.1,-18.1,7.05389,1484.307,211.544,False,,0.9566,2313.0,fp,Beta-picoline,7.05389,1484.307,211.544
+440,440,,,,110-89-4,,,,,,,,,,,,,,,,,,1371.0,0.0,TIC,Piperidine,110-89-4,liquid; soapy feel; characteristic odor,85.15,98.75898863,106.4,-10.5,6.85699,1239.577,205.528,False,,0.8622,2401.0,fp,Piperidine,6.85699,1239.577,205.528
+441,441,,,,463-49-0,,,,,,,,,,,,,,,,,,1372.0,0.0,TIC,Propadiene,463-49-0,'',40.06,22.41745943,-34.5,-136.3,6.673187065,755.286,233.991,False,,1.787,2200.0,fp,Propadiene,6.673187065,755.286,233.991
+442,442,,,,74-98-6,,,,,,,,,,,,,,,,,,1373.0,0.0,TIC,Propane,74-98-6,"odorless gas; burns with luminous, smoky flame",44.1,75.34597642,-42.0,-187.7,7.41188,1149.36,298.056,False,,0.5853,1075.0,fp,Propane,7.41188,1149.36,298.056
+443,443,,,,79869-58-2,,,,,,,,,,,,,,,,,,1374.0,0.0,TIC,Propanethiol,79869-58-2,'',76.16,90.34400949,67.71819859,-273.15,6.92863,1183.392,224.634,False,,0.843,2402.0,fp,Propanethiol,6.92863,1183.392,224.634
+444,444,,,,71-23-8,,,,,,,,,,,,,,,,,,1375.0,0.0,TIC,N-propanol,71-23-8,liquid; alcoholic and slightly stupefying odor,60.1,74.63057246,97.2,-126.2,8.18894,1690.864,221.346,False,,0.8053,,fp,N-propanol,8.18894,1690.864,221.346
+445,445,,,,79-09-4,,,,,,,,,,,,,,,,,,1376.0,0.0,TIC,Propionic acid,79-09-4,oily liquid; rancid odor,74.08,74.60221551,141.2,-20.7,7.62068,1679.869,213.318,False,,0.993,1848.0,fp,Propionic acid,7.62068,1679.869,213.318
+446,446,,,,123-62-6,,,,,,,,,,,,,,,,,,1377.0,0.0,TIC,Propionic anhydride,123-62-6,liquid; pungent odor,130.14,129.2941666,167.0,-45.0,6.10586,949.198,127.252,False,,1.00654193,2496.0,fp,Propionic anhydride,6.10586,949.198,127.252
+447,447,,,,109-60-4,,,,,,,,,,,,,,,,,,1379.0,0.0,TIC,N-propyl acetate,109-60-4,liquid; odor of pears,102.13,122.1650718,101.5,-95.0,7.01896,1283.861,208.772,False,,0.836,,fp,N-propyl acetate,7.01896,1283.861,208.772
+448,448,,,,103-65-1,,,,,,,,,,,,,,,,,,1380.0,0.0,TIC,N-propyl benzene,103-65-1,liquid,120.19,139.4315545,159.2,-99.6,6.95094,1490.963,207.15,False,,0.862,,fp,N-propyl benzene,6.95094,1490.963,207.15
+449,449,,,,115-07-1,,,,,,,,,,,,,,,,,,1381.0,0.0,TIC,Propylene,115-07-1,flammable gas; burns with yellow sooty flame,42.08,81.88363495,-47.7,-185.3,0.0,0.0,0.0,False,,0.5139,1075.0,fp,Propylene,0.0,0.0,0.0
+450,450,,,,75-56-9,,,,,,,,,,,,,,,,,,1382.0,0.0,TIC,Propylene oxide,75-56-9,"colorless, extremely flammable liquid",58.08,69.94219653,34.5,-111.9,6.42556,802.487,191.802,False,,0.8304,1280.0,fp,Propylene oxide,6.42556,802.487,191.802
+451,451,,,,110-74-7,,,,,,,,,,,,,,,,,,1383.0,0.0,TIC,N-propyl formate,110-74-7,colorless liquid; pleasant odor,88.11,97.79134295,80.8,-92.9,6.90905,1159.609,207.335,False,,0.901,,fp,N-propyl formate,6.90905,1159.609,207.335
+452,452,,,,107-03-9,,,,,,,,,,,,,,,,,,1384.0,0.0,TIC,Propyl mercaptan,107-03-9,'',76.16,90.34400949,67.7,-113.2,6.92863,1183.392,224.634,False,,0.843,2402.0,fp,Propyl mercaptan,6.92863,1183.392,224.634
+453,453,,,,627-13-4,,,,,,,,,,,,,,,,,,1385.0,0.0,TIC,N-propyl nitrate,627-13-4,pale yellow liquid; heating may cause explosion,105.1,99.73429493,110.6,-273.15,7.73719,1721.723,245.49,False,,1.0538,,fp,N-propyl nitrate,7.73719,1721.723,245.49
+454,454,,,,140-76-1,,,,,,,,,,,,,,,,,,1387.0,0.0,TIC,"Pyridine, 2-methyl-5-vinyl-",140-76-1,'',119.18,,181.1,-14.3,6.35364,1135.712,143.982,False,,,,fp,"Pyridine, 2-methyl-5-vinyl-",6.35364,1135.712,143.982
+455,455,,,,123-75-1,,,,,,,,,,,,,,,,,,1388.0,0.0,TIC,Pyrrolidine,123-75-1,almost colorless liquid; ammonia-like odor; fumes in air,71.12,83.4741784,86.6,-57.8,6.92463,1180.043,205.255,False,,0.852,1922.0,fp,Pyrrolidine,6.92463,1180.043,205.255
+456,456,,,,108-46-3,,,,,,,,,,,,,,,,,,1389.0,0.0,TIC,Resorcinol,108-46-3,"white, needle-like crystals; becomes pink on exposure to light and air",110.11,86.58488637,276.5,108.9,8.39758,2687.152,210.986,False,,1.2717,2876.0,fp,Resorcinol,8.39758,2687.152,210.986
+457,457,,,,7783-79-1,,,,,,,,,,,,,,,,,,1390.0,0.0,TIC,Selenium hexafluoride,7783-79-1,gas,193.0,,-34.4,-50.6,9.408207065,1556.66,284.052,False,,,2194.0,fp,Selenium hexafluoride,9.408207065,1556.66,284.052
+458,458,,,,7791-23-3,,,,,,,,,,,,,,,,,,1391.0,0.0,TIC,Selenium oxychloride,7791-23-3,"nearly colorless or yellowish, corrosive liquid; fumes in air",165.87,67.9795082,180.0,8.5,10.25402,3515.404,308.095,False,,2.44,2879.0,fp,Selenium oxychloride,10.25402,3515.404,308.095
+459,459,,,,7803-62-5,,,,,,,,,,,,,,,,,,1392.0,0.0,TIC,Silane,7803-62-5,gas; repulsive odor,32.12,47.23529412,-112.1,-184.7,7.09738,703.987,278.502,False,,0.68,2203.0,fp,Silane,7.09738,703.987,278.502
+460,460,,,,10026-04-7,,,,,,,,,,,,,,,,,,1393.0,0.0,TIC,Silicon tetrachloride,10026-04-7,"colorless, clear, fuming liquid",169.9,111.7763158,56.9,-68.8,7.70402,1616.546,278.455,False,,1.52,1818.0,fp,Silicon tetrachloride,7.70402,1616.546,278.455
+461,461,,,,7783-61-1,,,,,,,,,,,,,,,,,,1394.0,0.0,TIC,Silicon tetrafluoride,7783-61-1,colorless gas; very pungent odor; forms heavy clouds with moist air,104.08,65.13141427,-95.16028603,-86.8,0.0,0.0,0.0,False,,1.598,1859.0,fp,Silicon tetrafluoride,0.0,0.0,0.0
+462,462,,,,9/5/7446,,,,,,,,,,,,,,,,,,1396.0,0.0,TIC,Sulfur dioxide,9/5/7446,"colorless, nonflammable gas; strong suffocating odor",64.06,42.70666667,-10.0,-73.1,7.25308,966.575,231.079,False,,1.5,1079.0,fp,Sulfur dioxide,7.25308,966.575,231.079
+463,463,,,,"12771-08-3, 10025-67-9",,,,,,,,,,,,,,,,,,1397.0,0.0,TIC,Sulfur monochloride,"12771-08-3, 10025-67-9","non-flammable, light amber to yellowish red, fuming, oily liquid",135.03,79.97038792,137.8,-80.0,6.9399,1417.43,211.465,False,,1.6885,1828.0,fp,Sulfur monochloride,6.9399,1417.43,211.465
+464,464,,,,11/9/7446,,,,,,,,,,,,,,,,,,1398.0,0.0,TIC,Sulfur trioxide,11/9/7446,ice-like mass,80.06,41.64585934,44.7,16.8,7.08025,892.175,169.586,False,,1.9224,1829.0,fp,Sulfur trioxide,7.08025,892.175,169.586
+465,465,,,,507-19-7,,,,,,,,,,,,,,,,,,1399.0,0.0,TIC,T-butyl bromide,507-19-7,colorless liquid,137.04,113.0226804,73.3,-16.3,7.43955,1539.717,264.955,False,,1.2125,,fp,T-butyl bromide,7.43955,1539.717,264.955
+466,466,,,,7783-80-4,,,,,,,,,,,,,,,,,,1400.0,0.0,TIC,Tellurium hexafluoride,7783-80-4,colorless gas; repulsive odor,241.61,96.68267307,-35.5,-37.6,8.230527065,1122.339,247.713,False,,2.499,2195.0,fp,Tellurium hexafluoride,8.230527065,1122.339,247.713
+467,467,,,,76-12-0,,,,,,,,,,,,,,,,,,1401.0,0.0,TIC,"1,1,2,2-Tetrachloro-1,2-difluoroethane",76-12-0,'',203.83,123.9314161,92.9,24.8,10.02097,3501.665,398.81,False,,1.6447,1078.0,fp,"1,1,2,2-Tetrachloro-1,2-difluoroethane",10.02097,3501.665,398.81
+468,468,,,,79-34-5,,,,,,,,,,,,,,,,,,1402.0,0.0,TIC,"1,1,2,2-Tetrachloroethane",79-34-5,"nonflammable, heavy, mobile liquid",167.85,105.21532,145.1,-43.8,6.09073,959.602,149.778,False,,1.5953,1702.0,fp,"1,1,2,2-Tetrachloroethane",6.09073,959.602,149.778
+469,469,,,,116-14-3,,,,,,,,,,,,,,,,,,1403.0,0.0,TIC,Tetrafluoroethylene,116-14-3,'',100.01,65.83936801,-75.6,-131.1,0.0,0.0,0.0,False,,1.519,1081.0,fp,Tetrafluoroethylene,0.0,0.0,0.0
+470,470,,,,109-99-9,,,,,,,,,,,,,,,,,,1404.0,0.0,TIC,Tetrahydrofuran,109-99-9,hygroscopic liquid; faint odor,72.11,81.09536662,66.0,-108.5,6.99628,1202.942,226.332,False,,0.8892,2056.0,fp,Tetrahydrofuran,6.99628,1202.942,226.332
+471,471,,,,110-01-0,,,,,,,,,,,,,,,,,,1405.0,0.0,TIC,Tetrahydrothiophene,110-01-0,colorless liquid; natural gas odorant,88.17,88.2847702,121.1,-96.2,7.88371,1979.981,275.496,False,,0.9987,2412.0,fp,Tetrahydrothiophene,7.88371,1979.981,275.496
+472,472,,,,75-74-1,,,,,,,,,,,,,,,,,,1406.0,0.0,TIC,Tetramethyllead,75-74-1,'',267.33,134.0,109.7715084,-27.5,7.01769,1376.726,223.021,False,,1.995,1649.0,fp,Tetramethyllead,7.01769,1376.726,223.021
+473,473,,,,75-76-3,,,,,,,,,,,,,,,,,,1407.0,0.0,TIC,Tetramethylsilane,75-76-3,'',88.22,,26.6,-99.1,6.85213,1047.272,237.093,False,,,2749.0,fp,Tetramethylsilane,6.85213,1047.272,237.093
+474,474,,,,509-14-8,,,,,,,,,,,,,,,,,,1408.0,0.0,TIC,Tetranitromethane,509-14-8,pale yellow liquid,196.03,120.7899439,125.7,13.9,4.63198,498.772,114.612,False,,1.6229,1510.0,fp,Tetranitromethane,4.63198,498.772,114.612
+475,475,,,,288-47-1,,,,,,,,,,,,,,,,,,1409.0,0.0,TIC,Thiazole,288-47-1,colorless or pale yellow liquid,85.13,70.94166667,116.8,-273.15,7.14057,1424.453,216.157,False,,1.2,,fp,Thiazole,7.14057,1424.453,216.157
+476,476,,,,9/7/7719,,,,,,,,,,,,,,,,,,1410.0,0.0,TIC,Thionyl chloride,9/7/7719,"colorless to pale yellow or reddish, fuming liquid; suffocating odor",118.97,72.63125763,75.6,-104.5,7.21904,1399.91,246.948,False,,1.638,1836.0,fp,Thionyl chloride,7.21904,1399.91,246.948
+477,477,,,,110-02-1,,,,,,,,,,,,,,,,,,1411.0,0.0,TIC,Thiophene,110-02-1,liquid; slight aromatic odor,84.14,79.00914606,84.2,-38.2,6.94868,1239.578,220.565,False,,1.06494,2414.0,fp,Thiophene,6.94868,1239.578,220.565
+478,478,,,,3982-91-0,,,,,,,,,,,,,,,,,,1412.0,0.0,TIC,Thiophosphoryl chloride,3982-91-0,fuming liquid; strong irritant,169.4,103.6085627,125.0,-36.2,7.23188,1553.827,233.178,False,,1.635,1837.0,fp,Thiophosphoryl chloride,7.23188,1553.827,233.178
+479,479,,,,106-49-0,,,,,,,,,,,,,,,,,,1417.0,0.0,TIC,P-toluidine,106-49-0,lustrous plates or leaflets,107.15,102.4378585,200.4,43.7,7.59394,1961.716,216.15,False,,1.046,1993.0,fp,P-toluidine,7.59394,1961.716,216.15
+480,480,,,,76-02-8,,,,,,,,,,,,,,,,,,1419.0,0.0,TIC,Trichloroacetyl chloride,76-02-8,'',181.83,112.2268856,118.0,-57.0,6.98442,1386.68,219.703,False,,1.6202,2442.0,fp,Trichloroacetyl chloride,6.98442,1386.68,219.703
+481,481,,,,12002-48-1,,,,,,,,,,,,,,,,,,1420.0,0.0,TIC,Trichlorobenzene,12002-48-1,liquid; volatile with steam,181.44,124.6153846,213.0,17.0,7.51512,2110.983,242.429,False,,1.456,2321.0,fp,Trichlorobenzene,7.51512,2110.983,242.429
+482,482,,,,79-00-5,,,,,,,,,,,,,,,,,,1422.0,0.0,TIC,"1,1,2-Trichloroethane",79-00-5,nonflammable liquid; pleasant odor,133.4,92.53607103,113.9,-36.6,6.94484,1310.297,208.74,False,,1.4416,,fp,"1,1,2-Trichloroethane",6.94484,1310.297,208.74
+483,483,,,,79-01-6,,,,,,,,,,,,,,,,,,1423.0,0.0,TIC,Trichloroethylene,79-01-6,"nonflammable, mobile liquid; chloroform odor",131.39,89.73500888,87.0,-84.8,6.42856,974.538,187.339,False,,1.4642,1710.0,fp,Trichloroethylene,6.42856,974.538,187.339
+484,484,,,,75-69-4,,,,,,,,,,,,,,,,,,1424.0,0.0,TIC,Trichlorofluoromethane,75-69-4,nonflammable liquid below 23.7 degrees Celsius,137.37,91.94779116,23.8,-111.1,6.88957,1043.303,236.548,False,,1.494,2810.0,fp,Trichlorofluoromethane,6.88957,1043.303,236.548
+485,485,,,,96-18-4,,,,,,,,,,,,,,,,,,1425.0,0.0,TIC,"1,2,3-Trichloropropane",96-18-4,'',147.43,106.1487508,156.9,-14.7,7.5318,1818.875,232.519,False,,1.3889,2810.0,fp,"1,2,3-Trichloropropane",7.5318,1818.875,232.519
+486,486,,,,10025-78-2,,,,,,,,,,,,,,,,,,1426.0,0.0,TIC,Trichlorosilane,10025-78-2,volatile liquid; fumes in air,135.45,100.9540136,31.9,-128.2,7.09119,1170.0,246.15,False,,1.3417,1295.0,fp,Trichlorosilane,7.09119,1170.0,246.15
+487,487,,,,76-13-1,,,,,,,,,,,,,,,,,,1427.0,0.0,TIC,"1,1,2-Trichloro-1,2,2-trifluoroethane",76-13-1,'',187.38,119.8464982,47.6,-36.2,6.90446,1112.856,229.031,False,,1.5635,1708.0,fp,"1,1,2-Trichloro-1,2,2-trifluoroethane",6.90446,1112.856,229.031
+488,488,,,,121-44-8,,,,,,,,,,,,,,,,,,1428.0,0.0,TIC,Triethylamine,121-44-8,liquid; strong ammoniacal odor,101.19,139.4762233,88.8,-114.7,5.85878,695.814,144.879,False,,0.7255,1296.0,fp,Triethylamine,5.85878,695.814,144.879
+489,489,,,,76-05-1,,,,,,,,,,,,,,,,,,1429.0,0.0,TIC,Trifluoroacetic acid,76-05-1,"liquid; sharp, biting odor",114.02,74.27529151,71.8,-15.3,6.22044,1267.252,220.192,False,,1.5351,2699.0,fp,Trifluoroacetic acid,6.22044,1267.252,220.192
+490,490,,,,79-38-9,,,,,,,,,,,,,,,,,,1430.0,0.0,TIC,Trifluorochloroethylene,79-38-9,'',116.47,89.24904215,-28.3,-158.1,6.901457065,850.498,239.904,False,,1.305,1082.0,fp,Trifluorochloroethylene,6.901457065,850.498,239.904
+491,491,,,,420-46-2,,,,,,,,,,,,,,,,,,1431.0,0.0,TIC,"1,1,1-Trifluoroethane",420-46-2,'',84.04,,-47.3,-111.3,0.0,0.0,0.0,False,,,2035.0,fp,"1,1,1-Trifluoroethane",0.0,0.0,0.0
+492,492,,,,75-46-7,,,,,,,,,,,,,,,,,,1432.0,0.0,TIC,Trifluoromethane,75-46-7,"colorless, odorless gas",70.01,46.05921053,-82.1,-155.2,0.0,0.0,0.0,False,,1.52,1984.0,fp,Trifluoromethane,0.0,0.0,0.0
+493,493,,,,7756-94-7,,,,,,,,,,,,,,,,,,1433.0,0.0,TIC,Triisobutylene,7756-94-7,gas; simple asphyxiant,168.32,285.7724958,177.0,-76.0,6.97343,1595.479,210.85,False,,0.589,2324.0,fp,Triisobutylene,6.97343,1595.479,210.85
+494,494,,,,75-50-3,,,,,,,,,,,,,,,,,,1434.0,0.0,TIC,Trimethylamine,75-50-3,"gas; pungent, fishy, ammoniacal odor",59.11,94.27432217,2.9,-117.1,6.89123,970.297,239.09,False,,0.627,1083.0,fp,Trimethylamine,6.89123,970.297,239.09
+495,495,,,,95-63-6,,,,,,,,,,,,,,,,,,1435.0,0.0,TIC,"1,2,4-Trimethylbenzene",95-63-6,liquid,120.19,137.1875357,169.4,-43.8,7.04383,1573.267,208.564,False,,0.8761,1993.0,fp,"1,2,4-Trimethylbenzene",7.04383,1573.267,208.564
+496,496,,,,108-67-8,,,,,,,,,,,,,,,,,,1436.0,0.0,TIC,"1,3,5-Trimethylbenzene",108-67-8,liquid; peculiar odor,120.19,139.1571147,164.7,-44.7,7.07437,1569.622,209.578,False,,0.8637,2325.0,fp,"1,3,5-Trimethylbenzene",7.07437,1569.622,209.578
+497,497,,,,75-77-4,,,,,,,,,,,,,,,,,,1437.0,0.0,TIC,Trimethylchlorosilane,75-77-4,'',108.64,127.2131148,57.6,-57.7,6.8407,1123.68,225.979,False,,0.854,1298.0,fp,Trimethylchlorosilane,6.8407,1123.68,225.979
+498,498,,,,7783-82-6,,,,,,,,,,,,,,,,,,1438.0,0.0,TIC,Tungsten hexafluoride,7783-82-6,colorless gas or pale yellow liquid,297.9,86.57367044,19.4,2.8,7.43079,1021.208,208.45,False,,3.441,2196.0,fp,Tungsten hexafluoride,7.43079,1021.208,208.45
+499,499,,,,108-05-4,,,,,,,,,,,,,,,,,,1439.0,0.0,TIC,Vinyl acetate,108-05-4,liquid; polymerizes in light,86.09,92.37124464,72.5,-92.8,7.21542,1299.069,226.967,False,,0.932,1301.0,fp,Vinyl acetate,7.21542,1299.069,226.967
+500,500,,,,593-60-2,,,,,,,,,,,,,,,,,,1440.0,0.0,TIC,Vinyl bromide,593-60-2,'',106.95,71.61990223,15.8,-137.8,7.24379,1219.308,264.021,False,,1.4933,1085.0,fp,Vinyl bromide,7.24379,1219.308,264.021
+501,501,,,,75-01-4,,,,,,,,,,,,,,,,,,1441.0,0.0,TIC,Vinyl chloride,75-01-4,colorless gas; polymerizes in light,62.5,68.63606413,-13.9,-153.8,6.86108,892.757,238.099,False,,0.9106,1086.0,fp,Vinyl chloride,6.86108,892.757,238.099
+502,502,,,,75-02-5,,,,,,,,,,,,,,,,,,1442.0,0.0,TIC,Vinyl fluoride,75-02-5,'',46.04,72.38993711,-72.2,-160.5,0.0,0.0,0.0,False,,0.636,1860.0,fp,Vinyl fluoride,0.0,0.0,0.0
+503,503,,,,75-35-4,,,,,,,,,,,,,,,,,,1443.0,0.0,TIC,Vinylidene chloride,75-35-4,"liquid; mild, sweet odor",96.94,79.92414873,31.6,-122.6,6.9829,1104.726,237.747,False,,1.2129,1303.0,fp,Vinylidene chloride,6.9829,1104.726,237.747
+504,504,,,,75-94-5,,,,,,,,,,,,,,,,,,1444.0,0.0,TIC,Vinyltrichlorosilane,75-94-5,'',161.49,129.9613713,90.7,-94.8,7.32284,1513.0,250.15,False,,1.2426,1305.0,fp,Vinyltrichlorosilane,7.32284,1513.0,250.15
+505,505,,,,7440-63-3,,,,,,,,,,,,,,,,,,1445.0,0.0,TIC,Xenon,7440-63-3,"colorless, odorless, inert gas",131.29,,-108.1,-111.8,0.0,0.0,0.0,False,,,2036.0,fp,Xenon,0.0,0.0,0.0
+506,506,,,,1330-20-7,,,,,,,,,,,,,,,,,,1446.0,0.0,TIC,Xylene,1330-20-7,"mobile, flammable liquid",106.17,122.8819444,138.5,-273.15,7.96709,1996.545,258.378,False,,0.864,1307.0,fp,Xylene,7.96709,1996.545,258.378
+507,507,,,,108-38-3,,,,,,,,,,,,,,,,,,1447.0,0.0,TIC,M-xylene,108-38-3,colorless liquid,106.17,122.2593275,139.1,-47.8,7.96709,1996.545,258.378,False,,0.8684,2956.0,fp,M-xylene,7.96709,1996.545,258.378
+508,508,,,,95-47-6,,,,,,,,,,,,,,,,,,1448.0,0.0,TIC,O-xylene,95-47-6,colorless liquid,106.17,120.6340189,144.4,-25.2,7.81265,1901.373,246.882,False,,0.8801,,fp,O-xylene,7.81265,1901.373,246.882
+509,509,,,,106-42-3,,,,,,,,,,,,,,,,,,1449.0,0.0,TIC,P-xylene,106-42-3,colorless plates or prisms,106.17,123.3043761,138.4,13.3,7.32399,1644.214,232.921,False,,0.86104,1307.0,fp,P-xylene,7.32399,1644.214,232.921
+510,510,,,,87-62-7,,,,,,,,,,,,,,,,,,1450.0,0.0,TIC,"2,6-Xylidine",87-62-7,'',121.2,123.1457021,218.605542,8.4,7.57561,2157.756,240.999,False,,0.9842,1711.0,fp,"2,6-Xylidine",7.57561,2157.756,240.999
+511,511,,,,1310-73-2,,,,,,,,,,,,,,,,,,1451.0,0.0,TIC,Sodium Hydroxide (solid),1310-73-2,whitish solid sodium hydroxide; becomes colourless and odorless after dissolution in water,39.9971,0.476190476,1388.0,318.0,-5.12494,0.0,273.15,False,,2.1,1823.0,fp,Sodium Hydroxide (solid),-5.12494,0.0,273.15

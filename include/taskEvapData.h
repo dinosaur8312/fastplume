@@ -50,6 +50,7 @@ namespace FastPlume
 
     private:
         std::vector <int> id;
+        std::vector <int> icase;
         std::vector <double> surfaceTemperature;
         std::vector <double> AtmPressure;
         std::vector <double> windSpeed;

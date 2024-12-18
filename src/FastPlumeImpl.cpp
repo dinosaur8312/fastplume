@@ -16,6 +16,7 @@ namespace FastPlume
         // Process the CSV files to get the data
         m_coefData = dispersionCoef(config.coefCSVPath);
         m_taskData = taskData(config.taskCSVPath, "./");
+        p_dustIntegralTable = nullptr;
     }
 
     void FastPlumeImpl::validateConfiguration() const
@@ -298,6 +299,7 @@ namespace FastPlume
             const taskDataRow &row = results[i];
             std::cout << "Task " << i + 1 << ":\n";
             std::cout << "  id: " << row.id << "\n"
+                        << "  icase: " << row.icase << "\n"
                       << "  istab: " << row.istab << ", wind: " << row.wind << "\n"
                       << "  sig_x0: " << row.sig_x0 << ", sig_y0: " << row.sig_y0
                       << ", sig_z0: " << row.sig_z0 << "\n"
@@ -340,6 +342,7 @@ namespace FastPlume
             const taskEvapDataRow &row = results[i];
             std::cout << "Task " << i + 1 << ":\n";
             std::cout << "  id: " << row.id << "\n"
+                        << "  icase: " << row.icase << "\n"
                       << "  surfaceTemperature: " << row.surfaceTemperature << ", AtmPressure: " << row.AtmPressure
                       << ", windSpeed: " << row.windSpeed << "\n"
                       << "  surfaceType: " << row.surfaceType << ", agentName: " << row.agentName
@@ -402,6 +405,9 @@ namespace FastPlume
             {
                 auto row_evap = m_taskEvapData.getRow(i);
                 row.dur = run_evap_row(row_evap);
+                row.sig_x0 = row_evap.sig_x0;
+                row.sig_y0 = row_evap.sig_y0;
+                row.sig_z0 = row_evap.sig_z0;
             }
             // Add output file prefix to ../tests directory
 
@@ -414,7 +420,7 @@ namespace FastPlume
                 {
                     throw std::runtime_error("Error: Unable to open file " + output_file);
                 }
-                outputFile << "case,istab,wind,x,y,z,t,dur,";
+                outputFile << "id,case,istab,wind,x,y,z,t,dur,";
                 outputFile << "sig_x,sig_y,sig_z,zfunc,yfunc,xfunc,qyz,cpeak,concentration,dinf,dose,";
                 if (row.vd > 0)
                     outputFile << "c_surf,c_surf_inf, C_dep, D_dep, delta_dep";
@@ -441,9 +447,14 @@ namespace FastPlume
 
             row.zv = sig_z0 > EPSILON ? this->interpolate_x_from_sig_component(istab, wind, sig_z0, "z") : 0;
 
-            //  printf("i = %d, row.xv = %f, row.yv = %f, row.zv = %f\n", i, row.xv, row.yv, row.zv);
 
             //   printf("locdata.getLocNum() = %d\n", locdata.getLocNum());
+
+            if(row.vd>0)
+            {
+                p_dustIntegralTable = new dustIntegralTable(row, m_coefData);
+            }
+            //printf("i = %d, row.xv = %f, row.yv = %f, row.zv = %f, row.vd = %f\n", i, row.xv, row.yv, row.zv, row.vd);
 
             for (int j = 0; j < locdata.size(); j++)
             {
@@ -451,7 +462,7 @@ namespace FastPlume
                 double y = locdata[j].y;
                 double zrcp = locdata[j].z;
                 double t = locdata[j].t;
-                // printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f\n", i, j, x, y, zrcp, t);
+                //printf("i = %d, j = %d, x = %f, y = %f, z = %f, t = %f\n", i, j, x, y, zrcp, t);
 
                 double x_merge = std::max(0., x) + row.xv;
                 double y_merge = std::max(0., x) + row.yv;
@@ -537,9 +548,14 @@ namespace FastPlume
                         dinf = qyz / windPlume * cdfFunction(x, sig_x);
                     }
 
-                    if (row.vd >= 0)
+                    if (row.vd > 0)
                     {
-                        delta_dep = calcDepletion(row, x, zrcp);
+                       // delta_dep = calcDepletion(row, x, zrcp);
+                        double integral = p_dustIntegralTable->getIntegralAtX(x);
+                        delta_dep = exp(-integral*row.vd/row.wind);
+
+                        //printf("delta_dep = exp(%f*%f/%f) = %f\n", integral, row.vd, row.wind, delta_dep);
+
                         C_dep = concentration * delta_dep;
                         D_dep = dosage * delta_dep;
                         c_surf = row.vd * D_dep;
@@ -551,7 +567,7 @@ namespace FastPlume
                 if (outputMethod == "CSV")
                 {
 
-                    outputFile << i << "," << istab << "," << wind << ",";
+                    outputFile << row.id << "," << row.icase << "," << istab << "," << wind << ",";
                     outputFile << x << "," << y << "," << zrcp << ",";
                     outputFile << t << "," << row.dur << ",";
                     outputFile << sig_x << "," << sig_y << "," << sig_z << ",";
@@ -599,8 +615,17 @@ namespace FastPlume
                 row.locations = locdata;
                 m_taskData.setRow(i, row);
             }
-            // exit(0);
+
+            if(row.vd>0)
+            {
+                delete p_dustIntegralTable;
+                p_dustIntegralTable = nullptr;
+            }
+            // exit(0)
+            //printf("Row %d Run completed successfully\n", i);
         } // end of loop over all rows in data
+
+
 
         // outputFile.close();
         std::cout << "Run completed successfully.\n";
@@ -689,6 +714,7 @@ namespace FastPlume
             agent.m_AntoineC,
             temperature);
 
+
         double puddleArea;
         double puddleLength;
         double puddleWidth;
@@ -702,6 +728,15 @@ namespace FastPlume
         double sig_y0 = puddleWidth / 3.0;
         double sig_z0 = 0.1;
 
+        row.sig_x0 = sig_x0;
+        row.sig_y0 = sig_y0;
+        row.sig_z0 = sig_z0;
+
+        std::cout << "duration: " << row.time << " s\n";
+        std::cout << "sig_x0: " << sig_x0 << " m\n";
+        std::cout << "sig_y0: " << sig_y0 << " m\n";
+        std::cout << "sig_z0: " << sig_z0 << " m\n";
+
         // Convert temperature from Celsius to Kelvin
         temperature += 273.15;
         agentFreezingPoint += 273.15;
@@ -714,7 +749,8 @@ namespace FastPlume
         // Precondition: Ensure no boiling at the onset
         if (atmPressure <= agentVaporPressure || temperature >= agentBoilingPoint)
         {
-            std::cout << "\tAgent is boiling.\n";
+            std::cout << "\tAgent is boiling.\n" << std::endl;
+            return 60.0;
             // return m_environment.getQuantityRemaining() / 6.0; // Simplified boiling case
         }
 
@@ -724,10 +760,11 @@ namespace FastPlume
         }
 
         // print all input values
-        /*
+        
         std::cout << "\tWind speed: " << windSpeed << " m/s\n";
         std::cout << "\tTemperature: " << temperature << " K\n";
         std::cout << "\tAtmospheric pressure: " << atmPressure << " atm\n";
+        std::cout << "\tAgent vapor pressure: " << agentVaporPressure << " atm\n";
         std::cout << "\tPuddle area: " << puddleArea << " m^2\n";
         std::cout << "\tPuddle length: " << puddleLength << " m\n";
         std::cout << "\tAgent molecular weight: " << agentMolecularWeight << " gm/gm mole\n";
@@ -735,7 +772,7 @@ namespace FastPlume
         std::cout << "\tAgent vapor pressure: " << agentVaporPressure << " atm\n";
         std::cout << "\tAgent boiling point: " << agentBoilingPoint << " K\n";
         std::cout << "\tAgent freezing point: " << agentFreezingPoint << " K\n";
-        */
+        
         // Calculate air density and viscosity
         double airDensity = (0.3487 * atmPressure) / temperature;
         double airViscosity = exp(4.36 + 0.002844 * temperature) * 1.0e-6;
@@ -745,8 +782,8 @@ namespace FastPlume
             throw std::runtime_error("Air density is zero");
         }
 
-        // std::cout << "\tAir density: " << airDensity << " gm/cm^3\n";
-        // std::cout << "\tAir viscosity: " << airViscosity << " poise(gm/cm * sec)\n";
+         std::cout << "\tAir density: " << airDensity << " gm/cm^3\n";
+         std::cout << "\tAir viscosity: " << airViscosity << " poise(gm/cm * sec)\n";
 
         // Calculate Schmidt and Reynolds numbers
         double schmidtNumberD = airViscosity / airDensity;
@@ -769,8 +806,8 @@ namespace FastPlume
         double airDiffusivity = pow(temperature, 1.5) * pow(0.03448 + 1.0 / agentMolecularWeight, 0.5) / atmPressure;
         airDiffusivity *= 0.0043 / pow(3.1034 + pow(agentMolecularVolume, 1.0 / 3.0), 2.0);
 
-        //   std::cout << "\tSchmidt number: " << schmidtNumberD << " dimensionless\n";
-        //  std::cout << "\tAir diffusivity: " << airDiffusivity << " cm^2/s\n";
+           std::cout << "\tSchmidt number: " << schmidtNumberD << " dimensionless\n";
+          std::cout << "\tAir diffusivity: " << airDiffusivity << " cm^2/s\n";
 
         if (windSpeed < 0.03)
         {
@@ -786,17 +823,17 @@ namespace FastPlume
 
         double massTransferFactor = (reynoldsNumber <= 20000.0) ? 0.664 / sqrt(reynoldsNumber) : 0.036 / pow(reynoldsNumber, 0.2);
 
-        // std::cout << "\tReynolds number: " << reynoldsNumber << " dimensionless\n";
-        // std::cout << "\tMass transfer factor: " << massTransferFactor << " dimensionless\n";
+         std::cout << "\tReynolds number: " << reynoldsNumber << " dimensionless\n";
+         std::cout << "\tMass transfer factor: " << massTransferFactor << " dimensionless\n";
 
         // Calculate mass transfer coefficient and evaporation rate
         double molarMassVelocity = 3.448 * windSpeed * airDensity;
         double massTransferCoefficient = molarMassVelocity * massTransferFactor / pow(schmidtNumberD / airDiffusivity, 0.667);
         double evaporationRate = 6.0e8 * massTransferCoefficient * agentMolecularWeight * agentVaporPressure / atmPressure;
 
-        // std::cout << "\tMolar mass velocity: " << molarMassVelocity << " gm/cm^2s\n";
-        // std::cout << "\tMass transfer coefficient: " << massTransferCoefficient << " cm/s\n";
-        // std::cout << "\tEvaporation rate: " << evaporationRate << " mg/s\n";
+         std::cout << "\tMolar mass velocity: " << molarMassVelocity << " gm/cm^2s\n";
+         std::cout << "\tMass transfer coefficient: " << massTransferCoefficient << " cm/s\n";
+         std::cout << "\tEvaporation rate: " << evaporationRate << " mg/s\n";
 
         // Consider still air calculations
         double tkOverE = 0.1025 * temperature / sqrt(agentBoilingPoint);
@@ -811,21 +848,25 @@ namespace FastPlume
         double diameterOfSpill = sqrt(4.0 * puddleArea / M_PI);
         double reynoldsNumberStill = 300.0 * diameterOfSpill / schmidtNumberD;
 
-        // std::cout << "\tDiameter of spill: " << diameterOfSpill << " m\n";
-        // std::cout << "\tReynolds number (still air): " << reynoldsNumberStill << " dimensionless\n";
+         std::cout << "\tDiameter of spill: " << diameterOfSpill << " m\n";
+         std::cout << "\tReynolds number (still air): " << reynoldsNumberStill << " dimensionless\n";
 
         double evaporationRateStill = 292000.0 * (1.0 + 0.51 * sqrt(reynoldsNumberStill) * pow(schmidtNumberD / agentDiffusivity, 0.3333)) * log(1.0 / (1.0 - agentVaporPressure / atmPressure)) *
                                       (agentMolecularWeight / temperature) * (agentDiffusivity / diameterOfSpill) * (2.0 / M_PI);
 
-        // std::cout << "\tEvaporation rate (still air): " << evaporationRateStill << " mg/s\n";
+         std::cout << "\tEvaporation rate (still air): " << evaporationRateStill << " mg/s\n";
 
         // Compare and return the appropriate evaporation rate
         double finalRate = std::max(evaporationRate, evaporationRateStill) * puddleArea / 60.0; // Convert to mg/s
+
+        finalRate *= 5;
         // print
-        // std::cout << "\tEvaporation rate: " << finalRate << " mg/s\n";
+         std::cout << "\tEvaporation rate: " << finalRate << " mg/s\n";
         // return finalRate;
 
         double depletion_time = row.quantityRemaining / finalRate;
+
+        std::cout << "\tDepletion time: " << depletion_time << " s\n";
 
         return depletion_time;
     }

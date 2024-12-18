@@ -285,10 +285,11 @@ namespace FastPlume
             std::string cell;
             int colIdx = 0;
 
-           // std::cout << "line: " << line << std::endl;
+            //std::cout << "line: " << line << std::endl;
 
             // Temporary variables to store values
             int istabVal = 0;
+            int icaseVal = 0;
             double windVal = 0.0, hmlVal = 0.0, qMgVal = 0.0, durVal = 0.0, vDepVal = 0.0;
             double sigX0Val = 0.0, sigY0Val = 0.0, sigZ0Val = 0.0;
             double xVal = 0.0, yVal = 0.0, zVal = 0.0, tVal = 0.0;
@@ -305,6 +306,8 @@ namespace FastPlume
                 //std::cout << cell << std::endl;
                 //std::cout << "colIdx: " << colIdx << " cell: " << cell << std::endl;
                 cell = removeSpecialCharacters(cell);
+
+               // std::cout << "colIdx: " << colIdx << " cell: " << cell << std::endl;
 
                 if (colIdx == columnIndices["istab"])
                 {
@@ -358,10 +361,13 @@ namespace FastPlume
                     zplumeVal = std::stod(cell);
                 else if (columnIndices.find("decay") != columnIndices.end() && colIdx == columnIndices["decay"])
                     decayVal = std::stod(cell);
+                else if (columnIndices.find("case") != columnIndices.end() && colIdx == columnIndices["case"])
+                    icaseVal = std::stoi(cell);
 
                 colIdx++;
             }
             // Store the parsed values in class member vectors
+            icase.push_back(icaseVal);
             istab.push_back(istabVal);
             wind.push_back(windVal);
             hml.push_back(hmlVal);
@@ -431,6 +437,7 @@ namespace FastPlume
 
         // Apply resizing to all taskData vectors
         resizeToTarget(id);
+        resizeToTarget(icase);
         resizeToTarget(sig_x0);
         resizeToTarget(sig_y0);
         resizeToTarget(sig_z0);
@@ -487,6 +494,8 @@ namespace FastPlume
         {
             if (attrName == "id")
                 id = values;
+            else if (attrName == "icase")
+                icase = values;
             else if (attrName == "istab")
                 istab = values;
             else
@@ -566,6 +575,8 @@ namespace FastPlume
     {
         if (attrName == "id")
             return std::vector<T>(id.begin(), id.end());
+        if (attrName == "icase")
+            return std::vector<T>(icase.begin(), icase.end());
         if (attrName == "sig_x0")
             return std::vector<T>(sig_x0.begin(), sig_x0.end());
         if (attrName == "sig_y0")
@@ -617,6 +628,7 @@ namespace FastPlume
     {
         std::cout << "Printing all data for taskData class:" << std::endl;
         printAttr<int>("id");
+        printAttr<int>("icase");
         printAttr<double>("sig_x0");
         printAttr<double>("sig_y0");
         printAttr<double>("sig_z0");
@@ -660,6 +672,7 @@ namespace FastPlume
 
         taskDataRow row;
         row.id = id[index];
+        row.icase = icase[index];
         row.sig_x0 = sig_x0[index];
         row.sig_y0 = sig_y0[index];
         row.sig_z0 = sig_z0[index];
@@ -693,6 +706,7 @@ namespace FastPlume
         }
 
         id[index] = row.id;
+        icase[index] = row.icase;
         sig_x0[index] = row.sig_x0;
         sig_y0[index] = row.sig_y0;
         sig_z0[index] = row.sig_z0;

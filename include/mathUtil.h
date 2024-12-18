@@ -103,6 +103,7 @@ namespace FastPlume
 
     inline double AntoineToVaporPressure(double a, double b, double c, double temperature)
     {
+        printf("a = %f, b = %f, c = %f, temperature = %f\n", a, b, c, temperature);
         return pow(10.0, a - fabs(b) / (temperature + c));
     }
 

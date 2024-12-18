@@ -188,7 +188,7 @@ namespace FastPlume
         return idx == 0 ? idx : idx - 1;
     }
 
-    std::vector<float> dispersionCoef::interpolate_sig_component(int istab, float wind, float x, const std::string &flag)
+    std::vector<float> dispersionCoef::interpolate_sig_component(int istab, float wind, float x, const std::string &flag) const
     {
         //printf("interpolate_sig_component: istab=%d, wind=%f, x=%f, flag=%s\n", istab, wind, x, flag.c_str());
 
@@ -244,7 +244,7 @@ namespace FastPlume
         return interpolated_values;
     }
 
-    float dispersionCoef::interpolate_x_from_sig_component(int istab, float wind, float sig_value, const std::string &flag)
+    float dispersionCoef::interpolate_x_from_sig_component(int istab, float wind, float sig_value, const std::string &flag) const
     {
         // Find the IstabData for the specified istab value
         auto it_istab = std::find_if(istabData.begin(), istabData.end(), [&](const IstabData &d)

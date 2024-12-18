@@ -19,6 +19,7 @@ namespace FastPlume
     {
     public:
         int id;
+        int icase;
         double sig_x0;
         double sig_y0;
         double sig_z0;

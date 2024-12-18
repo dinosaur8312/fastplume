@@ -71,6 +71,7 @@ namespace FastPlume
 
             // Temporary variables to store value
             int idVal = 0;
+            int icaseVal = 0;
             double qMgVal = 0.0;
             double surfaceTemperatureVal = 0.0;
             double AtmPressureVal = 0.0;
@@ -113,6 +114,7 @@ namespace FastPlume
             }
             // Store the parsed values in class member vectors
             id.push_back(idVal);
+            icase.push_back(icaseVal);
             surfaceTemperature.push_back(surfaceTemperatureVal);
             AtmPressure.push_back(AtmPressureVal);
             windSpeed.push_back(windSpeedVal);
@@ -143,6 +145,7 @@ namespace FastPlume
 
         // Apply resizing to all taskData vectors
         resizeToTarget(id);
+        resizeToTarget(icase);
         resizeToTarget(surfaceTemperature);
         resizeToTarget(AtmPressure);
         resizeToTarget(windSpeed);
@@ -160,6 +163,8 @@ namespace FastPlume
         {
             if (attrName == "id")
                 id = values;
+            else if (attrName == "icase")
+                icase = values;
             else if (attrName == "istab")
                 stabilityClass = values;
             else
@@ -202,6 +207,8 @@ namespace FastPlume
         {
             if (attrName == "id")
                 return std::vector<T>(id.begin(), id.end());
+            if (attrName == "icase")
+                return std::vector<T>(icase.begin(), icase.end());
             if (attrName == "istab")
                 return std::vector<T>(stabilityClass.begin(), stabilityClass.end());
         }
@@ -262,6 +269,7 @@ namespace FastPlume
 
         taskEvapDataRow row;
         row.id = id[index];
+        row.icase = icase[index];
       //  printf("id = %d\n", row.id);
         row.surfaceTemperature = surfaceTemperature[index];
      //   printf("surfaceTemperature = %f\n", row.surfaceTemperature);
@@ -279,6 +287,8 @@ namespace FastPlume
       //  printf("stabilityClass = %d\n", row.stabilityClass);
         row.quantityRemaining = quantityRemaining[index];
         //printf("quantityRemaining = %f\n", row.quantityRemaining);
+
+
 
         return row;
     }

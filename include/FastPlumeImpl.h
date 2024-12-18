@@ -5,6 +5,7 @@
 #include <vector>
 #include "dispersionCoef.h"
 #include "taskData.h"
+#include "dustIntegralTable.h"
 #include "taskEvapData.h"
 
 namespace FastPlume
@@ -58,6 +59,8 @@ namespace FastPlume
         agentProperties m_agentData;
         taskData m_taskData;
         taskEvapData m_taskEvapData;
+        dustIntegralTable* p_dustIntegralTable;
+
         std::string DispersionCoefCSVPath;
         std::string AgentPropertiesCSVPath;
         std::string TaskDataCSVPath;

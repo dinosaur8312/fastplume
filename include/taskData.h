@@ -10,9 +10,6 @@
 namespace FastPlume
 {
 
-
-    
-
     class locData
     {
     public:
@@ -92,6 +89,7 @@ namespace FastPlume
         //int taskNum;
 
         std::vector<int> id;
+        std::vector<int> icase;
         std::vector<double> sig_x0;
         std::vector<double> sig_y0;
         std::vector<double> sig_z0;

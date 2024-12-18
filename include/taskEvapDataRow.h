@@ -9,6 +9,7 @@ namespace FastPlume
     {
     public:
         int id;
+        int icase;
         double surfaceTemperature;
         double AtmPressure;
         double windSpeed;
@@ -41,9 +42,9 @@ namespace FastPlume
         //double releaseRate;
         double time;
         //int stabilityClass;
-        //double sig_x;
-        //double sig_y;
-        //double sig_z;
+        double sig_x0;
+        double sig_y0;
+        double sig_z0;
     };
 
 } // namespace FastPlume

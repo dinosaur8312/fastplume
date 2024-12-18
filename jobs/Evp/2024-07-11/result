@@ -1,8 +1,589 @@
 
 === Using setTaskDataCSV and setDispersionCoefCSV for setup, output to CSV ===
 Agent Properties are loaded
-Parsed 21 rows from ./taskFile/Evp_Runs_2024-07-11.csv
-EvapTaskData is loaded
+Parsed 21 rows from ./taskFile/Evp_Case_Definitions_2024-07-15.csv
 Running FastPlumeImpl with 21 tasks
-CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/Evp_Runs_2024-07-11_out.csv
+a = 7.729577, b = 1312.253000, c = 240.705000, temperature = 10.000000
+duration: 3600 s
+sig_x0: 1.30384 m
+sig_y0: 1.30384 m
+sig_z0: 0.1 m
+	Wind speed: 0.8 m/s
+	Temperature: 283.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.411635 atm
+	Puddle area: 15.3 m^2
+	Puddle length: 3.91152 m
+	Agent molecular weight: 58.08 gm/gm mole
+	Agent molecular volume: 73.5283 cm^3/gm mole
+	Agent vapor pressure: 0.411635 atm
+	Agent boiling point: 329.45 K
+	Agent freezing point: 178.45 K
+	Air density: 0.0012315 gm/cm^3
+	Air viscosity: 0.000175086 poise(gm/cm * sec)
+	Schmidt number: 0.142173 dimensionless
+	Air diffusivity: 0.0875872 cm^2/s
+	Reynolds number: 220100 dimensionless
+	Mass transfer factor: 0.00307453 dimensionless
+	Molar mass velocity: 0.00339698 gm/cm^2s
+	Mass transfer coefficient: 7.5605e-06 cm/s
+	Evaporation rate: 108453 mg/s
+	Diameter of spill: 4.41368 m
+	Reynolds number (still air): 9313.34 dimensionless
+	Evaporation rate (still air): 26120.8 mg/s
+	Evaporation rate: 138277 mg/s
+	Depletion time: 723.185 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_001.csv
+a = 7.729577, b = 1312.253000, c = 240.705000, temperature = 20.000000
+duration: 3600 s
+sig_x0: 1.30384 m
+sig_y0: 1.30384 m
+sig_z0: 0.1 m
+	Wind speed: 0.8 m/s
+	Temperature: 293.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.653559 atm
+	Puddle area: 15.3 m^2
+	Puddle length: 3.91152 m
+	Agent molecular weight: 58.08 gm/gm mole
+	Agent molecular volume: 73.5283 cm^3/gm mole
+	Agent vapor pressure: 0.653559 atm
+	Agent boiling point: 329.45 K
+	Agent freezing point: 178.45 K
+	Air density: 0.00118949 gm/cm^3
+	Air viscosity: 0.000180137 poise(gm/cm * sec)
+	Schmidt number: 0.15144 dimensionless
+	Air diffusivity: 0.0922678 cm^2/s
+	Reynolds number: 206630 dimensionless
+	Mass transfer factor: 0.00311361 dimensionless
+	Molar mass velocity: 0.0032811 gm/cm^2s
+	Mass transfer coefficient: 7.34092e-06 cm/s
+	Evaporation rate: 167191 mg/s
+	Diameter of spill: 4.41368 m
+	Reynolds number (still air): 8743.41 dimensionless
+	Evaporation rate (still air): 52159.4 mg/s
+	Evaporation rate: 213169 mg/s
+	Depletion time: 469.112 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_002.csv
+a = 7.729577, b = 1312.253000, c = 240.705000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 1.30384 m
+sig_y0: 1.30384 m
+sig_z0: 0.1 m
+	Agent is boiling.
+
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_003.csv
+a = 7.729577, b = 1312.253000, c = 240.705000, temperature = 10.000000
+duration: 3600 s
+sig_x0: 1.30384 m
+sig_y0: 1.30384 m
+sig_z0: 0.1 m
+	Wind speed: 9.6 m/s
+	Temperature: 283.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.411635 atm
+	Puddle area: 15.3 m^2
+	Puddle length: 3.91152 m
+	Agent molecular weight: 58.08 gm/gm mole
+	Agent molecular volume: 73.5283 cm^3/gm mole
+	Agent vapor pressure: 0.411635 atm
+	Agent boiling point: 329.45 K
+	Agent freezing point: 178.45 K
+	Air density: 0.0012315 gm/cm^3
+	Air viscosity: 0.000175086 poise(gm/cm * sec)
+	Schmidt number: 0.142173 dimensionless
+	Air diffusivity: 0.0875872 cm^2/s
+	Reynolds number: 2.64119e+06 dimensionless
+	Mass transfer factor: 0.00187043 dimensionless
+	Molar mass velocity: 0.0407637 gm/cm^2s
+	Mass transfer coefficient: 5.51944e-05 cm/s
+	Evaporation rate: 791745 mg/s
+	Diameter of spill: 4.41368 m
+	Reynolds number (still air): 9313.34 dimensionless
+	Evaporation rate (still air): 26120.8 mg/s
+	Evaporation rate: 1.00947e+06 mg/s
+	Depletion time: 99.0614 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_004.csv
+a = 7.729577, b = 1312.253000, c = 240.705000, temperature = 20.000000
+duration: 3600 s
+sig_x0: 1.30384 m
+sig_y0: 1.30384 m
+sig_z0: 0.1 m
+	Wind speed: 9.6 m/s
+	Temperature: 293.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.653559 atm
+	Puddle area: 15.3 m^2
+	Puddle length: 3.91152 m
+	Agent molecular weight: 58.08 gm/gm mole
+	Agent molecular volume: 73.5283 cm^3/gm mole
+	Agent vapor pressure: 0.653559 atm
+	Agent boiling point: 329.45 K
+	Agent freezing point: 178.45 K
+	Air density: 0.00118949 gm/cm^3
+	Air viscosity: 0.000180137 poise(gm/cm * sec)
+	Schmidt number: 0.15144 dimensionless
+	Air diffusivity: 0.0922678 cm^2/s
+	Reynolds number: 2.47957e+06 dimensionless
+	Mass transfer factor: 0.00189421 dimensionless
+	Molar mass velocity: 0.0393732 gm/cm^2s
+	Mass transfer coefficient: 5.35915e-05 cm/s
+	Evaporation rate: 1.22056e+06 mg/s
+	Diameter of spill: 4.41368 m
+	Reynolds number (still air): 8743.41 dimensionless
+	Evaporation rate (still air): 52159.4 mg/s
+	Evaporation rate: 1.55621e+06 mg/s
+	Depletion time: 64.2586 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_005.csv
+a = 7.729577, b = 1312.253000, c = 240.705000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 1.30384 m
+sig_y0: 1.30384 m
+sig_z0: 0.1 m
+	Agent is boiling.
+
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_006.csv
+a = 7.729577, b = 1312.253000, c = 240.705000, temperature = 10.000000
+duration: 3600 s
+sig_x0: 1.30384 m
+sig_y0: 1.30384 m
+sig_z0: 0.1 m
+	Wind speed: 12 m/s
+	Temperature: 283.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.411635 atm
+	Puddle area: 15.3 m^2
+	Puddle length: 3.91152 m
+	Agent molecular weight: 58.08 gm/gm mole
+	Agent molecular volume: 73.5283 cm^3/gm mole
+	Agent vapor pressure: 0.411635 atm
+	Agent boiling point: 329.45 K
+	Agent freezing point: 178.45 K
+	Air density: 0.0012315 gm/cm^3
+	Air viscosity: 0.000175086 poise(gm/cm * sec)
+	Schmidt number: 0.142173 dimensionless
+	Air diffusivity: 0.0875872 cm^2/s
+	Reynolds number: 3.30149e+06 dimensionless
+	Mass transfer factor: 0.00178879 dimensionless
+	Molar mass velocity: 0.0509547 gm/cm^2s
+	Mass transfer coefficient: 6.59817e-05 cm/s
+	Evaporation rate: 946484 mg/s
+	Diameter of spill: 4.41368 m
+	Reynolds number (still air): 9313.34 dimensionless
+	Evaporation rate (still air): 26120.8 mg/s
+	Evaporation rate: 1.20677e+06 mg/s
+	Depletion time: 82.866 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_007.csv
+a = 7.729577, b = 1312.253000, c = 240.705000, temperature = 20.000000
+duration: 3600 s
+sig_x0: 1.30384 m
+sig_y0: 1.30384 m
+sig_z0: 0.1 m
+	Wind speed: 12 m/s
+	Temperature: 293.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.653559 atm
+	Puddle area: 15.3 m^2
+	Puddle length: 3.91152 m
+	Agent molecular weight: 58.08 gm/gm mole
+	Agent molecular volume: 73.5283 cm^3/gm mole
+	Agent vapor pressure: 0.653559 atm
+	Agent boiling point: 329.45 K
+	Agent freezing point: 178.45 K
+	Air density: 0.00118949 gm/cm^3
+	Air viscosity: 0.000180137 poise(gm/cm * sec)
+	Schmidt number: 0.15144 dimensionless
+	Air diffusivity: 0.0922678 cm^2/s
+	Reynolds number: 3.09946e+06 dimensionless
+	Mass transfer factor: 0.00181153 dimensionless
+	Molar mass velocity: 0.0492165 gm/cm^2s
+	Mass transfer coefficient: 6.40654e-05 cm/s
+	Evaporation rate: 1.4591e+06 mg/s
+	Diameter of spill: 4.41368 m
+	Reynolds number (still air): 8743.41 dimensionless
+	Evaporation rate (still air): 52159.4 mg/s
+	Evaporation rate: 1.86036e+06 mg/s
+	Depletion time: 53.7531 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_008.csv
+a = 7.729577, b = 1312.253000, c = 240.705000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 1.30384 m
+sig_y0: 1.30384 m
+sig_z0: 0.1 m
+	Agent is boiling.
+
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_009.csv
+a = 7.481600, b = 1773.820000, c = 227.900000, temperature = 10.000000
+duration: 3600 s
+sig_x0: 1.1595 m
+sig_y0: 1.1595 m
+sig_z0: 0.1 m
+	Wind speed: 4.1 m/s
+	Temperature: 283.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.00139517 atm
+	Puddle area: 12.1 m^2
+	Puddle length: 3.47851 m
+	Agent molecular weight: 140.1 gm/gm mole
+	Agent molecular volume: 150.3 cm^3/gm mole
+	Agent vapor pressure: 0.00139517 atm
+	Agent boiling point: 431 K
+	Agent freezing point: 217.15 K
+	Air density: 0.0012315 gm/cm^3
+	Air viscosity: 0.000175086 poise(gm/cm * sec)
+	Schmidt number: 0.142173 dimensionless
+	Air diffusivity: 0.0589501 cm^2/s
+	Reynolds number: 1.00314e+06 dimensionless
+	Mass transfer factor: 0.00227002 dimensionless
+	Molar mass velocity: 0.0174095 gm/cm^2s
+	Mass transfer coefficient: 2.19686e-05 cm/s
+	Evaporation rate: 2576.44 mg/s
+	Diameter of spill: 3.92507 m
+	Reynolds number (still air): 8282.33 dimensionless
+	Evaporation rate (still air): 130.105 mg/s
+	Evaporation rate: 2597.91 mg/s
+	Depletion time: 3849.25 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_010.csv
+a = 7.481600, b = 1773.820000, c = 227.900000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 1.1595 m
+sig_y0: 1.1595 m
+sig_z0: 0.1 m
+	Wind speed: 4.1 m/s
+	Temperature: 303.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.00528262 atm
+	Puddle area: 12.1 m^2
+	Puddle length: 3.47851 m
+	Agent molecular weight: 140.1 gm/gm mole
+	Agent molecular volume: 150.3 cm^3/gm mole
+	Agent vapor pressure: 0.00528262 atm
+	Agent boiling point: 431 K
+	Agent freezing point: 217.15 K
+	Air density: 0.00115026 gm/cm^3
+	Air viscosity: 0.000185334 poise(gm/cm * sec)
+	Schmidt number: 0.161124 dimensionless
+	Air diffusivity: 0.0653049 cm^2/s
+	Reynolds number: 885149 dimensionless
+	Mass transfer factor: 0.00232755 dimensionless
+	Molar mass velocity: 0.0162609 gm/cm^2s
+	Mass transfer coefficient: 2.07223e-05 cm/s
+	Evaporation rate: 9201.88 mg/s
+	Diameter of spill: 3.92507 m
+	Reynolds number (still air): 7308.17 dimensionless
+	Evaporation rate (still air): 493.257 mg/s
+	Evaporation rate: 9278.56 mg/s
+	Depletion time: 1077.75 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_011.csv
+a = 7.481600, b = 1773.820000, c = 227.900000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 0.412311 m
+sig_y0: 0.412311 m
+sig_z0: 0.1 m
+	Wind speed: 0.8 m/s
+	Temperature: 303.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.00528262 atm
+	Puddle area: 1.53 m^2
+	Puddle length: 1.23693 m
+	Agent molecular weight: 140.1 gm/gm mole
+	Agent molecular volume: 150.3 cm^3/gm mole
+	Agent vapor pressure: 0.00528262 atm
+	Agent boiling point: 431 K
+	Agent freezing point: 217.15 K
+	Air density: 0.00115026 gm/cm^3
+	Air viscosity: 0.000185334 poise(gm/cm * sec)
+	Schmidt number: 0.161124 dimensionless
+	Air diffusivity: 0.0653049 cm^2/s
+	Reynolds number: 61415.1 dimensionless
+	Mass transfer factor: 0.00396869 dimensionless
+	Molar mass velocity: 0.00317287 gm/cm^2s
+	Mass transfer coefficient: 6.89433e-06 cm/s
+	Evaporation rate: 3061.47 mg/s
+	Diameter of spill: 1.39573 m
+	Reynolds number (still air): 2598.73 dimensionless
+	Evaporation rate (still air): 836.91 mg/s
+	Evaporation rate: 390.338 mg/s
+	Depletion time: 25618.8 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_012.csv
+a = 7.481600, b = 1773.820000, c = 227.900000, temperature = 10.000000
+duration: 3600 s
+sig_x0: 0.412311 m
+sig_y0: 0.412311 m
+sig_z0: 0.1 m
+	Wind speed: 4.1 m/s
+	Temperature: 283.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.00139517 atm
+	Puddle area: 1.53 m^2
+	Puddle length: 1.23693 m
+	Agent molecular weight: 140.1 gm/gm mole
+	Agent molecular volume: 150.3 cm^3/gm mole
+	Agent vapor pressure: 0.00139517 atm
+	Agent boiling point: 431 K
+	Agent freezing point: 217.15 K
+	Air density: 0.0012315 gm/cm^3
+	Air viscosity: 0.000175086 poise(gm/cm * sec)
+	Schmidt number: 0.142173 dimensionless
+	Air diffusivity: 0.0589501 cm^2/s
+	Reynolds number: 356708 dimensionless
+	Mass transfer factor: 0.00279151 dimensionless
+	Molar mass velocity: 0.0174095 gm/cm^2s
+	Mass transfer coefficient: 2.70154e-05 cm/s
+	Evaporation rate: 3168.32 mg/s
+	Diameter of spill: 1.39573 m
+	Reynolds number (still air): 2945.14 dimensionless
+	Evaporation rate (still air): 220.591 mg/s
+	Evaporation rate: 403.96 mg/s
+	Depletion time: 24754.9 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_013.csv
+a = 7.481600, b = 1773.820000, c = 227.900000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 0.412311 m
+sig_y0: 0.412311 m
+sig_z0: 0.1 m
+	Wind speed: 9.6 m/s
+	Temperature: 303.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.00528262 atm
+	Puddle area: 1.53 m^2
+	Puddle length: 1.23693 m
+	Agent molecular weight: 140.1 gm/gm mole
+	Agent molecular volume: 150.3 cm^3/gm mole
+	Agent vapor pressure: 0.00528262 atm
+	Agent boiling point: 431 K
+	Agent freezing point: 217.15 K
+	Air density: 0.00115026 gm/cm^3
+	Air viscosity: 0.000185334 poise(gm/cm * sec)
+	Schmidt number: 0.161124 dimensionless
+	Air diffusivity: 0.0653049 cm^2/s
+	Reynolds number: 736982 dimensionless
+	Mass transfer factor: 0.00241441 dimensionless
+	Molar mass velocity: 0.0380744 gm/cm^2s
+	Mass transfer coefficient: 5.03312e-05 cm/s
+	Evaporation rate: 22349.9 mg/s
+	Diameter of spill: 1.39573 m
+	Reynolds number (still air): 2598.73 dimensionless
+	Evaporation rate (still air): 836.91 mg/s
+	Evaporation rate: 2849.61 mg/s
+	Depletion time: 3509.25 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_014.csv
+a = 7.481600, b = 1773.820000, c = 227.900000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 0.412311 m
+sig_y0: 0.412311 m
+sig_z0: 0.1 m
+	Wind speed: 12 m/s
+	Temperature: 303.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.00528262 atm
+	Puddle area: 1.53 m^2
+	Puddle length: 1.23693 m
+	Agent molecular weight: 140.1 gm/gm mole
+	Agent molecular volume: 150.3 cm^3/gm mole
+	Agent vapor pressure: 0.00528262 atm
+	Agent boiling point: 431 K
+	Agent freezing point: 217.15 K
+	Air density: 0.00115026 gm/cm^3
+	Air viscosity: 0.000185334 poise(gm/cm * sec)
+	Schmidt number: 0.161124 dimensionless
+	Air diffusivity: 0.0653049 cm^2/s
+	Reynolds number: 921227 dimensionless
+	Mass transfer factor: 0.00230903 dimensionless
+	Molar mass velocity: 0.047593 gm/cm^2s
+	Mass transfer coefficient: 6.01679e-05 cm/s
+	Evaporation rate: 26718 mg/s
+	Diameter of spill: 1.39573 m
+	Reynolds number (still air): 2598.73 dimensionless
+	Evaporation rate (still air): 836.91 mg/s
+	Evaporation rate: 3406.54 mg/s
+	Depletion time: 2935.53 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_015.csv
+a = 7.475000, b = 1935.470000, c = 204.200000, temperature = 10.000000
+duration: 3600 s
+sig_x0: 1.1595 m
+sig_y0: 1.1595 m
+sig_z0: 0.1 m
+	Wind speed: 4.1 m/s
+	Temperature: 283.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 3.61725e-05 atm
+	Puddle area: 12.1 m^2
+	Puddle length: 3.47851 m
+	Agent molecular weight: 159.1 gm/gm mole
+	Agent molecular volume: 149.7 cm^3/gm mole
+	Agent vapor pressure: 3.61725e-05 atm
+	Agent boiling point: 490 K
+	Agent freezing point: 287.6 K
+	Air density: 0.0012315 gm/cm^3
+	Air viscosity: 0.000175086 poise(gm/cm * sec)
+	Schmidt number: 0.142173 dimensionless
+	Air diffusivity: 0.0584416 cm^2/s
+	Reynolds number: 1.00314e+06 dimensionless
+	Mass transfer factor: 0.00227002 dimensionless
+	Molar mass velocity: 0.0174095 gm/cm^2s
+	Mass transfer coefficient: 2.1842e-05 cm/s
+	Evaporation rate: 75.4209 mg/s
+	Diameter of spill: 3.92507 m
+	Reynolds number (still air): 8282.33 dimensionless
+	Evaporation rate (still air): 3.73514 mg/s
+	Evaporation rate: 76.0495 mg/s
+	Depletion time: 131493 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_016.csv
+a = 7.475000, b = 1935.470000, c = 204.200000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 1.1595 m
+sig_y0: 1.1595 m
+sig_z0: 0.1 m
+	Wind speed: 4.1 m/s
+	Temperature: 303.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.000213801 atm
+	Puddle area: 12.1 m^2
+	Puddle length: 3.47851 m
+	Agent molecular weight: 159.1 gm/gm mole
+	Agent molecular volume: 149.7 cm^3/gm mole
+	Agent vapor pressure: 0.000213801 atm
+	Agent boiling point: 490 K
+	Agent freezing point: 287.6 K
+	Air density: 0.00115026 gm/cm^3
+	Air viscosity: 0.000185334 poise(gm/cm * sec)
+	Schmidt number: 0.161124 dimensionless
+	Air diffusivity: 0.0647416 cm^2/s
+	Reynolds number: 885149 dimensionless
+	Mass transfer factor: 0.00232755 dimensionless
+	Molar mass velocity: 0.0162609 gm/cm^2s
+	Mass transfer coefficient: 2.06029e-05 cm/s
+	Evaporation rate: 420.494 mg/s
+	Diameter of spill: 3.92507 m
+	Reynolds number (still air): 7308.17 dimensionless
+	Evaporation rate (still air): 22.0787 mg/s
+	Evaporation rate: 423.998 mg/s
+	Depletion time: 23585 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_017.csv
+a = 7.475000, b = 1935.470000, c = 204.200000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 0.412311 m
+sig_y0: 0.412311 m
+sig_z0: 0.1 m
+	Wind speed: 0.8 m/s
+	Temperature: 303.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.000213801 atm
+	Puddle area: 1.53 m^2
+	Puddle length: 1.23693 m
+	Agent molecular weight: 159.1 gm/gm mole
+	Agent molecular volume: 149.7 cm^3/gm mole
+	Agent vapor pressure: 0.000213801 atm
+	Agent boiling point: 490 K
+	Agent freezing point: 287.6 K
+	Air density: 0.00115026 gm/cm^3
+	Air viscosity: 0.000185334 poise(gm/cm * sec)
+	Schmidt number: 0.161124 dimensionless
+	Air diffusivity: 0.0647416 cm^2/s
+	Reynolds number: 61415.1 dimensionless
+	Mass transfer factor: 0.00396869 dimensionless
+	Molar mass velocity: 0.00317287 gm/cm^2s
+	Mass transfer coefficient: 6.8546e-06 cm/s
+	Evaporation rate: 139.899 mg/s
+	Diameter of spill: 1.39573 m
+	Reynolds number (still air): 2598.73 dimensionless
+	Evaporation rate (still air): 37.4559 mg/s
+	Evaporation rate: 17.8371 mg/s
+	Depletion time: 560629 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_018.csv
+a = 7.475000, b = 1935.470000, c = 204.200000, temperature = 10.000000
+duration: 3600 s
+sig_x0: 0.412311 m
+sig_y0: 0.412311 m
+sig_z0: 0.1 m
+	Wind speed: 4.1 m/s
+	Temperature: 283.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 3.61725e-05 atm
+	Puddle area: 1.53 m^2
+	Puddle length: 1.23693 m
+	Agent molecular weight: 159.1 gm/gm mole
+	Agent molecular volume: 149.7 cm^3/gm mole
+	Agent vapor pressure: 3.61725e-05 atm
+	Agent boiling point: 490 K
+	Agent freezing point: 287.6 K
+	Air density: 0.0012315 gm/cm^3
+	Air viscosity: 0.000175086 poise(gm/cm * sec)
+	Schmidt number: 0.142173 dimensionless
+	Air diffusivity: 0.0584416 cm^2/s
+	Reynolds number: 356708 dimensionless
+	Mass transfer factor: 0.00279151 dimensionless
+	Molar mass velocity: 0.0174095 gm/cm^2s
+	Mass transfer coefficient: 2.68597e-05 cm/s
+	Evaporation rate: 92.7473 mg/s
+	Diameter of spill: 1.39573 m
+	Reynolds number (still air): 2945.14 dimensionless
+	Evaporation rate (still air): 6.33207 mg/s
+	Evaporation rate: 11.8253 mg/s
+	Depletion time: 845646 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_019.csv
+a = 7.475000, b = 1935.470000, c = 204.200000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 0.412311 m
+sig_y0: 0.412311 m
+sig_z0: 0.1 m
+	Wind speed: 9.6 m/s
+	Temperature: 303.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.000213801 atm
+	Puddle area: 1.53 m^2
+	Puddle length: 1.23693 m
+	Agent molecular weight: 159.1 gm/gm mole
+	Agent molecular volume: 149.7 cm^3/gm mole
+	Agent vapor pressure: 0.000213801 atm
+	Agent boiling point: 490 K
+	Agent freezing point: 287.6 K
+	Air density: 0.00115026 gm/cm^3
+	Air viscosity: 0.000185334 poise(gm/cm * sec)
+	Schmidt number: 0.161124 dimensionless
+	Air diffusivity: 0.0647416 cm^2/s
+	Reynolds number: 736982 dimensionless
+	Mass transfer factor: 0.00241441 dimensionless
+	Molar mass velocity: 0.0380744 gm/cm^2s
+	Mass transfer coefficient: 5.00412e-05 cm/s
+	Evaporation rate: 1021.31 mg/s
+	Diameter of spill: 1.39573 m
+	Reynolds number (still air): 2598.73 dimensionless
+	Evaporation rate (still air): 37.4559 mg/s
+	Evaporation rate: 130.218 mg/s
+	Depletion time: 76794.6 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_020.csv
+a = 7.475000, b = 1935.470000, c = 204.200000, temperature = 30.000000
+duration: 3600 s
+sig_x0: 0.412311 m
+sig_y0: 0.412311 m
+sig_z0: 0.1 m
+	Wind speed: 12 m/s
+	Temperature: 303.15 K
+	Atmospheric pressure: 1 atm
+	Agent vapor pressure: 0.000213801 atm
+	Puddle area: 1.53 m^2
+	Puddle length: 1.23693 m
+	Agent molecular weight: 159.1 gm/gm mole
+	Agent molecular volume: 149.7 cm^3/gm mole
+	Agent vapor pressure: 0.000213801 atm
+	Agent boiling point: 490 K
+	Agent freezing point: 287.6 K
+	Air density: 0.00115026 gm/cm^3
+	Air viscosity: 0.000185334 poise(gm/cm * sec)
+	Schmidt number: 0.161124 dimensionless
+	Air diffusivity: 0.0647416 cm^2/s
+	Reynolds number: 921227 dimensionless
+	Mass transfer factor: 0.00230903 dimensionless
+	Molar mass velocity: 0.047593 gm/cm^2s
+	Mass transfer coefficient: 5.98212e-05 cm/s
+	Evaporation rate: 1220.92 mg/s
+	Diameter of spill: 1.39573 m
+	Reynolds number (still air): 2598.73 dimensionless
+	Evaporation rate (still air): 37.4559 mg/s
+	Evaporation rate: 155.667 mg/s
+	Depletion time: 64239.5 s
+CSV file written to /home/xianlong/Code/FastPlume/jobs/Evp/2024-07-11/outputFiles/evp_fp_out_021.csv
+Run completed successfully.
 Test completed: Task data and coefficients set using CSV files, results output to CSV file.

@@ -121,10 +121,10 @@ public:
     void printData() const;
 
     // Interpolates one or all sig_* components based on input flags
-    std::vector<float> interpolate_sig_component(int istab, float wind, float x, const std::string &flag);
+    std::vector<float> interpolate_sig_component(int istab, float wind, float x, const std::string &flag) const;
 
     // Inverse interpolation to get x from a sig_* component
-    float interpolate_x_from_sig_component(int istab, float wind, float sig_value, const std::string &flag);
+    float interpolate_x_from_sig_component(int istab, float wind, float sig_value, const std::string &flag) const;
 
 private:
     // Helper to find indices for interpolation based on nearest values
