@@ -99,7 +99,11 @@ namespace FastPlume
         {
             float z_merge = std::max(0., x[i]) + zv;
             float sig_z = coefData.interpolate_sig_component(istab, wind, z_merge, "z")[0];
-            zfunc[i] = zFunction(zv, zplume, hml, sig_z);
+            zfunc[i] = zFunction(zval, zplume, hml, sig_z);
+            if(i%50==0)
+            {
+                printf("x=%f, z_merge=%f, sig_z=%f, zfunc[%d] = %f\n", x[i], z_merge, sig_z, i, zfunc[i]);
+            }
         }
 
         //printf("zfunc size = %d\n", zfunc.size());
@@ -135,12 +139,16 @@ namespace FastPlume
             }
         }
 
-//        printf("integral0 = %f\n", integral0);
+        printf("integral0 = %f\n", integral0);
 
         // Adjust integrals to calculate from x_ref
         for (size_t i = 0; i < x.size(); ++i)
         {
             integral[i] = std::max(integral_raw[i] - integral0, 0.0);
+            if(i%50==0)
+            {
+                printf("x=%f, zfunc=%f, integral[%d] = %f\n", x[i], zfunc[i], i, integral[i]);
+            }
         }
     }
 

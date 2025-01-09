@@ -252,6 +252,8 @@ namespace FastPlume
             else if (columnName == "fn_fp_xyzt")
                 hasFnFpXyzt = true;
 
+            //std::cout << "columnName: " << columnName << " index: " << index-1 << std::endl;
+
         }
 
 
@@ -307,62 +309,114 @@ namespace FastPlume
                 //std::cout << "colIdx: " << colIdx << " cell: " << cell << std::endl;
                 cell = removeSpecialCharacters(cell);
 
-               // std::cout << "colIdx: " << colIdx << " cell: " << cell << std::endl;
+                //std::cout << "colIdx: " << colIdx << " cell: " << cell  << std::endl;
 
-                if (colIdx == columnIndices["istab"])
+                //if (colIdx == columnIndices["istab"])
+                if(columnIndices.find("istab") != columnIndices.end() && colIdx == columnIndices["istab"])
                 {
                     istabVal = std::stoi(cell);
-
                 }
-                else if (colIdx == columnIndices["wind"] || colIdx == columnIndices["U"])
-
+                //else if (colIdx == columnIndices["wind"] || colIdx == columnIndices["U"])
+                else if(columnIndices.find("wind") != columnIndices.end() && colIdx == columnIndices["wind"])
+                {
                     windVal = std::stod(cell);
-                else if (colIdx == columnIndices["hml"] || colIdx == columnIndices["zi"])
+                }
+                else if(columnIndices.find("U") != columnIndices.end() && colIdx == columnIndices["U"] && windVal == 0)
+                {
+                    windVal = std::stod(cell);
+                }
+                else if(columnIndices.find("hml") != columnIndices.end() && colIdx == columnIndices["hml"])
+                {
                     hmlVal = std::stod(cell);
-                else if (colIdx == columnIndices["Q_mg"] || colIdx == columnIndices["Q"])
+                }
+                else if(columnIndices.find("zi") != columnIndices.end() && colIdx == columnIndices["zi"])
+                {
+                    hmlVal = std::stod(cell);
+                }
+                else if(columnIndices.find("Q_mg") != columnIndices.end() && colIdx == columnIndices["Q_mg"])
+                {
                     qMgVal = std::stod(cell);
-                else if (colIdx == columnIndices["Q_kg"])
+                }
+                else if(columnIndices.find("Q") != columnIndices.end() && colIdx == columnIndices["Q"] && qMgVal == 0)
+                {
+                    qMgVal = std::stod(cell);
+                }
+                else if(columnIndices.find("Q_kg") != columnIndices.end() && colIdx == columnIndices["Q_kg"] && qMgVal == 0)
+                {
                     qMgVal = std::stod(cell) * 1e6;
-                else if (colIdx == columnIndices["dur"] || colIdx == columnIndices["depletion_time"])
+                }
+                else if(columnIndices.find("dur") != columnIndices.end() && colIdx == columnIndices["dur"])
+                {
                     durVal = std::stod(cell);
-                else if (colIdx == columnIndices["v_dep"] || colIdx == columnIndices["vd"])
+                }
+                else if(columnIndices.find("time") != columnIndices.end() && colIdx == columnIndices["time"] && durVal == 0)
+                {
+                    durVal = std::stod(cell);
+                }
+                else if(columnIndices.find("v_dep") != columnIndices.end() && colIdx == columnIndices["v_dep"])
+                {
                     vDepVal = std::stod(cell);
-                else if (columnIndices.find("sig_x0") != columnIndices.end() && colIdx == columnIndices["sig_x0"])
+                }
+                else if(columnIndices.find("vd") != columnIndices.end() && colIdx == columnIndices["vd"] && vDepVal ==0)
+                {
+                    vDepVal = std::stod(cell);
+                }
+                else if(columnIndices.find("decay") != columnIndices.end() && colIdx == columnIndices["decay"])
+                {
+                    decayVal = std::stod(cell);
+                }
+                else if(columnIndices.find("decay_rate") != columnIndices.end() && colIdx == columnIndices["decay_rate"] && decayVal==0)
+                {
+                    decayVal = std::stod(cell);
+                }
+                else if(columnIndices.find("sig_x0") != columnIndices.end() && colIdx == columnIndices["sig_x0"])
+                {
                     sigX0Val = std::stod(cell);
-                else if (columnIndices.find("sig_y0") != columnIndices.end() && colIdx == columnIndices["sig_y0"])
+                }
+                else if(columnIndices.find("sig_y0") != columnIndices.end() && colIdx == columnIndices["sig_y0"])
+                {
                     sigY0Val = std::stod(cell);
-                else if (columnIndices.find("sig_z0") != columnIndices.end() && colIdx == columnIndices["sig_z0"])
+                }
+                else if(columnIndices.find("sig_z0") != columnIndices.end() && colIdx == columnIndices["sig_z0"])
+                {
                     sigZ0Val = std::stod(cell);
-                else if (columnIndices.find("x") != columnIndices.end() && colIdx == columnIndices["x"])
+                }
+                else if(columnIndices.find("x") != columnIndices.end() && colIdx == columnIndices["x"])
                 {
                     xVal = std::stod(cell);
                     location.x.push_back(xVal);
                 }
-                else if (columnIndices.find("y") != columnIndices.end() && colIdx == columnIndices["y"])
+                else if(columnIndices.find("y") != columnIndices.end() && colIdx == columnIndices["y"])
                 {
                     yVal = std::stod(cell);
                     location.y.push_back(yVal);
                 }
-                else if (columnIndices.find("z") != columnIndices.end() && colIdx == columnIndices["z"])
+                else if(columnIndices.find("z") != columnIndices.end() && colIdx == columnIndices["z"])
                 {
                     zVal = std::stod(cell);
                     location.z.push_back(zVal);
                 }
-                else if (columnIndices.find("t") != columnIndices.end() && colIdx == columnIndices["t"])
+                else if(columnIndices.find("t") != columnIndices.end() && colIdx == columnIndices["t"])
                 {
                     tVal = std::stod(cell);
                     location.t.push_back(tVal);
                 }
-                else if (columnIndices.find("fn_fp_xyzt") != columnIndices.end() && colIdx == columnIndices["fn_fp_xyzt"])
+                else if(columnIndices.find("fn_fp_xyzt") != columnIndices.end() && colIdx == columnIndices["fn_fp_xyzt"])
+                {
                     fnFpXyzt = cell;
-                else if (columnIndices.find("fn_fp_output") != columnIndices.end() && colIdx == columnIndices["fn_fp_output"])
+                }
+                else if(columnIndices.find("fn_fp_output") != columnIndices.end() && colIdx == columnIndices["fn_fp_output"])
+                {
                     fnFpOutput = cell;
-                else if (columnIndices.find("zplume") != columnIndices.end() && colIdx == columnIndices["zplume"])
+                }
+                else if(columnIndices.find("zplume") != columnIndices.end() && colIdx == columnIndices["zplume"])
+                {
                     zplumeVal = std::stod(cell);
-                else if (columnIndices.find("decay") != columnIndices.end() && colIdx == columnIndices["decay"])
-                    decayVal = std::stod(cell);
-                else if (columnIndices.find("case") != columnIndices.end() && colIdx == columnIndices["case"])
+                }
+                else if(columnIndices.find("case") != columnIndices.end() && colIdx == columnIndices["case"])
+                {
                     icaseVal = std::stoi(cell);
+                }
 
                 colIdx++;
             }

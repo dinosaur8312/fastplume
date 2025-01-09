@@ -5,7 +5,7 @@ namespace FastPlume
 
     float getSpeedFactor(int istab)
     {
-        static const std::vector<float> speedFactors = {1.35, 1.47, 1.58, 1.7, 2.15, 2.6, 2.6};
+        static const std::vector<float> speedFactors = {1.35, 1.43, 1.43, 1.7, 3.1, 2.6, 1.52};
         if (istab < 0 || istab >= speedFactors.size())
             return 1.0;
         return speedFactors[istab];

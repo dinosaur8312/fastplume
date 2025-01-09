@@ -254,12 +254,17 @@ namespace FastPlume
 
         // Find the nearest wind index
         int wind_idx = find_nearest_wind_index(it_istab->wind, wind);
+        //printf("wind_idx = %d\n", wind_idx);
         float wind1 = it_istab->wind[wind_idx];
         float wind2 = it_istab->wind[wind_idx + 1];
         float wind_weight = (wind - wind1) / (wind2 - wind1);
 
+        //printf("wind1=%f, wind2=%f, wind_weight=%f\n", wind1, wind2, wind_weight);
+
         // Calculate the log of the target sig_value
         float ln_sig_value = std::log(sig_value);
+
+        //printf("sig_value=%f, ln_sig_value=%f\n", sig_value, ln_sig_value);
 
         // Get pointers to the appropriate ln_sig_* vectors based on the flag
         const std::vector<float> *ln_sig_vec1 = nullptr;
@@ -282,23 +287,67 @@ namespace FastPlume
         }
 
         // Binary search to locate the position in ln_sig where ln_sig_value would fit
-        auto it_lower = std::lower_bound(ln_sig_vec1->begin(), ln_sig_vec1->end(), ln_sig_value);
-        int i = std::distance(ln_sig_vec1->begin(), it_lower) - 1;
+        //auto it_lower = wind_weight < 0.5f ?
+        //            std::lower_bound(ln_sig_vec1->begin(), ln_sig_vec1->end(), ln_sig_value):
+        //            std::lower_bound(ln_sig_vec2->begin(), ln_sig_vec2->end(), ln_sig_value);
+
+        //ln_sig_vec1 is the log sig value vector for the lower wind speed
+        //ln_sig_vec2 is the log sig value vector for the higher wind speed
+
+        auto it_lower1 = std::lower_bound(ln_sig_vec1->begin(), ln_sig_vec1->end(), ln_sig_value);
+        auto it_lower2 = std::lower_bound(ln_sig_vec2->begin(), ln_sig_vec2->end(), ln_sig_value);
+
+        //int i = wind_weight<0.5f? 
+        //    std::distance(ln_sig_vec1->begin(), it_lower) - 1:
+        //    std::distance(ln_sig_vec2->begin(), it_lower) - 1;
+
+        int i1 = std::distance(ln_sig_vec1->begin(), it_lower1) - 1;
+        int i2 = std::distance(ln_sig_vec2->begin(), it_lower2) - 1;
+
+        // i1 is the index of the lower log sig value for the lower wind speed
+        // i2 is the index of the lower log sig value for the higher wind speed
 
         // Ensure the index is within bounds
-        if (i < 0 || i >= ln_sig_vec1->size() - 1)
+        //if (i < 0 || i >= ln_sig_vec1->size() - 1)
+        //{
+        //    std::cerr << "Error: ln_sig_value out of interpolation bounds.\n";
+        //    return -1;
+        //}
+        if (i1 < 0 || i1 >= ln_sig_vec1->size() - 1)
+        {
+            std::cerr << "Error: ln_sig_value out of interpolation bounds.\n";
+            return -1;
+        }
+        if (i2 < 0 || i2 >= ln_sig_vec2->size() - 1)
         {
             std::cerr << "Error: ln_sig_value out of interpolation bounds.\n";
             return -1;
         }
 
         // Get the bounding ln_sig values for interpolation
-        float ln_sig1 = (1 - wind_weight) * (*ln_sig_vec1)[i] + wind_weight * (*ln_sig_vec2)[i];
-        float ln_sig2 = (1 - wind_weight) * (*ln_sig_vec1)[i + 1] + wind_weight * (*ln_sig_vec2)[i + 1];
+
+       //float ln_sig1 = (1-wind_weight)*(*ln_sig_vec1)[i1] + wind_weight*(*ln_sig_vec2)[i2];
+       //float ln_sig2 = (1-wind_weight)*(*ln_sig_vec1)[i1+1] + wind_weight*(*ln_sig_vec2)[i2+1];
+
+       float x_weight1 = (ln_sig_value - (*ln_sig_vec1)[i1]) / ((*ln_sig_vec1)[i1+1] - (*ln_sig_vec1)[i1]);
+         float x_weight2 = (ln_sig_value - (*ln_sig_vec2)[i2]) / ((*ln_sig_vec2)[i2+1] - (*ln_sig_vec2)[i2]);
+
+         float x_weight = (1-wind_weight)*x_weight1 + wind_weight*x_weight2;
+
+         float ln_x1 = (1-wind_weight)*ln_x[i1] + wind_weight*ln_x[i2];
+            float ln_x2 = (1-wind_weight)*ln_x[i1+1] + wind_weight*ln_x[i2+1];
+
+        //printf("ln_sig1=%f, ln_sig2=%f\n", ln_sig1, ln_sig2);   
 
         // Interpolate to find the corresponding ln_x
-        float x_weight = (ln_sig_value - ln_sig1) / (ln_sig2 - ln_sig1);
-        return std::exp((1 - x_weight) * ln_x[i] + x_weight * ln_x[i + 1]);
+      //  float x_weight = (ln_sig_value - ln_sig1) / (ln_sig2 - ln_sig1);
+
+        //printf("x_weight=%f\n", x_weight);
+
+        //printf("x1=%f, x2=%f\n", x[i], x[i + 1]);
+        //printf("lnx1=%f, lnx2=%f\n", ln_x[i], ln_x[i + 1]);
+        //return std::exp((1 - x_weight) * ln_x[i] + x_weight * ln_x[i + 1]);
+        return std::exp((1 - x_weight) * ln_x1 + x_weight * ln_x2);
     }
 
 } // namespace FastPlume

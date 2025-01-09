@@ -15,6 +15,7 @@ namespace FastPlume
     public:
         double zplume;
         double hml;
+        double zval;
         double zv;
         int istab;
         float wind;
@@ -33,6 +34,7 @@ namespace FastPlume
             // Initialize scalar fields
             zplume = row.zplume;
             hml = row.hml;
+            zval = 0.0;
             zv = row.zv;
             istab = row.istab;
             wind = row.wind;

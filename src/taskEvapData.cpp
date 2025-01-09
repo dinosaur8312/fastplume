@@ -86,28 +86,39 @@ namespace FastPlume
             {
                 //std::cout << "colIdx: " << colIdx << " cell: " << cell << std::endl;
 
-                if (colIdx == columnIndices["id"])
+                if(columnIndices.find("id") != columnIndices.end() && colIdx == columnIndices["id"])
                     idVal = std::stoi(cell);
-                else if (colIdx == columnIndices["surface_temperature"])
+                else if(columnIndices.find("surface_temperature") != columnIndices.end() && colIdx == columnIndices["surface_temperature"])
                     surfaceTemperatureVal = std::stod(cell);
-                else if (colIdx == columnIndices["atmPressure"])
+                else if(columnIndices.find("atmPressure") != columnIndices.end() && colIdx == columnIndices["atmPressure"])
                 {
                     AtmPressureVal = std::stod(cell);
-                    //std::cout << "AtmPressureVal: " << AtmPressureVal << std::endl;
                 }
-                else if (colIdx == columnIndices["windSpeed"] || colIdx == columnIndices["U"] || colIdx == columnIndices["wind"])
+                else if(columnIndices.find("windSpeed") != columnIndices.end() && colIdx == columnIndices["windSpeed"])
+                {
                     windSpeedVal = std::stod(cell);
-                else if (colIdx == columnIndices["surface_type"])
+                }
+                else if(columnIndices.find("wind") != columnIndices.end() && colIdx == columnIndices["wind"] && windSpeedVal == 0)
+                {
+                    windSpeedVal = std::stod(cell);
+                }
+                else if(columnIndices.find("U") != columnIndices.end() && colIdx == columnIndices["U"] && windSpeedVal == 0)
+                {
+                    windSpeedVal = std::stod(cell);
+                }
+                else if(columnIndices.find("surface_type") != columnIndices.end() && colIdx == columnIndices["surface_type"])
                     surfaceTypeVal = cell;
-                else if (colIdx == columnIndices["agent_fp"])
+                else if(columnIndices.find("agent_fp") != columnIndices.end() && colIdx == columnIndices["agent_fp"])
                     agent_fpVal = cell;
-                else if (colIdx == columnIndices["Q_mg"] || colIdx == columnIndices["Q"])
+                else if(columnIndices.find("Q_mg") != columnIndices.end() && colIdx == columnIndices["Q_mg"] )
                     qMgVal = std::stod(cell);
-                else if (colIdx == columnIndices["Q_kg"])
+                else if(columnIndices.find("Q") != columnIndices.end() && colIdx == columnIndices["Q"] && qMgVal == 0)
+                    qMgVal = std::stod(cell);
+                else if(columnIndices.find("Q_kg") != columnIndices.end() && colIdx == columnIndices["Q_kg"] && qMgVal == 0)
                     qMgVal = std::stod(cell) * 1e6;
-                else if (colIdx == columnIndices["time"])
+                else if(columnIndices.find("time") != columnIndices.end() && colIdx == columnIndices["time"])
                     timeVal = std::stod(cell);
-                else if (colIdx == columnIndices["istab"])
+                else if(columnIndices.find("istab") != columnIndices.end() && colIdx == columnIndices["istab"])
                     istabVal = std::stoi(cell);
 
                 colIdx++;
